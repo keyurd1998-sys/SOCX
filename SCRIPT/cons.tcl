@@ -127,19 +127,6 @@ set_input_delay \
     -clock UART_CLK \
     [get_ports UART_RX_IN]
 
-# Optional scan constraints
-if {[sizeof_collection [get_ports TestMode]]} {
-    set_input_delay $in1_delay -clock REF_CLK [get_ports TestMode]
-}
-
-if {[sizeof_collection [get_ports ScanEnable]]} {
-    set_input_delay $in1_delay -clock REF_CLK [get_ports ScanEnable]
-}
-
-if {[sizeof_collection [get_ports ScanIn*]]} {
-    set_input_delay $in1_delay -clock REF_CLK [get_ports ScanIn*]
-}
-
 #=========================================================
 # OUTPUT DELAYS
 #=========================================================
@@ -158,11 +145,3 @@ set_output_delay \
     $out2_delay \
     -clock UART_CLK \
     [get_ports framing_error]
-
-# Optional scan outputs
-if {[sizeof_collection [get_ports ScanOut*]]} {
-    set_output_delay \
-        $out1_delay \
-        -clock REF_CLK \
-        [get_ports ScanOut*]
-}
