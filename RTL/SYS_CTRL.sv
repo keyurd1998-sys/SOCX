@@ -23,6 +23,7 @@ module SYS_CTRL #( parameter ADDR_WIDTH = 4, DATA_WIDTH = 8) (
 	input	wire							ALU_OUT_Valid, 
 	output	reg								ALU_EN,  
 	output	reg		[3:0]					ALU_FUN,     
+	output	reg								CLKG_EN,    
 	output	reg 							CLKDIV_EN,
 	input	wire	[DATA_WIDTH-1:0]		Rd_Reg,       
 	input	wire							Rd_Reg_Valid, 
@@ -85,11 +86,11 @@ always@(posedge CLK or negedge RST)
  begin
 	if (!RST) 
 	 begin
-	  current_state <= IDLE;		
+	  current_state = IDLE;		
 	 end
 	else 
 	 begin
-	  current_state <= next_state;
+	  current_state = next_state;
 	 end
  end
 
@@ -101,6 +102,7 @@ always@(*)
  	// Enable signals
  	WrEn        = 1'b0;
  	RdEn        = 1'b0;
+ 	CLKG_EN     = 1'b0;
  	CLKDIV_EN   = 1'b1;
  	ALU_EN      = 1'b0;
  	FIFO_WR_INC = 1'b0;
@@ -227,6 +229,7 @@ always@(*)
  	 			 end
 
  	 FUN_of_ALU : begin
+ 	 			   CLKG_EN = 1'b1;
  	 			   if (UART_RX_Valid)
  	 			    begin
  	 			     ALU_EN = 1'b1;
@@ -240,6 +243,7 @@ always@(*)
  	 			 end
 
  	 ALU_Save_OUT : begin
+	 	 			  CLKG_EN = 1'b1;
 	 	 			  if (ALU_OUT_Valid)
 	 	 			   begin
 	 	 			    ALU_OUT_REG_CHECK = 1'b1;
@@ -254,6 +258,7 @@ always@(*)
 
 ///////////////////// Since output of ALU is 2*Operand_Width so we have to send it on 2 frames since fifo is 8 bits ///////////////////
  	 ALU_1st_Byte : begin
+ 	 				 CLKG_EN = 1'b1;
 	 	 			 if (!FIFO_FULL)
 	 	 			  begin
 	 	 			   FIFO_WR_INC = 1'b1;
@@ -267,6 +272,7 @@ always@(*)
 	 	 			end
 
  	 ALU_2nd_Byte : begin
+ 	 				 CLKG_EN = 1'b1;
 	 	 			 if (!FIFO_FULL)
 	 	 			  begin
 	 	 			   FIFO_WR_INC = 1'b1;

@@ -40,6 +40,8 @@ wire	[DATA_WIDTH-1:0]		Operand_A;
 wire	[DATA_WIDTH-1:0]		Operand_B;
 wire	[3:0]					ALU_FUN;
 wire							ALU_EN;
+wire							CLKG_EN;
+wire							ALU_CLK;
 wire	[DATA_WIDTH*2-1:0]		ALU_OUT;
 wire							ALU_OUT_Valid;
 
@@ -60,6 +62,8 @@ wire							FIFO_Rd_INC;
 wire							TX_CLK;
 wire							RX_CLK;
 wire							CLKDIV_EN;
+
+
 
 
 
@@ -199,6 +203,7 @@ SYS_CTRL U0_SYS_CTRL (
 	.ALU_OUT_Valid(ALU_OUT_Valid),
 	.ALU_EN(ALU_EN),
 	.ALU_FUN(ALU_FUN),
+	.CLKG_EN(CLKG_EN),
 	.CLKDIV_EN(CLKDIV_EN),
 	.Rd_Reg(Rd_Reg),
 	.Rd_Reg_Valid(Rd_Reg_Valid), 
@@ -238,14 +243,22 @@ Register_File U0_Register_File (
 	.B(Operand_B),
 	.EN(ALU_EN),
 	.ALU_FUN(ALU_FUN),
-	.CLK(REF_CLK),
+	.CLK(ALU_CLK),
 	.RST(SYNC_RST_REF),
 	.ALU_OUT(ALU_OUT),
 	.OUT_VALID(ALU_OUT_Valid)
  	);
 
 
+///********************************************************///
+///////////////////////// Clock Gating ///////////////////////
+///********************************************************///
 
+CLK_GATE U0_CLK_GATE (
+.CLK_EN(CLKG_EN),
+.CLK(REF_CLK),
+.GATED_CLK(ALU_CLK)
+);
 
 
 
