@@ -1,3 +1,16 @@
+//==============================================================================
+// Project      : SOC Controller
+// File Name    : TOP.sv
+// Module Name  : TOP
+// Author       : Inaved-Semicon
+// Created On   : 19 April, 2026
+// Description  : RTL Module
+//
+//==============================================================================
+// Inaved-Semicon
+//==============================================================================
+
+
 module TOP #(
 
 parameter DATA_WIDTH        = 64,
