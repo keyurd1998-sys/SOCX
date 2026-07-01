@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_062426093316-329318000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070126171011-283401000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Jun 24 09:33:16 2026  IST
+            Date Started: Wednesday Jul 01 17:10:11 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 3754886.
+            This job is process number 592385.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -22,7 +22,7 @@ INFO (TDA-009): Options/Values information.
             -designtop TOP
             -TECHLIB ../../Library/verilog/typical.v
             -allowmissingmodules yes
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_062426093316-329318000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070126171011-283401000
             -STDOUT summary
             -messagecounteach 100
             -DESIGNSOURCE /home/admin/DFT/SOCX/ATPG/TOP.test_netlist.v
@@ -38,7 +38,7 @@ Search Order  2:  "../../Library/verilog/typical.v"
 
 Reading Verilog data from /home/admin/DFT/SOCX/ATPG/TOP.test_netlist.v
 
-Verilog Parser complete - 31 modules, 2 gates, 0 user defined primitives.
+Verilog Parser complete - 32 modules, 2 gates, 0 user defined primitives.
 
 
 Reading Verilog data from ../../Library/verilog/typical.v
@@ -53,9 +53,9 @@ WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connecti
 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
 
 
-Number of blocks in the hierarchical model is: 267,484.
+Number of blocks in the hierarchical model is: 17,570.
 
-Number of technology library cell instances in the hierarchical model is: 19,510.
+Number of technology library cell instances in the hierarchical model is: 1,761.
 
 
 INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
@@ -72,20 +72,20 @@ INFO (TLM-055): Design Summary
                 --------------
 
 Hierarchical Model:                  Flattened Model:
-        267,484  Blocks                     140,636  Blocks
-        833,427  Pins                       140,636  Nodes
-        481,802  Nets
+         17,570  Blocks                       9,916  Blocks
+         54,484  Pins                         9,916  Nodes
+         29,103  Nets
 
 Primary Inputs:                      Primary Outputs:
-         31  Input Only                        28  Output Only
+         10  Input Only                         7  Output Only
           0  Input/Output                       0  Input/Output
-         31  Total Inputs                      28  Total Outputs
+         10  Total Inputs                       7  Total Outputs
 
 Tied Nets:                           Dotted Nets:
-     12,636  Tied to 0                          0  Two-State
-      6,324  Tied to 1                          0  Three-State
+        708  Tied to 0                          0  Two-State
+        360  Tied to 1                          0  Three-State
           0  Tied to X                          0  Total Dotted Nets
-     18,960  Total Tied Nets
+      1,068  Total Tied Nets
 
 Selected Primitive Functions:
           0  Clock Chopper (CHOP) primitives 
@@ -94,21 +94,21 @@ Selected Primitive Functions:
           0  TSDs
           0  Resistors
           0  Transistors
-     12,567  MUX2s
+        630  MUX2s
           1  Latches
 
 
-      6,325  Rising  Edge Flop w/Set-Dominant and Reset Port
-      6,325  Total Flops
+        361  Rising  Edge Flop w/Set-Dominant and Reset Port
+        361  Total Flops
 
-     19,510  Technology Library Cell Instances
+      1,761  Technology Library Cell Instances
 
 [end TLM_055] 
-Optimization removed logic for 4 of 68 cells in this design.
+Optimization removed logic for 4 of 66 cells in this design.
 
 Optimization removed a total of 22 tied Latch Ports.
-Optimization removed a total of 6,343 non-controlling inputs.
-Optimization removed a total of 82,259 dangling logic nodes.
+Optimization removed a total of 379 non-controlling inputs.
+Optimization removed a total of 4,727 dangling logic nodes.
 
 
 
@@ -117,10 +117,10 @@ INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =          130,021,840  bytes
+                  Total Memory =          103,821,136  bytes
 
-                      CPU Time =    0:00:01.73
-                  Elapsed Time =    0:00:04.19                    [end TDA_001]
+                      CPU Time =    0:00:01.01
+                  Elapsed Time =    0:00:02.94                    [end TDA_001]
 
 
 

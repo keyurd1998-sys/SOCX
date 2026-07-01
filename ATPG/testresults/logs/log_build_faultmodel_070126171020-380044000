@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_faultmodel_062426093326-591832000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_faultmodel_070126171020-380044000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Jun 24 09:33:26 2026  IST
+            Date Started: Wednesday Jul 01 17:10:20 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 3755043.
+            This job is process number 592529.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -19,7 +19,7 @@ INFO (TDA-009): Options/Values information.
 
             -WORKDIR /home/admin/DFT/SOCX/ATPG
 
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_faultmodel_062426093326-591832000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_faultmodel_070126171020-380044000
             -STDOUT summary
             -includedynamic no
 [end TDA_009]
@@ -27,7 +27,7 @@ INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117]
 INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/ATPG/tbdata/faultModel.  [end TFM_102] 
 
-Global Ignored Static Fault Count                16
+Global Ignored Static Fault Count                 4
 Global Ignored Dynamic Fault Count                0
 
 
@@ -36,16 +36,16 @@ Global Ignored Dynamic Fault Count                0
                     ATCov  ----------------------- Global Faults --------------------------
                    Global        Total       Tested     Possibly    Redundant     Untested
 
-Total Static         0.00       184788            0            0            0       184788
-Collapsed Static     0.00       147235            0            0            0       147235
-PI Static            0.00           62            0            0            0           62
-PO Static            0.00           56            0            0            0           56
+Total Static         0.00        14888            0            0            0        14888
+Collapsed Static     0.00        10763            0            0            0        10763
+PI Static            0.00           20            0            0            0           20
+PO Static            0.00           14            0            0            0           14
 
 Total Dynamic                        0
 
 Parametric        
 
-IDDq                 0.00       184788            0                                 184788
+IDDq                 0.00        14888            0                                  14888
 
 
 
@@ -56,16 +56,16 @@ INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/ATPG/tbdata/fault
                  ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
                  Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
 
-Total Static         0.00   0.00       178369            0            0            0       178369       184788            0            0            0       184788
-Collapsed Static     0.00   0.00       140867            0            0            0       140867       147235            0            0            0       147235
-PI Static            0.00   0.00           59            0            0            0           59           62            0            0            0           62
-PO Static            0.00   0.00           56            0            0            0           56           56            0            0            0           56
+Total Static         0.00   0.00        14425            0            0            0        14425        14888            0            0            0        14888
+Collapsed Static     0.00   0.00        10357            0            0            0        10357        10763            0            0            0        10763
+PI Static            0.00   0.00           17            0            0            0           17           20            0            0            0           20
+PO Static            0.00   0.00           14            0            0            0           14           14            0            0            0           14
 
 Total Dynamic                               0
 
 Parametric        
 
-IDDq                 0.00   0.00       184788            0                                 184788       184788            0                                 184788
+IDDq                 0.00   0.00        14888            0                                  14888        14888            0                                  14888
 
 Path                 0.00   0.00            0            0                                      0            0            0                                      0
 
@@ -74,10 +74,10 @@ Path                 0.00   0.00            0            0                      
 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
 
                   %Active      #Faults      #Active    #Inactive
-Total Static        96.53       184788       178369         6419
-Collapsed Static    95.67       147235       140867         6368
-PI Static           95.16           62           59            3
-PO Static          100.00           56           56            0
+Total Static        96.89        14888        14425          463
+Collapsed Static    96.23        10763        10357          406
+PI Static           85.00           20           17            3
+PO Static          100.00           14           14            0
 
 Total Dynamic                        0
 
@@ -91,12 +91,12 @@ INFO (TFM-109): Build Fault Model has completed with highest level severity mess
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           59,449,536  bytes
+                  Total Memory =           11,658,624  bytes
 
-                      CPU Time =    0:00:00.15
-                  Elapsed Time =    0:00:00.20                    [end TDA_001]
+                      CPU Time =    0:00:00.02
+                  Elapsed Time =    0:00:00.07                    [end TDA_001]
 
-     Date Ended:  Wednesday Jun 24 09:33:26 2026  IST
+     Date Ended:  Wednesday Jul 01 17:10:20 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 

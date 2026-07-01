@@ -18,7 +18,7 @@ xrun \
    +xmoverride_timescale \
    +xmseq_udp_delay+2ps \
    +libext+.v+.V+.z+.Z+.gz \
-   +xmlibdirname+$WORKDIR/Inca_libs_09_32_15 \
+   +xmlibdirname+$WORKDIR/Inca_libs_17_07_24 \
    -l $WORKDIR/ncverilog_FULLSCAN.log \
   -v ../../Library/verilog/typical.v \
 $WORKDIR/TOP.test_netlist.v \
