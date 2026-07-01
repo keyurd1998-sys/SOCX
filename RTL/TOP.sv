@@ -11,7 +11,7 @@
 //==============================================================================
 
 
-module TOP #(
+module TOP_1 #(
 
 parameter DATA_WIDTH        = 64,
 parameter ADDR_WIDTH        = 10,
