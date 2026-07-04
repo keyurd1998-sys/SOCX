@@ -1,0 +1,2197 @@
+
+ 
+Copyright (C) 2002-2025 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 25.10-p027_1, built Mar 13 2025 (linux26_64)
+Options : -files runmodus.atpg.tcl
+Date    : Sat, July 04 14:43:12 2026
+Host    : Pine-06 (x86_64 Linux 5.14.0-611.30.1.el9_7.x86_64) (6*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB)
+OS      : Red Hat Enterprise Linux release 9.7 (Plow)
+
+INFO (TUI-300): Detected the presence of Modus database in present working directory. The 'workdir' root attribute is set to '/home/admin/DFT/SOCX/ATPG'. [end TUI_300]
+#@ Processing -files option
+@modus:root:/ 1>  source runmodus.atpg.tcl
+#@ Begin verbose source runmodus.atpg.tcl
+@file(runmodus.atpg.tcl) 13: set_db workdir ../ATPG;
+@file(runmodus.atpg.tcl) 14: set   WORKDIR [get_db workdir]
+@file(runmodus.atpg.tcl) 17: set_option stdout     summary;                                # Only print a summary for each command to the terminal
+@file(runmodus.atpg.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(runmodus.atpg.tcl) 20: set_db stop_on_severity error;
+@file(runmodus.atpg.tcl) 22: file delete -force $WORKDIR/tbdata;                       # Delete Test Database
+@file(runmodus.atpg.tcl) 23: file delete -force $WORKDIR/testresults;                  # Delete Test Output Files/Logs
+@file(runmodus.atpg.tcl) 30: build_model \
+    -cell	 TOP \
+    -techlib	 ../../Library/verilog/typical.v \
+    -designsource	 $WORKDIR/TOP.test_netlist.v \
+    -allowmissingmodules	 yes \
+    -messagecounteach	 100 \
+
+ 
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -designtop TOP
+            -TECHLIB ../../Library/verilog/typical.v
+            -allowmissingmodules yes
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070426144313-404591000
+            -STDOUT summary
+            -messagecounteach 100
+            -DESIGNSOURCE /home/admin/DFT/SOCX/ATPG/TOP.test_netlist.v
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 41: build_testmode \
+    -testmode	 FULLSCAN \
+    -assignfile	 $WORKDIR/TOP.FULLSCAN.pinassign \
+    -modedef	 FULLSCAN \
+ 
+Starting Command: build_testmode 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/ATPG/TOP.FULLSCAN.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426144316-656927000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 93.03% active logic,  6.97% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 20 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+     87 WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 50: report_test_structures \
+    -testmode	 FULLSCAN \
+    -reportscanchain	 all \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_report_test_structures_FULLSCAN_070426144317-968655000
+            -STDOUT summary
+            -reportscanchain all
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 58: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 FULLSCAN \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_070426144319-099084000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 20 bit positions, which is 106% of the average scan chain length 19 (based on 378 total scan chain bits and 20 valid scan chains).    
+     20 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 20 bit positions.    
+      1 INFO (TSV-383): There are 1 floating latches.    
+      1 INFO (TSV-567): There are 20 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 20 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 14:43:19 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 66: build_faultmodel \
+    -includedynamic	 no \
+ 
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_faultmodel_070426144320-495796000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/ATPG/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/ATPG/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 73: create_logic_tests \
+    -experiment	 TOP_atpg \
+    -testmode	 FULLSCAN \
+
+
+Starting Command: create_logic_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_atpg
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_atpg_070426144321-754674000
+            -STDOUT summary
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      1       1       3206    20.93%   20.22%        12111           00:00.09    [end TDA_220] 
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16       5185    54.79%   52.94%         6915           00:33.24    [end TDA_220] 
+INFO (TDA-220):     32      32        607    58.76%   56.77%         6312           00:37.66    [end TDA_220] 
+INFO (TDA-220):     48      48        324    60.87%   58.81%         5989           00:39.37    [end TDA_220] 
+INFO (TDA-220):     64      64        792    66.04%   63.81%         5199           00:40.30    [end TDA_220] 
+INFO (TDA-220):     80      80        435    68.88%   66.55%         4765           00:40.72    [end TDA_220] 
+INFO (TDA-220):     96      96        357    71.22%   68.80%         4408           00:41.18    [end TDA_220] 
+INFO (TDA-220):    112     110        202    72.53%   70.08%         4206           00:41.31    [end TDA_220] 
+INFO (TDA-220):    128     126        191    73.78%   71.28%         4015           00:41.72    [end TDA_220] 
+INFO (TDA-220):    144     142        164    74.86%   72.33%         3849           00:42.16    [end TDA_220] 
+INFO (TDA-220):    160     158        163    75.95%   73.37%         3682           00:42.37    [end TDA_220] 
+INFO (TDA-220):    176     174        144    76.91%   74.30%         3534           00:42.87    [end TDA_220] 
+INFO (TDA-220):    181     179         31    77.17%   74.55%         3491           00:43.30    [end TDA_220] 
+INFO (TDA-220):    197     194        720    81.88%   79.10%         2771           00:43.32    [end TDA_220] 
+INFO (TDA-220):    213     208        304    83.87%   81.02%         2467           00:43.33    [end TDA_220] 
+INFO (TDA-220):    229     220        285    85.73%   82.82%         2182           00:43.34    [end TDA_220] 
+INFO (TDA-220):    245     233        299    87.69%   84.71%         1883           00:43.36    [end TDA_220] 
+INFO (TDA-220):    261     249        245    89.29%   86.26%         1638           00:43.38    [end TDA_220] 
+INFO (TDA-220):    277     265        171    90.41%   87.34%         1467           00:43.39    [end TDA_220] 
+INFO (TDA-220):    293     280        143    91.34%   88.24%         1324           00:43.41    [end TDA_220] 
+INFO (TDA-220):    309     295        121    92.13%   89.01%         1203           00:43.42    [end TDA_220] 
+INFO (TDA-220):    321     304         28    92.32%   89.18%         1175           00:43.42    [end TDA_220] 
+INFO (TDA-220):    337     318        115    93.07%   89.91%         1060           00:43.43    [end TDA_220] 
+INFO (TDA-220):    353     334         37    93.31%   90.14%         1023           00:43.44    [end TDA_220] 
+INFO (TDA-220):    367     334          0    93.31%   90.14%         1023           00:43.44    [end TDA_220] 
+INFO (TDA-220):    383     350         29    93.50%   90.33%          994           00:43.44    [end TDA_220] 
+INFO (TDA-220):    392     356         70    93.96%   90.77%          924           00:43.45    [end TDA_220] 
+INFO (TDA-220):    399     363         93    94.57%   91.36%          831           00:43.46    [end TDA_220] 
+INFO (TDA-220):    403     367         12    94.64%   91.43%          819           00:43.47    [end TDA_220] 
+INFO (TDA-220):    408     370          9    94.70%   91.49%          810           00:43.48    [end TDA_220] 
+INFO (TDA-220):    413     372          3    94.72%   91.51%          807           00:43.48    [end TDA_220] 
+INFO (TDA-220):    415     372          0    94.72%   91.51%          807           00:43.48    [end TDA_220] 
+INFO (TDA-220):    419     374          4    94.75%   91.53%          803           00:43.49    [end TDA_220] 
+INFO (TDA-220):    421     376          7    94.79%   91.58%          796           00:43.49    [end TDA_220] 
+INFO (TDA-220):    424     377          1    94.80%   91.59%          795           00:43.49    [end TDA_220] 
+INFO (TDA-220):    425     377          0    94.80%   91.59%          795           00:43.50    [end TDA_220] 
+INFO (TDA-220):    427     377          0    94.80%   91.59%          795           00:43.50    [end TDA_220] 
+INFO (TDA-220):    429     377          0    94.80%   91.59%          795           00:43.50    [end TDA_220] 
+INFO (TDA-220):    431     377          0    94.80%   91.59%          795           00:43.51    [end TDA_220] 
+INFO (TDA-220):    432     377          0    94.80%   91.59%          795           00:43.51    [end TDA_220] 
+INFO (TDA-220):    433     378          1    94.81%   91.59%          794           00:43.51    [end TDA_220] 
+INFO (TDA-220):    434     378          0    94.81%   91.59%          794           00:43.51    [end TDA_220] 
+INFO (TDA-220):    435     379          4    94.83%   91.62%          790           00:43.51    [end TDA_220] 
+INFO (TDA-220):    436     380          1    94.84%   91.62%          789           00:43.52    [end TDA_220] 
+INFO (TDA-220):    437     381         34    95.06%   91.84%          755           00:43.52    [end TDA_220] 
+INFO (TDA-220):    438     381          0    95.06%   91.84%          755           00:43.53    [end TDA_220] 
+INFO (TDA-220):    454     397         26    95.23%   92.00%          729           00:49.14    [end TDA_220] 
+INFO (TDA-220):    458     401          9    95.29%   92.06%          720           00:49.15    [end TDA_220] 
+INFO (TDA-220):    461     401          0    95.29%   92.06%          720           00:49.15    [end TDA_220] 
+INFO (TDA-220):    463     403          2    95.30%   92.07%          718           00:49.15    [end TDA_220] 
+INFO (TDA-220):    464     404          1    95.31%   92.08%          717           00:49.15    [end TDA_220] 
+INFO (TDA-220):    465     405          4    95.34%   92.10%          713           00:49.15    [end TDA_220] 
+INFO (TDA-220):    466     406          1    95.34%   92.11%          712           00:49.15    [end TDA_220] 
+INFO (TDA-220):    466     406          0    95.53%   92.28%          682           00:49.32    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     58 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    438     381          0    95.06%   91.84%          755           00:43.53     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 81: write_toggle_gram \
+    -experiment	 TOP_atpg \
+    -testmode	 FULLSCAN \
+
+#-------------------------------------------------------------------------------
+Starting Command: write_toggle_gram 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_atpg
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_write_toggle_gram_FULLSCAN_TOP_atpg_070426144412-195709000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 407 and for capture is 406.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+  WARNING Messages...
+      1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
+      1 WARNING (TBM-109):The test patterns analyzed for toggle calculations contain X values for unknown latch/flop states. The X values can impact toggle numbers significantly. The default latch fill policy for X values (if not specified otherwise) is the 'dontcare' option set to 'random'.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 88: write_vectors \
+    -inexperiment	 TOP_atpg \
+    -testmode	 FULLSCAN \
+    -language	 verilog \
+    -scanformat	 parallel \
+
+
+Starting Command: write_vectors 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_write_vectors_FULLSCAN_TOP_atpg_070426144413-477617000
+            -STDOUT summary
+            -scanformat parallel
+          + -language verilog
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      4 INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/ATPG/testresults/verilog/cycleMap.FULLSCAN.TOP_atpg.    
+      2 INFO (TVE-004): Reading test section 1.1. Test section type equals scan.    
+      2 INFO (TVE-008): Created 291 total measures, of which 0 are PO measures and 291 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      4 INFO (TVE-103): There was no specified TEST offset for this clock 'pin REF_CLK'.  A default clock offset of 8.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(runmodus.atpg.tcl) 98: commit_tests \
+    -inexperiment	 TOP_atpg \
+    -testmode	 FULLSCAN
+INFO (TUI-772): The command 'commit_tests' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: commit_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426144414-862920000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.43.1 (Relative test numbers 1 thru 407).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.43.1 (Relative test numbers 1 to 407).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+#@ End verbose source runmodus.atpg.tcl
+0
+@modus:root:/ 2> faultstatus
+invalid command name "faultstatus"
+@modus:root:/ 3> report
+invalid command name "report"
+@modus:root:/ 4> report_faults
+Starting Command: report_faults 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_report_faults_070426144444-775938000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Global    Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+0
+@modus:root:/ 5> report_faults -class untested
+Starting Command: report_faults 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_report_faults_070426144544-786360000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  ERROR Messages...
+      1 ERROR (TFW-021): The option -class is not valid for the report_faults command line.   
+      1 ERROR (TFW-926): Syntax checking detected terminating errors.  Correct the errors noted in preceding messages and rerun.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+5
+@modus:root:/ 6> help report_faults
+Commands:
+    report_faults:
+
+    report_faults is used to print out a list of faults that meet the specified 
+    criteria. 
+
+
+report_faults:
+
+ [-H]                                  Help text
+ [-h]                                  Help text
+ [-ALTFAULT <string>]                  Alternate Fault Model
+ [-COMET <string>]                     COMET Name(s)
+ [-EXPERIMENT <string>]                Experiment Name
+ [-LOG no|all|summary|nosummary] (all) Customize Data Written to Log
+ [-LOGCOMPRESS yes|no] (no)            Compress the log file
+ [-LOGFILE <outfilename>]              Write to specified log file
+ [-STDOUT no|all|summary|nosummary] (all) Customize Data Written to STDOUT
+ [-TESTMODE <string>]                  Test Mode (Name(s), all, or NONE)
+  -WORKDIR <indirectory>               Working Directory
+ [-cellawaredefects yes|no] (no)       Report Cell Aware Defects for each pattern fault
+ [-cellnamelength <integer>] (20)      Length of Cell Name field (column) in the report
+ [-experimentglobal no|yes] (no)       Include experiment status on top of global status
+ [-experimentonly no|yes] (no)         Include uncommitted tests experiment status without test mode status
+ [-faultlocation net|faultnet|pin|cellpin] (Conditional Default) Use primitive pin names, cell pin names or propagation net names to identify fault location
+ [-faults <string>]                    Range of Fault IDs
+ [-faultstatus untested|tested|testedthismode|possibly|redundant|aborted|untestable|all[,untested|tested|testedthismode|possibly|redundant|aborted|untestable|all]...] (Conditional Default) Include Only Faults with Specified Fault Status
+ [-faulttype static|dynamic|parametric|shortednet|staticbridge|dynamicbridge|iddq|all[,static|dynamic|parametric|shortednet|staticbridge|dynamicbridge|iddq|all]...] (static) Include Only Faults with Specified Types of Faults
+ [-help <string>]                      Help Facility
+ [-hierend primitive|techcell|macro|<integer>] (Conditional Default) Limit hierarchical list to this many levels deep
+ [-hierstart top|<string><integer>]    Report Hierarchical List for Block Name
+ [-ignored yes|no] (Conditional Default) Include faults that are identified as ignored
+ [-inactive yes|no] (Conditional Default) Include faults that are not active in the selected test mode
+ [-inactiveallmodes yes|no] (no)       List Faults that are Not Active in Any Testmode
+ [-includecollapsed no|yes] (yes)      Include Collapsed Faults
+ [-logmode append|overwrite] (overwrite) Specify the mode of writing to logfile : append or overwrite.
+ [-messagecount <string>]              Limit Messages for Specified Message Id (e.g., messagecount=XXX-710=3).
+ [-messagecounteach <integer>]         Default Limit for Each Message.
+ [-messagecounteachseverity all|excludeinfo] (all) Level of severity for which messages are to be suppressed as per messagecounteach
+ [-messagesuppressionfile <infilename>]File containing messages that needs to be filtered
+ [-messagesuppressionrc include|exclude] (include) Option to exclude return code of the command based on the highest severity code of suppressed messages
+ [-powercomponent <string>]            Type(s) of Low Power Components to report
+ [-ptab yes|no] (no)                   Include faults that are identified as possibly testable at best
+ [-quiet no|yes] (no)                  Quiet
+ [-reportdetails no|yes] (no)          Print Long Listing (activation/propagation requirements)
+ [-reportkey yes|no] (no)              Print Fault Status Key and Fault Type Key
+ [-statussummary no|yes|only] (yes)    Print fault status summary table for listed faults
+
+@modus:root:/ 7> report_faults -faultstatus untested
+Starting Command: report_faults 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_report_faults_070426144634-143562000
+            -STDOUT summary
+          + -faultstatus untested
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Global    Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+0
+@modus:root:/ 8> report_faults -faultstatus untested -STDOUT all
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_report_faults_070426144843-996243000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+TFMlist 
+
+Logic Model(GM)   07/04/26
+                  09:13:15
+
+
+File Id     faultModel        faultStatus
+Created (GM)  07/04/26           07/04/26
+              09:13:20           09:13:20
+Modified(GM)  07/04/26           07/04/26
+              09:13:20           09:14:14
+Code Level        2025.0             2025.0            
+Max Fault Id         15858
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 4
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Global    Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         3 u       OSA0           PI                      RST_N   
+         4 u       OSA1           PI                      RST_N   
+        48 u       OSA1           PI                      TestMode   
+       101 u       OSA1           OR2X1                   U1_RST_SYNC_UART.g21.Y   
+     15850 cu      ISA1           OR2X1                   U1_RST_SYNC_UART.g21.A   
+     15852 cu      ISA1           OR2X1                   U1_RST_SYNC_UART.g21.B   
+       109 u       ISA0           OR2X1                   U1_RST_SYNC_UART.g21.B   
+       129 u       ISA1           SDFFRHQX1               U1_RST_SYNC_UART.\sync_reg_reg[1].RN   
+       159 u       ISA1           SDFFRHQX1               U1_RST_SYNC_UART.\sync_reg_reg[0].RN   
+       189 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.gen_clk_reg.RN   
+       212 u       OSA1           OR2X1                   U1_Integer_Clock_Divider_RX.g1376.Y   
+     15794 cu      ISA1           OR2X1                   U1_Integer_Clock_Divider_RX.g1376.A   
+     15796 cu      ISA1           OR2X1                   U1_Integer_Clock_Divider_RX.g1376.B   
+       220 u       ISA0           OR2X1                   U1_Integer_Clock_Divider_RX.g1376.B   
+       562 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[6].RN   
+       594 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[5].RN   
+       616 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[4].RN   
+       638 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[3].RN   
+       672 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[2].RN   
+       706 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[1].RN   
+       724 u       ISA1           SDFFRHQX1               U1_Integer_Clock_Divider_RX.\counter_reg[0].RN   
+       742 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.ser_done_reg.RN   
+       759 u       OSA1           OR2X1                   U0_UART.U0_UART_TX.U0_serializer.g1119.Y   
+     15456 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_serializer.g1119.A   
+     15458 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_serializer.g1119.B   
+       762 u       ISA0           OR2X1                   U0_UART.U0_UART_TX.U0_serializer.g1119.B   
+      1010 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[7].RN   
+      1028 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[6].RN   
+      1064 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[5].RN   
+      1073 u       ISA1           SDFFRHQX1               U0_ALU_16B.OUT_VALID_reg.RN   
+      1085 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[0].RN   
+      1097 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[10].RN   
+      1109 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[11].RN   
+      1121 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[12].RN   
+      1133 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[13].RN   
+      1145 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[14].RN   
+      1157 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[15].RN   
+      1169 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[1].RN   
+      1181 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[2].RN   
+      1193 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[3].RN   
+      1205 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[4].RN   
+      1217 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[5].RN   
+      1229 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[6].RN   
+      1241 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[7].RN   
+      1253 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[8].RN   
+      1265 u       ISA1           SDFFRHQX1               U0_ALU_16B.\ALU_OUT_reg[9].RN   
+      1293 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[4].RN   
+      1324 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[3].RN   
+      1349 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[2].RN   
+      1371 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[1].RN   
+      1418 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[0].RN   
+      1446 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\counter_reg[3].RN   
+      1478 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\counter_reg[2].RN   
+      1508 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\counter_reg[1].RN   
+      1570 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_serializer.\counter_reg[0].RN   
+      1595 u       ISA1           SDFFSXL                 U0_UART.U0_UART_TX.U0_serializer.S_DATA_reg.SN   
+      1737 u       OSA1           OR2X1                   U0_UART.U0_UART_TX.U0_parity_Calc.g184.Y   
+     14988 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_parity_Calc.g184.A   
+     14990 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_parity_Calc.g184.B   
+      1741 u       ISA0           OR2X1                   U0_UART.U0_UART_TX.U0_parity_Calc.g184.B   
+      1940 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[7].RN   
+      1976 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[6].RN   
+      2002 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[5].RN   
+      2024 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[4].RN   
+      2048 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[3].RN   
+      2072 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[2].RN   
+      2099 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[1].RN   
+      2125 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[0].RN   
+      2159 u       OSA1           OR2X1                   U0_UART.U0_UART_TX.U0_FSM.g288.Y   
+     14788 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_FSM.g288.A   
+     14790 cu      ISA1           OR2X1                   U0_UART.U0_UART_TX.U0_FSM.g288.B   
+      2163 u       ISA0           OR2X1                   U0_UART.U0_UART_TX.U0_FSM.g288.B   
+      2234 u       ISA1           AOI22X1                 U0_UART.U0_UART_TX.U0_FSM.g2.A1   
+      2240 u       ISA1           AOI22X1                 U0_UART.U0_UART_TX.U0_FSM.g2.B1   
+      2258 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[2].RN   
+      2270 u       ISA0           SDFFRHQX1               U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[2].D   
+      2283 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[1].RN   
+      2316 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[0].RN   
+      2362 u       ISA1           AND2X1                  U0_UART.U0_UART_TX.U0_FSM.DFT_tpi_xor_tree_13.DFT_and_g7.A   
+      2366 u       ISA1           AND2X1                  U0_UART.U0_UART_TX.U0_FSM.DFT_tpi_xor_tree_13.DFT_and3_g7.A   
+      2368 u       ISA1           AND2X1                  U0_UART.U0_UART_TX.U0_FSM.DFT_tpi_xor_tree_13.DFT_and2_g7.A   
+      2376 u       ISA1           AND2X1                  U0_UART.U0_UART_TX.U0_FSM.DFT_tpi_xor_tree_13.DFT_and1_g7.A   
+      2394 u       ISA1           AND2XL                  U0_UART.U0_UART_TX.U0_FSM.DFT_testpoint_0.B   
+      2412 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_strt_check.strt_glitch_reg.RN   
+     14592 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_strt_check.g774.A   
+     14594 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_strt_check.g774.B   
+     14596 cu      OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_strt_check.g774.Y   
+      2445 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.B   
+      2446 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.A   
+      2448 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_strt_check.g774.B   
+      2451 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.B   
+      2452 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.A   
+      2454 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.B   
+      2456 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.A   
+      2458 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.B   
+      2460 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.B   
+      2461 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.A   
+      2462 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.A   
+      2464 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.B   
+      2466 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.B   
+      2472 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.A   
+      2476 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.A   
+      2477 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.D   
+      2478 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.C   
+     14602 cu      OSA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.Y   
+      2482 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.B   
+      2484 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.A   
+     14584 cu      OSA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.Y   
+      2492 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.B   
+     14578 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.Y   
+      2494 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.B   
+     14577 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g771.Y   
+      2498 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.A   
+      2500 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.A   
+      2501 u       ISA1           OA21X1                  U0_UART.U0_UART_RX.U0_strt_check.g766.B0   
+      2502 u       ISA0           OA21X1                  U0_UART.U0_UART_RX.U0_strt_check.g766.A1   
+      2506 u       ISA1           OA21X1                  U0_UART.U0_UART_RX.U0_strt_check.g766.A0   
+     14540 cu      ISA1           OA21X1                  U0_UART.U0_UART_RX.U0_strt_check.g766.A1   
+      2512 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.C0   
+     14550 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.Y   
+      2513 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.B0   
+     14586 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.A   
+     14588 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.B   
+     14590 cu      OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.Y   
+      2514 u       ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.A1   
+      2518 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.A0   
+     14530 cu      ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.A1   
+      2520 u       ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.A0   
+      2552 u       OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g762.Y   
+      2556 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g762.B   
+     14544 cu      OSA1           OA21X1                  U0_UART.U0_UART_RX.U0_strt_check.g766.Y   
+      2560 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g762.A   
+      2586 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.B0   
+     14572 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.Y   
+      2588 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.A1   
+      2589 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.A0   
+     14488 cu      ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.A1   
+      2590 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.A0   
+      2594 u       ISA0           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.D   
+     14565 cu      OSA0           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.Y   
+      2596 u       ISA0           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.C   
+     14491 cu      OSA0           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.Y   
+      2597 u       ISA0           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.B   
+      2598 u       ISA0           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.A   
+     14535 cu      OSA0           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.Y   
+      2608 u       ISA0           OAI32X1                 U0_UART.U0_UART_RX.U0_strt_check.g757.A1   
+      2612 u       ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_strt_check.g757.A0   
+     14470 cu      ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_strt_check.g757.A1   
+     14472 cu      ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_strt_check.g757.A2   
+     14476 cu      ISA1           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.A   
+     14478 cu      ISA1           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.B   
+     14480 cu      ISA1           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.C   
+     14482 cu      ISA1           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.D   
+     14484 cu      OSA1           OR4X1                   U0_UART.U0_UART_RX.U0_strt_check.g758.Y   
+     14490 cu      ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.B0   
+     14492 cu      OSA1           OAI21X1                 U0_UART.U0_UART_RX.U0_strt_check.g759.Y   
+     14532 cu      ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.B0   
+     14534 cu      ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.C0   
+     14536 cu      OSA1           OAI211X1                U0_UART.U0_UART_RX.U0_strt_check.g765.Y   
+     14549 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g767.Y   
+     14558 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.A   
+     14560 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.B   
+     14562 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.C   
+     14564 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.D   
+     14566 cu      OSA1           NAND4XL                 U0_UART.U0_UART_RX.U0_strt_check.g769.Y   
+     14571 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_strt_check.g770.Y   
+     14580 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.A   
+     14582 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.B   
+     14583 cu      OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g772.Y   
+     14589 cu      OSA0           NAND2X1                 U0_UART.U0_UART_RX.U0_strt_check.g773.Y   
+     14598 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.A   
+     14600 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.B   
+     14601 cu      OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_strt_check.g775.Y   
+      2616 u       ISA0           OAI32X1                 U0_UART.U0_UART_RX.U0_strt_check.g757.A0   
+      2648 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_1.DFT_and_g7.A   
+      2654 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_1.DFT_and3_g7.A   
+      2656 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_1.DFT_and2_g7.A   
+      2662 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_1.DFT_and1_g7.A   
+      2682 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_strt_check.DFT_testpoint_0.B   
+      2698 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_stop_check.stp_err_reg.RN   
+     14368 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_stop_check.g560.A   
+     14370 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_stop_check.g560.B   
+     14372 cu      OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_stop_check.g560.Y   
+      2742 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_stop_check.g560.B   
+      2766 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.B   
+      2767 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.A   
+      2768 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.B   
+      2770 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.B   
+      2772 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.A   
+      2774 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.A   
+      2776 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.B   
+      2777 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.B   
+      2778 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.A   
+      2779 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.A   
+      2784 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.B0   
+     14348 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.Y   
+      2786 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.A1N   
+      2788 u       ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.A0N   
+     14332 cu      ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.A1N   
+      2792 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.A0N   
+      2800 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.C   
+     14335 cu      OSA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.Y   
+      2804 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.B   
+     14356 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.A   
+     14358 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.B   
+     14359 cu      OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.Y   
+      2805 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.A   
+      2814 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.B   
+     14354 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.Y   
+      2818 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.B   
+     14353 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g557.Y   
+      2820 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.A   
+      2821 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.A   
+      2870 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.B   
+     14312 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.Y   
+      2880 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g544.B0   
+     14260 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.A   
+     14262 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.B   
+     14264 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.C   
+     14266 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.D   
+     14268 cu      OSA1           NAND4XL                 U0_UART.U0_UART_RX.U0_stop_check.g545.Y   
+     14311 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g551.Y   
+     14320 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.A   
+     14322 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.B   
+     14324 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.C   
+     14326 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.D   
+     14327 cu      OSA0           NOR4X1                  U0_UART.U0_UART_RX.U0_stop_check.g553.Y   
+     14334 cu      ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.B0   
+     14336 cu      OSA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_stop_check.g554.Y   
+     14347 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_stop_check.g556.Y   
+     14360 cu      OSA1           NOR2X1                  U0_UART.U0_UART_RX.U0_stop_check.g558.Y   
+      2928 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_parity_check.parity_reg.RN   
+      2970 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_parity_check.par_err_reg.RN   
+      2992 u       OSA1           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.Y   
+     14217 cu      ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.AN   
+     14220 cu      ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.B   
+      2994 u       OSA0           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.Y   
+      2998 u       ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.B   
+      3000 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_parity_check.g1089.AN   
+      3006 u       OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_parity_check.g1088.Y   
+     14212 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_parity_check.g1088.A   
+     14214 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_parity_check.g1088.B   
+      3011 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_parity_check.g1088.B   
+      3029 u       ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_parity_check.g1085.B   
+      3050 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.B   
+      3052 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.B   
+      3056 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.A   
+      3058 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.A   
+      3059 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.B   
+      3062 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.B   
+      3066 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.A   
+      3068 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.A   
+      3072 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.B   
+      3074 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.B   
+      3078 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.A   
+      3080 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.A   
+      3112 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1077.B   
+      3120 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1077.A   
+      3152 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.C   
+     14172 cu      OSA1           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.Y   
+      3154 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.B   
+      3158 u       ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.AN   
+      3172 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.B   
+     14188 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.Y   
+      3176 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.B   
+     14187 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1083.Y   
+      3178 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.A   
+      3182 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.A   
+      3190 u       ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.B   
+      3194 u       ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.AN   
+      3201 u       ISA0           OR2X1                   U0_ALU_16B.g5698__6260.B   
+      3204 u       OSA1           OR2X1                   U0_ALU_16B.g5698__6260.Y   
+     14092 cu      ISA1           OR2X1                   U0_ALU_16B.g5698__6260.B   
+     14093 cu      ISA1           OR2X1                   U0_ALU_16B.g5698__6260.A   
+      3207 u       OSA0           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.Y   
+     14086 cu      ISA1           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.B0   
+     14088 cu      ISA1           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.C0   
+     14097 cu      ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.AN   
+     14100 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.B   
+     14102 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.C   
+     14104 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.D   
+     14106 cu      OSA1           NAND4BX1                U0_UART.U0_UART_RX.U0_parity_check.g1070.Y   
+     14151 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1077.Y   
+     14182 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.Y   
+      3209 u       ISA0           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.B0   
+     14181 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_parity_check.g1082.Y   
+      3210 u       ISA1           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.A1   
+      3211 u       ISA0           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.A0   
+     14084 cu      ISA0           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.A1   
+      3212 u       ISA1           AOI211XL                U0_UART.U0_UART_RX.U0_parity_check.g1068.A0   
+      3226 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.B0   
+      3230 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.A1   
+     14207 cu      OSA0           INVX1                   U0_UART.U0_UART_RX.U0_parity_check.g1087.Y   
+     14208 cu      ISA1           INVX1                   U0_UART.U0_UART_RX.U0_parity_check.g1087.A   
+      3232 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.A0   
+     14068 cu      ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.A1   
+     14209 cu      OSA1           INVX1                   U0_UART.U0_UART_RX.U0_parity_check.g1087.Y   
+     14210 cu      ISA0           INVX1                   U0_UART.U0_UART_RX.U0_parity_check.g1087.A   
+      3233 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.A0   
+      3286 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.B   
+     14070 cu      ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.B0   
+     14072 cu      OSA1           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.Y   
+      3290 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.A   
+      3298 u       ISA0           OAI32X1                 U0_UART.U0_UART_RX.U0_parity_check.g1060.A1   
+     14127 cu      OSA0           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.Y   
+      3300 u       ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_parity_check.g1060.A0   
+     14030 cu      ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_parity_check.g1060.A1   
+     14032 cu      ISA1           OAI32X1                 U0_UART.U0_UART_RX.U0_parity_check.g1060.A2   
+     14036 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.A   
+     14038 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.B   
+     14040 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.C   
+     14042 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.D   
+     14044 cu      OSA1           NAND4XL                 U0_UART.U0_UART_RX.U0_parity_check.g1062.Y   
+     14071 cu      OSA0           OAI21X1                 U0_UART.U0_UART_RX.U0_parity_check.g1066.Y   
+     14108 cu      OSA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.Y   
+     14121 cu      ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.AN   
+     14124 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.B   
+     14126 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.C   
+     14128 cu      OSA1           NAND3BXL                U0_UART.U0_UART_RX.U0_parity_check.g1073.Y   
+     14171 cu      OSA0           XOR2XL                  U0_UART.U0_UART_RX.U0_parity_check.g1081.Y   
+      3302 u       ISA0           OAI32X1                 U0_UART.U0_UART_RX.U0_parity_check.g1060.A0   
+     14107 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_parity_check.g1071.Y   
+      3329 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][0].RN   
+      3341 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][1].RN   
+      3353 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][2].RN   
+      3365 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][3].RN   
+      3377 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][4].RN   
+      3389 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][5].RN   
+      3401 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][6].RN   
+      3413 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][7].RN   
+      3425 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][0].RN   
+      3437 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][1].RN   
+      3449 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][2].RN   
+      3461 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][3].RN   
+      3473 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][4].RN   
+      3485 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][5].RN   
+      3497 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][6].RN   
+      3509 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][7].RN   
+      3521 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][0].RN   
+      3533 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][1].RN   
+      3545 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][2].RN   
+      3557 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][3].RN   
+      3569 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][4].RN   
+      3581 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][5].RN   
+      3593 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][6].RN   
+      3605 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][7].RN   
+      3617 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][0].RN   
+      3629 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][1].RN   
+      3641 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][2].RN   
+      3653 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][3].RN   
+      3665 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][4].RN   
+      3677 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][5].RN   
+      3689 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][6].RN   
+      3701 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][7].RN   
+      3713 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][0].RN   
+      3725 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][1].RN   
+      3737 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][2].RN   
+      3749 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][3].RN   
+      3761 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][4].RN   
+      3773 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][5].RN   
+      3785 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][6].RN   
+      3797 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][7].RN   
+      3809 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][0].RN   
+      3821 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][1].RN   
+      3833 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][2].RN   
+      3845 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][3].RN   
+      3857 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][4].RN   
+      3869 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][5].RN   
+      3881 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][6].RN   
+      3893 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][7].RN   
+      3905 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][0].RN   
+      3917 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][1].RN   
+      3929 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][2].RN   
+      3941 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][3].RN   
+      3953 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][4].RN   
+      3965 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][5].RN   
+      3977 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][6].RN   
+      3989 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][7].RN   
+      4001 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][0].RN   
+      4013 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][1].RN   
+      4025 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][2].RN   
+      4037 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][3].RN   
+      4049 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][4].RN   
+      4061 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][5].RN   
+      4073 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][6].RN   
+      4085 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][7].RN   
+      4108 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_8.DFT_and_g7.A   
+      4114 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_8.DFT_and3_g7.A   
+      4118 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_8.DFT_and2_g7.A   
+      4124 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_8.DFT_and1_g7.A   
+      4143 u       ISA1           NAND4XL                 U0_Async_fifo.u_fifo_mem.g1489__6783.B   
+     13947 cu      OSA1           AOI22XL                 U0_Async_fifo.u_fifo_mem.g1492__2802.Y   
+      4172 u       ISA0           AOI22XL                 U0_Async_fifo.u_fifo_mem.g1492__2802.B0   
+     13956 cu      ISA0           AOI22XL                 U0_Async_fifo.u_fifo_mem.g1492__2802.B1   
+      4176 u       ISA0           AOI22XL                 U0_Async_fifo.u_fifo_mem.g1492__2802.A0   
+     13955 cu      ISA0           AOI22XL                 U0_Async_fifo.u_fifo_mem.g1492__2802.A1   
+      4180 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_12.DFT_and_g7.A   
+      4186 u       ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1493__1705.A0   
+     13941 cu      ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1493__1705.A1   
+      4188 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_12.DFT_and3_g7.A   
+      4190 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_12.DFT_and2_g7.A   
+      4198 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_12.DFT_and1_g7.A   
+      4201 u       ISA1           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1495__8246.B0   
+      4224 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_parity_check.DFT_testpoint_0.B   
+      4229 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.B0   
+      4230 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.A1   
+      4234 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.A0   
+     13908 cu      ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.A1   
+      4238 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.A0   
+      4284 u       OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1186.Y   
+     13860 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1186.A   
+     13862 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1186.B   
+      4289 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1186.B   
+      4298 u       OSA0           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1185.Y   
+     13854 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1185.A   
+     13856 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1185.B   
+      4301 u       ISA1           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1505__2883.B0   
+      4329 u       OSA1           NAND2XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1182.Y   
+     13834 cu      ISA0           NAND2XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1182.A   
+     13836 cu      ISA0           NAND2XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1182.B   
+      4334 u       ISA1           NAND2XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1182.B   
+      4341 u       ISA1           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1509__6417.B0   
+      4346 u       ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1509__6417.A0   
+     13827 cu      ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1509__6417.A1   
+      4354 u       ISA1           OA21X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1179.B0   
+      4358 u       ISA0           OA21X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1179.A1   
+      4361 u       ISA1           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1511__2398.B0   
+      4365 u       ISA1           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1511__2398.A0   
+      4366 u       ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1511__2398.A0   
+     13807 cu      ISA0           AOI22X1                 U0_Async_fifo.u_fifo_mem.g1511__2398.A1   
+      4380 u       OSA0           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1176.Y   
+     13796 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1176.A   
+     13798 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1176.B   
+      4404 u       ISA0           AOI21XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1174.B0   
+      4408 u       ISA1           AOI21XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1174.A1   
+      4440 u       ISA0           MXI2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1168.A   
+      4448 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1167.B0   
+     13808 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1178.A   
+     13810 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1178.B   
+     13812 cu      OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1178.Y   
+      4468 u       ISA1           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.A2   
+     13910 cu      ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.B0   
+     13912 cu      OSA1           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.Y   
+      4469 u       ISA1           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.A1   
+     13823 cu      OSA1           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1180.Y   
+     13824 cu      ISA0           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1180.A   
+      4470 u       ISA0           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.A0   
+     13740 cu      ISA0           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.A1   
+     13742 cu      ISA0           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.A2   
+     13821 cu      OSA0           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1180.Y   
+     13822 cu      ISA1           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1180.A   
+     13911 cu      OSA0           OAI21X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g2.Y   
+      4478 u       ISA1           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.B2   
+     13903 cu      OSA1           INVXL                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1195.Y   
+     13904 cu      ISA0           INVXL                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1195.A   
+      4484 u       ISA1           AOI33XL                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1165.B0   
+     13865 cu      ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1187.AN   
+     13868 cu      ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1187.B   
+     13870 cu      OSA1           NAND2BX1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1187.Y   
+      4498 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1164.A   
+     13843 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1183.Y   
+      4510 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1163.A   
+      4548 u       ISA0           AOI211XL                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1160.B0   
+      4560 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1159.B   
+      4612 u       OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1149.Y   
+     13652 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1149.A   
+     13654 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1149.B   
+      4620 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1149.A   
+      4635 u       ISA0           AOI211XL                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1147.C0   
+      4643 u       ISA1           AOI211XL                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1147.A1   
+      4652 u       OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.Y   
+     13636 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.A   
+     13638 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.B   
+      4659 u       OSA0           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.Y   
+      4660 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.B   
+      4667 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1146.A   
+      4668 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.C0   
+      4676 u       ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.A1   
+      4683 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.A0   
+     13628 cu      ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.A1   
+      4684 u       ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.A0   
+      4692 u       OSA0           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1143.Y   
+     13622 cu      ISA1           INVX1                   U0_UART.U0_UART_RX.U0_edge_bit_counter.g1143.A   
+     13630 cu      ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.B0   
+     13632 cu      ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.C0   
+     13634 cu      OSA1           OAI211X1                U0_UART.U0_UART_RX.U0_edge_bit_counter.g1144.Y   
+      4699 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.B   
+      4700 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.B   
+      4707 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.A   
+      4708 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.A   
+      4715 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.B   
+     13620 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.Y   
+      4716 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.A   
+      4740 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[4].RN   
+      4788 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[3].RN   
+      4836 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[2].RN   
+      4884 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[1].RN   
+      4932 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[0].RN   
+      4980 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].RN   
+      4987 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].SE   
+      5003 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].D   
+     13614 cu      OSA1           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.Y   
+      5004 u       ISA0           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].D   
+     13610 cu      ISA0           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.A   
+     13612 cu      ISA0           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.B   
+     13613 cu      OSA0           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.g1140.Y   
+     13619 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_edge_bit_counter.g1142.Y   
+      5028 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].RN   
+      5035 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].SE   
+      5051 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].D   
+      5052 u       ISA0           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].D   
+      5076 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1].RN   
+      5083 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1].SE   
+      5094 u       ISA0           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1].D   
+      5112 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[0].RN   
+      5159 u       ISA0           OR2X1                   U0_Async_fifo.u_fifo_mem.g947__7482.B   
+      5162 u       OSA1           OR2X1                   U0_Async_fifo.u_fifo_mem.g947__7482.Y   
+     13487 cu      ISA1           OR2X1                   U0_Async_fifo.u_fifo_mem.g947__7482.B   
+     13488 cu      ISA1           OR2X1                   U0_Async_fifo.u_fifo_mem.g947__7482.A   
+      5172 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_14.DFT_and_g7.A   
+      5176 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_14.DFT_and3_g7.A   
+      5181 u       ISA1           AND2XL                  U0_Async_fifo.u_fifo_rd.DFT_testpoint_0.B   
+      5182 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_14.DFT_and2_g7.A   
+      5194 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_14.DFT_and1_g7.A   
+      5195 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and1_g7.A   
+      5201 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and2_g7.A   
+      5203 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and2_g7.B   
+      5207 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and3_g7.A   
+      5213 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and_g7.A   
+      5222 u       ISA1           CLKXOR2X1               U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_xor4_g23.A   
+     13449 cu      OSA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_5.DFT_and2_g7.Y   
+      5232 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_10.DFT_and_g7.A   
+      5246 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_10.DFT_and3_g7.A   
+      5247 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_7.DFT_and1_g7.A   
+      5250 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_10.DFT_and2_g7.A   
+      5252 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_10.DFT_and1_g7.A   
+      5253 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_7.DFT_and2_g7.A   
+      5259 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_7.DFT_and3_g7.A   
+      5265 u       ISA1           AND2X1                  U0_Async_fifo.u_fifo_rd.DFT_tpi_xor_tree_7.DFT_and_g7.A   
+      5269 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_testpoint_0.B   
+      5295 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].RN   
+      5307 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[1].RN   
+      5319 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[2].RN   
+      5331 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[3].RN   
+      5343 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[0].RN   
+      5355 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[1].RN   
+      5367 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[2].RN   
+      5379 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[3].RN   
+      5394 u       ISA1           MX2XL                   U0_Async_fifo.u_fifo_rd.g281__5107.S0   
+      5399 u       ISA1           OAI2BB1X1               U0_Async_fifo.u_fifo_rd.g283__6260.A1N   
+      5401 u       ISA1           OAI2BB1X1               U0_Async_fifo.u_fifo_rd.g283__6260.B0   
+     13355 cu      ISA1           INVX1                   U0_Async_fifo.u_fifo_rd.g293.A   
+     13357 cu      OSA0           INVX1                   U0_Async_fifo.u_fifo_rd.g293.Y   
+     13361 cu      OSA1           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.Y   
+     13364 cu      ISA0           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.C0   
+     13365 cu      ISA0           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.B0   
+      5408 u       ISA1           XNOR2X1                 U0_Async_fifo.u_fifo_rd.g284__4319.B   
+      5409 u       OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_deserializer.g1366.Y   
+     13366 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_deserializer.g1366.A   
+     13368 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_deserializer.g1366.B   
+      5411 u       ISA0           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.A0   
+      5413 u       ISA0           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.A1   
+      5414 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_deserializer.g1366.B   
+      5415 u       ISA1           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.B0   
+      5417 u       ISA1           OAI211X1                U0_Async_fifo.u_fifo_rd.g285__8428.C0   
+     13352 cu      ISA0           INVX1                   U0_Async_fifo.u_fifo_rd.g293.A   
+     13353 cu      OSA1           INVX1                   U0_Async_fifo.u_fifo_rd.g293.Y   
+      5426 u       ISA1           MX2XL                   U0_Async_fifo.u_fifo_rd.g287__5526.S0   
+      5493 u       ISA1           NOR4BX1                 U0_UART.U0_UART_RX.U0_deserializer.g1361.AN   
+      5507 u       OSA1           INVX1                   U0_Async_fifo.u_fifo_rd.g342.Y   
+     13314 cu      OSA0           NOR2XL                  U0_Async_fifo.u_fifo_rd.g343__2398.Y   
+     13315 cu      ISA1           NOR2XL                  U0_Async_fifo.u_fifo_rd.g343__2398.B   
+     13317 cu      ISA1           NOR2XL                  U0_Async_fifo.u_fifo_rd.g343__2398.A   
+     13319 cu      ISA0           INVX1                   U0_Async_fifo.u_fifo_rd.g342.A   
+      5511 u       ISA0           NOR2XL                  U0_Async_fifo.u_fifo_rd.g343__2398.B   
+      5521 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[0].RN   
+      5533 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[1].RN   
+      5545 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[2].RN   
+      5557 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[3].RN   
+      5569 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\w_ptr_reg[0].RN   
+      5581 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\w_ptr_reg[1].RN   
+      5593 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\w_ptr_reg[2].RN   
+      5605 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_fifo_wr.\w_ptr_reg[3].RN   
+      5642 u       ISA1           AOI32X1                 U0_UART.U0_UART_RX.U0_deserializer.g1354.A2   
+      5731 u       OSA1           INVX1                   U0_Async_fifo.u_fifo_wr.g284.Y   
+     13243 cu      OSA0           NOR2XL                  U0_Async_fifo.u_fifo_wr.g285__7482.Y   
+     13245 cu      ISA1           NOR2XL                  U0_Async_fifo.u_fifo_wr.g285__7482.B   
+     13246 cu      ISA1           NOR2XL                  U0_Async_fifo.u_fifo_wr.g285__7482.A   
+     13247 cu      ISA0           INVX1                   U0_Async_fifo.u_fifo_wr.g284.A   
+      5735 u       ISA0           NOR2XL                  U0_Async_fifo.u_fifo_wr.g285__7482.B   
+      5745 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[0][0].RN   
+      5757 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[0][1].RN   
+      5769 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[1][0].RN   
+      5781 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[1][1].RN   
+      5793 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[2][0].RN   
+      5805 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[2][1].RN   
+      5817 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[3][0].RN   
+      5829 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_r2w_sync.\sync_reg_reg[3][1].RN   
+      5837 u       ISA0           OR2X1                   U0_Async_fifo.u_r2w_sync.g29__5477.B   
+      5840 u       OSA1           OR2X1                   U0_Async_fifo.u_r2w_sync.g29__5477.Y   
+     13235 cu      ISA1           OR2X1                   U0_Async_fifo.u_r2w_sync.g29__5477.B   
+     13239 cu      ISA1           OR2X1                   U0_Async_fifo.u_r2w_sync.g29__5477.A   
+      5847 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][0].RN   
+      5859 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1].RN   
+      5871 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][0].RN   
+      5883 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1].RN   
+      5895 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][0].RN   
+      5907 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1].RN   
+      5919 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][0].RN   
+      5931 u       ISA1           SDFFRHQX1               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1].RN   
+      5939 u       ISA0           OR2X1                   U0_Async_fifo.u_w2r_sync.g29__2398.B   
+      5942 u       OSA1           OR2X1                   U0_Async_fifo.u_w2r_sync.g29__2398.Y   
+     13232 cu      ISA1           OR2X1                   U0_Async_fifo.u_w2r_sync.g29__2398.B   
+     13233 cu      ISA1           OR2X1                   U0_Async_fifo.u_w2r_sync.g29__2398.A   
+      5950 u       ISA0           OAI32X1                 U0_UART.U0_UART_RX.U0_deserializer.g1345.A0   
+      5974 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_deserializer.g1342.A   
+      5999 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_deserializer.g1339.A0   
+      6017 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[0].RN   
+      6029 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[1].RN   
+      6041 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[2].RN   
+      6053 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[3].RN   
+      6065 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[4].RN   
+      6077 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[5].RN   
+      6089 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[6].RN   
+      6101 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_bus_reg[7].RN   
+      6113 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_reg_reg[0].RN   
+      6125 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.\sync_reg_reg[1].RN   
+      6137 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.enable_flop_reg.RN   
+      6149 u       ISA1           SDFFRHQX1               U0_DATA_SYNC.enable_pulse_reg.RN   
+      6167 u       OSA1           INVX1                   U0_DATA_SYNC.g121.Y   
+     13161 cu      OSA0           NOR2XL                  U0_DATA_SYNC.g122__2802.Y   
+     13162 cu      ISA1           NOR2XL                  U0_DATA_SYNC.g122__2802.B   
+     13163 cu      ISA1           NOR2XL                  U0_DATA_SYNC.g122__2802.A   
+     13164 cu      ISA0           INVX1                   U0_DATA_SYNC.g121.A   
+      6171 u       ISA0           NOR2XL                  U0_DATA_SYNC.g122__2802.B   
+      6229 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[7].RN   
+      6245 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[0].RN   
+      6257 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[1].RN   
+      6269 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[2].RN   
+      6281 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[3].RN   
+      6293 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[4].RN   
+      6305 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[5].RN   
+      6317 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.\counter_reg[6].RN   
+      6344 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[6].RN   
+      6378 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[5].RN   
+      6405 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[4].RN   
+      6422 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[3].RN   
+      6446 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[2].RN   
+      6470 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[1].RN   
+      6501 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[0].RN   
+      6546 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_deserializer.DFT_tpi_xor_tree_15.DFT_and_g7.A   
+      6548 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_deserializer.DFT_tpi_xor_tree_15.DFT_and3_g7.A   
+      6554 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_deserializer.DFT_tpi_xor_tree_15.DFT_and2_g7.A   
+      6557 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_deserializer.DFT_tpi_xor_tree_15.DFT_and1_g7.A   
+      6576 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_deserializer.DFT_testpoint_0.B   
+      6588 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg.RN   
+     12976 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_data_sampling.g1484.A   
+     12978 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_data_sampling.g1484.B   
+     12980 cu      OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_data_sampling.g1484.Y   
+      6589 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg.SE   
+      6598 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg.D   
+      6606 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_data_sampling.g1484.B   
+      6630 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.B   
+      6632 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.B   
+      6655 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.A   
+      6658 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.A   
+      6662 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.B0   
+      6664 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.A1   
+      6668 u       ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.A0   
+     12958 cu      ISA1           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.A1   
+      6669 u       ISA0           OR2X1                   U0_Integer_Clock_Divider_TX.g1749__8428.B   
+      6670 u       ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.A0   
+      6672 u       OSA1           OR2X1                   U0_Integer_Clock_Divider_TX.g1749__8428.Y   
+     12955 cu      ISA1           OR2X1                   U0_Integer_Clock_Divider_TX.g1749__8428.B   
+     12956 cu      ISA1           OR2X1                   U0_Integer_Clock_Divider_TX.g1749__8428.A   
+      6699 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.B0   
+     12960 cu      ISA0           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.B0   
+     12962 cu      OSA1           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.Y   
+      6700 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.A1N   
+      6701 u       ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.A0N   
+     12936 cu      ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.A1N   
+      6702 u       ISA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.A0N   
+      6703 u       OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.Y   
+      6704 u       OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.Y   
+      6705 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.B   
+     12968 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.Y   
+      6706 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.B   
+     12967 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1482.Y   
+      6708 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.A   
+      6710 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1477.A   
+      6727 u       ISA1           SDFFRHQX1               U0_Integer_Clock_Divider_TX.gen_clk_reg.RN   
+      6737 u       OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.Y   
+     12910 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.A   
+     12912 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.B   
+      6738 u       OSA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.Y   
+      6740 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.B   
+      6741 u       ISA0           OR2X1                   U0_PULSE_GEN.g40__1705.B   
+      6742 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1474.A   
+      6744 u       OSA1           OR2X1                   U0_PULSE_GEN.g40__1705.Y   
+     12909 cu      ISA1           OR2X1                   U0_PULSE_GEN.g40__1705.B   
+     12911 cu      ISA1           OR2X1                   U0_PULSE_GEN.g40__1705.A   
+      6745 u       ISA0           SDFFRHQX1               U0_PULSE_GEN.pls_flop_reg.D   
+      6746 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.pls_flop_reg.D   
+      6750 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.pls_flop_reg.SE   
+      6751 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.pls_flop_reg.RN   
+      6757 u       ISA0           SDFFRHQX1               U0_PULSE_GEN.rcv_flop_reg.D   
+      6758 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.rcv_flop_reg.D   
+      6762 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.rcv_flop_reg.SE   
+      6763 u       ISA1           SDFFRHQX1               U0_PULSE_GEN.rcv_flop_reg.RN   
+      6775 u       ISA1           SDFFRHQX1               U0_RST_SYNC_REF.\sync_reg_reg[0].RN   
+      6787 u       ISA1           SDFFRHQX1               U0_RST_SYNC_REF.\sync_reg_reg[1].RN   
+      6797 u       ISA0           OR2X1                   U0_RST_SYNC_REF.g21__5122.B   
+      6800 u       OSA1           OR2X1                   U0_RST_SYNC_REF.g21__5122.Y   
+     12906 cu      ISA1           OR2X1                   U0_RST_SYNC_REF.g21__5122.B   
+     12907 cu      ISA1           OR2X1                   U0_RST_SYNC_REF.g21__5122.A   
+      6807 u       ISA1           SDFFRHQX1               U0_Register_File.RdData_Valid_reg.RN   
+      6819 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][0].RN   
+      6831 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][1].RN   
+      6843 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][2].RN   
+      6855 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][3].RN   
+      6867 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][4].RN   
+      6879 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][5].RN   
+      6891 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][6].RN   
+      6903 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[0][7].RN   
+      6915 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][0].RN   
+      6927 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][1].RN   
+      6939 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][2].RN   
+      6951 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][3].RN   
+      6963 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][4].RN   
+      6975 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][5].RN   
+      6987 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][6].RN   
+      6999 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[10][7].RN   
+      7011 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][0].RN   
+      7023 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][1].RN   
+      7035 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][2].RN   
+      7047 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][3].RN   
+      7059 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][4].RN   
+      7071 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][5].RN   
+      7083 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][6].RN   
+      7095 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[11][7].RN   
+      7107 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][0].RN   
+      7119 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][1].RN   
+      7131 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][2].RN   
+      7143 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][3].RN   
+      7155 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][4].RN   
+      7167 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][5].RN   
+      7179 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][6].RN   
+      7191 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[12][7].RN   
+      7203 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][0].RN   
+      7215 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][1].RN   
+      7227 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][2].RN   
+      7239 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][3].RN   
+      7251 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][4].RN   
+      7263 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][5].RN   
+      7275 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][6].RN   
+      7287 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[13][7].RN   
+      7299 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][0].RN   
+      7311 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][1].RN   
+      7323 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][2].RN   
+      7335 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][3].RN   
+      7347 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][4].RN   
+      7359 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][5].RN   
+      7371 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][6].RN   
+      7383 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[14][7].RN   
+      7395 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][0].RN   
+      7407 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][1].RN   
+      7419 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][2].RN   
+      7431 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][3].RN   
+      7443 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][4].RN   
+      7455 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][5].RN   
+      7467 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][6].RN   
+      7479 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[15][7].RN   
+      7491 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][0].RN   
+      7503 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][1].RN   
+      7515 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][2].RN   
+      7527 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][3].RN   
+      7539 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][4].RN   
+      7551 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][5].RN   
+      7563 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][6].RN   
+      7575 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[1][7].RN   
+      7587 u       ISA1           SDFFSXL                 U0_Register_File.\Memory_reg[2][0].SN   
+      7593 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1473.B   
+      7601 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][1].RN   
+      7613 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][2].RN   
+      7625 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][3].RN   
+      7637 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][4].RN   
+      7649 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][5].RN   
+      7661 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[2][6].RN   
+      7673 u       ISA1           SDFFSXL                 U0_Register_File.\Memory_reg[2][7].SN   
+      7680 u       OSA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.Y   
+     12895 cu      ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.AN   
+     12898 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.B   
+     12900 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.C   
+      7687 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][0].RN   
+      7699 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][1].RN   
+      7711 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][2].RN   
+      7723 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][3].RN   
+      7735 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][4].RN   
+      7747 u       ISA1           SDFFSXL                 U0_Register_File.\Memory_reg[3][5].SN   
+      7753 u       OSA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.Y   
+      7754 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.C   
+      7761 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][6].RN   
+      7773 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[3][7].RN   
+      7785 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][0].RN   
+      7797 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][1].RN   
+      7809 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][2].RN   
+      7821 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][3].RN   
+      7833 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][4].RN   
+      7845 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][5].RN   
+      7857 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][6].RN   
+      7869 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[4][7].RN   
+      7881 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][0].RN   
+      7893 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][1].RN   
+      7905 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][2].RN   
+      7917 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][3].RN   
+      7929 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][4].RN   
+      7941 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][5].RN   
+      7953 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][6].RN   
+      7965 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[5][7].RN   
+      7977 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][0].RN   
+      7989 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][1].RN   
+      8001 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][2].RN   
+      8013 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][3].RN   
+      8025 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][4].RN   
+      8037 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][5].RN   
+      8049 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][6].RN   
+      8061 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[6][7].RN   
+      8073 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][0].RN   
+      8085 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][1].RN   
+      8097 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][2].RN   
+      8109 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][3].RN   
+      8121 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][4].RN   
+      8133 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][5].RN   
+      8145 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][6].RN   
+      8157 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[7][7].RN   
+      8169 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][0].RN   
+      8181 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][1].RN   
+      8193 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][2].RN   
+      8205 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][3].RN   
+      8217 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][4].RN   
+      8229 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][5].RN   
+      8241 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][6].RN   
+      8253 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[8][7].RN   
+      8265 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][0].RN   
+      8277 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][1].RN   
+      8289 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][2].RN   
+      8301 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][3].RN   
+      8313 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][4].RN   
+      8325 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][5].RN   
+      8337 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][6].RN   
+      8349 u       ISA1           SDFFRHQX1               U0_Register_File.\Memory_reg[9][7].RN   
+      8361 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[0].RN   
+      8373 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[1].RN   
+      8385 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[2].RN   
+      8397 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[3].RN   
+      8409 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[4].RN   
+      8421 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[5].RN   
+      8433 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[6].RN   
+      8445 u       ISA1           SDFFRHQX1               U0_Register_File.\RdData_reg[7].RN   
+      8451 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.B   
+      8454 u       ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1472.AN   
+      8458 u       OSA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.Y   
+     12889 cu      ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.AN   
+     12892 cu      ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.B   
+      8460 u       OSA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.Y   
+      8461 u       ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.B   
+      8462 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1471.AN   
+      8470 u       OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.Y   
+      8472 u       OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.Y   
+      8473 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.B   
+      8474 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.B   
+      8476 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.A   
+      8478 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1469.A   
+      8480 u       OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1468.Y   
+     12872 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1468.A   
+     12874 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1468.B   
+      8484 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1468.A   
+      8485 u       OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1467.Y   
+     12866 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1467.A   
+     12868 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1467.B   
+      8490 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1467.A   
+      8500 u       OSA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.Y   
+     12851 cu      ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.AN   
+     12854 cu      ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.B   
+      8502 u       OSA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.Y   
+      8503 u       ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.B   
+      8504 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1465.AN   
+      8516 u       OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.Y   
+      8520 u       OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.Y   
+      8524 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.B   
+      8526 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.B   
+      8527 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.A   
+      8528 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1463.A   
+      8532 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.B   
+      8536 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.B   
+      8538 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.A   
+      8539 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.A   
+      8544 u       OSA0           NOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1461.Y   
+     12828 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1461.A   
+     12830 cu      ISA1           NOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1461.B   
+      8550 u       ISA0           NOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1461.A   
+      8551 u       OSA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1460.Y   
+     12822 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1460.A   
+     12824 cu      ISA0           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1460.B   
+      8556 u       ISA1           NAND2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1460.B   
+      8564 u       ISA0           AOI21XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1459.B0   
+      8568 u       ISA1           AOI21XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1459.A1   
+      8576 u       OSA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1458.Y   
+      8580 u       ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1458.B   
+      8584 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1458.AN   
+      8587 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1457.B   
+      8588 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1457.A   
+      8596 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.B   
+      8598 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.B   
+      8599 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.A   
+      8600 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.A   
+      8609 u       OSA1           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.Y   
+      8610 u       OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.Y   
+     12784 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.A   
+     12786 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.B   
+      8612 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.B   
+      8614 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1454.A   
+      8616 u       OSA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.Y   
+      8618 u       OSA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.Y   
+     12778 cu      ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.AN   
+     12780 cu      ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.B   
+      8619 u       ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.B   
+      8620 u       ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1453.AN   
+      8622 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.D   
+      8624 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.C   
+      8626 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.B   
+      8628 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.A   
+      8629 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.B   
+      8630 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.B   
+      8632 u       ISA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.A   
+      8634 u       ISA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.A   
+      8636 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.B   
+      8638 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.B   
+      8639 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.A   
+      8640 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.A   
+      8642 u       OSA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.Y   
+     12747 cu      ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.AN   
+     12750 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.B   
+     12752 cu      ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.C   
+     12755 cu      OSA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.Y   
+     12805 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1457.Y   
+      8646 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.C   
+     12756 cu      OSA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.g1450.Y   
+      8649 u       ISA0           NAND3BXL                U0_UART.U0_UART_RX.U0_data_sampling.g1449.AN   
+      8650 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.D   
+      8652 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.C   
+     12833 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.Y   
+      8654 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.B   
+      8656 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.A   
+      8658 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.D   
+      8659 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.C   
+      8660 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.B   
+      8662 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.A   
+     12776 cu      OSA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.Y   
+      8666 u       ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1446.AN   
+      8668 u       ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.D   
+     12766 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.Y   
+      8669 u       ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.C   
+      8670 u       ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.B   
+      8672 u       ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.AN   
+      8674 u       ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.B   
+     12735 cu      OSA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.Y   
+      8676 u       ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.AN   
+      8684 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1443.S0   
+     12738 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.A   
+     12740 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.B   
+     12742 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.C   
+     12744 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.D   
+     12745 cu      OSA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1448.Y   
+     12834 cu      OSA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.g1462.Y   
+      8688 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1443.B   
+      8690 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1443.B   
+      8700 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.C   
+      8702 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.B   
+      8703 u       ISA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.A   
+      8704 u       OSA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.Y   
+      8708 u       OSA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.Y   
+      8712 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.S0   
+     12710 cu      OSA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.Y   
+      8714 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.S0   
+     12706 cu      ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.AN   
+     12708 cu      ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.B   
+     12709 cu      OSA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1444.Y   
+     12728 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.A   
+     12730 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.B   
+     12732 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.C   
+     12734 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.D   
+     12736 cu      OSA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1447.Y   
+     12768 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.A   
+     12770 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.B   
+     12772 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.C   
+     12774 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.D   
+     12775 cu      OSA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1452.Y   
+      8715 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.B   
+      8716 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.B   
+      8720 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.A   
+      8724 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1441.A   
+      8726 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.D   
+     12719 cu      OSA0           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.Y   
+      8727 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.C   
+     12799 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.Y   
+      8728 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.B   
+      8732 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.A   
+      8739 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1437.S0   
+     12688 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.A   
+     12690 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.B   
+     12692 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.C   
+     12694 cu      ISA0           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.D   
+     12696 cu      OSA1           NAND4XL                 U0_UART.U0_UART_RX.U0_data_sampling.g1442.Y   
+     12722 cu      ISA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1446.AN   
+     12724 cu      ISA1           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1446.B   
+     12725 cu      OSA0           NOR2BX1                 U0_UART.U0_UART_RX.U0_data_sampling.g1446.Y   
+      8750 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1437.A   
+     12938 cu      ISA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.B0   
+     12940 cu      OSA1           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.Y   
+     12961 cu      OSA0           OAI21X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1481.Y   
+      8751 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1437.A   
+     12939 cu      OSA0           OAI2BB1X1               U0_UART.U0_UART_RX.U0_data_sampling.g1478.Y   
+      8762 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1436.S0   
+     12670 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.A   
+     12672 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.B   
+     12674 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.C   
+     12676 cu      ISA1           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.D   
+     12677 cu      OSA0           NOR4X1                  U0_UART.U0_UART_RX.U0_data_sampling.g1439.Y   
+     12711 cu      ISA1           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.AN   
+     12714 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.B   
+     12716 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.C   
+     12718 cu      ISA0           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.D   
+     12720 cu      OSA1           NAND4BX1                U0_UART.U0_UART_RX.U0_data_sampling.g1445.Y   
+     12765 cu      OSA0           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1451.Y   
+     12800 cu      OSA1           XNOR2X1                 U0_UART.U0_UART_RX.U0_data_sampling.g1456.Y   
+      8763 u       ISA1           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1436.B   
+      8764 u       ISA0           MX2XL                   U0_UART.U0_UART_RX.U0_data_sampling.g1436.B   
+      8794 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[2].D   
+      8812 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1].SE   
+      8822 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1].D   
+      8826 u       ISA0           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1].D   
+      8840 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0].SE   
+      8850 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0].D   
+      8854 u       ISA0           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0].D   
+      8859 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor_g23.B   
+     12582 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and1_g7.A   
+     12584 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and1_g7.B   
+     12585 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and1_g7.Y   
+      8864 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor_g23.A   
+     12600 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and_g7.A   
+     12602 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and_g7.B   
+     12603 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and_g7.Y   
+      8872 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor5_g23.B   
+     12605 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor4_g23.Y   
+      8874 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor5_g23.A   
+     12617 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor_g23.Y   
+      8882 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor4_g23.B   
+     12594 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and3_g7.A   
+     12596 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and3_g7.B   
+     12597 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and3_g7.Y   
+      8887 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor4_g23.A   
+     12588 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and2_g7.A   
+     12590 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and2_g7.B   
+     12591 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and2_g7.Y   
+      8890 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and_g7.A   
+      8893 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and3_g7.A   
+      8896 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and2_g7.A   
+      8899 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_and1_g7.A   
+      8911 u       ISA0           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_CDNS_OBS_tpi_flop.D   
+     12611 cu      OSA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_11.DFT_xor5_g23.Y   
+      8912 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.B   
+     12534 cu      OSA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.Y   
+      8914 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.B   
+     12530 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.A   
+     12532 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.B   
+     12533 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.Y   
+      8916 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.A   
+     12552 cu      OSA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.Y   
+      8917 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.A   
+     12548 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.A   
+     12550 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.B   
+     12551 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.Y   
+      8918 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.B   
+     12554 cu      OSA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.Y   
+      8920 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.B   
+     12553 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.Y   
+      8922 u       ISA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.A   
+     12566 cu      OSA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.Y   
+      8923 u       ISA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.A   
+     12565 cu      OSA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor_g23.Y   
+      8924 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.B   
+     12546 cu      OSA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.Y   
+      8926 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.B   
+     12542 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.A   
+     12544 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.B   
+     12545 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.Y   
+      8928 u       ISA1           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.A   
+     12540 cu      OSA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.Y   
+      8929 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor4_g23.A   
+     12536 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.A   
+     12538 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.B   
+     12539 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.Y   
+      8930 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.B   
+      8932 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and_g7.A   
+      8934 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.B   
+      8935 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and3_g7.A   
+      8936 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.B   
+      8943 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and2_g7.A   
+      8944 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.B   
+      8948 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_and1_g7.A   
+      8954 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_CDNS_OBS_tpi_flop.SE   
+      8964 u       ISA1           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_CDNS_OBS_tpi_flop.D   
+     12560 cu      OSA1           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.Y   
+      8968 u       ISA0           SDFFQX1                 U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_CDNS_OBS_tpi_flop.D   
+     12559 cu      OSA0           XOR2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_tpi_xor_tree_0.DFT_xor5_g23.Y   
+      8974 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_data_sampling.DFT_testpoint_0.B   
+      9003 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_FSM.g2400.AN   
+      9168 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2384.A   
+      9233 u       ISA0           NOR4BX1                 U0_UART.U0_UART_RX.U0_FSM.g2378.C   
+      9333 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_FSM.g2370__8246.B0   
+      9374 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2367__1705.A   
+      9389 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_FSM.g2366__2802.C0   
+      9406 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2365__1617.B   
+      9413 u       ISA0           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2365__1617.A   
+      9430 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_FSM.g2364__3680.B   
+      9437 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_FSM.g2364__3680.A   
+      9438 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_FSM.g2363__6783.D   
+     12244 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2365__1617.A   
+     12246 cu      ISA1           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2365__1617.B   
+     12247 cu      OSA0           NOR2X1                  U0_UART.U0_UART_RX.U0_FSM.g2365__1617.Y   
+      9446 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_FSM.g2363__6783.B   
+      9453 u       ISA0           NOR4X1                  U0_UART.U0_UART_RX.U0_FSM.g2363__6783.A   
+      9485 u       ISA0           NAND2BX1                U0_UART.U0_UART_RX.U0_FSM.g2361__8428.AN   
+      9501 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_FSM.g2360__4319.B   
+      9534 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_FSM.g2358__5107.A   
+      9549 u       ISA1           NAND3BXL                U0_UART.U0_UART_RX.U0_FSM.g2357__2398.C   
+      9566 u       ISA1           NAND2BX1                U0_UART.U0_UART_RX.U0_FSM.g2356__5477.B   
+      9661 u       ISA1           NAND3X1                 U0_UART.U0_UART_RX.U0_FSM.g2.B   
+      9662 u       ISA1           NAND3X1                 U0_UART.U0_UART_RX.U0_FSM.g2.A   
+      9669 u       OSA1           OR2X1                   U0_UART.U0_UART_RX.U0_FSM.g1825.Y   
+     12134 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_FSM.g1825.A   
+     12136 cu      ISA1           OR2X1                   U0_UART.U0_UART_RX.U0_FSM.g1825.B   
+      9677 u       ISA0           OR2X1                   U0_UART.U0_UART_RX.U0_FSM.g1825.B   
+      9696 u       ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_FSM.g1824.A0   
+     12126 cu      ISA1           OAI211X1                U0_UART.U0_UART_RX.U0_FSM.g1824.A1   
+     12267 cu      OSA1           INVX1                   U0_UART.U0_UART_RX.U0_FSM.g2368.Y   
+     12268 cu      ISA0           INVX1                   U0_UART.U0_UART_RX.U0_FSM.g2368.A   
+      9703 u       ISA0           OAI211X1                U0_UART.U0_UART_RX.U0_FSM.g1824.A0   
+      9744 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[2].RN   
+      9792 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[1].RN   
+      9840 u       ISA1           SDFFRHQX1               U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[0].RN   
+      9912 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_xor4_g23.A   
+     12040 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and2_g7.A   
+     12042 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and2_g7.B   
+     12043 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and2_g7.Y   
+      9920 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and_g7.A   
+      9928 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and3_g7.A   
+      9936 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and2_g7.A   
+      9944 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_9.DFT_and1_g7.A   
+      9984 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_xor_g23.B   
+     11982 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and1_g7.A   
+     11984 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and1_g7.B   
+     11985 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and1_g7.Y   
+     10032 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and_g7.A   
+     10040 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and3_g7.A   
+     10048 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and2_g7.A   
+     10056 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_6.DFT_and1_g7.A   
+     10144 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_4.DFT_and_g7.A   
+     10152 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_4.DFT_and3_g7.A   
+     10160 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_4.DFT_and2_g7.A   
+     10168 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_4.DFT_and1_g7.A   
+     10248 u       ISA0           CLKXOR2X1               U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_xor4_g23.A   
+     11884 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and2_g7.A   
+     11886 cu      ISA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and2_g7.B   
+     11887 cu      OSA0           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and2_g7.Y   
+     10256 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and_g7.A   
+     10264 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and3_g7.A   
+     10272 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and2_g7.A   
+     10280 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_3.DFT_and1_g7.A   
+     10364 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_2.DFT_and_g7.A   
+     10370 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_2.DFT_and3_g7.A   
+     10376 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_2.DFT_and2_g7.A   
+     10382 u       ISA1           AND2X1                  U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_2.DFT_and1_g7.A   
+     10416 u       ISA1           AND2XL                  U0_UART.U0_UART_RX.U0_FSM.DFT_testpoint_0.B   
+     10627 u       ISA0           OR2X1                   U0_Register_File.g4345__9315.B   
+     10630 u       OSA1           OR2X1                   U0_Register_File.g4345__9315.Y   
+     11696 cu      ISA1           OR2X1                   U0_Register_File.g4345__9315.B   
+     11697 cu      ISA1           OR2X1                   U0_Register_File.g4345__9315.A   
+     10687 u       ISA1           AND2XL                  U0_SYS_CTRL.DFT_testpoint_0.B   
+     10701 u       ISA1           AND2XL                  U0_SYS_CTRL.DFT_tpi_xor_tree_16.DFT_and_g7.A   
+     10713 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ADDR_REG_reg[0].RN   
+     10725 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ADDR_REG_reg[1].RN   
+     10737 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ADDR_REG_reg[2].RN   
+     10749 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ADDR_REG_reg[3].RN   
+     10761 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[0].RN   
+     10773 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[10].RN   
+     10785 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[11].RN   
+     10797 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[12].RN   
+     10809 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[13].RN   
+     10821 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[14].RN   
+     10833 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[15].RN   
+     10845 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[1].RN   
+     10857 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[2].RN   
+     10869 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[3].RN   
+     10881 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[4].RN   
+     10893 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[5].RN   
+     10905 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[6].RN   
+     10917 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[7].RN   
+     10929 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[8].RN   
+     10941 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\ALU_OUT_REG_reg[9].RN   
+     10953 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\current_state_reg[0].RN   
+     10965 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\current_state_reg[1].RN   
+     10977 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\current_state_reg[2].RN   
+     10989 u       ISA1           SDFFRHQX1               U0_SYS_CTRL.\current_state_reg[3].RN   
+     11357 u       ISA0           OR2X1                   U0_SYS_CTRL.g2298__5115.B   
+     11360 u       OSA1           OR2X1                   U0_SYS_CTRL.g2298__5115.Y   
+     11426 cu      ISA1           OR2X1                   U0_SYS_CTRL.g2298__5115.B   
+     11427 cu      ISA1           OR2X1                   U0_SYS_CTRL.g2298__5115.A   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :         1219
+ Tested                :            0
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):         1219
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           10,215,920  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.01                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 14:48:44 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Global    Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+0
+@modus:root:/ 9> help create_logic_tests
+Commands:
+    create_logic_tests:
+
+    create_logic_tests is used to create stored pattern logic tests for
+    the device under test.
+
+
+create_logic_tests:
+
+ [-H]                                  Help Text
+ [-h]                                  Help Text
+ [-ALTFAULT <string>]                  Use Alternate Fault Model
+  -EXPERIMENT <string>                 Experiment Name
+ [-INEXPERIMENT <string>]              Input Experiment Name
+ [-LINEHOLD <infilename>]              Linehold File
+ [-LOG no|all|summary|nosummary] (all) Customize Data Written to Log
+ [-LOGCOMPRESS yes|no] (no)            Compress the log file
+ [-LOGFILE <outfilename>]              Write to specified log file
+ [-STDOUT no|all|summary|nosummary] (all) Customize Data Written to STDOUT
+  -TESTMODE <string>                   Test Mode Name
+  -WORKDIR <string>                    Working Directory
+ [-aliascheck no|yes] (no)             Check for fault aliasing on designs with XOR compression
+ [-allowconstraintsimthroughmuxselpin yes|no] (yes) Allow constraint simulator to propagate constraint through MUX select pin
+ [-append no|yes] (no)                 Append to Existing Experiment
+ [-balancehierblockcoverage <decimal 0.00 to 100.00>[,<decimal 0.00 to 100.00>]...] Minimum Test Coverage (approximate)
+ [-bsuboptionsfile <string>]           File containing options for bsub command - when there's white space in options
+ [-checkpoint <integer 0 or greater>]  Checkpoint Interval in minutes (approximate)
+ [-choppers safe|risky] (Conditional Default) Clock Chopper Simulation
+ [-constraintcheck no|yes] (yes)       Detect Run-Time Constraint Violations.
+ [-contentionremove hard|soft|allx|none] (hard) Type of Three-state Contention to Remove
+ [-countxcaptureswitches half|no|yes] (half) Count X transitions as switching activity
+ [-domaincutoff <decimal>]             Domain Cutoff Percentage
+ [-effort low|high] (high)             Test Generation Effort
+ [-faulttype static|staticbridge[,static|staticbridge]...] (static) Limit Faults to Selected Type
+ [-fromexperiment <string>]            Experiment From Which to Map Fault Status (exists in fromtestmode)
+ [-fromtestmode <string>]              Testmode for Experiment from which to Map Fault Status
+ [-globalterm 0|zero|1|one|either|both|none] (Conditional Default) Tester Provided Termination on Product Drivers
+ [-help <string>]                      Help Facility
+ [-hiercaptureswitching <integer 0 to 100>] Specifies the maximum percentage of switching allowed on a hierblock during capture
+ [-holdcgoverrides yes|no] (Conditional Default) Apply automatic lineholds for clock gate overrides identified during low power ATPG
+ [-holdflopoverrides no|yes] (no)      Apply flop lineholds for clock gate overrides identified during low power ATPG
+ [-hosts <string>]                     Host Machines for Parallel Processing
+ [-ignoremeasures <infilename>]        Ignore Measures File
+ [-includesysclkforhalfcycleconstraint yes|no] (yes) Allow constraint simulator to use system clocks on latch to determine half cycle constraints.
+ [-keepers safe|risky|no] (Conditional Default) Keeper Device Simulation
+ [-latchsimulation optimistic|pessimistic] (optimistic) Sim Latch/Flip-flop Output to X when Clock at X
+ [-logmode append|overwrite] (overwrite) Specify the mode of writing to logfile : append or overwrite.
+ [-maxcaptureswitching <integer 0 to 100>[,<integer 0 to 100>]...] Specifies the maximum percentage of switching allowed on any pulse during capture
+ [-maxcarebits <integer 0 to 255>]     Maximum Care Bits Per Cycle
+ [-maxcoverage <decimal 0.00 to 100.00>] Maximum Adjusted Test Coverage (approximate)
+ [-maxcputime <decimal>]               Maximum CPU Minutes (approximate)
+ [-maxelapsedtime <decimal>]           Maximum Elapsed Minutes (approximate)
+ [-maxfaultsize <integer>] (Conditional Default) Maximum Fault Size
+ [-maxglobalcoverage <decimal 0.00 to 100.00>] Maximum Global Adjusted Test Coverage (approximate)
+ [-maxpatterns <integer>]              Maximum Number of Patterns (approximate)
+ [-maxscanswitching <integer 5 to 100>[,<integer 5 to 100>]...] Specify the Maximum Percentage of Switching Allowed During Scan
+ [-messagecount <string>]              Limit Messages for Specified Message Id (e.g., messagecount=XXX-710=3).
+ [-messagecounteach <integer>]         Default Limit for Each Message.
+ [-messagecounteachseverity all|excludeinfo] (all) Level of severity for which messages are to be suppressed as per messagecounteach
+ [-messagesuppressionfile <infilename>]File containing messages that needs to be filtered
+ [-messagesuppressionrc include|exclude] (include) Option to exclude return code of the command based on the highest severity code of suppressed messages
+ [-multiclockcompaction yes|no|only]   Multi Clock Compaction
+ [-ndetect <integer 2 to 65534>]       Allow the fault to be detected for the specified number of times in test patterns before marking it tested
+ [-nonscanlatch latch|flush|buffer] (latch) Treat non-scan pipeline latches as latches, or flush latches
+ [-numprocesses <integer 2 to 63>]     Number of Slaves in Parallel Processing
+ [-numslaves <integer 2 to 63>]        Number of Slaves in Parallel Processing
+ [-pdl <integer>:] (0)                 Possible Detect Limit - 0 for No Limit
+ [-pistimswhileclkon yes|no] (no)      Allow PI Stimulus while Clocks are ON during Sequential Test Generation
+ [-postprocessconstraintsiminparallel yes|no] (yes) post process constraint simulation results in parallel to identify violation.
+ [-propxignore no|yes] (Conditional Default) Propagate X to Downstream Logic from Ignored Location
+ [-queuename <string>]                 Queue name for LSF utility
+ [-ramsimulation optimistic|pessimistic] (optimistic) Sim RAM instance Output to X when write port of that primitive at X
+ [-ramsize all|<integer>:] (all)       RAM Address Space Size
+ [-removexlatch no|yes]                For compression. Remove patterns which have Latch=X.
+ [-removexpo no|yes] (Conditional Default) For Compression. Remove Patterns Which Have PO=X.
+ [-reportclockgateinfo compact|all] (compact) Report Information About Clock Gates in the Design
+ [-reportfaultsummary yes|no] (no)     Report Fault Summary
+ [-reportheartbeat <integer 0 or greater>] (60) Report Heartbeat Interval since the last Sim Report or Heartbeat (minutes)
+ [-reportsequencefaults yes|no|run] (no) Report Test Sequence Fault List Size
+ [-reportsequences yes|no] (no)        Report Test Sequences
+ [-restart no|yes|end]                 Restart from Checkpoint
+ [-sequencefile <infilename>]          Sequence File Name
+ [-sequentialdepth <integer 0 to 32>]  Maximum Sequential Depth the Test Generator is Allowed to Try
+ [-setupsequence <string>[,<string>]...] (Global Data Default) Setup Sequence
+ [-simpatterns yes|no|all] (yes)       Simulate Patterns
+ [-singleload no|yes]                  Single Load
+ [-singletimeonly no|yes]              Create single time tests
+ [-stimclock yes|no] (no)              Allow Clocks to be Stimmed (as well as pulsed)
+ [-testscan yes|no] (Conditional Default) Create Scan Test Patterns
+ [-testsequence <string>]              User Test Sequences
+ [-tgfaultlist <infilename>]           List of fault indexes the test generator will target
+ [-writemasksall yes|no]               Add Mask Events to all Test_Sequences
+ [-writepatterns yes|no|all] (yes)     Write Patterns to TBDbin
+ [-xmask no|yes] (yes)                 For compression. Perform Channel Masking.
+
+@modus:root:/ 10> write_vectors
+Starting Command: write_vectors 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_write_vectors_070426150110-633568000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  ERROR Messages...
+      1 ERROR (TFW-901): Required option -TESTMODE must be specified.   
+      1 ERROR (TFW-926): Syntax checking detected terminating errors.  Correct the errors noted in preceding messages and rerun.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+5
+@modus:root:/ 11> help write_vectors
+Commands:
+    write_vectors:
+
+    write_vectors is used to write out the test vectors in the 
+    specified language. 
+
+
+write_vectors:
+
+ [-H]                                  Help Text
+ [-h]                                  Help Text
+ [-DESIGNSOURCE <string>]              Design Source File(s)
+ [-EXPORTDIR <outdir>]                 Directory to Contain Export Data (default is part directory)
+ [-INEXPERIMENT <string>[,<string>]...]Name(s) of InExperiment(s)
+ [-LOG no|all|summary|nosummary] (all) Customize Data Written to Log
+ [-LOGCOMPRESS yes|no] (no)            Compress the log file
+ [-LOGFILE <outfilename>]              Write to specified log file
+ [-STDOUT no|all|summary|nosummary] (all) Customize Data Written to STDOUT
+ [-TECHLIB <string>]                   Technology Cell Definition File(s)
+  -TESTMODE <string>                   Test Mode Name
+  -WORKDIR <string>                    Working Directory
+ [-bidipins drivez|measurex|mask] (Conditional Default) Set how non controlling BIDIs will be treated
+ [-capturebidioffset <decimal 0.000000 or greater>] Global dynamic capture timing - Set the default capture BIDI offset
+ [-captureperiod <decimal 0.000000 or greater>] Global dynamic capture timing - Set the capture period
+ [-capturepioffset <decimal 0.000000 or greater>] Global dynamic capture timing - Set the default capture PI offset
+ [-capturepioffsetlist <string>]       Set the individual dynamic capture PI offsets
+ [-capturepioffsetlistfile <infilename>] File containing individual dynamic capture PI offsets
+ [-capturepulsewidth <decimal 0.000000 or greater>] Global dynamic capture clock pulse width
+ [-capturepulsewidthlist <string>]     Set the individual dynamic capture clock pulse widths
+ [-capturepulsewidthlistfile <infilename>] File containing individual dynamic capture clock pulse widths
+ [-capturestrobeoffset <decimal 0.000000 or greater>] Global dynamic capture timing - Set the capture strobe offset (measure)
+ [-capturestrobetype window|edge] (edge) Global dynamic capture timing - Set the capture strobe type
+ [-capturetimeunits ps|ns|us|ms] (ns)  Global dynamic capture timing - Set the capture time units
+ [-clockinitialstate previous|down|up|no] (previous) Specify the initial state of clock.
+ [-combinesections no|yes|all] (no)    Limit the number of output files.
+ [-compressfiles no|yes] (Conditional Default) Compress the resulting vector files
+ [-compresspatterns yes|no] (no)       Compress test vectors across pattern boundaries
+ [-dataformat binary|hex] (binary)     Format for the STIL output data
+ [-dutname <string>]                   Changes the default design under test name (dut) for verilog
+ [-explicitshifts <integer 1 or greater>] (1) Allows the user to supply the number of explicit scan shifts required when doing parallel verilog simulation.
+ [-help <string>]                      Help Facility
+ [-includealldynamictimeplates yes|no] (no) Include all dynamic timeplates or only the timeplates that are used.
+ [-includelatchnames no|yes] (no)      Include latch/flop name in scan out miscompare messages
+ [-includemodeinit yes|no|separate|limit|only|include|all|includeall] (Conditional Default) How to handle the modeinit sequence in the output vector files. Values other than yes or include must be used with caution.
+ [-includeopcgcsls yes|no] (no)        Include first correlated opcg in case representative opcg flop is in pseudoblock.
+ [-includepinnames no|yes] (no)        Include pin name in scan out miscompare messages
+ [-initbidioffset <decimal 0.000000 or greater>] Global modeinit timing - Set the default modeinit BIDI offset
+ [-initperiod <decimal 0.000000 or greater>] Global modeinit timing - Set the modeinit period
+ [-initpioffset <decimal 0.000000 or greater>] Global modeinit timing - Set the default modeinit PI offset
+ [-initpioffsetlist <string>]          Set the individual modeinit PI offsets
+ [-initpioffsetlistfile <infilename>]  File containing individual modeinit PI offsets
+ [-initpulsewidth <decimal 0.000000 or greater>] Global modeinit pulse width
+ [-initpulsewidthlist <string>]        Set the individual modeinit clock pulse widths
+ [-initpulsewidthlistfile <infilename>]File containing individual modeinit clock pulse widths
+ [-initstrobeoffset <decimal 0.000000 or greater>] Global modeinit timing - Set the modeinit strobe offset (measure)
+ [-initstrobetype window|edge]         Global modeinit timing - Set the modeinit strobe type
+ [-inittimeunits ps|ns|us|ms]          Global modeinit timing - Set the modeinit time units
+ [-language stil|verilog|wgl|tdl|verilog_hw] (verilog) Specify the language in which to write vectors
+ [-latchnametype primitive|cell] (primitive) Specify the type of the latch name to be printed.
+ [-latchreleaseoffset <decimal 0.000000 or greater>] Set the offset when the latches should be released for parallel Verilog
+ [-limitcomments no|yes|passthru] (no) Limit commentary in the output vectors.
+ [-limittimeplates no|yes] (Conditional Default) Limit timeplates to one for scan/test.
+ [-logmode append|overwrite] (overwrite) Specify the mode of writing to logfile : append or overwrite.
+ [-maxsequencesperfile <integer 1 or greater>] Specify the maximum number of test sequences allowed in any one output vector file
+ [-messagecount <string>]              Limit Messages for Specified Message Id (e.g., messagecount=XXX-710=3).
+ [-messagecounteach <integer>]         Default Limit for Each Message.
+ [-messagecounteachseverity all|excludeinfo] (all) Level of severity for which messages are to be suppressed as per messagecounteach
+ [-messagesuppressionfile <infilename>]File containing messages that needs to be filtered
+ [-messagesuppressionrc include|exclude] (include) Option to exclude return code of the command based on the highest severity code of suppressed messages
+ [-misrobserve parallel|serial] (parallel) Set how to observe the MISR values
+ [-misrperiod <decimal 0.000000 or greater>] Global misr timing - Set the misr period
+ [-misrpioffset <decimal 0.000000 or greater>] Global misr timing - Set the default misr PI offset
+ [-misrpioffsetlist <string>]          Set the individual misr PI offsets
+ [-misrpioffsetlistfile <infilename>]  File containing individual misr PI offsets
+ [-misrpulsewidth <decimal 0.000000 or greater>] Global misr pulse width
+ [-misrpulsewidthlist <string>]        Set the individual misr clock pulse widths
+ [-misrpulsewidthlistfile <infilename>]File containing individual misr clock pulse widths
+ [-misrstrobeoffset <decimal 0.000000 or greater>] Global misr timing - Set the strobe offset (measure)
+ [-misrtimeunits ps|ns|us|ms]          Global misr timing - Set the misr time units
+ [-modeinitfilename <string>]          Change the default modeinit output file name, based on this name
+ [-modeinitsequenceonly no|yes] (no)   Enable writing modeinit sequence in verilog, tdl, stil and wgl after build_testmode and without creating any ATPG patterns.
+ [-modeinittimingfile <infilename>]    File containing modeinit timing
+ [-modulealias <string>]               Set the Verilog module alias name
+ [-mospins <string>]                   Set the MOS pins.  Example mospins=pi1,pi2,etc
+ [-mosstates <string>]                 Set the MOS states and cores associated with that state.  Example mosstates=001=core1,010=core2,etc
+ [-multibitscanshifts no|yes] (no)     Support multiple shifts in a scan chain library cell if needed.
+ [-multipintracing no|yes] (yes)       Trace all the pins on scan path to identify stim points for scan flop 
+ [-outputfilename <string>]            Change the default output files name, based on this name
+ [-outputmainsim yes|no|all] (yes)     Create the mainsim file containing definition and tasks
+ [-outputvectors yes|no] (yes)         Create the pattern/data file containing input and output values
+ [-parallelshifts <integer 1 or greater>] (1) Allows the user to supply a number of dummy scan shifts after normal parallel scan.
+ [-pinasdata <string>]                 Specify a pin or a list of pins to be treated as a data pin
+ [-pinorder <infilename>]              File containing pin ordering information
+ [-printlatchfailures no|yes] (no)     Print detailed latch failure information for all latches.
+ [-pulseclockcharacter default|edge] (default) Pulse clock character to be used for clocks
+ [-pulsestart priorvalue|offvalue] (priorvalue) Set whether pulse's should start waveforms/timeplates with the previous value or the off value
+ [-releasebidioffset <decimal 0.000000 or greater>] Global dynamic release timing - Set the default release BIDI offset
+ [-releaseperiod <decimal 0.000000 or greater>] Global dynamic release timing - Set the release period
+ [-releasepioffset <decimal 0.000000 or greater>] Global dynamic release timing - Set the default release PI offset
+ [-releasepioffsetlist <string>]       Set the individual dynamic release PI offsets
+ [-releasepioffsetlistfile <infilename>] File containing individual dynamic release PI offsets
+ [-releasepulsewidth <decimal 0.000000 or greater>] Global dynamic release clock pulse width
+ [-releasepulsewidthlist <string>]     Set the individual dynamic release clock pulse widths
+ [-releasepulsewidthlistfile <infilename>] File containing individual dynamic release clock pulse widths
+ [-releasetimeunits ps|ns|us|ms] (ns)  Global dynamic release timing - Set the release time units
+ [-renamecapture <string>] (CAPTURE)   Change the default CAPTURE name for timeplate
+ [-renameinit <string>]                Change the default init timeplate name
+ [-renamerelease <string>] (RELEASE)   Change the default RELEASE name for timeplate
+ [-renamescan <string>]                Change the default scan timeplate name
+ [-renametest <string>]                Change the default test timeplate name
+ [-repeatheartbeat <integer 0 or greater>] (1000) Enable Verilog simulation heartbeat messages in a repeat loop
+ [-reportbsvportmap no|yes] (no)       Dump file contain the mapping between tester cycle and associated chip port for Boundary Scan Failure Analysis
+ [-scanbidioffset <decimal 0.000000 or greater>] Global scan timing - Set the default scan BIDI offset
+ [-scanbidipins drivez|measurex|mask] (Conditional Default) Set how non controlling BIDIs will be treated during scan
+ [-scanformat serial|parallel] (Conditional Default) Set the scan format
+ [-scanperiod <decimal 0.000000 or greater>] Global scan timing - Set the scan period
+ [-scanpioffset <decimal 0.000000 or greater>] Global scan timing - Set the default scan PI offset
+ [-scanpioffsetlist <string>]          Set the individual scan PI offsets
+ [-scanpioffsetlistfile <infilename>]  File containing individual scan PI offsets
+ [-scanpulsewidth <decimal 0.000000 or greater>] Global scan pulse width
+ [-scanpulsewidthlist <string>]        Set the individual scan clock pulse widths
+ [-scanpulsewidthlistfile <infilename>]File containing individual scan clock pulse widths
+ [-scansetuptiming default|test] (default) Timeplate to be used for scan setup operations
+ [-scanstrobeoffset <decimal 0.000000 or greater>] Global scan timing - Set the strobe offset (measure)
+ [-scanstrobetype window|edge]         Global scan timing - Set the scan strobe type
+ [-scantimeunits ps|ns|us|ms]          Global scan timing - Set the scan time units
+ [-sdfname <string>]                   SDF Filename(s)
+ [-setpaddingpatterns <decimal 0 or greater>] (0) Set the number of padding patterns
+ [-signalsfile yes|no] (yes)           Create a file containing common elements (signals)
+ [-signalsfilename <string>]           Change the default signals output file name, based on this name
+ [-stimclock yes|no] (Conditional Default) Specify if stimming a clock to its ON state is allowed
+ [-temporaryfilelocation tmp|exportdir] (tmp) Specify the directory for creating temporary outputs files.
+ [-testbidioffset <decimal 0.000000 or greater>] Global test timing - Set the default test BIDI offset
+ [-testperiod <decimal 0.000000 or greater>] Global test timing - Set the test period
+ [-testpioffset <decimal 0.000000 or greater>] Global test timing - Set the default test PI offset
+ [-testpioffsetlist <string>]          Set the individual test PI offsets
+ [-testpioffsetlistfile <infilename>]  File containing individual test PI offsets
+ [-testpulsewidth <decimal 0.000000 or greater>] Global test timing - Set the test pulse width
+ [-testpulsewidthlist <string>]        Set the individual test clock pulse widths
+ [-testpulsewidthlistfile <infilename>]File containing individual test clock pulse widths
+ [-testrange <odometerRange>]          Select Range of Tests
+ [-testrangefile <infilename>]         File containing Range of Tests
+ [-testsectiontype all|burnin|channelscan|iddq|logic|logiclbist|scan|path[,all|burnin|channelscan|iddq|logic|logiclbist|scan|path]...] (all) Print specific Test Sections only.
+ [-testsequence <string>]              Specify a sequence or a list of sequences to be included in the output vectors.
+ [-teststrobeoffset <decimal 0.000000 or greater>] Global test timing - Set the test strobe offset (measure)
+ [-teststrobeoffsetlist <string>]      Set the individual test Strobe offsets
+ [-teststrobetype window|edge]         Global test timing - Set the test strobe type
+ [-testtimeunits ps|ns|us|ms]          Global test timing - Set the test time units
+ [-timingfile <infilename>|no]         File containing scan, test or init timing keywords
+ [-verilogformat fullnetlists|reducednetlists] (fullnetlists) Full or Reduced Verilog Netlists to be used for Verilog Simulation
+ [-waitcycleafterchannelmaskexit <integer 0 or greater>] Wait X number of cycles after the channel mask scan exit sequence has completed
+ [-waitcycleafterchannelmaskprecon <integer 0 or greater>] Wait X number of cycles after the channel mask scan preconditioning sequence has completed
+ [-waitcycleafterdiagreturn <integer 0 or greater>] Wait X number of cycles after the diagnostic observation return sequence has completed
+ [-waitcycleafterdynamic <integer 0 or greater>] Wait X number of cycles after a dynamic timed pattern has been processed
+ [-waitcycleafterlowpowergatingenable <integer 0 or greater>] Wait X number of cycles after the low power gating scan enable sequence has completed
+ [-waitcycleafterlowpowergatingexit <integer 0 or greater>] Wait X number of cycles after the low power gating scan exit sequence has completed
+ [-waitcycleafterlowpowergatingprecon <integer 0 or greater>] Wait X number of cycles before the low power gating scan preconditioning sequence has been applied
+ [-waitcycleaftermisrobserve <integer 0 or greater>] Wait X number of cycles after the MO pins are measured in the MISR Observe Sequence
+ [-waitcycleaftermodeinit <integer 0 or greater>] Wait X number of cycles after the mode initialization sequence has completed
+ [-waitcycleafteropcgexit <integer 0 or greater>] Wait X number of cycles after the opcg scan exit sequence has completed
+ [-waitcycleafteropcgprecon <integer 0 or greater>] Wait X number of cycles after the opcg scan preconditioning sequence has completed
+ [-waitcycleafterpreset <integer 0 or greater>] Wait X number of cycles after the resetable pipelines and elastic register sequence has been applied
+ [-waitcycleafterscanexit <integer 0 or greater>] Wait X number of cycles after the Scan Exit Sequence has completed
+ [-waitcycleafterscanprecon <integer 0 or greater>] Wait X number of cycles after the Scan Preconditioning Sequence has completed
+ [-waitcycleaftersigobsreturn <integer 0 or greater>] Wait X number of cycles after the signature observation return sequence has completed
+ [-waitcyclebeforechannelmaskexit <integer 0 or greater>] Wait X number of cycles before the channel mask scan exit sequence has been applied
+ [-waitcyclebeforechannelmaskload <integer 0 or greater>] Wait X number of cycles before the channel mask load sequence has been applied
+ [-waitcyclebeforechannelmaskprecon <integer 0 or greater>] Wait X number of cycles before the channel mask scan preconditioning sequence has been applied
+ [-waitcyclebeforediagobserve <integer 0 or greater>] Wait X number of cycles before the diagnostic observation observe sequence has been applied
+ [-waitcyclebeforedynamic <integer 0 or greater>] Wait X number of cycles before a dynamic timed pattern has been processed
+ [-waitcyclebeforelowpowergatingenable <integer 0 or greater>] Wait X number of cycles before the low power gating scan enable sequence has been applied
+ [-waitcyclebeforelowpowergatingexit <integer 0 or greater>] Wait X number of cycles before the low power gating scan exit sequence has been applied
+ [-waitcyclebeforelowpowergatingload <integer 0 or greater>] Wait X number of cycles before the low power gating scan load sequence has been applied
+ [-waitcyclebeforelowpowergatingprecon <integer 0 or greater>] Wait X number of cycles after the low power gating scan preconditioning sequence has completed
+ [-waitcyclebeforemeasurepo <integer 0 or greater>] Wait X number of cycles before any static measure PO
+ [-waitcyclebeforemisrobserve <integer 0 or greater>] Wait X number of cycles before the MO pins are measured in the MISR Observe Sequence
+ [-waitcyclebeforeopcgexit <integer 0 or greater>] Wait X number of cycles before the opcg scan exit sequence has been applied
+ [-waitcyclebeforeopcgload <integer 0 or greater>] Wait X number of cycles before the opcg scan sequence has been applied
+ [-waitcyclebeforeopcgprecon <integer 0 or greater>] Wait X number of cycles before the opcg scan preconditioning sequence has been applied
+ [-waitcyclebeforescanexit <integer 0 or greater>] Wait X number of cycles before the Scan Exit Sequence has been applied
+ [-waitcyclebeforescanload <integer 0 or greater>] Wait X number of cycles before the Scan Load Sequence has been applied
+ [-waitcyclebeforescanprecon <integer 0 or greater>] Wait X number of cycles before the Scan Preconditioning Sequence has been applied
+ [-waitcyclebeforesigobsobserve <integer 0 or greater>] Wait X number of cycles before the signature observation observe sequence has been applied
+ [-waitcyclebeforestaticpulse <integer 0 or greater>] Wait X number of cycles before any static clock pulse
+
+@modus:root:/ 12> exit

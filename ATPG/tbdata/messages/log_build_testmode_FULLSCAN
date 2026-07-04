@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426141318-772574000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426150550-655735000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Saturday Jul 04 14:13:18 2026  IST
+            Date Started: Saturday Jul 04 15:05:50 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 1171658.
+            This job is process number 1194761.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -21,7 +21,7 @@ INFO (TDA-009): Options/Values information.
 
             -ASSIGNFILE /home/admin/DFT/SOCX/ATPG/TOP.FULLSCAN.pinassign
           * update_assign_file=
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426141318-772574000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426150550-655735000
             -MODEDEF FULLSCAN
             -STDOUT summary
 [end TDA_009]
@@ -486,7 +486,7 @@ Modus Build Test Mode(s) completed. Highest severity is (WARNING).
                Total Memory =           17,744,048  bytes
 
             Cumulative Time in hours:minutes:seconds:
-                   CPU Time =   0:00:00.14
-               Elapsed Time =   0:00:00.24
+                   CPU Time =   0:00:00.16
+               Elapsed Time =   0:00:00.25
 
 

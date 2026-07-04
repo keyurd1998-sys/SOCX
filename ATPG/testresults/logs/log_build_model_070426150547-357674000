@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070426141315-520555000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070426150547-357674000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Saturday Jul 04 14:13:15 2026  IST
+            Date Started: Saturday Jul 04 15:05:47 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 1171594.
+            This job is process number 1194700.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -22,7 +22,7 @@ INFO (TDA-009): Options/Values information.
             -designtop TOP
             -TECHLIB ../../Library/verilog/typical.v
             -allowmissingmodules yes
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070426141315-520555000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_model_070426150547-357674000
             -STDOUT summary
             -messagecounteach 100
             -DESIGNSOURCE /home/admin/DFT/SOCX/ATPG/TOP.test_netlist.v
@@ -117,10 +117,10 @@ INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =          104,438,672  bytes
+                  Total Memory =          104,438,656  bytes
 
-                      CPU Time =    0:00:00.97
-                  Elapsed Time =    0:00:02.09                    [end TDA_001]
+                      CPU Time =    0:00:00.98
+                  Elapsed Time =    0:00:02.11                    [end TDA_001]
 
 
 

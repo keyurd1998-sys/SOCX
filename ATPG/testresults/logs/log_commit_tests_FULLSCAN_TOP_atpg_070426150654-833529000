@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426141416-684319000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426150654-833529000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Saturday Jul 04 14:14:16 2026  IST
+            Date Started: Saturday Jul 04 15:06:54 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 1172109.
+            This job is process number 1195283.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -21,15 +21,15 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE FULLSCAN
 
             -INEXPERIMENT TOP_atpg
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426141416-684319000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426150654-833529000
             -STDOUT summary
 [end TDA_009]
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 
 INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
-         622493 /home/admin/DFT/SOCX/ATPG/tbdata/TBDbin.FULLSCAN.TOP_atpg
+         530637 /home/admin/DFT/SOCX/ATPG/tbdata/TBDbin.FULLSCAN.TOP_atpg
 
-INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.43.1 (Relative test numbers 1 thru 407).  [end TBD_807] 
+INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.38.1 (Relative test numbers 1 thru 356).  [end TBD_807] 
 
 Testmode and Global statistics prior to commit_tests
 
@@ -57,8 +57,8 @@ Testmode and Global statistics after commit_tests
                  ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
                  Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
 
-Total Static        95.53  92.28        15317        14580            0           55          682        15854        14580            0           55         1219
-Collapsed Static    96.43  92.35        10919        10483            0           48          388        11399        10483            0           48          868
+Total Static        93.50  90.32        15317        14270            0           55          992        15854        14270            0           55         1529
+Collapsed Static    94.64  90.64        10919        10288            0           48          583        11399        10288            0           48         1063
 PI Static          100.00  94.23           49           49            0            0            0           52           49            0            0            3
 PO Static          100.00 100.00           46           46            0            0            0           46           46            0            0            0
 
@@ -72,30 +72,30 @@ Path                 0.00   0.00            0            0                      
 
 
 
-INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.43.1 (Relative test numbers 1 to 407).  [end TBD_810] 
+INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.38.1 (Relative test numbers 1 to 356).  [end TBD_810] 
 
 INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
   experiments     = 1
   test sections   = 2
   tester loops    = 2
-  test procedures = 45
-  test sequence   = 407
+  test procedures = 40
+  test sequence   = 356
   init sequencess = 2
 
 INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
-         622493 /home/admin/DFT/SOCX/ATPG/tbdata/TBDbin.FULLSCAN 
+         530637 /home/admin/DFT/SOCX/ATPG/tbdata/TBDbin.FULLSCAN 
          180224 /home/admin/DFT/SOCX/ATPG/tbdata/faultStatus 
 
 INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =            7,959,712  bytes
+                  Total Memory =            7,950,704  bytes
 
                       CPU Time =    0:00:00.01
                   Elapsed Time =    0:00:00.04                    [end TDA_001]
 
-     Date Ended:  Saturday Jul 04 14:14:16 2026  IST
+     Date Ended:  Saturday Jul 04 15:06:54 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
@@ -110,9 +110,9 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
   INFO Messages...
       1 INFO (TBD-805): File(s) generated (bytes and name):   
       1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
-      1 INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.43.1 (Relative test numbers 1 thru 407).   
+      1 INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.38.1 (Relative test numbers 1 thru 356).   
       1 INFO (TBD-809): Master test vector file statistics:     
-      1 INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.43.1 (Relative test numbers 1 to 407).   
+      1 INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.38.1 (Relative test numbers 1 to 356).   
       1 INFO (TBD-831): commit_tests completed successfully.   
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   

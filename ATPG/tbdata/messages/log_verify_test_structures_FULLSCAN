@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_070426141321-252097000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_070426150553-171479000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Saturday Jul 04 14:13:21 2026  IST
+            Date Started: Saturday Jul 04 15:05:53 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 1171703.
+            This job is process number 1194813.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,10 +20,10 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE FULLSCAN
 
             -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
-            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_070426141321-252097000
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_070426150553-171479000
             -STDOUT summary
 [end TDA_009]
-INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 14:13:21 2026    [end TSV_900] 
+INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 15:05:53 2026    [end TSV_900] 
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 ------------------- verify_test_structures Process Preview ---------------------
   apply constraints ...................................... constraints=yes    
@@ -205,7 +205,7 @@ INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multipl
 INFO (TSV-383): There are 1 floating latches.   [end TSV_383] 
 
 Analyze flip-flop and latch scan characteristics process has completed.
-                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.03
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
   
    Analyze explicit fixed value latches 
 
@@ -233,9 +233,9 @@ INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:
 
                   Total Memory =            9,005,296  bytes
 
-                      CPU Time =    0:00:00.05
-                  Elapsed Time =    0:00:00.34                    [end TDA_001]
+                      CPU Time =    0:00:00.04
+                  Elapsed Time =    0:00:00.28                    [end TDA_001]
 
-     Date Ended:  Saturday Jul 04 14:13:21 2026  IST
+     Date Ended:  Saturday Jul 04 15:05:53 2026  IST
 
 

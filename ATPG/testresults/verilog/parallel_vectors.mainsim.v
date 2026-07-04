@@ -3,7 +3,7 @@
 // Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025  //
 //***************************************************************************//
 //                                                                           //
-//  FILE CREATED..............July 04, 2026 at 14:14:15                      //
+//  FILE CREATED..............July 04, 2026 at 15:06:50                      //
 //                                                                           //
 //  PROJECT NAME..............ATPG                                           //
 //                                                                           //
@@ -40,7 +40,7 @@
 //                                                                           //
 //***************************************************************************//
 
-// Command Line: write_vectors -WORKDIR /home/admin/DFT/SOCX/ATPG -TESTMODE FULLSCAN -INEXPERIMENT TOP_atpg -STDOUT summary -language verilog -scanformat parallel
+// Command Line: write_vectors -WORKDIR /home/admin/DFT/SOCX/ATPG -TESTMODE FULLSCAN -INEXPERIMENT TOP_atpg -STDOUT summary -language verilog -outputfilename parallel_vectors -scanformat parallel
 
   `timescale 1 ns / 1 ps
 
