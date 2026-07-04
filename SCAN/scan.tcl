@@ -143,15 +143,15 @@ syn_map                                      ;# Map generic cells to library gat
 set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
 
 # =========================================================
-# ATPG Analysis and Test Point Insertion (NEW SECTION)
+# ATPG Analysis and Test Point Insertion
 # =========================================================
-# 1. Analyze the design for untestable faults
-analyze_atpg_testability
+# Perform ATPG analysis specifying the work directory and library
+analyze_atpg_testability -directory $ATPG_DIR -library $VERILOG_LIB [current_design]
 
-# 2. Identify test points for deterministic coverage
+# Identify test points for deterministic coverage
 write_dft_deterministic_test_points > $REPORT_DIR/test_points.rpt
 
-# 3. Insert the identified test points into the design
+# Insert the identified test points into the design
 add_analyzed_test_points
 
 # =========================================================
