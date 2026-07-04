@@ -97,7 +97,4 @@ write_vectors \
 #-------------------------------------------------------------------------------
 commit_tests \
     -inexperiment	 TOP_atpg \
-    -testmode	 FULLSCAN 
-
-
-exit
+    -testmode	 FULLSCAN
