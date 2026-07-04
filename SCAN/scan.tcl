@@ -17,10 +17,12 @@ file mkdir $WORK_DIR                         ;# Create Output Dir
 file mkdir $WORK_DIR/Report                  ;# Create report folder
 file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
 file mkdir ../ATPG                           ;# Create ATPG folder
+file mkdir $WORK_DIR/TP                       ;# Create Test Point folder
 
 set REPORT_DIR "$WORK_DIR/Report"
 set NETLIST_DIR "$WORK_DIR/Netlist"
 set ATPG_DIR    "../ATPG"
+set TP_DIR      "$WORK_DIR/TP"
 # =========================================================
 # Search Path for RTL, LIBRARY & SCRIPTS
 # =========================================================
@@ -151,7 +153,7 @@ connect_scan_chains -auto_create
 # ATPG Analysis and Test Point Insertion
 # =========================================================
 # 1. Perform ATPG analysis
-analyze_atpg_testability -directory $ATPG_DIR -library $VERILOG_LIB [current_design]
+analyze_atpg_testability -directory $TP_DIR -library $VERILOG_LIB [current_design]
 
 # 2. Generate the DFA scripts
 # The tool automatically writes the scripts (e.g., runmodus.dfa.tcl) to './test_scripts'
