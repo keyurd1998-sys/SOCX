@@ -17,12 +17,12 @@ file mkdir $WORK_DIR                         ;# Create Output Dir
 file mkdir $WORK_DIR/Report                  ;# Create report folder
 file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
 file mkdir ../ATPG                           ;# Create ATPG folder
-file mkdir $WORK_DIR/TP                       ;# Create Test Point folder
+file mkdir TP                       ;# Create Test Point folder
 
 set REPORT_DIR "$WORK_DIR/Report"
 set NETLIST_DIR "$WORK_DIR/Netlist"
 set ATPG_DIR    "../ATPG"
-set TP_DIR      "$WORK_DIR/TP"
+set TP_DIR      "TP"
 # =========================================================
 # Search Path for RTL, LIBRARY & SCRIPTS
 # =========================================================
