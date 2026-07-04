@@ -1,0 +1,241 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            verify_test_structures -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/SCAN/test_scripts -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_verify_test_structures_FULLSCAN_070426141047-068474000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 04 14:10:47 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 1168905.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_verify_test_structures_FULLSCAN_070426141047-068474000
+            -STDOUT summary
+[end TDA_009]
+INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 14:10:47 2026    [end TSV_900] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Re-run verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+         17,607  Blocks                       9,962  Blocks
+         54,624  Pins                         9,962  Nodes
+         29,208  Nets
+
+Primary Inputs:                      Primary Outputs:
+         26  Input Only                        23  Output Only
+          0  Input/Output                       0  Input/Output
+         26  Total Inputs                      23  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+        710  Tied to 0                          0  Two-State
+        361  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+      1,071  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+        630  MUX2s
+          1  Latches
+
+
+        361  Rising  Edge Flop w/Set-Dominant and Reset Port
+        361  Total Flops
+
+      1,769  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         20  SI    (Scan Input)                Pins
+         20  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         24      PI  -EC  -SC                             UART_CLK / UART_CLK
+         23      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         16      PI   SI2                                 ScanIn_3 / ScanIn_3
+         17      PI   SI3                                 ScanIn_4 / ScanIn_4
+         18      PI   SI4                                 ScanIn_5 / ScanIn_5
+         19      PI   SI5                                 ScanIn_6 / ScanIn_6
+         20      PI   SI6                                 ScanIn_7 / ScanIn_7
+         21      PI   SI7                                 ScanIn_8 / ScanIn_8
+         22      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         26      PO   SO                                  ScanOut_1 / ScanOut_1
+         37      PO   SO1                                 ScanOut_2 / ScanOut_2
+         39      PO   SO2                                 ScanOut_3 / ScanOut_3
+         40      PO   SO3                                 ScanOut_4 / ScanOut_4
+         41      PO   SO4                                 ScanOut_5 / ScanOut_5
+         42      PO   SO5                                 ScanOut_6 / ScanOut_6
+         43      PO   SO6                                 ScanOut_7 / ScanOut_7
+         44      PO   SO7                                 ScanOut_8 / ScanOut_8
+         45      PO   SO8                                 ScanOut_9 / ScanOut_9
+         27      PO   SO9                                 ScanOut_10 / ScanOut_10
+         28      PO   SO10                                ScanOut_11 / ScanOut_11
+         29      PO   SO11                                ScanOut_12 / ScanOut_12
+         30      PO   SO12                                ScanOut_13 / ScanOut_13
+         31      PO   SO13                                ScanOut_14 / ScanOut_14
+         32      PO   SO14                                ScanOut_15 / ScanOut_15
+         33      PO   SO15                                ScanOut_16 / ScanOut_16
+         34      PO   SO16                                ScanOut_17 / ScanOut_17
+         35      PO   SO17                                ScanOut_18 / ScanOut_18
+         36      PO   SO18                                ScanOut_19 / ScanOut_19
+         38      PO   SO19                                ScanOut_20 / ScanOut_20
+
+  
+   Analyze test clocks' control of memory elements    
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.03
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.05
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-068): The length of the longest scan chain is 19 bit positions, which is 106% of the average scan chain length 19 (based on 361 total scan chain bits and 20 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 19 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_3' and ending at 'pin ScanOut_3' is controllable and observable. The length of the scan chain is 19 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_4' and ending at 'pin ScanOut_4' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_5' and ending at 'pin ScanOut_5' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_6' and ending at 'pin ScanOut_6' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_7' and ending at 'pin ScanOut_7' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_8' and ending at 'pin ScanOut_8' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_9' and ending at 'pin ScanOut_9' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_10' and ending at 'pin ScanOut_10' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_11' and ending at 'pin ScanOut_11' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_12' and ending at 'pin ScanOut_12' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_13' and ending at 'pin ScanOut_13' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_14' and ending at 'pin ScanOut_14' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_15' and ending at 'pin ScanOut_15' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_16' and ending at 'pin ScanOut_16' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_17' and ending at 'pin ScanOut_17' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_18' and ending at 'pin ScanOut_18' is controllable and observable. The length of the scan chain is 17 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_19' and ending at 'pin ScanOut_19' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_20' and ending at 'pin ScanOut_20' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-567): There are 20 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 20 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+INFO (TSV-383): There are 1 floating latches.   [end TSV_383] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.03
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+
+--------------------File Information----------------------
+          57344 /home/admin/DFT/SOCX/SCAN/test_scripts/tbdata/TSVmessageFile.FULLSCAN 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            8,927,472  bytes
+
+                      CPU Time =    0:00:00.05
+                  Elapsed Time =    0:00:00.33                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 14:10:47 2026  IST
+
+

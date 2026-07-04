@@ -1,0 +1,1085 @@
+
+ 
+Copyright (C) 2002-2025 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 25.10-p027_1, built Mar 13 2025 (linux26_64)
+Options : -no_gui -log TP/atpg -overwrite
+Date    : Sat, July 04 14:09:45 2026
+Host    : Pine-06 (x86_64 Linux 5.14.0-611.30.1.el9_7.x86_64) (6*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB)
+OS      : Red Hat Enterprise Linux release 9.7 (Plow)
+@modus:root:/ 1> set code [catch { source TP/runmodus.init.tcl ; source TP/runmodus.atpg.tcl ;}]; exit $code
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/TP/testresults/logs/log_build_model_070426140945-538800000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
+
+
+Search Order  1:  "/home/admin/DFT/SOCX/SCAN/TP/test_netlist.v"
+Search Order  2:  "../../Library/verilog/typical.v"
+
+
+
+Reading Verilog data from /home/admin/DFT/SOCX/SCAN/TP/test_netlist.v
+
+Verilog Parser complete - 32 modules, 20 gates, 0 user defined primitives.
+
+
+Reading Verilog data from ../../Library/verilog/typical.v
+
+Verilog Parser complete - 477 modules, 2799 gates, 3 user defined primitives.
+
+
+
+INFO (TEI-196): Build Model - Hierarchical Model Build starting: [end TEI_196] 
+
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
+
+
+Number of blocks in the hierarchical model is: 17,607.
+
+Number of technology library cell instances in the hierarchical model is: 1,769.
+
+
+INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
+
+
+
+INFO (TEI-198): Build Model - Flat Model Build starting: [end TEI_198] 
+
+ defaultTIE = X
+ defaultDFN = T
+
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+         17,607  Blocks                       9,962  Blocks
+         54,624  Pins                         9,962  Nodes
+         29,208  Nets
+
+Primary Inputs:                      Primary Outputs:
+         26  Input Only                        23  Output Only
+          0  Input/Output                       0  Input/Output
+         26  Total Inputs                      23  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+        710  Tied to 0                          0  Two-State
+        361  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+      1,071  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+        630  MUX2s
+          1  Latches
+
+
+        361  Rising  Edge Flop w/Set-Dominant and Reset Port
+        361  Total Flops
+
+      1,769  Technology Library Cell Instances
+
+[end TLM_055] 
+Optimization removed logic for 4 of 66 cells in this design.
+
+Optimization removed a total of 22 tied Latch Ports.
+Optimization removed a total of 379 non-controlling inputs.
+Optimization removed a total of 4,727 dangling logic nodes.
+
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          104,098,672  bytes
+
+                      CPU Time =    0:00:00.93
+                  Elapsed Time =    0:00:01.91                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: build_testmode 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/TP/testresults/logs/log_build_testmode_SCAN_070426140948-554268000 [end TDA_015]
+
+TDRPATH set to: /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 92.84% active logic,  7.16% inactive logic and  0.00% constraint logic.   [end THM_814] 
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+           coverage is impacted when too little of the logic is visible.   [end TTM_347] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_PULSE_GEN.pls_flop_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_PULSE_GEN.rcv_flop_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[2].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.par_err_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.parity_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_stop_check.stp_err_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_strt_check.strt_glitch_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.S_DATA_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.ser_done_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+INFO (TTM-357): There are 20 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  SCAN
+
+Information for Test Mode:  SCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  SCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        1           0           1 
+ Finite State    (FSM)           0           0           0 
+
+WARNING (TTM-809): Test mode SCAN has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  SCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         20  SI    (Scan Input)                Pins
+         20  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         24      PI  -EC  -SC                             UART_CLK / UART_CLK
+         23      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         16      PI   SI2                                 ScanIn_3 / ScanIn_3
+         17      PI   SI3                                 ScanIn_4 / ScanIn_4
+         18      PI   SI4                                 ScanIn_5 / ScanIn_5
+         19      PI   SI5                                 ScanIn_6 / ScanIn_6
+         20      PI   SI6                                 ScanIn_7 / ScanIn_7
+         21      PI   SI7                                 ScanIn_8 / ScanIn_8
+         22      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         26      PO   SO                                  ScanOut_1 / ScanOut_1
+         37      PO   SO1                                 ScanOut_2 / ScanOut_2
+         39      PO   SO2                                 ScanOut_3 / ScanOut_3
+         40      PO   SO3                                 ScanOut_4 / ScanOut_4
+         41      PO   SO4                                 ScanOut_5 / ScanOut_5
+         42      PO   SO5                                 ScanOut_6 / ScanOut_6
+         43      PO   SO6                                 ScanOut_7 / ScanOut_7
+         44      PO   SO7                                 ScanOut_8 / ScanOut_8
+         45      PO   SO8                                 ScanOut_9 / ScanOut_9
+         27      PO   SO9                                 ScanOut_10 / ScanOut_10
+         28      PO   SO10                                ScanOut_11 / ScanOut_11
+         29      PO   SO11                                ScanOut_12 / ScanOut_12
+         30      PO   SO12                                ScanOut_13 / ScanOut_13
+         31      PO   SO13                                ScanOut_14 / ScanOut_14
+         32      PO   SO14                                ScanOut_15 / ScanOut_15
+         33      PO   SO15                                ScanOut_16 / ScanOut_16
+         34      PO   SO16                                ScanOut_17 / ScanOut_17
+         35      PO   SO17                                ScanOut_18 / ScanOut_18
+         36      PO   SO18                                ScanOut_19 / ScanOut_19
+         38      PO   SO19                                ScanOut_20 / ScanOut_20
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+               Total Memory =           17,591,440  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.15
+               Elapsed Time =   0:00:00.24
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 92.84% active logic,  7.16% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 20 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+     71 WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+      1 WARNING (TTM-809): Test mode SCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/TP/testresults/logs/log_build_faultmodel_070426140949-877518000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/SCAN/TP/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count                10
+Global Ignored Dynamic Fault Count                0
+
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00        14990            0            0            0        14990
+Collapsed Static     0.00        10844            0            0            0        10844
+PI Static            0.00           52            0            0            0           52
+PO Static            0.00           46            0            0            0           46
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00        14990            0                                  14990
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/SCAN/TP/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: SCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00        14521            0            0            0        14521        14990            0            0            0        14990
+Collapsed Static     0.00   0.00        10432            0            0            0        10432        10844            0            0            0        10844
+PI Static            0.00   0.00           49            0            0            0           49           52            0            0            0           52
+PO Static            0.00   0.00           46            0            0            0           46           46            0            0            0           46
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00        14990            0                                  14990        14990            0                                  14990
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static        96.87        14990        14521          469
+Collapsed Static    96.20        10844        10432          412
+PI Static           94.23           52           49            3
+PO Static          100.00           46           46            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      SCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           11,665,168  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.06                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 14:09:50 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/SCAN/TP/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/SCAN/TP/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+#@ Begin verbose source TP/runmodus.atpg.tcl
+@file(TP/runmodus.atpg.tcl) 13: set_db workdir TP;
+@file(TP/runmodus.atpg.tcl) 14: set   WORKDIR [get_db workdir]
+@file(TP/runmodus.atpg.tcl) 17: set_option stdout     all;                                     # Not printing output for each command to the terminal
+@file(TP/runmodus.atpg.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(TP/runmodus.atpg.tcl) 20: set_db stop_on_severity error;
+@file(TP/runmodus.atpg.tcl) 25: verify_test_structures \
+    -testmode	 SCAN \
+ 
+Starting Command: verify_test_structures 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/TP/testresults/logs/log_verify_test_structures_SCAN_070426140951-108790000 [end TDA_015]
+
+INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 14:09:51 2026    [end TSV_900] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Re-run verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+         17,607  Blocks                       9,962  Blocks
+         54,624  Pins                         9,962  Nodes
+         29,208  Nets
+
+Primary Inputs:                      Primary Outputs:
+         26  Input Only                        23  Output Only
+          0  Input/Output                       0  Input/Output
+         26  Total Inputs                      23  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+        710  Tied to 0                          0  Two-State
+        361  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+      1,071  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+        630  MUX2s
+          1  Latches
+
+
+        361  Rising  Edge Flop w/Set-Dominant and Reset Port
+        361  Total Flops
+
+      1,769  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  SCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         20  SI    (Scan Input)                Pins
+         20  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         24      PI  -EC  -SC                             UART_CLK / UART_CLK
+         23      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         16      PI   SI2                                 ScanIn_3 / ScanIn_3
+         17      PI   SI3                                 ScanIn_4 / ScanIn_4
+         18      PI   SI4                                 ScanIn_5 / ScanIn_5
+         19      PI   SI5                                 ScanIn_6 / ScanIn_6
+         20      PI   SI6                                 ScanIn_7 / ScanIn_7
+         21      PI   SI7                                 ScanIn_8 / ScanIn_8
+         22      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         26      PO   SO                                  ScanOut_1 / ScanOut_1
+         37      PO   SO1                                 ScanOut_2 / ScanOut_2
+         39      PO   SO2                                 ScanOut_3 / ScanOut_3
+         40      PO   SO3                                 ScanOut_4 / ScanOut_4
+         41      PO   SO4                                 ScanOut_5 / ScanOut_5
+         42      PO   SO5                                 ScanOut_6 / ScanOut_6
+         43      PO   SO6                                 ScanOut_7 / ScanOut_7
+         44      PO   SO7                                 ScanOut_8 / ScanOut_8
+         45      PO   SO8                                 ScanOut_9 / ScanOut_9
+         27      PO   SO9                                 ScanOut_10 / ScanOut_10
+         28      PO   SO10                                ScanOut_11 / ScanOut_11
+         29      PO   SO11                                ScanOut_12 / ScanOut_12
+         30      PO   SO12                                ScanOut_13 / ScanOut_13
+         31      PO   SO13                                ScanOut_14 / ScanOut_14
+         32      PO   SO14                                ScanOut_15 / ScanOut_15
+         33      PO   SO15                                ScanOut_16 / ScanOut_16
+         34      PO   SO16                                ScanOut_17 / ScanOut_17
+         35      PO   SO17                                ScanOut_18 / ScanOut_18
+         36      PO   SO18                                ScanOut_19 / ScanOut_19
+         38      PO   SO19                                ScanOut_20 / ScanOut_20
+
+  
+   Analyze test clocks' control of memory elements    
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.05
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-068): The length of the longest scan chain is 19 bit positions, which is 106% of the average scan chain length 19 (based on 361 total scan chain bits and 20 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 19 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_3' and ending at 'pin ScanOut_3' is controllable and observable. The length of the scan chain is 19 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_4' and ending at 'pin ScanOut_4' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_5' and ending at 'pin ScanOut_5' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_6' and ending at 'pin ScanOut_6' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_7' and ending at 'pin ScanOut_7' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_8' and ending at 'pin ScanOut_8' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_9' and ending at 'pin ScanOut_9' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_10' and ending at 'pin ScanOut_10' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_11' and ending at 'pin ScanOut_11' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_12' and ending at 'pin ScanOut_12' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_13' and ending at 'pin ScanOut_13' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_14' and ending at 'pin ScanOut_14' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_15' and ending at 'pin ScanOut_15' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_16' and ending at 'pin ScanOut_16' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_17' and ending at 'pin ScanOut_17' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_18' and ending at 'pin ScanOut_18' is controllable and observable. The length of the scan chain is 17 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_19' and ending at 'pin ScanOut_19' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_20' and ending at 'pin ScanOut_20' is controllable and observable. The length of the scan chain is 18 bit positions.   [end TSV_378] 
+INFO (TSV-567): There are 20 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 20 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+INFO (TSV-383): There are 1 floating latches.   [end TSV_383] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.03
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.03  Elapsed time =  0:00:00.04
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+
+--------------------File Information----------------------
+          57344 /home/admin/DFT/SOCX/SCAN/TP/tbdata/TSVmessageFile.SCAN 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            8,934,384  bytes
+
+                      CPU Time =    0:00:00.06
+                  Elapsed Time =    0:00:00.31                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 14:09:51 2026  IST
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 19 bit positions, which is 106% of the average scan chain length 19 (based on 361 total scan chain bits and 20 valid scan chains).    
+     20 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 19 bit positions.    
+      1 INFO (TSV-383): There are 1 floating latches.    
+      1 INFO (TSV-567): There are 20 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 20 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 14:09:51 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TP/runmodus.atpg.tcl) 32: analyze_testability \
+    -testmode	 SCAN \
+
+
+Starting Command: analyze_testability 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/TP/testresults/logs/log_analyze_testability_SCAN_070426140952-554036000 [end TDA_015]
+
+
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: SCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14521            0            0            0        14521   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14990            0            0            0        14990   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Scan Test generation                                                   [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      0       0       3050    21.00%   20.35%        11471           00:00.16    [end TDA_220] 
+INFO (TTC-110): Ending Scan Test generation                                                     [end TTC_110] 
+*************************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16       4648    53.03%   51.37%         6819           00:06.13    [end TDA_220] 
+INFO (TDA-220):     32      32        842    58.84%   57.00%         5973           00:10.07    [end TDA_220] 
+INFO (TDA-220):     48      48        511    62.37%   60.42%         5461           00:13.37    [end TDA_220] 
+INFO (TDA-220):     64      64        336    64.69%   62.66%         5124           00:16.27    [end TDA_220] 
+INFO (TDA-220):     80      80        255    66.46%   64.38%         4866           00:18.97    [end TDA_220] 
+INFO (TDA-220):     96      96        238    68.11%   65.98%         4625           00:22.89    [end TDA_220] 
+INFO (TDA-220):    112     111        169    69.28%   67.11%         4456           00:27.70    [end TDA_220] 
+INFO (TDA-220):    128     127        177    70.51%   68.30%         4277           00:30.82    [end TDA_220] 
+INFO (TDA-220):    144     143        527    74.16%   71.84%         3747           00:37.58    [end TDA_220] 
+INFO (TDA-220):    160     159        154    75.22%   72.86%         3593           00:37.58    [end TDA_220] 
+INFO (TDA-220):    176     173        398    77.97%   75.52%         3195           00:37.59    [end TDA_220] 
+INFO (TDA-220):    192     187        318    80.16%   77.65%         2877           00:37.59    [end TDA_220] 
+INFO (TDA-220):    208     200         68    80.63%   78.10%         2809           00:37.60    [end TDA_220] 
+INFO (TDA-220):    224     216        192    81.95%   79.38%         2617           00:37.61    [end TDA_220] 
+INFO (TDA-220):    240     232        105    82.68%   80.09%         2512           00:37.61    [end TDA_220] 
+INFO (TDA-220):    256     248        106    83.41%   80.79%         2406           00:37.61    [end TDA_220] 
+INFO (TDA-220):    272     264         77    83.94%   81.31%         2329           00:37.61    [end TDA_220] 
+INFO (TDA-220):    288     280         74    84.45%   81.80%         2255           00:37.62    [end TDA_220] 
+INFO (TDA-220):    304     280          0    84.45%   81.80%         2255           00:37.62    [end TDA_220] 
+INFO (TDA-220):    317     289        129    85.34%   82.66%         2126           00:37.62    [end TDA_220] 
+INFO (TDA-220):    333     304         44    85.64%   82.96%         2082           00:37.62    [end TDA_220] 
+INFO (TDA-220):    349     320         58    86.04%   83.35%         2024           00:37.63    [end TDA_220] 
+INFO (TDA-220):    365     336         36    86.29%   83.59%         1988           00:37.63    [end TDA_220] 
+INFO (TDA-220):    373     342         43    86.59%   83.87%         1945           00:37.64    [end TDA_220] 
+INFO (TDA-220):    385     354         97    87.26%   84.52%         1848           00:37.64    [end TDA_220] 
+INFO (TDA-220):    399     368         18    87.38%   84.64%         1830           00:37.64    [end TDA_220] 
+INFO (TDA-220):    406     375        200    88.76%   85.98%         1630           00:37.65    [end TDA_220] 
+INFO (TDA-220):    413     380         67    89.22%   86.43%         1563           00:37.66    [end TDA_220] 
+INFO (TDA-220):    420     386         91    89.85%   87.03%         1472           00:37.66    [end TDA_220] 
+INFO (TDA-220):    429     391         40    90.12%   87.30%         1432           00:37.67    [end TDA_220] 
+INFO (TDA-220):    433     391          0    90.12%   87.30%         1432           00:37.67    [end TDA_220] 
+INFO (TDA-220):    439     391          0    90.12%   87.30%         1432           00:37.67    [end TDA_220] 
+INFO (TDA-220):    445     391          0    90.12%   87.30%         1432           00:37.68    [end TDA_220] 
+INFO (TDA-220):    453     391          0    90.12%   87.30%         1432           00:37.68    [end TDA_220] 
+INFO (TDA-220):    458     391          0    90.12%   87.30%         1432           00:37.68    [end TDA_220] 
+INFO (TDA-220):    464     391          0    90.12%   87.30%         1432           00:37.68    [end TDA_220] 
+INFO (TDA-220):    469     395          8    90.18%   87.35%         1424           00:37.69    [end TDA_220] 
+INFO (TDA-220):    470     395          0    90.18%   87.35%         1424           00:37.69    [end TDA_220] 
+INFO (TDA-220):    472     397         75    90.70%   87.85%         1349           00:37.69    [end TDA_220] 
+INFO (TDA-220):    475     397          0    90.70%   87.85%         1349           00:37.69    [end TDA_220] 
+INFO (TDA-220):    477     399         81    91.26%   88.40%         1268           00:37.70    [end TDA_220] 
+INFO (TDA-220):    479     400          1    91.26%   88.40%         1267           00:37.70    [end TDA_220] 
+INFO (TDA-220):    481     401          1    91.27%   88.41%         1266           00:37.70    [end TDA_220] 
+INFO (TDA-220):    482     401          0    91.27%   88.41%         1266           00:37.70    [end TDA_220] 
+INFO (TDA-220):    483     401          0    91.27%   88.41%         1266           00:37.71    [end TDA_220] 
+INFO (TDA-220):    484     401          0    91.27%   88.41%         1266           00:37.71    [end TDA_220] 
+INFO (TDA-220):    485     401          0    91.27%   88.41%         1266           00:37.71    [end TDA_220] 
+INFO (TDA-221):    485     401          0    91.27%   88.41%         1266           00:37.71    [end TDA_221] 
+INFO (TDA-220):    490     406         37    91.52%   88.66%         1229           00:41.66    [end TDA_220] 
+INFO (TDA-220):    496     406          0    91.52%   88.66%         1229           00:41.66    [end TDA_220] 
+INFO (TDA-220):    497     407          3    91.54%   88.68%         1226           00:41.66    [end TDA_220] 
+INFO (TDA-220):    499     408         33    91.77%   88.90%         1193           00:41.66    [end TDA_220] 
+INFO (TDA-220):    502     408          0    91.77%   88.90%         1193           00:41.66    [end TDA_220] 
+INFO (TDA-220):    504     408          0    91.77%   88.90%         1193           00:41.67    [end TDA_220] 
+INFO (TDA-220):    505     408          0    91.77%   88.90%         1193           00:41.67    [end TDA_220] 
+INFO (TDA-220):    506     408          0    91.77%   88.90%         1193           00:41.67    [end TDA_220] 
+INFO (TDA-220):    507     408          0    91.77%   88.90%         1193           00:41.67    [end TDA_220] 
+INFO (TDA-220):    510     408          0    91.77%   88.90%         1193           00:41.75    [end TDA_220] 
+INFO (TDA-220):    511     408          0    91.77%   88.90%         1193           00:41.75    [end TDA_220] 
+INFO (TDA-220):    511     408          0    91.96%   89.08%         1163           00:41.91    [end TDA_220] 
+
+****************************************************************************************************
+                           Testmode Statistics: SCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14521        13307            0           51         1163  91.64  91.96
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14990        13307            0           51         1632  88.77  89.08
+****************************************************************************************************
+
+(I) File(s) generated (bytes and name):
+
+         118784 /home/admin/DFT/SOCX/SCAN/TP/tbdata/faultStatus.SCAN.TFA
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           11,666,912  bytes
+
+                      CPU Time =    0:00:40.52
+                  Elapsed Time =    0:00:41.95                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 14:10:34 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     64 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    485     401          0    91.27%   88.41%         1266           00:37.71     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      3 INFO (TTC-110): Starting Scan Test generation                                                    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+#@ End verbose source TP/runmodus.atpg.tcl
