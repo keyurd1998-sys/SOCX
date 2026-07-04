@@ -143,7 +143,7 @@ syn_map                                      ;# Map generic cells to library gat
 # Chain Configuration
 # =========================================================
 set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
-
+set_db [current_design] .dft_max_length_of_scan_chains 96
 # =========================================================
 # build Scan Chains
 # =========================================================
