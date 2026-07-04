@@ -71,9 +71,12 @@ build_faultmodel \
 # ATPG - TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_tests \
-    -experiment	 TOP_atpg \
-    -testmode	 FULLSCAN \
-
+    -experiment  TOP_atpg \
+    -testmode    FULLSCAN \
+    -effort      high \
+    -sequentialdepth 4 \
+    -stimclock   yes \
+    -pistimswhileclkon yes
 
 #-------------------------------------------------------------------------------
 # ATPG - Report the Scan and Capture Switching
@@ -83,13 +86,41 @@ write_toggle_gram \
     -testmode	 FULLSCAN \
 
 #-------------------------------------------------------------------------------
-# VERILOG VECTORS - For PARALLEL Simulation
+# ATPG - Generate Readable Fault Report
+#-------------------------------------------------------------------------------
+report_faults \
+    -faultstatus untested \
+    -stdout all \
+    -logfile $WORKDIR/untested_faults.txt
+    
+#-------------------------------------------------------------------------------
+# VERILOG VECTORS - For PARALLEL Simulation (Fast Logic Verification)
 #-------------------------------------------------------------------------------
 write_vectors \
-    -inexperiment	 TOP_atpg \
-    -testmode	 FULLSCAN \
-    -language	 verilog \
-    -scanformat	 parallel \
+    -inexperiment    TOP_atpg \
+    -testmode        FULLSCAN \
+    -language        verilog \
+    -scanformat      parallel \
+    -outputfilename  parallel_vectors
+
+#-------------------------------------------------------------------------------
+# VERILOG VECTORS - For SERIAL Simulation (Chain Verification)
+#-------------------------------------------------------------------------------
+write_vectors \
+    -inexperiment    TOP_atpg \
+    -testmode        FULLSCAN \
+    -language        verilog \
+    -scanformat      serial \
+    -outputfilename  serial_vectors
+
+#-------------------------------------------------------------------------------
+# STIL VECTORS - For ATE (Automatic Test Equipment)
+#-------------------------------------------------------------------------------
+write_vectors \
+    -inexperiment    TOP_atpg \
+    -testmode        FULLSCAN \
+    -language        stil \
+    -outputfilename  tester_patterns
 
 
 #-------------------------------------------------------------------------------
