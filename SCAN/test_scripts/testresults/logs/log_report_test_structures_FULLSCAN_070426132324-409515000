@@ -1,0 +1,551 @@
+Starting Command: report_test_structures 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_test_structures -reportscanchain all -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/SCAN/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_report_test_structures_FULLSCAN_070426132324-409515000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 04 13:23:24 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 1133513.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_report_test_structures_FULLSCAN_070426132324-409515000
+            -STDOUT summary
+            -reportscanchain all
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+         17,607  Blocks                       9,930  Blocks
+         54,546  Pins                         9,930  Nodes
+         29,136  Nets
+
+Primary Inputs:                      Primary Outputs:
+         10  Input Only                         7  Output Only
+          0  Input/Output                       0  Input/Output
+         10  Total Inputs                       7  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+        710  Tied to 0                          0  Two-State
+        361  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+      1,071  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+        630  MUX2s
+          1  Latches
+
+
+        361  Rising  Edge Flop w/Set-Dominant and Reset Port
+        361  Total Flops
+
+      1,769  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Information for Test Mode:  FULLSCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+
+
+Control/Observe Chain Information for Test Mode:  FULLSCAN
+-----------------------------------------------
+
+     4 Control Chains (0 Control Only)
+     4 Observe Chains (0 Observe Only)
+     4 Chains are Control and Observe
+
+  Longest Scan Chain: 91 bits
+  Average Scan Chain Length: 91 bits
+
+
+  Control Chain: 1
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name           3/port:ScanIn_1    Pipeline Stages: 0 
+    Load Point Pin Index/Name  3/port:ScanIn_1
+    Length: 91
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 1
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          10/port:ScanOut_1    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  10/port:ScanOut_1
+    Unload Point In Phase with Load Point
+    Length: 91
+    Scan Section: Scan_Section_Sequence
+
+    Position     Type  Block Index  IO Phase  ObserveChn  ObservePos  Block Name
+    --------  -------  -----------  --------  ----------  ----------  ----------
+           1  rDFF_cS          568        ++           1          91  inst:U0_ALU_16B.\ALU_OUT_reg[0]
+           2  rDFF_cS          813        ++           1          90  inst:U0_ALU_16B.\ALU_OUT_reg[1]
+           3  rDFF_cS          848        ++           1          89  inst:U0_ALU_16B.\ALU_OUT_reg[2]
+           4  rDFF_cS          883        ++           1          88  inst:U0_ALU_16B.\ALU_OUT_reg[3]
+           5  rDFF_cS          918        ++           1          87  inst:U0_ALU_16B.\ALU_OUT_reg[4]
+           6  rDFF_cS          953        ++           1          86  inst:U0_ALU_16B.\ALU_OUT_reg[5]
+           7  rDFF_cS          988        ++           1          85  inst:U0_ALU_16B.\ALU_OUT_reg[6]
+           8  rDFF_cS         1023        ++           1          84  inst:U0_ALU_16B.\ALU_OUT_reg[7]
+           9  rDFF_cS         1058        ++           1          83  inst:U0_ALU_16B.\ALU_OUT_reg[8]
+          10  rDFF_cS         1093        ++           1          82  inst:U0_ALU_16B.\ALU_OUT_reg[9]
+          11  rDFF_cS          603        ++           1          81  inst:U0_ALU_16B.\ALU_OUT_reg[10]
+          12  rDFF_cS          638        ++           1          80  inst:U0_ALU_16B.\ALU_OUT_reg[11]
+          13  rDFF_cS          673        ++           1          79  inst:U0_ALU_16B.\ALU_OUT_reg[12]
+          14  rDFF_cS          708        ++           1          78  inst:U0_ALU_16B.\ALU_OUT_reg[13]
+          15  rDFF_cS          743        ++           1          77  inst:U0_ALU_16B.\ALU_OUT_reg[14]
+          16  rDFF_cS          778        ++           1          76  inst:U0_ALU_16B.\ALU_OUT_reg[15]
+          17  rDFF_cS          533        ++           1          75  inst:U0_ALU_16B.OUT_VALID_reg
+          18  rDFF_cS         2133        ++           1          74  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][0]
+          19  rDFF_cS         2168        ++           1          73  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][1]
+          20  rDFF_cS         2203        ++           1          72  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][2]
+          21  rDFF_cS         2238        ++           1          71  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][3]
+          22  rDFF_cS         2273        ++           1          70  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][4]
+          23  rDFF_cS         2308        ++           1          69  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][5]
+          24  rDFF_cS         2343        ++           1          68  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][6]
+          25  rDFF_cS         2378        ++           1          67  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[0][7]
+          26  rDFF_cS         2413        ++           1          66  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][0]
+          27  rDFF_cS         2448        ++           1          65  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][1]
+          28  rDFF_cS         2483        ++           1          64  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][2]
+          29  rDFF_cS         2518        ++           1          63  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][3]
+          30  rDFF_cS         2553        ++           1          62  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][4]
+          31  rDFF_cS         2588        ++           1          61  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][5]
+          32  rDFF_cS         2623        ++           1          60  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][6]
+          33  rDFF_cS         2658        ++           1          59  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[1][7]
+          34  rDFF_cS         2693        ++           1          58  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][0]
+          35  rDFF_cS         2728        ++           1          57  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][1]
+          36  rDFF_cS         2763        ++           1          56  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][2]
+          37  rDFF_cS         2798        ++           1          55  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][3]
+          38  rDFF_cS         2833        ++           1          54  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][4]
+          39  rDFF_cS         2868        ++           1          53  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][5]
+          40  rDFF_cS         2903        ++           1          52  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][6]
+          41  rDFF_cS         2938        ++           1          51  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[2][7]
+          42  rDFF_cS         2973        ++           1          50  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][0]
+          43  rDFF_cS         3008        ++           1          49  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][1]
+          44  rDFF_cS         3043        ++           1          48  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][2]
+          45  rDFF_cS         3078        ++           1          47  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][3]
+          46  rDFF_cS         3113        ++           1          46  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][4]
+          47  rDFF_cS         3148        ++           1          45  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][5]
+          48  rDFF_cS         3183        ++           1          44  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][6]
+          49  rDFF_cS         3218        ++           1          43  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[3][7]
+          50  rDFF_cS         3253        ++           1          42  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][0]
+          51  rDFF_cS         3288        ++           1          41  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][1]
+          52  rDFF_cS         3323        ++           1          40  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][2]
+          53  rDFF_cS         3358        ++           1          39  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][3]
+          54  rDFF_cS         3393        ++           1          38  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][4]
+          55  rDFF_cS         3428        ++           1          37  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][5]
+          56  rDFF_cS         3463        ++           1          36  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][6]
+          57  rDFF_cS         3498        ++           1          35  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[4][7]
+          58  rDFF_cS         3533        ++           1          34  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][0]
+          59  rDFF_cS         3568        ++           1          33  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][1]
+          60  rDFF_cS         3603        ++           1          32  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][2]
+          61  rDFF_cS         3638        ++           1          31  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][3]
+          62  rDFF_cS         3673        ++           1          30  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][4]
+          63  rDFF_cS         3708        ++           1          29  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][5]
+          64  rDFF_cS         3743        ++           1          28  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][6]
+          65  rDFF_cS         3778        ++           1          27  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[5][7]
+          66  rDFF_cS         3813        ++           1          26  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][0]
+          67  rDFF_cS         3848        ++           1          25  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][1]
+          68  rDFF_cS         3883        ++           1          24  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][2]
+          69  rDFF_cS         3918        ++           1          23  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][3]
+          70  rDFF_cS         3953        ++           1          22  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][4]
+          71  rDFF_cS         3988        ++           1          21  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][5]
+          72  rDFF_cS         4023        ++           1          20  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][6]
+          73  rDFF_cS         4058        ++           1          19  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[6][7]
+          74  rDFF_cS         4093        ++           1          18  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][0]
+          75  rDFF_cS         4128        ++           1          17  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][1]
+          76  rDFF_cS         4163        ++           1          16  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][2]
+          77  rDFF_cS         4198        ++           1          15  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][3]
+          78  rDFF_cS         4233        ++           1          14  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][4]
+          79  rDFF_cS         4268        ++           1          13  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][5]
+          80  rDFF_cS         4303        ++           1          12  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][6]
+          81  rDFF_cS         4338        ++           1          11  inst:U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[7][7]
+          82  rDFF_cS         5186        ++           1          10  inst:U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[0]
+          83  rDFF_cS         5221        ++           1           9  inst:U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[1]
+          84  rDFF_cS         5256        ++           1           8  inst:U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[2]
+          85  rDFF_cS         5291        ++           1           7  inst:U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[3]
+          86  rDFF_cS         5326        ++           1           6  inst:U0_Async_fifo.u_fifo_wr.\w_ptr_reg[0]
+          87  rDFF_cS         5361        ++           1           5  inst:U0_Async_fifo.u_fifo_wr.\w_ptr_reg[1]
+          88  rDFF_cS         5396        ++           1           4  inst:U0_Async_fifo.u_fifo_wr.\w_ptr_reg[2]
+          89  rDFF_cS         5431        ++           1           3  inst:U0_Async_fifo.u_fifo_wr.\w_ptr_reg[3]
+          90  rDFF_cS         5525        ++           1           2  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[0][0]
+          91  rDFF_cS         5560        ++           1           1  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[0][1]
+
+
+  Control Chain: 2
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name           4/port:ScanIn_2    Pipeline Stages: 0 
+    Load Point Pin Index/Name  4/port:ScanIn_2
+    Length: 89
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 2
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          11/port:ScanOut_2    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  11/port:ScanOut_2
+    Unload Point Inverted from Load Point
+    Length: 89
+    Scan Section: Scan_Section_Sequence
+
+    Position     Type  Block Index  IO Phase  ObserveChn  ObservePos  Block Name
+    --------  -------  -----------  --------  ----------  ----------  ----------
+           1  rDFF_cS         4845        +~           2          89  inst:U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0]
+           2  rDFF_cS         4880        +~           2          88  inst:U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[1]
+           3  rDFF_cS         4915        +~           2          87  inst:U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[2]
+           4  rDFF_cS         4950        +~           2          86  inst:U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[3]
+           5  rDFF_cS         4985        +~           2          85  inst:U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[0]
+           6  rDFF_cS         5020        +~           2          84  inst:U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[1]
+           7  rDFF_cS         5055        +~           2          83  inst:U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[2]
+           8  rDFF_cS         5090        +~           2          82  inst:U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[3]
+           9  rDFF_cS         5808        +~           2          81  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][0]
+          10  rDFF_cS         5843        +~           2          80  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1]
+          11  rDFF_cS         5878        +~           2          79  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][0]
+          12  rDFF_cS         5913        +~           2          78  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1]
+          13  rDFF_cS         5948        +~           2          77  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][0]
+          14  rDFF_cS         5983        +~           2          76  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1]
+          15  rDFF_cS         6018        +~           2          75  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][0]
+          16  rDFF_cS         6053        +~           2          74  inst:U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1]
+          17  rDFF_cS         6596        +-           2          73  inst:U0_Integer_Clock_Divider_TX.\counter_reg[0]
+          18  rDFF_cS         6631        +-           2          72  inst:U0_Integer_Clock_Divider_TX.\counter_reg[1]
+          19  rDFF_cS         6666        +-           2          71  inst:U0_Integer_Clock_Divider_TX.\counter_reg[2]
+          20  rDFF_cS         6701        +-           2          70  inst:U0_Integer_Clock_Divider_TX.\counter_reg[3]
+          21  rDFF_cS         6736        +-           2          69  inst:U0_Integer_Clock_Divider_TX.\counter_reg[4]
+          22  rDFF_cS         6771        +-           2          68  inst:U0_Integer_Clock_Divider_TX.\counter_reg[5]
+          23  rDFF_cS         6806        +-           2          67  inst:U0_Integer_Clock_Divider_TX.\counter_reg[6]
+          24  rDFF_cS         7027        +-           2          66  inst:U0_Integer_Clock_Divider_TX.gen_clk_reg
+          25  rDFF_cS         7069        +~           2          65  inst:U0_PULSE_GEN.pls_flop_reg
+          26  rDFF_cS         7104        +~           2          64  inst:U0_PULSE_GEN.rcv_flop_reg
+          27  rDFF_cS        14200        +~           2          63  inst:U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[0]
+          28  rDFF_cS        14235        +~           2          62  inst:U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[1]
+          29  rDFF_cS        14270        +~           2          61  inst:U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[2]
+          30  rDFF_cS        14741        +~           2          60  inst:U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg
+          31  rDFF_cS        14497        +~           2          59  inst:U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0]
+          32  rDFF_cS        14527        +~           2          58  inst:U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1]
+          33  rDFF_cS        14557        +~           2          57  inst:U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[2]
+          34  rDFF_cS        14777        +~           2          56  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[0]
+          35  rDFF_cS        14812        +~           2          55  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[1]
+          36  rDFF_cS        14847        +~           2          54  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[2]
+          37  rDFF_cS        14882        +~           2          53  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[3]
+          38  rDFF_cS        14917        +~           2          52  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[4]
+          39  rDFF_cS        14952        +~           2          51  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[5]
+          40  rDFF_cS        14987        +~           2          50  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[6]
+          41  rDFF_cS        15022        +~           2          49  inst:U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[7]
+          42  rDFF_cS        15172        +~           2          48  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[0]
+          43  rDFF_cS        15207        +~           2          47  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1]
+          44  rDFF_cS        15242        +~           2          46  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2]
+          45  rDFF_cS        15277        +~           2          45  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3]
+          46  rDFF_cS        15312        +~           2          44  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[0]
+          47  rDFF_cS        15347        +~           2          43  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[1]
+          48  rDFF_cS        15382        +~           2          42  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[2]
+          49  rDFF_cS        15417        +~           2          41  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[3]
+          50  rDFF_cS        15452        +~           2          40  inst:U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[4]
+          51  rDFF_cS        15721        +~           2          39  inst:U0_UART.U0_UART_RX.U0_parity_check.par_err_reg
+          52  rDFF_cS        15756        +~           2          38  inst:U0_UART.U0_UART_RX.U0_parity_check.parity_reg
+          53  rDFF_cS        15861        +~           2          37  inst:U0_UART.U0_UART_RX.U0_stop_check.stp_err_reg
+          54  rDFF_cS        15965        +~           2          36  inst:U0_UART.U0_UART_RX.U0_strt_check.strt_glitch_reg
+          55  rDFF_cS        16004        +~           2          35  inst:U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[0]
+          56  rDFF_cS        16039        +~           2          34  inst:U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[1]
+          57  rDFF_cS        16074        +~           2          33  inst:U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[2]
+          58  rDFF_cS        16167        +~           2          32  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[0]
+          59  rDFF_cS        16202        +~           2          31  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[1]
+          60  rDFF_cS        16237        +~           2          30  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[2]
+          61  rDFF_cS        16272        +~           2          29  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[3]
+          62  rDFF_cS        16307        +~           2          28  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[4]
+          63  rDFF_cS        16342        +~           2          27  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[5]
+          64  rDFF_cS        16377        +~           2          26  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[6]
+          65  rDFF_cS        16412        +~           2          25  inst:U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[7]
+          66  rDFF_cS        16502        +~           2          24  inst:U0_UART.U0_UART_TX.U0_serializer.S_DATA_reg
+          67  rDFF_cS        16536        -!           2          23  inst:U0_UART.U0_UART_TX.U0_serializer.\counter_reg[0]
+          68  rDFF_cS        16571        -!           2          22  inst:U0_UART.U0_UART_TX.U0_serializer.\counter_reg[1]
+          69  rDFF_cS        16606        -!           2          21  inst:U0_UART.U0_UART_TX.U0_serializer.\counter_reg[2]
+          70  rDFF_cS        16641        -!           2          20  inst:U0_UART.U0_UART_TX.U0_serializer.\counter_reg[3]
+          71  rDFF_cS        16676        -!           2          19  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[0]
+          72  rDFF_cS        16711        -!           2          18  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[1]
+          73  rDFF_cS        16746        -!           2          17  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[2]
+          74  rDFF_cS        16781        -!           2          16  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[3]
+          75  rDFF_cS        16816        -!           2          15  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[4]
+          76  rDFF_cS        16851        -!           2          14  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[5]
+          77  rDFF_cS        16886        -!           2          13  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[6]
+          78  rDFF_cS        16921        -!           2          12  inst:U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[7]
+          79  rDFF_cS        17090        -!           2          11  inst:U0_UART.U0_UART_TX.U0_serializer.ser_done_reg
+          80  rDFF_cS        17126        -+           2          10  inst:U1_Integer_Clock_Divider_RX.\counter_reg[0]
+          81  rDFF_cS        17161        -+           2           9  inst:U1_Integer_Clock_Divider_RX.\counter_reg[1]
+          82  rDFF_cS        17196        -+           2           8  inst:U1_Integer_Clock_Divider_RX.\counter_reg[2]
+          83  rDFF_cS        17231        -+           2           7  inst:U1_Integer_Clock_Divider_RX.\counter_reg[3]
+          84  rDFF_cS        17266        -+           2           6  inst:U1_Integer_Clock_Divider_RX.\counter_reg[4]
+          85  rDFF_cS        17301        -+           2           5  inst:U1_Integer_Clock_Divider_RX.\counter_reg[5]
+          86  rDFF_cS        17336        -+           2           4  inst:U1_Integer_Clock_Divider_RX.\counter_reg[6]
+          87  rDFF_cS        17490        -+           2           3  inst:U1_Integer_Clock_Divider_RX.gen_clk_reg
+          88  rDFF_cS        17526        -+           2           2  inst:U1_RST_SYNC_UART.\sync_reg_reg[0]
+          89  rDFF_cS        17561        -+           2           1  inst:U1_RST_SYNC_UART.\sync_reg_reg[1]
+
+
+  Control Chain: 3
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name           5/port:ScanIn_3    Pipeline Stages: 0 
+    Load Point Pin Index/Name  5/port:ScanIn_3
+    Length: 91
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 3
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          12/port:ScanOut_3    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  12/port:ScanOut_3
+    Unload Point Inverted from Load Point
+    Length: 91
+    Scan Section: Scan_Section_Sequence
+
+    Position     Type  Block Index  IO Phase  ObserveChn  ObservePos  Block Name
+    --------  -------  -----------  --------  ----------  ----------  ----------
+           1  rDFF_cS         5595        +-           3          91  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[1][0]
+           2  rDFF_cS         5630        +-           3          90  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[1][1]
+           3  rDFF_cS         5665        +-           3          89  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[2][0]
+           4  rDFF_cS         5700        +-           3          88  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[2][1]
+           5  rDFF_cS         5735        +-           3          87  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[3][0]
+           6  rDFF_cS         5770        +-           3          86  inst:U0_Async_fifo.u_r2w_sync.\sync_reg_reg[3][1]
+           7  rDFF_cS         6488        +-           3          85  inst:U0_DATA_SYNC.enable_flop_reg
+           8  rDFF_cS         6523        +-           3          84  inst:U0_DATA_SYNC.enable_pulse_reg
+           9  rDFF_cS         6138        +-           3          83  inst:U0_DATA_SYNC.\sync_bus_reg[0]
+          10  rDFF_cS         6173        +-           3          82  inst:U0_DATA_SYNC.\sync_bus_reg[1]
+          11  rDFF_cS         6208        +-           3          81  inst:U0_DATA_SYNC.\sync_bus_reg[2]
+          12  rDFF_cS         6243        +-           3          80  inst:U0_DATA_SYNC.\sync_bus_reg[3]
+          13  rDFF_cS         6278        +-           3          79  inst:U0_DATA_SYNC.\sync_bus_reg[4]
+          14  rDFF_cS         6313        +-           3          78  inst:U0_DATA_SYNC.\sync_bus_reg[5]
+          15  rDFF_cS         6348        +-           3          77  inst:U0_DATA_SYNC.\sync_bus_reg[6]
+          16  rDFF_cS         6383        +-           3          76  inst:U0_DATA_SYNC.\sync_bus_reg[7]
+          17  rDFF_cS         6418        +-           3          75  inst:U0_DATA_SYNC.\sync_reg_reg[0]
+          18  rDFF_cS         6453        +-           3          74  inst:U0_DATA_SYNC.\sync_reg_reg[1]
+          19  rDFF_cS         7140        +-           3          73  inst:U0_RST_SYNC_REF.\sync_reg_reg[0]
+          20  rDFF_cS         7175        +-           3          72  inst:U0_RST_SYNC_REF.\sync_reg_reg[1]
+          21  rDFF_cS         7249        +-           3          71  inst:U0_Register_File.\Memory_reg[0][0]
+          22  rDFF_cS         7284        +-           3          70  inst:U0_Register_File.\Memory_reg[0][1]
+          23  rDFF_cS         7319        +-           3          69  inst:U0_Register_File.\Memory_reg[0][2]
+          24  rDFF_cS         7354        +-           3          68  inst:U0_Register_File.\Memory_reg[0][3]
+          25  rDFF_cS         7389        +-           3          67  inst:U0_Register_File.\Memory_reg[0][4]
+          26  rDFF_cS         7424        +-           3          66  inst:U0_Register_File.\Memory_reg[0][5]
+          27  rDFF_cS         7459        +-           3          65  inst:U0_Register_File.\Memory_reg[0][6]
+          28  rDFF_cS         7494        +-           3          64  inst:U0_Register_File.\Memory_reg[0][7]
+          29  rDFF_cS         9209        +-           3          63  inst:U0_Register_File.\Memory_reg[1][0]
+          30  rDFF_cS         9244        +-           3          62  inst:U0_Register_File.\Memory_reg[1][1]
+          31  rDFF_cS         9279        +-           3          61  inst:U0_Register_File.\Memory_reg[1][2]
+          32  rDFF_cS         9314        +-           3          60  inst:U0_Register_File.\Memory_reg[1][3]
+          33  rDFF_cS         9349        +-           3          59  inst:U0_Register_File.\Memory_reg[1][4]
+          34  rDFF_cS         9384        +-           3          58  inst:U0_Register_File.\Memory_reg[1][5]
+          35  rDFF_cS         9419        +-           3          57  inst:U0_Register_File.\Memory_reg[1][6]
+          36  rDFF_cS         9454        +-           3          56  inst:U0_Register_File.\Memory_reg[1][7]
+          37  rDFF_cS         9489        +-           3          55  inst:U0_Register_File.\Memory_reg[2][0]
+          38  rDFF_cS         9523        -+           3          54  inst:U0_Register_File.\Memory_reg[2][1]
+          39  rDFF_cS         9558        -+           3          53  inst:U0_Register_File.\Memory_reg[2][2]
+          40  rDFF_cS         9593        -+           3          52  inst:U0_Register_File.\Memory_reg[2][3]
+          41  rDFF_cS         9628        -+           3          51  inst:U0_Register_File.\Memory_reg[2][4]
+          42  rDFF_cS         9663        -+           3          50  inst:U0_Register_File.\Memory_reg[2][5]
+          43  rDFF_cS         9698        -+           3          49  inst:U0_Register_File.\Memory_reg[2][6]
+          44  rDFF_cS         9733        -+           3          48  inst:U0_Register_File.\Memory_reg[2][7]
+          45  rDFF_cS         9767        +-           3          47  inst:U0_Register_File.\Memory_reg[3][0]
+          46  rDFF_cS         9802        +-           3          46  inst:U0_Register_File.\Memory_reg[3][1]
+          47  rDFF_cS         9837        +-           3          45  inst:U0_Register_File.\Memory_reg[3][2]
+          48  rDFF_cS         9872        +-           3          44  inst:U0_Register_File.\Memory_reg[3][3]
+          49  rDFF_cS         9907        +-           3          43  inst:U0_Register_File.\Memory_reg[3][4]
+          50  rDFF_cS         9942        +-           3          42  inst:U0_Register_File.\Memory_reg[3][5]
+          51  rDFF_cS         9976        -+           3          41  inst:U0_Register_File.\Memory_reg[3][6]
+          52  rDFF_cS        10011        -+           3          40  inst:U0_Register_File.\Memory_reg[3][7]
+          53  rDFF_cS        10046        -+           3          39  inst:U0_Register_File.\Memory_reg[4][0]
+          54  rDFF_cS        10081        -+           3          38  inst:U0_Register_File.\Memory_reg[4][1]
+          55  rDFF_cS        10116        -+           3          37  inst:U0_Register_File.\Memory_reg[4][2]
+          56  rDFF_cS        10151        -+           3          36  inst:U0_Register_File.\Memory_reg[4][3]
+          57  rDFF_cS        10186        -+           3          35  inst:U0_Register_File.\Memory_reg[4][4]
+          58  rDFF_cS        10221        -+           3          34  inst:U0_Register_File.\Memory_reg[4][5]
+          59  rDFF_cS        10256        -+           3          33  inst:U0_Register_File.\Memory_reg[4][6]
+          60  rDFF_cS        10291        -+           3          32  inst:U0_Register_File.\Memory_reg[4][7]
+          61  rDFF_cS        10326        -+           3          31  inst:U0_Register_File.\Memory_reg[5][0]
+          62  rDFF_cS        10361        -+           3          30  inst:U0_Register_File.\Memory_reg[5][1]
+          63  rDFF_cS        10396        -+           3          29  inst:U0_Register_File.\Memory_reg[5][2]
+          64  rDFF_cS        10431        -+           3          28  inst:U0_Register_File.\Memory_reg[5][3]
+          65  rDFF_cS        10466        -+           3          27  inst:U0_Register_File.\Memory_reg[5][4]
+          66  rDFF_cS        10501        -+           3          26  inst:U0_Register_File.\Memory_reg[5][5]
+          67  rDFF_cS        10536        -+           3          25  inst:U0_Register_File.\Memory_reg[5][6]
+          68  rDFF_cS        10571        -+           3          24  inst:U0_Register_File.\Memory_reg[5][7]
+          69  rDFF_cS        10606        -+           3          23  inst:U0_Register_File.\Memory_reg[6][0]
+          70  rDFF_cS        10641        -+           3          22  inst:U0_Register_File.\Memory_reg[6][1]
+          71  rDFF_cS        10676        -+           3          21  inst:U0_Register_File.\Memory_reg[6][2]
+          72  rDFF_cS        10711        -+           3          20  inst:U0_Register_File.\Memory_reg[6][3]
+          73  rDFF_cS        10746        -+           3          19  inst:U0_Register_File.\Memory_reg[6][4]
+          74  rDFF_cS        10781        -+           3          18  inst:U0_Register_File.\Memory_reg[6][5]
+          75  rDFF_cS        10816        -+           3          17  inst:U0_Register_File.\Memory_reg[6][6]
+          76  rDFF_cS        10851        -+           3          16  inst:U0_Register_File.\Memory_reg[6][7]
+          77  rDFF_cS        10886        -+           3          15  inst:U0_Register_File.\Memory_reg[7][0]
+          78  rDFF_cS        10921        -+           3          14  inst:U0_Register_File.\Memory_reg[7][1]
+          79  rDFF_cS        10956        -+           3          13  inst:U0_Register_File.\Memory_reg[7][2]
+          80  rDFF_cS        10991        -+           3          12  inst:U0_Register_File.\Memory_reg[7][3]
+          81  rDFF_cS        11026        -+           3          11  inst:U0_Register_File.\Memory_reg[7][4]
+          82  rDFF_cS        11061        -+           3          10  inst:U0_Register_File.\Memory_reg[7][5]
+          83  rDFF_cS        11096        -+           3           9  inst:U0_Register_File.\Memory_reg[7][6]
+          84  rDFF_cS        11131        -+           3           8  inst:U0_Register_File.\Memory_reg[7][7]
+          85  rDFF_cS        11166        -+           3           7  inst:U0_Register_File.\Memory_reg[8][0]
+          86  rDFF_cS        11201        -+           3           6  inst:U0_Register_File.\Memory_reg[8][1]
+          87  rDFF_cS        11236        -+           3           5  inst:U0_Register_File.\Memory_reg[8][2]
+          88  rDFF_cS        11271        -+           3           4  inst:U0_Register_File.\Memory_reg[8][3]
+          89  rDFF_cS        11306        -+           3           3  inst:U0_Register_File.\Memory_reg[8][4]
+          90  rDFF_cS        11341        -+           3           2  inst:U0_Register_File.\Memory_reg[8][5]
+          91  rDFF_cS        11376        -+           3           1  inst:U0_Register_File.\Memory_reg[8][6]
+
+
+  Control Chain: 4
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name           6/port:ScanIn_4    Pipeline Stages: 0 
+    Load Point Pin Index/Name  6/port:ScanIn_4
+    Length: 90
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 4
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          13/port:ScanOut_4    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  13/port:ScanOut_4
+    Unload Point In Phase with Load Point
+    Length: 90
+    Scan Section: Scan_Section_Sequence
+
+    Position     Type  Block Index  IO Phase  ObserveChn  ObservePos  Block Name
+    --------  -------  -----------  --------  ----------  ----------  ----------
+           1  rDFF_cS        11411        ++           4          90  inst:U0_Register_File.\Memory_reg[8][7]
+           2  rDFF_cS        11446        ++           4          89  inst:U0_Register_File.\Memory_reg[9][0]
+           3  rDFF_cS        11481        ++           4          88  inst:U0_Register_File.\Memory_reg[9][1]
+           4  rDFF_cS        11516        ++           4          87  inst:U0_Register_File.\Memory_reg[9][2]
+           5  rDFF_cS        11551        ++           4          86  inst:U0_Register_File.\Memory_reg[9][3]
+           6  rDFF_cS        11586        ++           4          85  inst:U0_Register_File.\Memory_reg[9][4]
+           7  rDFF_cS        11621        ++           4          84  inst:U0_Register_File.\Memory_reg[9][5]
+           8  rDFF_cS        11656        ++           4          83  inst:U0_Register_File.\Memory_reg[9][6]
+           9  rDFF_cS        11691        ++           4          82  inst:U0_Register_File.\Memory_reg[9][7]
+          10  rDFF_cS         7529        ++           4          81  inst:U0_Register_File.\Memory_reg[10][0]
+          11  rDFF_cS         7564        ++           4          80  inst:U0_Register_File.\Memory_reg[10][1]
+          12  rDFF_cS         7599        ++           4          79  inst:U0_Register_File.\Memory_reg[10][2]
+          13  rDFF_cS         7634        ++           4          78  inst:U0_Register_File.\Memory_reg[10][3]
+          14  rDFF_cS         7669        ++           4          77  inst:U0_Register_File.\Memory_reg[10][4]
+          15  rDFF_cS         7704        ++           4          76  inst:U0_Register_File.\Memory_reg[10][5]
+          16  rDFF_cS         7739        ++           4          75  inst:U0_Register_File.\Memory_reg[10][6]
+          17  rDFF_cS         7774        ++           4          74  inst:U0_Register_File.\Memory_reg[10][7]
+          18  rDFF_cS         7809        ++           4          73  inst:U0_Register_File.\Memory_reg[11][0]
+          19  rDFF_cS         7844        ++           4          72  inst:U0_Register_File.\Memory_reg[11][1]
+          20  rDFF_cS         7879        ++           4          71  inst:U0_Register_File.\Memory_reg[11][2]
+          21  rDFF_cS         7914        ++           4          70  inst:U0_Register_File.\Memory_reg[11][3]
+          22  rDFF_cS         7949        ++           4          69  inst:U0_Register_File.\Memory_reg[11][4]
+          23  rDFF_cS         7984        ++           4          68  inst:U0_Register_File.\Memory_reg[11][5]
+          24  rDFF_cS         8019        ++           4          67  inst:U0_Register_File.\Memory_reg[11][6]
+          25  rDFF_cS         8054        ++           4          66  inst:U0_Register_File.\Memory_reg[11][7]
+          26  rDFF_cS         8089        ++           4          65  inst:U0_Register_File.\Memory_reg[12][0]
+          27  rDFF_cS         8124        ++           4          64  inst:U0_Register_File.\Memory_reg[12][1]
+          28  rDFF_cS         8159        ++           4          63  inst:U0_Register_File.\Memory_reg[12][2]
+          29  rDFF_cS         8194        ++           4          62  inst:U0_Register_File.\Memory_reg[12][3]
+          30  rDFF_cS         8229        ++           4          61  inst:U0_Register_File.\Memory_reg[12][4]
+          31  rDFF_cS         8264        ++           4          60  inst:U0_Register_File.\Memory_reg[12][5]
+          32  rDFF_cS         8299        ++           4          59  inst:U0_Register_File.\Memory_reg[12][6]
+          33  rDFF_cS         8334        ++           4          58  inst:U0_Register_File.\Memory_reg[12][7]
+          34  rDFF_cS         8369        ++           4          57  inst:U0_Register_File.\Memory_reg[13][0]
+          35  rDFF_cS         8404        ++           4          56  inst:U0_Register_File.\Memory_reg[13][1]
+          36  rDFF_cS         8439        ++           4          55  inst:U0_Register_File.\Memory_reg[13][2]
+          37  rDFF_cS         8474        ++           4          54  inst:U0_Register_File.\Memory_reg[13][3]
+          38  rDFF_cS         8509        ++           4          53  inst:U0_Register_File.\Memory_reg[13][4]
+          39  rDFF_cS         8544        ++           4          52  inst:U0_Register_File.\Memory_reg[13][5]
+          40  rDFF_cS         8579        ++           4          51  inst:U0_Register_File.\Memory_reg[13][6]
+          41  rDFF_cS         8614        ++           4          50  inst:U0_Register_File.\Memory_reg[13][7]
+          42  rDFF_cS         8649        ++           4          49  inst:U0_Register_File.\Memory_reg[14][0]
+          43  rDFF_cS         8684        ++           4          48  inst:U0_Register_File.\Memory_reg[14][1]
+          44  rDFF_cS         8719        ++           4          47  inst:U0_Register_File.\Memory_reg[14][2]
+          45  rDFF_cS         8754        ++           4          46  inst:U0_Register_File.\Memory_reg[14][3]
+          46  rDFF_cS         8789        ++           4          45  inst:U0_Register_File.\Memory_reg[14][4]
+          47  rDFF_cS         8824        ++           4          44  inst:U0_Register_File.\Memory_reg[14][5]
+          48  rDFF_cS         8859        ++           4          43  inst:U0_Register_File.\Memory_reg[14][6]
+          49  rDFF_cS         8894        ++           4          42  inst:U0_Register_File.\Memory_reg[14][7]
+          50  rDFF_cS         8929        ++           4          41  inst:U0_Register_File.\Memory_reg[15][0]
+          51  rDFF_cS         8964        ++           4          40  inst:U0_Register_File.\Memory_reg[15][1]
+          52  rDFF_cS         8999        ++           4          39  inst:U0_Register_File.\Memory_reg[15][2]
+          53  rDFF_cS         9034        ++           4          38  inst:U0_Register_File.\Memory_reg[15][3]
+          54  rDFF_cS         9069        ++           4          37  inst:U0_Register_File.\Memory_reg[15][4]
+          55  rDFF_cS         9104        ++           4          36  inst:U0_Register_File.\Memory_reg[15][5]
+          56  rDFF_cS         9139        ++           4          35  inst:U0_Register_File.\Memory_reg[15][6]
+          57  rDFF_cS         9174        ++           4          34  inst:U0_Register_File.\Memory_reg[15][7]
+          58  rDFF_cS         7214        ++           4          33  inst:U0_Register_File.RdData_Valid_reg
+          59  rDFF_cS        11726        ++           4          32  inst:U0_Register_File.\RdData_reg[0]
+          60  rDFF_cS        11761        ++           4          31  inst:U0_Register_File.\RdData_reg[1]
+          61  rDFF_cS        11796        ++           4          30  inst:U0_Register_File.\RdData_reg[2]
+          62  rDFF_cS        11831        ++           4          29  inst:U0_Register_File.\RdData_reg[3]
+          63  rDFF_cS        11866        ++           4          28  inst:U0_Register_File.\RdData_reg[4]
+          64  rDFF_cS        11901        ++           4          27  inst:U0_Register_File.\RdData_reg[5]
+          65  rDFF_cS        11936        ++           4          26  inst:U0_Register_File.\RdData_reg[6]
+          66  rDFF_cS        11971        ++           4          25  inst:U0_Register_File.\RdData_reg[7]
+          67  rDFF_cS        12968        ++           4          24  inst:U0_SYS_CTRL.\ADDR_REG_reg[0]
+          68  rDFF_cS        13003        ++           4          23  inst:U0_SYS_CTRL.\ADDR_REG_reg[1]
+          69  rDFF_cS        13038        ++           4          22  inst:U0_SYS_CTRL.\ADDR_REG_reg[2]
+          70  rDFF_cS        13073        ++           4          21  inst:U0_SYS_CTRL.\ADDR_REG_reg[3]
+          71  rDFF_cS        13108        ++           4          20  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[0]
+          72  rDFF_cS        13353        ++           4          19  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[1]
+          73  rDFF_cS        13388        ++           4          18  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[2]
+          74  rDFF_cS        13423        ++           4          17  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[3]
+          75  rDFF_cS        13458        ++           4          16  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[4]
+          76  rDFF_cS        13493        ++           4          15  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[5]
+          77  rDFF_cS        13528        ++           4          14  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[6]
+          78  rDFF_cS        13563        ++           4          13  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[7]
+          79  rDFF_cS        13598        ++           4          12  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[8]
+          80  rDFF_cS        13633        ++           4          11  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[9]
+          81  rDFF_cS        13143        ++           4          10  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[10]
+          82  rDFF_cS        13178        ++           4           9  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[11]
+          83  rDFF_cS        13213        ++           4           8  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[12]
+          84  rDFF_cS        13248        ++           4           7  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[13]
+          85  rDFF_cS        13283        ++           4           6  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[14]
+          86  rDFF_cS        13318        ++           4           5  inst:U0_SYS_CTRL.\ALU_OUT_REG_reg[15]
+          87  rDFF_cS        13668        ++           4           4  inst:U0_SYS_CTRL.\current_state_reg[0]
+          88  rDFF_cS        13703        ++           4           3  inst:U0_SYS_CTRL.\current_state_reg[1]
+          89  rDFF_cS        13738        ++           4           2  inst:U0_SYS_CTRL.\current_state_reg[2]
+          90  rDFF_cS        13773        ++           4           1  inst:U0_SYS_CTRL.\current_state_reg[3]
+
+
+Report completed.
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            8,154,736  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.01                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 13:23:24 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

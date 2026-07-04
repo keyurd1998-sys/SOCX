@@ -1,0 +1,396 @@
+
+ 
+Copyright (C) 2002-2025 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 25.10-p027_1, built Mar 13 2025 (linux26_64)
+Options : -files ./test_scripts/runmodus.dfa.tcl
+Date    : Sat, July 04 13:23:19 2026
+Host    : Pine-06 (x86_64 Linux 5.14.0-611.30.1.el9_7.x86_64) (6*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB)
+OS      : Red Hat Enterprise Linux release 9.7 (Plow)
+#@ Processing -files option
+@modus:root:/ 1>  source ./test_scripts/runmodus.dfa.tcl
+#@ Begin verbose source ./test_scripts/runmodus.dfa.tcl
+@file(./test_scripts/runmodus.dfa.tcl) 13: set_db workdir ./test_scripts;
+@file(./test_scripts/runmodus.dfa.tcl) 14: set   WORKDIR [get_db workdir]
+@file(./test_scripts/runmodus.dfa.tcl) 17: set_option stdout     summary;                                # Only print a summary for each command to the terminal
+@file(./test_scripts/runmodus.dfa.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(./test_scripts/runmodus.dfa.tcl) 20: set_db stop_on_severity error;
+@file(./test_scripts/runmodus.dfa.tcl) 22: file delete -force $WORKDIR/tbdata;                       # Delete Test Database
+@file(./test_scripts/runmodus.dfa.tcl) 23: file delete -force $WORKDIR/testresults;                  # Delete Test Output Files/Logs
+@file(./test_scripts/runmodus.dfa.tcl) 30: build_model \
+    -cell	 TOP \
+    -techlib	 ../../Library/verilog/typical.v \
+    -designsource	 $WORKDIR/TOP.test_netlist.v \
+    -allowmissingmodules	 yes \
+    -messagecounteach	 100 \
+
+ 
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+
+            -designtop TOP
+            -TECHLIB ../../Library/verilog/typical.v
+            -allowmissingmodules yes
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_build_model_070426132320-005220000
+            -STDOUT summary
+            -messagecounteach 100
+            -DESIGNSOURCE /home/admin/DFT/SOCX/SCAN/test_scripts/TOP.test_netlist.v
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 41: build_testmode \
+    -testmode	 FULLSCAN \
+    -assignfile	 $WORKDIR/TOP.FULLSCAN.pinassign \
+    -modedef	 FULLSCAN \
+ 
+Starting Command: build_testmode 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/SCAN/test_scripts/TOP.FULLSCAN.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_build_testmode_FULLSCAN_070426132323-061280000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 92.82% active logic,  7.18% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 4 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+     71 WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 50: report_test_structures \
+    -testmode	 FULLSCAN \
+    -reportscanchain	 all \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_report_test_structures_FULLSCAN_070426132324-409515000
+            -STDOUT summary
+            -reportscanchain all
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 58: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 FULLSCAN \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_verify_test_structures_FULLSCAN_070426132325-596540000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 91 bit positions, which is 101% of the average scan chain length 91 (based on 361 total scan chain bits and 4 valid scan chains).    
+      4 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 91 bit positions.    
+      1 INFO (TSV-383): There are 1 floating latches.    
+      1 INFO (TSV-567): There are 4 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 4 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Sat Jul  4 13:23:25 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 66: build_faultmodel \
+    -includedynamic	 no \
+ 
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_build_faultmodel_070426132327-053632000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/SCAN/test_scripts/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/SCAN/test_scripts/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 73: create_logic_tests \
+    -experiment	 TOP_atpg \
+    -testmode	 FULLSCAN \
+
+
+Starting Command: create_logic_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_atpg
+
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_atpg_070426132328-351369000
+            -STDOUT summary
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      1       1       2984    20.64%   19.99%        11473           00:00.10    [end TDA_220] 
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16       5037    55.49%   53.75%         6432           00:32.80    [end TDA_220] 
+INFO (TDA-220):     32      32       1055    62.79%   60.82%         5378           00:36.32    [end TDA_220] 
+INFO (TDA-220):     48      48        452    65.92%   63.85%         4926           00:38.53    [end TDA_220] 
+INFO (TDA-220):     64      64        497    69.36%   67.18%         4429           00:40.03    [end TDA_220] 
+INFO (TDA-220):     80      80        246    71.06%   68.83%         4183           00:40.95    [end TDA_220] 
+INFO (TDA-220):     96      96        208    72.50%   70.22%         3975           00:41.71    [end TDA_220] 
+INFO (TDA-220):    112     111        321    74.72%   72.37%         3654           00:41.95    [end TDA_220] 
+INFO (TDA-220):    128     127        153    75.78%   73.40%         3501           00:42.47    [end TDA_220] 
+INFO (TDA-220):    144     143        185    77.07%   74.65%         3314           00:43.23    [end TDA_220] 
+INFO (TDA-220):    160     159        152    78.12%   75.67%         3162           00:44.12    [end TDA_220] 
+INFO (TDA-220):    176     175         87    78.74%   76.27%         3071           00:45.48    [end TDA_220] 
+INFO (TDA-220):    180     179         31    79.05%   76.56%         3024           00:45.60    [end TDA_220] 
+INFO (TDA-220):    196     190        343    81.42%   78.86%         2681           00:45.61    [end TDA_220] 
+INFO (TDA-220):    211     204        232    83.03%   80.42%         2449           00:45.61    [end TDA_220] 
+INFO (TDA-220):    227     219        406    85.84%   83.14%         2043           00:45.63    [end TDA_220] 
+INFO (TDA-220):    239     230         32    86.07%   83.36%         2011           00:45.63    [end TDA_220] 
+INFO (TDA-220):    255     244         44    86.37%   83.65%         1967           00:45.63    [end TDA_220] 
+INFO (TDA-220):    271     259         31    86.59%   83.86%         1936           00:45.64    [end TDA_220] 
+INFO (TDA-220):    278     266         76    87.11%   84.37%         1860           00:45.65    [end TDA_220] 
+INFO (TDA-220):    287     266          0    87.11%   84.37%         1860           00:45.65    [end TDA_220] 
+INFO (TDA-220):    302     281         24    87.28%   84.53%         1836           00:45.65    [end TDA_220] 
+INFO (TDA-220):    304     281          0    87.28%   84.53%         1836           00:45.65    [end TDA_220] 
+INFO (TDA-220):    312     289        129    88.17%   85.40%         1707           00:45.66    [end TDA_220] 
+INFO (TDA-220):    319     295         77    88.71%   85.91%         1630           00:45.67    [end TDA_220] 
+INFO (TDA-220):    327     297          5    88.74%   85.95%         1625           00:45.68    [end TDA_220] 
+INFO (TDA-220):    336     300         23    88.90%   86.10%         1602           00:45.69    [end TDA_220] 
+INFO (TDA-220):    341     300          0    88.90%   86.10%         1602           00:45.69    [end TDA_220] 
+INFO (TDA-220):    346     305         12    88.98%   86.18%         1590           00:45.69    [end TDA_220] 
+INFO (TDA-220):    350     305          0    88.98%   86.18%         1590           00:45.70    [end TDA_220] 
+INFO (TDA-220):    352     307         20    89.12%   86.32%         1570           00:45.70    [end TDA_220] 
+INFO (TDA-220):    355     309         12    89.20%   86.40%         1558           00:45.70    [end TDA_220] 
+INFO (TDA-220):    356     310         19    89.34%   86.52%         1539           00:45.71    [end TDA_220] 
+INFO (TDA-220):    358     310          0    89.34%   86.52%         1539           00:45.71    [end TDA_220] 
+INFO (TDA-220):    360     310          0    89.34%   86.52%         1539           00:45.71    [end TDA_220] 
+INFO (TDA-220):    362     311         13    89.43%   86.61%         1526           00:45.72    [end TDA_220] 
+INFO (TDA-220):    364     313         11    89.50%   86.69%         1515           00:45.72    [end TDA_220] 
+INFO (TDA-220):    365     314          6    89.54%   86.73%         1509           00:45.72    [end TDA_220] 
+INFO (TDA-220):    366     314          0    89.54%   86.73%         1509           00:45.72    [end TDA_220] 
+INFO (TDA-220):    367     314          0    89.54%   86.73%         1509           00:45.73    [end TDA_220] 
+INFO (TDA-220):    373     319         46    89.86%   87.03%         1463           00:51.03    [end TDA_220] 
+INFO (TDA-220):    387     332         20    90.00%   87.17%         1443           00:51.03    [end TDA_220] 
+INFO (TDA-220):    391     332          0    90.00%   87.17%         1443           00:51.03    [end TDA_220] 
+INFO (TDA-220):    394     332          0    90.00%   87.17%         1443           00:51.03    [end TDA_220] 
+INFO (TDA-220):    395     333          3    90.02%   87.19%         1440           00:51.03    [end TDA_220] 
+INFO (TDA-220):    396     333          0    90.02%   87.19%         1440           00:51.03    [end TDA_220] 
+INFO (TDA-220):    397     334         81    90.58%   87.73%         1359           00:51.04    [end TDA_220] 
+INFO (TDA-220):    398     335          6    90.62%   87.77%         1353           00:51.04    [end TDA_220] 
+INFO (TDA-220):    399     335          0    90.62%   87.77%         1353           00:51.04    [end TDA_220] 
+INFO (TDA-220):    400     335          0    90.62%   87.77%         1353           00:51.13    [end TDA_220] 
+INFO (TDA-220):    401     335          0    90.62%   87.77%         1353           00:51.13    [end TDA_220] 
+INFO (TDA-220):    401     335          0    90.81%   87.95%         1323           00:51.33    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     56 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    367     314          0    89.54%   86.73%         1509           00:45.73     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 81: set env(THM_TESTBENCH_NAME) yes
+@file(./test_scripts/runmodus.dfa.tcl) 85: analyze_deterministic_testpoints \
+    -testmode	 FULLSCAN \
+    -inexperiment	 TOP_atpg
+INFO (TUI-772): The command 'analyze_deterministic_testpoints' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: analyze_deterministic_testpoints 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_analyze_deterministic_testpoints_FULLSCAN_TOP_atpg_070426132420-819312000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 90: exec ln -s -f ./testresults/TestPointInsertion.FULLSCAN.dfa $WORKDIR/TOP.dfa.tpfile
+@file(./test_scripts/runmodus.dfa.tcl) 95: commit_tests \
+    -inexperiment	 TOP_atpg \
+    -testmode	 FULLSCAN 
+INFO (TUI-772): The command 'commit_tests' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: commit_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_commit_tests_FULLSCAN_TOP_atpg_070426132422-137566000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.37.1 (Relative test numbers 1 thru 336).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.37.1 (Relative test numbers 1 to 336).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./test_scripts/runmodus.dfa.tcl) 100: exit

@@ -1,0 +1,154 @@
+Starting Command: analyze_deterministic_testpoints 
+
+INFO (TDA-005): Command Line Invocation: 
+            analyze_deterministic_testpoints -inexperiment TOP_atpg -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/SCAN/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_analyze_deterministic_testpoints_FULLSCAN_TOP_atpg_070426132420-819312000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 04 13:24:20 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 1133910.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/SCAN/test_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/logs/log_analyze_deterministic_testpoints_FULLSCAN_TOP_atpg_070426132420-819312000
+            -STDOUT summary
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+**************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14457        13079            0           55         1323  90.47  90.81
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 14926        13079            0           55         1792  87.63  87.95
+**************************************************************************************
+
+Testpoint   Testpoint     Est.      Est. Global   Est. Fault   
+ Number       Type      ATCov(%)     ATCov(%)       Count      Testpoint Location 
+----------  ----------  ----------  ------------  -----------  ------------------ 
+  Start                   90.81%       87.95%          
+      1          O        91.42%       88.54%        88        U0_UART.U0_UART_RX.U0_strt_check.g757.Y
+      2          O        92.03%       89.13%        87        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1162.Y
+      3          O        92.54%       89.62%        73        U0_UART.U0_UART_RX.U0_data_sampling.g1441.Y
+      4          O        93.01%       90.07%        68        U0_UART.U0_UART_RX.U0_parity_check.g1060.Y
+      5          O        93.40%       90.45%        56        U0_UART.U0_UART_RX.U0_FSM.g2369__5122.Y
+      6          O        93.72%       90.76%        46        U0_UART.U0_UART_RX.U0_stop_check.g544.Y
+      7          O        93.98%       91.02%        38        U0_UART.U0_UART_RX.U0_data_sampling.g1436.Y
+      8          O        94.22%       91.25%        35        U0_UART.U0_UART_RX.U0_data_sampling.g1437.Y
+      9          O        94.43%       91.45%        30        U0_UART.U0_UART_RX.U0_FSM.g2371__7098.Y
+     10          O        94.61%       91.63%        26        U0_UART.U0_UART_RX.U0_FSM.g2379.Y
+     11          O        94.79%       91.80%        26        U0_UART.U0_UART_RX.U0_FSM.g1826.Y
+     12          O        94.97%       91.97%        25        U0_UART.U0_UART_RX.U0_data_sampling.g1443.Y
+     13          O        95.13%       92.13%        24        U0_UART.U0_UART_RX.U0_parity_check.g1068.Y
+     14          O        95.30%       92.29%        24        U0_UART.U0_UART_RX.U0_FSM.g2375__7482.Y
+     15          O        95.45%       92.44%        22        U0_UART.U0_UART_RX.U0_FSM.g1823.Y
+     16          O        95.60%       92.58%        21        U0_UART.U0_UART_RX.U0_FSM.g2366__2802.Y
+     17          O        95.73%       92.71%        19        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1176.Y
+     18          O        95.86%       92.84%        19        U0_UART.U0_UART_TX.U0_parity_Calc.g181.Y
+     19          O        95.99%       92.97%        19        U0_UART.U0_UART_RX.U0_FSM.g2360__4319.Y
+     20          O        96.12%       93.09%        18        U0_UART.U0_UART_RX.U0_stop_check.g547.Y
+     21          O        96.24%       93.21%        18        U0_UART.U0_UART_RX.U0_stop_check.g546.Y
+     22          O        96.37%       93.33%        18        U0_Async_fifo.u_fifo_rd.g292__1617.Y
+     23          O        96.49%       93.45%        18        U0_UART.U0_UART_TX.U0_parity_Calc.g183.Y
+     24          O        96.60%       93.56%        16        U0_UART.U0_UART_RX.U0_stop_check.g552.Y
+     25          O        96.72%       93.67%        16        U0_UART.U0_UART_TX.U0_parity_Calc.g178.Y
+     26          O        96.83%       93.77%        16        U0_Async_fifo.u_fifo_rd.g283__6260.Y
+     27          O        96.94%       93.88%        16        U0_UART.U0_UART_TX.U0_parity_Calc.g182.Y
+     28          O        97.05%       93.99%        16        U0_UART.U0_UART_RX.U0_strt_check.g768.Y
+     29          O        97.15%       94.08%        14        U0_UART.U0_UART_TX.U0_serializer.g1099.Y
+     30          O        97.24%       94.18%        14        U0_UART.U0_UART_TX.U0_parity_Calc.g177.Y
+     31          O        97.34%       94.27%        14        U0_UART.U0_UART_TX.U0_serializer.g1102.Y
+     32          O        97.43%       94.36%        13        U0_UART.U0_UART_RX.U0_strt_check.g760.Y
+     33          O        97.51%       94.44%        12        U0_UART.U0_UART_RX.U0_strt_check.g762.Y
+     34          O        97.60%       94.52%        12        U0_UART.U0_UART_RX.U0_parity_check.g1065.Y
+     35          O        97.68%       94.60%        12        U0_Async_fifo.u_fifo_rd.g281__5107.Y
+     36          O        97.76%       94.68%        12        U0_UART.U0_UART_RX.U0_data_sampling.g1461.Y
+     37          O        97.85%       94.76%        12        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1181.Y
+     38          O        97.93%       94.84%        12        U0_UART.U0_UART_RX.U0_parity_check.g1074.Y
+     39          O        98.01%       94.92%        11        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1150.Y
+     40          O        98.08%       94.99%        11        U0_UART.U0_UART_RX.U0_FSM.g2359__6260.Y
+     41          O        98.15%       95.06%        10        U0_UART.U0_UART_TX.U0_parity_Calc.g179.Y
+     42          O        98.22%       95.12%         9        U0_UART.U0_UART_TX.U0_parity_Calc.g176.Y
+     43          O        98.28%       95.18%         9        U0_UART.U0_UART_RX.U0_data_sampling.g1476.Y
+     44          O        98.34%       95.24%         9        U0_UART.U0_UART_RX.U0_data_sampling.g1464.Y
+     45          O        98.40%       95.30%         9        U0_UART.U0_UART_RX.U0_parity_check.g1067.Y
+     46          O        98.46%       95.35%         8        U0_Async_fifo.u_fifo_rd.g289__6783.Y
+     47          O        98.51%       95.41%         8        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1149.Y
+     48          O        98.57%       95.46%         8        U0_UART.U0_UART_RX.U0_data_sampling.g1455.Y
+     49          O        98.63%       95.51%         8        U0_UART.U0_UART_RX.U0_strt_check.g761.Y
+     50          O        98.68%       95.57%         8        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1143.Y
+     51          O        98.73%       95.62%         7        U0_UART.U0_UART_TX.U0_serializer.g1075.Y
+     52          O        98.78%       95.66%         7        U0_UART.U0_UART_RX.U0_FSM.g1824.Y
+     53          O        98.82%       95.70%         6        U0_UART.U0_UART_RX.U0_edge_bit_counter.g1147.Y
+     54          O        98.86%       95.74%         6        U0_UART.U0_UART_RX.U0_data_sampling.g1468.Y
+     55          O        98.90%       95.78%         6        U0_UART.U0_UART_RX.U0_deserializer.g1337.Y
+     56          O        98.94%       95.82%         6        U0_Async_fifo.u_fifo_rd.g287__5526.Y
+     57          O        98.99%       95.86%         6        U0_UART.U0_UART_RX.U0_stop_check.g562.Y
+     58          O        99.03%       95.90%         6        U0_UART.U0_UART_RX.U0_data_sampling.g1480.Y
+     59          O        99.06%       95.94%         5        U0_UART.U0_UART_TX.U0_serializer.g1081.Y
+     60          O        99.10%       95.97%         5        U0_UART.U0_UART_TX.U0_serializer.g1084.Y
+     61          O        99.13%       96.01%         5        U0_UART.U0_UART_RX.U0_deserializer.g1353.Y
+     62          O        99.16%       96.03%         4        U0_UART.U0_UART_TX.U0_parity_Calc.g180.Y
+     63          O        99.18%       96.05%         3        U0_UART.U0_UART_TX.U0_FSM.g281.Y
+     64          O        99.20%       96.07%         3        U0_UART.U0_UART_TX.U0_serializer.g1092.Y
+     65          O        99.22%       96.09%         3        U0_UART.U0_UART_TX.U0_serializer.g1110.Y
+     66          O        99.24%       96.11%         3        U0_UART.U0_UART_RX.U0_stop_check.g564.Y
+     67          O        99.26%       96.13%         2        U0_UART.U0_UART_TX.U0_serializer.g1094.S
+     68          O        99.27%       96.14%         2        U0_UART.U0_UART_RX.U0_deserializer.g1335.Y
+     69          O        99.28%       96.15%         2        U0_UART.U0_UART_RX.U0_FSM.g2354__7410.Y
+     70          O        99.30%       96.17%         2        U0_Async_fifo.u_fifo_mem.g1516__5526.Y
+     71          O        99.31%       96.17%         1        U0_UART.U0_UART_RX.U0_deserializer.g1340.Y
+     72          O        99.31%       96.18%         1        U0_UART.U0_UART_TX.U0_FSM.g284.Y
+     73          O        99.32%       96.19%         1        U0_SYS_CTRL.g2402__4319.Y
+
+ Test Point Summary:
+ ---------------------------
+ Observe   Test Points:   73
+ ---------------------------
+ Total     Test Points:   73
+
+(I) File(s) generated (bytes and name):
+
+           6029 /home/admin/DFT/SOCX/SCAN/test_scripts/testresults/TestPointInsertion.FULLSCAN.dfa
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,386,800  bytes
+
+                      CPU Time =    0:00:00.20
+                  Elapsed Time =    0:00:00.26                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 04 13:24:21 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

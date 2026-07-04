@@ -1,0 +1,470 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            build_testmode -modedef FULLSCAN -assignfile /home/admin/DFT/SOCX/ATPG/TOP.FULLSCAN.pinassign -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/ATPG -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426132456-898496000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 04 13:24:56 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 1136073.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/ATPG
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/ATPG/TOP.FULLSCAN.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/ATPG/testresults/logs/log_build_testmode_FULLSCAN_070426132456-898496000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+MODEDEFPATH set to:  /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/modedef 
+TDRPATH set to: /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 93.03% active logic,  6.97% inactive logic and  0.00% constraint logic.   [end THM_814] 
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+           coverage is impacted when too little of the logic is visible.   [end TTM_347] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_fifo_rd.\rd_ptr_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_PULSE_GEN.pls_flop_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_PULSE_GEN.rcv_flop_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_1.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_17.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.DFT_tpi_xor_tree_2.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_FSM.\current_state_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[0].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[1].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.\sampled_data_reg[2].__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_data_sampling.sampled_bit_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.DFT_tpi_xor_tree_15.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_deserializer.\P_DATA_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_13.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_4.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.DFT_tpi_xor_tree_9.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\bit_cnt_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_edge_bit_counter.\edge_cnt_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_11.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.DFT_tpi_xor_tree_3.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.par_err_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_parity_check.parity_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_stop_check.DFT_tpi_xor_tree_14.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_stop_check.DFT_tpi_xor_tree_5.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_stop_check.stp_err_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_0.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_12.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_strt_check.DFT_tpi_xor_tree_8.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_RX.U0_strt_check.strt_glitch_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_FSM.\current_state_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.DFT_tpi_xor_tree_10.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.DFT_tpi_xor_tree_6.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_parity_Calc.\parallel_data_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.DFT_tpi_xor_tree_16.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.DFT_tpi_xor_tree_7.DFT_CDNS_OBS_tpi_flop.__iNsT1.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.S_DATA_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\counter_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[0].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[1].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[2].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[3].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[4].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[5].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[6].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.\parallel_data_reg[7].__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+WARNING (TTM-362): At event 2.1.1 of the scanop sequence, observable scan 
+           element Block.f.l.TOP.nl.U0_UART.U0_UART_TX.U0_serializer.ser_done_reg.__iNsT2.dff_primitive is corrupted. Since the value captured by this scan element 
+           may have been overwritten, the latch is removed from the scan chain as a valid measure point. 
+           This condition may increase the difficulty of testing some faults.  [end TTM_362] 
+INFO (TTM-357): There are 5 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  FULLSCAN
+
+Information for Test Mode:  FULLSCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  FULLSCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        1           0           1 
+ Finite State    (FSM)           0           0           0 
+
+WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          5  SI    (Scan Input)                Pins
+          5  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          2      PI  -SC                                  RST_N / RST_N
+          1      PI  -EC  -SC                             REF_CLK / REF_CLK
+          9      PI  -EC  -SC                             UART_CLK / UART_CLK
+          8      PI  +TI                                  TestMode / TestMode
+          3      PI  +SE                                  ScanEnable / ScanEnable
+          4      PI   SI                                  ScanIn_1 / ScanIn_1
+          5      PI   SI1                                 ScanIn_2 / ScanIn_2
+          6      PI   SI2                                 ScanIn_3 / ScanIn_3
+          7      PI   SI3                                 ScanIn_4 / ScanIn_4
+          0      PI   SI4                                 DFT_sdi_1 / DFT_sdi_1
+         12      PO   SO                                  ScanOut_1 / ScanOut_1
+         13      PO   SO1                                 ScanOut_2 / ScanOut_2
+         14      PO   SO2                                 ScanOut_3 / ScanOut_3
+         15      PO   SO3                                 ScanOut_4 / ScanOut_4
+         11      PO   SO4                                 DFT_sdo_1 / DFT_sdo_1
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+               Total Memory =           17,699,456  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.13
+               Elapsed Time =   0:00:00.24
+
+
