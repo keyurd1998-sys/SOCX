@@ -24,9 +24,6 @@ file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
 set ATPG_DIR    "${DESIGN_NAME}_ATPG"
 file mkdir "${DESIGN_NAME}_ATPG"                           ;# Create ATPG folder
 
-set TP_DIR      "${DESIGN_NAME}_TP"
-file mkdir "${DESIGN_NAME}_TP"                       ;# Create Test Point folder
-
 # =========================================================
 # Search Path for RTL, LIBRARY & SCRIPTS
 # =========================================================
