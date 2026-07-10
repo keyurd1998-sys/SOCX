@@ -2,12 +2,12 @@
 # Top Design and Library Setup
 # =========================================================
 set DESIGN_NAME "SYS_TOP"                      ;# Top module name
-set HDL_PATH    "../RTL"        ;# RTL file path
-set SCRIPT_PATH "../CONSTRAINTS"               ;# Script path
-set LIB_PATH    "../../Library/timing"             ;# Library path
+set HDL_PATH    "../../RTL"        ;# RTL file path
+set SCRIPT_PATH "../../CONSTRAINTS"               ;# Script path
+set LIB_PATH    "../../../Library/timing"             ;# Library path
 set LIB_LIST "slow.lib"
 set EFFORT      "high"                     ;# Synthesis effort level
-set VERILOG_LIB "../../Library/verilog/typical.v"
+set VERILOG_LIB "../../../Library/verilog/typical.v"
 
 # =========================================================
 # Work Directory Setup
@@ -153,31 +153,6 @@ set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
 # =========================================================
 connect_scan_chains -auto_create
 
-# =========================================================
-# ATPG Analysis and Test Point Insertion
-# =========================================================
-# 1. Perform ATPG analysis
-analyze_atpg_testability -directory $TP_DIR -library $VERILOG_LIB [current_design]
-
-# 2. Generate the DFA scripts
-# The tool automatically writes the scripts (e.g., runmodus.dfa.tcl) to './test_scripts'
-write_dft_deterministic_test_points -library $VERILOG_LIB
-
-# 3. Invoke Modus analysis via OS command
-puts "Running Modus analysis..."
-exec modus -files ./test_scripts/runmodus.dfa.tcl
-
-# 4. Insert the identified test points into the design
-add_analyzed_test_points -input_test_point_file ./test_scripts/${DESIGN_NAME}.dfa.tpfile
-
-# 5. Update DFT status of the new registers
-check_dft_rules
-
-# =========================================================
-# re-create Scan Chains
-# =========================================================
-# Re-stitch chains to include new test point flip-flops
-connect_scan_chains -auto_create
 
 # =========================================================
 # Report Scan 
