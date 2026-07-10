@@ -40,18 +40,10 @@ always @(CLK or CLK_EN)
 assign  GATED_CLK = CLK && Latch_Out ;
 */
 
-
-
-
 TLATNCAX12 U0_TLATNCAX12M (
 .E(CLK_EN),
 .CK(CLK),
 .ECK(GATED_CLK)
 );
-
-
-
-
-
 
 endmodule

@@ -1,9 +1,9 @@
 # =========================================================
 # Top Design and Library Setup
 # =========================================================
-set DESIGN_NAME "TOP"                      ;# Top module name
+set DESIGN_NAME "SYS_TOP"                      ;# Top module name
 set HDL_PATH    "../RTL"        ;# RTL file path
-set SCRIPT_PATH "../SCRIPT"               ;# Script path
+set SCRIPT_PATH "../CONSTRAINTS"               ;# Script path
 set LIB_PATH    "../../Library/timing"             ;# Library path
 set LIB_LIST "slow.lib"
 set EFFORT      "high"                     ;# Synthesis effort level
@@ -14,15 +14,19 @@ set VERILOG_LIB "../../Library/verilog/typical.v"
 # =========================================================
 set WORK_DIR "${DESIGN_NAME}_Scan"          ;# Output root directory
 file mkdir $WORK_DIR                         ;# Create Output Dir
-file mkdir $WORK_DIR/Report                  ;# Create report folder
-file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
-file mkdir ../ATPG                           ;# Create ATPG folder
-file mkdir TP                       ;# Create Test Point folder
 
 set REPORT_DIR "$WORK_DIR/Report"
+file mkdir $WORK_DIR/Report                  ;# Create report folder
+
 set NETLIST_DIR "$WORK_DIR/Netlist"
-set ATPG_DIR    "../ATPG"
-set TP_DIR      "TP"
+file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
+
+set ATPG_DIR    "${DESIGN_NAME}_ATPG"
+file mkdir "${DESIGN_NAME}_ATPG"                           ;# Create ATPG folder
+
+set TP_DIR      "${DESIGN_NAME}_TP"
+file mkdir "${DESIGN_NAME}_TP"                       ;# Create Test Point folder
+
 # =========================================================
 # Search Path for RTL, LIBRARY & SCRIPTS
 # =========================================================
@@ -92,7 +96,7 @@ define_test_clock \
 # Define Scan Chains
 # =========================================================
 
-set NUM_SCAN_CHAINS 20
+set NUM_SCAN_CHAINS 4
 
 for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
 create_port \

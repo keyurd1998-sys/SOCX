@@ -11,7 +11,7 @@
 //==============================================================================
 
 
-module TOP #(parameter DATA_WIDTH = 8, ADDR_WIDTH = 4)
+module SYS_TOP #(parameter DATA_WIDTH = 8, ADDR_WIDTH = 4)
 (
  input   wire                          RST_N,
  input   wire                          UART_CLK,
