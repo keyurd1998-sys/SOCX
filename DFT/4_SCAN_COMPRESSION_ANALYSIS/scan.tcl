@@ -12,15 +12,6 @@ set VERILOG_LIB "../../../Library/verilog/typical.v"
 # =========================================================
 # Work Directory Setup
 # =========================================================
-set WORK_DIR "${DESIGN_NAME}_Scan"          ;# Output root directory
-file mkdir $WORK_DIR                         ;# Create Output Dir
-
-set REPORT_DIR "$WORK_DIR/Report"
-file mkdir $WORK_DIR/Report                  ;# Create report folder
-
-set NETLIST_DIR "$WORK_DIR/Netlist"
-file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
-
 set COMP_DIR    "${DESIGN_NAME}_COMP"
 file mkdir $COMP_DIR                           ;# Create ATPG folder
 
