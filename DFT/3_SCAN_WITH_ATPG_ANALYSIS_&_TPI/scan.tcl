@@ -96,7 +96,7 @@ define_test_clock \
 # Define Scan Chains
 # =========================================================
 
-set NUM_SCAN_CHAINS 10
+set NUM_SCAN_CHAINS 4
 
 for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
 create_port \
