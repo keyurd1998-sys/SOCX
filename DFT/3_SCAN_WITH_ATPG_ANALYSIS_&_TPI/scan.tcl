@@ -22,10 +22,10 @@ set NETLIST_DIR "$WORK_DIR/Netlist"
 file mkdir $WORK_DIR/Netlist                 ;# Create NETLIST folder
 
 set ATPG_DIR    "${DESIGN_NAME}_ATPG"
-file mkdir "${DESIGN_NAME}_ATPG"                           ;# Create ATPG folder
+file mkdir $ATPG_DIR                           ;# Create ATPG folder
 
 set TP_DIR      "${DESIGN_NAME}_TP"
-file mkdir "${DESIGN_NAME}_TP"                       ;# Create Test Point folder
+file mkdir $TP_DIR                       ;# Create Test Point folder
 
 # =========================================================
 # Search Path for RTL, LIBRARY & SCRIPTS
@@ -129,7 +129,7 @@ fix_dft_violations -async_reset -test_control TestMode
 fix_dft_violations -async_set -test_control TestMode
 
 #fix clock violation
-fix_dft_violations -clock -test_control ScanEnable
+fix_dft_violations -clock -test_control TestMode
 
 # =========================================================
 # GTECH mapping 
@@ -157,7 +157,7 @@ connect_scan_chains -auto_create
 # ATPG Analysis and Test Point Insertion
 # =========================================================
 # 1. Perform ATPG analysis
-analyze_atpg_testability -directory $TP_DIR -library $VERILOG_LIB [current_design]
+analyze_atpg_testability -directory $TP_DIR  -library $VERILOG_LIB [current_design]
 
 # 2. Generate the DFA scripts
 # The tool automatically writes the scripts (e.g., runmodus.dfa.tcl) to './test_scripts'
