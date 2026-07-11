@@ -118,7 +118,7 @@ puts "INFO: Starting Scan Compressibility Analysis Setup..."
 
 analyze_scan_compressibility \
   -scanins 1 \
-  -ratios "40 50 60"
+  -ratios "40 50 60" \
   -compressor xor \
   -compression_method compress_scan_chains \
   -library $VERILOG_LIB \
