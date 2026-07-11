@@ -23,51 +23,45 @@ module SYS_TOP #(parameter DATA_WIDTH = 8, ADDR_WIDTH = 4)
 );
 
 
-wire 							SYNC_RST_REF;
-wire 							SYNC_RST_UART;
+wire 				    SYNC_RST_REF;
+wire 				    SYNC_RST_UART;
 
-wire	[DATA_WIDTH-1:0]		UART_Config;
-wire 							WrEn;
-wire 							RdEn;
-wire	[ADDR_WIDTH-1:0]		Addr;
-wire	[DATA_WIDTH-1:0]		Wr_Reg; 
-wire	[DATA_WIDTH-1:0]		Rd_Reg;
-wire							Rd_Reg_Valid;
-wire	[DATA_WIDTH-1:0]		Div_Ratio;
-wire	[DATA_WIDTH-1:0]		Div_Ratio_to_RX;   // from CLKDIV_MUX to RX
+wire [DATA_WIDTH-1:0]               UART_Config;
+wire                                WrEn;
+wire                                RdEn;
+wire [ADDR_WIDTH-1:0]               Addr;
+wire [DATA_WIDTH-1:0]               Wr_Reg;
+wire [DATA_WIDTH-1:0]               Rd_Reg;
+wire                                Rd_Reg_Valid;
+wire [DATA_WIDTH-1:0]               Div_Ratio;
+wire [DATA_WIDTH-1:0]               Div_Ratio_to_RX;
 
-wire	[DATA_WIDTH-1:0]		Operand_A;
-wire	[DATA_WIDTH-1:0]		Operand_B;
-wire	[3:0]					ALU_FUN;
-wire							ALU_EN;
-wire							CLKG_EN;
-wire							ALU_CLK;
-wire	[DATA_WIDTH*2-1:0]		ALU_OUT;
-wire							ALU_OUT_Valid;
+wire [DATA_WIDTH-1:0]               Operand_A;
+wire [DATA_WIDTH-1:0]               Operand_B;
+wire [3:0]                          ALU_FUN;
+wire                                ALU_EN;
+wire                                CLKG_EN;
+wire                                ALU_CLK;
+wire [DATA_WIDTH*2-1:0]            ALU_OUT;
+wire                                ALU_OUT_Valid;
 
-wire	[DATA_WIDTH-1:0]		UART_RX_DATA_Unsync; 
-wire							UART_RX_Valid_Unsync;
-wire	[DATA_WIDTH-1:0]		UART_RX_DATA;
-wire							UART_RX_Valid;
+wire [DATA_WIDTH-1:0]               UART_RX_DATA_Unsync;
+wire                                UART_RX_Valid_Unsync;
+wire [DATA_WIDTH-1:0]               UART_RX_DATA;
+wire                                UART_RX_Valid;
 
-wire							FIFO_FULL;
-wire	[DATA_WIDTH-1:0]		FIFO_WR_DATA;
-wire							FIFO_WR_INC;
-wire							FIFO_EMPTY_Valid_for_UART_TX; 
-wire	[DATA_WIDTH-1:0]		FIFO_Rd_DATA;
+wire                                FIFO_FULL;
+wire [DATA_WIDTH-1:0]               FIFO_WR_DATA;
+wire                                FIFO_WR_INC;
+wire                                FIFO_EMPTY_Valid_for_UART_TX;
+wire [DATA_WIDTH-1:0]               FIFO_Rd_DATA;
 
-wire							UART_TX_Busy;
-wire							FIFO_Rd_INC;
+wire                                UART_TX_Busy;
+wire                                FIFO_Rd_INC;
 
-wire							TX_CLK;
-wire							RX_CLK;
-wire							CLKDIV_EN;
-
-
-
-
-
-
+wire                                TX_CLK;
+wire                                RX_CLK;
+wire                                CLKDIV_EN;
 
 
 ///********************************************************///
@@ -89,7 +83,6 @@ RST_SYNC #(.NUM_STAGES(2)) U1_RST_SYNC_UART (
 ///********************************************************///
 ///////////////////// Data Synchronizers /////////////////////
 ///********************************************************///
-
 DATA_SYNC #(.NUM_STAGES(2), .BUS_WIDTH(8)) U0_DATA_SYNC (
 	.unsync_bus(UART_RX_DATA_Unsync),
 	.bus_enable(UART_RX_Valid_Unsync),
@@ -99,30 +92,28 @@ DATA_SYNC #(.NUM_STAGES(2), .BUS_WIDTH(8)) U0_DATA_SYNC (
 	.enable_pulse(UART_RX_Valid)
 	);
 
-
 ///********************************************************///
 ///////////////////////// Async FIFO /////////////////////////
 ///********************************************************///
 
 Async_fifo #(.D_SIZE(DATA_WIDTH) , .P_SIZE(4)  , .F_DEPTH(8)) U0_Async_fifo (
 .i_w_clk(REF_CLK),
-.i_w_rstn(SYNC_RST_REF),  
+.i_w_rstn(SYNC_RST_REF),
 .i_w_inc(FIFO_WR_INC),
-.i_w_data(FIFO_WR_DATA),             
-.i_r_clk(TX_CLK),              
-.i_r_rstn(SYNC_RST_UART),              
-.i_r_inc(FIFO_Rd_INC),              
-.o_r_data(FIFO_Rd_DATA),             
-.o_full(FIFO_FULL),               
-.o_empty(FIFO_EMPTY_Valid_for_UART_TX)           
+.i_w_data(FIFO_WR_DATA),
+.i_r_clk(TX_CLK),
+.i_r_rstn(SYNC_RST_UART),
+.i_r_inc(FIFO_Rd_INC),
+.o_r_data(FIFO_Rd_DATA),
+.o_full(FIFO_FULL),
+.o_empty(FIFO_EMPTY_Valid_for_UART_TX)
 );
 
 
 ///********************************************************///
 //////////////////////// Pulse Generator /////////////////////
 ///********************************************************///
-
-PULSE_GEN U0_PULSE_GEN (
+PULSE_GEN U0_PULSE_GEN(
 .clk(TX_CLK),
 .rst(SYNC_RST_UART),
 .lvl_sig(UART_TX_Busy),
@@ -134,7 +125,7 @@ PULSE_GEN U0_PULSE_GEN (
 //////////// Clock Divider for UART_TX Clock /////////////////
 ///********************************************************///
 
-Integer_Clock_Divider U0_Integer_Clock_Divider_TX (
+Integer_Clock_Divider U0_Integer_Clock_Divider_TX(
 	.i_ref_clk(UART_CLK),
 	.i_rst_n(SYNC_RST_UART),
 	.i_clk_en(CLKDIV_EN),
@@ -156,7 +147,7 @@ CLKDIV_MUX U0_CLKDIV_MUX (
 //////////// Clock Divider for UART_RX Clock /////////////////
 ///********************************************************///
 
-Integer_Clock_Divider U1_Integer_Clock_Divider_RX (
+Integer_Clock_Divider U1_Integer_Clock_Divider_RX(
 	.i_ref_clk(UART_CLK),
 	.i_rst_n(SYNC_RST_UART),
 	.i_clk_en(CLKDIV_EN),
@@ -168,7 +159,7 @@ Integer_Clock_Divider U1_Integer_Clock_Divider_RX (
 /////////////////////////// UART /////////////////////////////
 ///********************************************************///
 
-UART U0_UART (
+UART U0_UART(
 	.TX_CLK(TX_CLK),
 	.TX_IN_P(FIFO_Rd_DATA),
 	.TX_IN_V(!FIFO_EMPTY_Valid_for_UART_TX),
@@ -194,11 +185,11 @@ UART U0_UART (
 SYS_CTRL U0_SYS_CTRL (
 	.CLK(REF_CLK),
 	.RST(SYNC_RST_REF),
-	.UART_RX_DATA(UART_RX_DATA),   	
-	.UART_RX_Valid(UART_RX_Valid),		
+	.UART_RX_DATA(UART_RX_DATA),
+	.UART_RX_Valid(UART_RX_Valid),
 	.FIFO_FULL(FIFO_FULL),
 	.FIFO_WR_DATA(FIFO_WR_DATA),
-	.FIFO_WR_INC(FIFO_WR_INC),    
+	.FIFO_WR_INC(FIFO_WR_INC),
 	.ALU_OUT(ALU_OUT),
 	.ALU_OUT_Valid(ALU_OUT_Valid),
 	.ALU_EN(ALU_EN),
@@ -206,18 +197,16 @@ SYS_CTRL U0_SYS_CTRL (
 	.CLKG_EN(CLKG_EN),
 	.CLKDIV_EN(CLKDIV_EN),
 	.Rd_Reg(Rd_Reg),
-	.Rd_Reg_Valid(Rd_Reg_Valid), 
+	.Rd_Reg_Valid(Rd_Reg_Valid),
 	.Wr_Reg(Wr_Reg),
 	.Addr(Addr),
 	.RdEn(RdEn),
 	.WrEn(WrEn)
 	);
 
-
 ///********************************************************///
 /////////////////////// Register File ////////////////////////
 ///********************************************************///
-
 Register_File U0_Register_File (
 	.WrData(Wr_Reg),
 	.Adresss(Addr),
@@ -233,13 +222,11 @@ Register_File U0_Register_File (
 	.REG3(Div_Ratio)
 	);
 
-
 ///********************************************************///
 //////////////////////////// ALU /////////////////////////////
 ///********************************************************///
- 
- ALU_16B U0_ALU_16B (
- 	.A(Operand_A),
+ALU_16B U0_ALU_16B (
+	.A(Operand_A),
 	.B(Operand_B),
 	.EN(ALU_EN),
 	.ALU_FUN(ALU_FUN),
@@ -247,8 +234,7 @@ Register_File U0_Register_File (
 	.RST(SYNC_RST_REF),
 	.ALU_OUT(ALU_OUT),
 	.OUT_VALID(ALU_OUT_Valid)
- 	);
-
+	);
 
 ///********************************************************///
 ///////////////////////// Clock Gating ///////////////////////
@@ -259,7 +245,5 @@ CLK_GATE U0_CLK_GATE (
 .CLK(REF_CLK),
 .GATED_CLK(ALU_CLK)
 );
-
-
 
 endmodule
