@@ -137,6 +137,7 @@ fix_dft_violations -clock -test_control TestMode
 set_db syn_generic_effort $EFFORT
 syn_generic
 
+
 # =========================================================
 # TECH mapping
 # =========================================================
