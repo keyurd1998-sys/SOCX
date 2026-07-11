@@ -126,7 +126,7 @@ fix_dft_violations -async_reset -test_control TestMode
 fix_dft_violations -async_set -test_control TestMode
 
 #fix clock violation
-fix_dft_violations -clock -test_control ScanEnable
+fix_dft_violations -clock -test_control TestMode
 
 # =========================================================
 # GTECH mapping 
