@@ -1,0 +1,82 @@
+Starting Command: analyze_deterministic_testpoints 
+
+INFO (TDA-005): Command Line Invocation: 
+            analyze_deterministic_testpoints -inexperiment TOP_atpg -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_analyze_deterministic_testpoints_FULLSCAN_TOP_atpg_071126115918-502912000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 11 11:59:18 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 951582.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_atpg
+            -LOGFILE /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_analyze_deterministic_testpoints_FULLSCAN_TOP_atpg_071126115918-502912000
+            -STDOUT summary
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+**************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                126235       126192            0           42            1  99.97  99.99
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                130766       126192            0           42         4532  96.50  96.53
+**************************************************************************************
+
+Testpoint   Testpoint     Est.      Est. Global   Est. Fault   
+ Number       Type      ATCov(%)     ATCov(%)       Count      Testpoint Location 
+----------  ----------  ----------  ------------  -----------  ------------------ 
+  Start                   100.00%       96.53%          
+      1          O       100.00%       96.53%         1        U0_SYS_CTRL.g2470.Y
+
+ Test Point Summary:
+ ---------------------------
+ Observe   Test Points:    1
+ ---------------------------
+ Total     Test Points:    1
+
+(I) File(s) generated (bytes and name):
+
+            257 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/TestPointInsertion.FULLSCAN.dfa
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           31,083,088  bytes
+
+                      CPU Time =    0:00:00.09
+                  Elapsed Time =    0:00:00.17                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 11 11:59:18 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

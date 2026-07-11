@@ -1,0 +1,101 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            build_faultmodel -includedynamic no -workdir /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_build_faultmodel_071126115904-449853000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Saturday Jul 11 11:59:04 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 951470.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_build_faultmodel_071126115904-449853000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count                10
+Global Ignored Dynamic Fault Count                0
+
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00       130766            0            0            0       130766
+Collapsed Static     0.00       103637            0            0            0       103637
+PI Static            0.00          100            0            0            0          100
+PO Static            0.00           94            0            0            0           94
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00       130766            0                                 130766
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: FULLSCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       126235            0            0            0       126235       130766            0            0            0       130766
+Collapsed Static     0.00   0.00        99176            0            0            0        99176       103637            0            0            0       103637
+PI Static            0.00   0.00           97            0            0            0           97          100            0            0            0          100
+PO Static            0.00   0.00           94            0            0            0           94           94            0            0            0           94
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       130766            0                                 130766       130766            0                                 130766
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static        96.54       130766       126235         4531
+Collapsed Static    95.70       103637        99176         4461
+PI Static           97.00          100           97            3
+PO Static          100.00           94           94            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      FULLSCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           47,095,568  bytes
+
+                      CPU Time =    0:00:00.11
+                  Elapsed Time =    0:00:00.17                    [end TDA_001]
+
+     Date Ended:  Saturday Jul 11 11:59:04 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+

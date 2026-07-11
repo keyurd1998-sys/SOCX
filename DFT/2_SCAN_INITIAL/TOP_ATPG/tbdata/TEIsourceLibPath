@@ -1,0 +1,3 @@
+SOURCE=/home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG/TOP.test_netlist.v
+TECHLIB=../../../Library/verilog/typical.v
+RUNDIR=/home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/
