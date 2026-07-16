@@ -14,7 +14,7 @@
 module TOP #(
 		parameter DATA_WIDTH        = 8,
 		parameter ADDR_WIDTH        = 4,
-		parameter RF_DEPTH          = 1024,
+		parameter RF_DEPTH          = 16,
 		parameter FIFO_DEPTH        = 1024,
 		parameter FIFO_PTR_WIDTH    = 10,
 		parameter SYNC_STAGES       = 2,
