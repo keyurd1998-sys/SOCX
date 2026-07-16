@@ -3,7 +3,6 @@
 # =========================================================
 set DESIGN_NAME "TOP"                      ;# Top module name
 set HDL_PATH    "../../RTL"        ;# RTL file path
-set SCRIPT_PATH "../../CONSTRAINTS"               ;# Script path
 set LIB_PATH    "../../../Library/timing"             ;# Library path
 set LIB_LIST "slow.lib"
 
@@ -29,13 +28,7 @@ elaborate $DESIGN_NAME -parameters {8 4 16 2048 11}                       ;# Bui
 check_design -unresolved                     ;# Check for missing sub-modules
 set_db auto_ungroup none
 
-# =========================================================
-# Read Constraints
-# =========================================================
-source cons.tcl                              
 
-# Lint the SDC constraints to catch missing constraints 
-check_timing_intent -verbose > $REPORT_DIR/${DESIGN_NAME}_timing_lint.rpt
 
 # =========================================================
 # Set Scan Configuration
@@ -75,26 +68,6 @@ define_test_clock \
     -controllable \
     [get_ports REF_CLK]
 
-# =========================================================
-# Define Scan Chains
-# =========================================================
-
-set NUM_SCAN_CHAINS 4
-
-for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
-create_port \
-    -direction in \
-    -name ScanIn_$i 
-
-create_port \
-    -direction out \
-    -name ScanOut_$i 
-
-define_scan_chain \
-        -name chain_$i \
-        -sdi [get_ports ScanIn_$i] \
-        -sdo [get_ports ScanOut_$i]
-    }
 
 # =========================================================
 # Check DRC Violation
