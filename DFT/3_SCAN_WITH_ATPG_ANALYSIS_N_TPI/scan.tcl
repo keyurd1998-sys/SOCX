@@ -45,7 +45,7 @@ read_libs $LIB_LIST
 read_hdl -sv [glob "$HDL_PATH/*.sv"] 
 read_hdl -sv [glob "$HDL_PATH/*.v"] 
 
-elaborate $DESIGN_NAME -parameters {FIFO_DEPTH 2048 FIFO_PTR_WIDTH 11}                       ;# Build design tree & resolve parameters
+elaborate $DESIGN_NAME -parameters "FIFO_DEPTH=2048, FIFO_PTR_WIDTH=11"                       ;# Build design tree & resolve parameters
 check_design -unresolved                     ;# Check for missing sub-modules
 set_db auto_ungroup none
 

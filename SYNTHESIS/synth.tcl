@@ -36,7 +36,7 @@ read_hdl -sv [glob "$HDL_PATH/*.sv"]
 read_hdl -sv [glob "$HDL_PATH/*.v"] 
 
 # Build design tree & resolve parameters
-elaborate $DESIGN_NAME -parameters {FIFO_DEPTH 2048 FIFO_PTR_WIDTH 11}                       
+elaborate $DESIGN_NAME -parameters "FIFO_DEPTH=2048, FIFO_PTR_WIDTH=11"                       
 check_design -unresolved                     
 set_db auto_ungroup none
 
