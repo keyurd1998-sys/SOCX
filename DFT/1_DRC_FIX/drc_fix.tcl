@@ -11,7 +11,6 @@ set LIB_LIST "slow.lib"
 # =========================================================
 set_db init_lib_search_path $LIB_PATH
 set_db init_hdl_search_path $HDL_PATH
-set_db script_search_path   $SCRIPT_PATH 
 
 # =========================================================
 # Read Library File
