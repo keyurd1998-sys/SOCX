@@ -36,7 +36,7 @@ read_hdl -sv [glob "$HDL_PATH/*.sv"]
 read_hdl -sv [glob "$HDL_PATH/*.v"] 
 
 # Build design tree & resolve parameters
-elaborate $DESIGN_NAME -parameters {8 10 16 2048 11}                       
+elaborate $DESIGN_NAME -parameters {8 4 16 2048 11}                       
 check_design -unresolved                     
 set_db auto_ungroup none
 
