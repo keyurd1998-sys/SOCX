@@ -12,11 +12,14 @@ set VERILOG_LIB [file normalize "../../../Library/verilog/typical.v"]
 # =========================================================
 # Work Directory Setup
 # =========================================================
-set WORK_DIR "${DESIGN_NAME}_Scan"          ;# Output root directory
-file mkdir $WORK_DIR                         ;# Create Output Dir
+set WORK_DIR "${DESIGN_NAME}_Scan"
+file mkdir $WORK_DIR
 
 set REPORT_DIR "$WORK_DIR/Report"
-file mkdir $WORK_DIR/Report                  ;# Create report folder
+file mkdir $WORK_DIR/Report
+
+set COMP_REPORT_DIR "Compression_Report"
+file mkdir $COMP_REPORT_DIR
 
 set COMP_DIR "Compression_Analysis"
 file mkdir $COMP_DIR
@@ -181,6 +184,6 @@ analyze_scan_compressibility \
     -library $VERILOG_LIB \
     -directory $COMP_DIR 
 
-report_scan_compressibility -directory $COMP_DIR > $REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
+report_scan_compressibility -directory $COMP_DIR > $COMP_REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
 
 puts "INFO: Compressibility analysis complete."
