@@ -19,7 +19,7 @@ module TOP_WRAPPER (
     
     // Shared DFT Control Pins
     input  wire PIN_ScanEnable,
-    input  wire PIN_TestMode
+    input  wire PIN_TestMode,
 
     // JTAG Pins 
     input  wire PIN_TCK,
