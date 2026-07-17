@@ -1,0 +1,140 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            create_logic_tests -testscan no -testmode COMPRESSION -experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression -workdir /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100 -stdout no  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121248-586364000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Friday Jul 17 12:12:48 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 482334.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121248-586364000
+            -STDOUT no
+            -testscan no
+[end TDA_009]
+
+
+WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.  [end TTC_018] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: COMPRESSION
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                245879       244420            0          239         1220  99.41  99.50
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                254516       244420            0          239         9857  96.03  96.12
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16        164    99.57%   96.19%         1056           00:01.55    [end TDA_220] 
+INFO (TDA-220):     32      32        107    99.61%   96.23%          949           00:02.63    [end TDA_220] 
+INFO (TDA-220):     48      48        140    99.67%   96.29%          809           00:03.11    [end TDA_220] 
+INFO (TDA-220):     64      64        102    99.71%   96.33%          707           00:04.56    [end TDA_220] 
+INFO (TDA-220):     80      80         88    99.75%   96.36%          619           00:04.67    [end TDA_220] 
+INFO (TDA-220):     96      96         67    99.78%   96.39%          552           00:04.74    [end TDA_220] 
+INFO (TDA-220):    112     112         48    99.79%   96.41%          504           00:04.81    [end TDA_220] 
+INFO (TDA-220):    128     128         39    99.81%   96.42%          465           00:04.88    [end TDA_220] 
+INFO (TDA-220):    144     144         45    99.83%   96.44%          420           00:04.99    [end TDA_220] 
+INFO (TDA-220):    160     160         38    99.84%   96.45%          382           00:05.06    [end TDA_220] 
+INFO (TDA-220):    176     176         27    99.86%   96.46%          355           00:05.13    [end TDA_220] 
+INFO (TDA-220):    184     184         18    99.86%   96.47%          337           00:05.22    [end TDA_220] 
+INFO (TDA-220):    189     189          7    99.87%   96.47%          330           00:05.28    [end TDA_220] 
+INFO (TDA-221):    189     189          0    99.87%   96.47%          330           00:05.28    [end TDA_221] 
+INFO (TDA-220):    205     205         18    99.87%   96.48%          312           00:15.15    [end TDA_220] 
+INFO (TDA-220):    221     221         17    99.88%   96.49%          295           00:15.21    [end TDA_220] 
+INFO (TDA-220):    237     237         23    99.89%   96.50%          272           00:15.26    [end TDA_220] 
+INFO (TDA-220):    246     246          9    99.89%   96.50%          263           00:15.33    [end TDA_220] 
+INFO (TDA-220):    254     254         10    99.90%   96.50%          253           00:15.37    [end TDA_220] 
+INFO (TDA-220):    255     255          1    99.90%   96.50%          252           00:15.42    [end TDA_220] 
+INFO (TDA-220):    255     255          0    99.90%   96.51%          249           00:15.67    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: COMPRESSION
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                245879       245388            0          242          249  99.80  99.90
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                254516       245388            0          242         8886  96.41  96.51
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          255
+----------------------------------------------------------
+ Total                                          255
+
+(I) File(s) generated (bytes and name):
+
+         466944 /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/tbdata/faultStatus.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+         853615 /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/tbdata/TBDbin.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           59,786,384  bytes
+
+                      CPU Time =    0:00:15.41
+                  Elapsed Time =    0:00:15.71                    [end TDA_001]
+
+     Date Ended:  Friday Jul 17 12:13:04 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     22 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    189     189          0    99.87%   96.47%          330           00:05.28     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING [Severe] Messages...
+      1 WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

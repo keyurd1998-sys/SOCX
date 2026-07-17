@@ -1,0 +1,3 @@
+SOURCE=/home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_150/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v
+TECHLIB=/home/admin/DFT/Library/verilog/typical.v
+RUNDIR=/home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/

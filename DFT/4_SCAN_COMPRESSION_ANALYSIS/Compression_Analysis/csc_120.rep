@@ -1,0 +1,98 @@
+
+Compressing scan chains...
+Will create a test port for 'compression_enable'
+Will create a test port for 'spread_enable'
+Will create a test port for 'mask_enable'
+Will create a test port for 'mask_clock'
+WARNING: Using existing directory 'Compression_Analysis' for compress_scan_chains.
+
+
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'XOR_COMPRESSION_236_2_1x2_21100110' from file 'Compression_Analysis/tmpCompression'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'XOR_COMPRESSION_236_2_1x2_21100110'.
+  Setting attribute of root '/': 'boundary_opto_internal_assert' = false
+  Setting attribute of module 'decomp_236_2_1x2_21100110_gate': 'boundary_opto' = strict_no
+  Setting attribute of module 'decomp_236_2_1x2_21100110': 'boundary_opto' = strict_no
+Info    : Skipping 'boundary_opto' = false setting since set on an internal created hierarchy. [GLO-52]
+        : The module is 'bmux'.
+  Setting attribute of module 'bmux': 'boundary_opto' = true
+  Setting attribute of module 'comp_236_2_1x2_21100110_gate': 'boundary_opto' = strict_no
+  Setting attribute of module 'comp_236_2_1x2_21100110': 'boundary_opto' = strict_no
+  Setting attribute of module 'decomp_236_2_1x2_21100110_gate': 'boundary_opto' = strict_no
+  Setting attribute of module 'decomp_236_2_1x2_21100110': 'boundary_opto' = strict_no
+Info    : Skipping 'boundary_opto' = false setting since set on an internal created hierarchy. [GLO-52]
+        : The module is 'bmux'.
+  Setting attribute of module 'bmux': 'boundary_opto' = true
+  Setting attribute of module 'comp_236_2_1x2_21100110_gate': 'boundary_opto' = strict_no
+  Setting attribute of module 'comp_236_2_1x2_21100110': 'boundary_opto' = strict_no
+  Setting attribute of root '/': 'boundary_opto_internal_assert' = true
+INFO: Mapping compression macro with a target period of 20000.0 ps
+Warning : This command will be obsolete in a next major release. [TUI-37]
+        : command: 'define_test_mode'
+Warning : This command will be obsolete in a next major release. [TUI-37]
+        : command: 'define_test_mode'
+Warning : This command will be obsolete in a next major release. [TUI-37]
+        : command: 'define_test_mode'
+Connecting the compression_enable signal test_signal:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_compression_enable ...
+Connecting the spread_enable test_signal:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_spreader ...
+Connecting the scan inputs to the compression macro...
+Connecting port:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/ScanIn_1 to {hpin:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/COMPACTOR/RSI_SI[0]}
+Connecting port:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/ScanIn_2 to {hpin:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/COMPACTOR/RSI_SI[1]}
+Warning : This command will be obsolete in a next major release. [TUI-37]
+        : command: 'define_test_mode'
+Connecting the scan outputs to the compression macro...
+Connecting the internal scan chains to the compression macro...
+Connecting the mask_enable signal test_signal:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_mask_enable ...
+Connecting the mask clock port:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_mask_clk ...
+Info    : Marking instance as dft_abstract_dont_scan as an abstract segment is being defined on it. [DFT-163]
+        : Setting dft_abstract_dont_scan attribute to true for instance 'COMPACTOR'
+
+  Setting attribute of design 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11': 'dft_mv_clock_invalidates_clock_domain' = false
+Prepending 'chain_1' with segment 'scan_segment:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_segment_2'
+Prepending 'chain_2' with segment 'scan_segment:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/DFT_segment_1'
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+Detected 0 DFT rule violation(s)
+    ... see the log file for more details
+  Number of user specified non-Scan registers:   0
+  Number of Abstract Segment non-Scan registers: 236
+      Number of registers that fail DFT rules:   0
+      Number of registers that pass DFT rules: 8731
+  Percentage of total registers that are scannable: 100%
+  Percentage of abstract segment flops that are scannable: 100%
+
+Mapping compression logic ...
+Done mapping compression logic..
+Info    : The given (sub)design is already uniquified. [TUI-296]
+        : module:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/XOR_COMPRESSION_236_2_1x2_21100110.
+
+Starting DFT Scan Compression for module 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' in 'xor' mode.
+Building the compression logic to include 'xor-spreader network' decompression and 'XOR' compression  with wide1 masking.
+Prepending the mask registers to the actual scan chains.
+
+Actual Scan Chain Summary
+-------------------------
+   The number of actual fullscan chains in the design is: 2
+   The number of actual fullscan chains in the design which are favorable for compression is: 2
+   The number of actual fullscan chains which can be prepended to is: 2
+   The number of actual fullscan chains which are not favorable for prepend is: 0
+
+Number of Internal Scan Channels
+--------------------------------
+   User requested ratio: 120
+   Tool achieved ratio: 118.0
+   The maximum original scan chain length: 4248
+   The number of internal scan channels is: 236
+   The maximum internal scan channel length is: 36
+   The maximum length of the mask register channels is: 118
+   The total number of mask registers added is: 236
+   The final maximum fullscan chain length (including mask and/or misr registers) is: 4366
+   This is 100.0% of the average fullscan chain length of 4365.5
+
+Tester Cycle Statistics
+-----------------------
+   The number of tester cycles required to load a scan pattern in compression mode is: 36
+   The number of tester cycles required to load a scan pattern in fullscan mode is: 4366
+   The number of tester cycles required to load a channel mask shift register chain is: 118
+

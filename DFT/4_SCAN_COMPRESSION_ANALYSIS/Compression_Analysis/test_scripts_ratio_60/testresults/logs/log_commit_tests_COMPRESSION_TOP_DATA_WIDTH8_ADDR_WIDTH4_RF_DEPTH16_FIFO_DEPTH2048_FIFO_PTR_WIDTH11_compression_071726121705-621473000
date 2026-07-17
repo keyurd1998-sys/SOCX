@@ -1,0 +1,121 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60 -stdout no  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60/testresults/logs/log_commit_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121705-621473000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Friday Jul 17 12:17:05 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 486689.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60
+            -TESTMODE COMPRESSION
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60/testresults/logs/log_commit_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121705-621473000
+            -STDOUT no
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+         600995 /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60/tbdata/TBDbin.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression odometers prior to commit_tests: 1.1.1.2.1 thru 1.1.1.15.2 (Relative test numbers 1 thru 179).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.66  96.24       242915       241939            0          162          814       251552       241939            0          162         9451
+Collapsed Static    99.70  95.42       190856       190127            0          155          574       199417       190127            0          155         9135
+PI Static          100.00  87.50           21           21            0            0            0           24           21            0            0            3
+PO Static          100.00 100.00           10           10            0            0            0           10           10            0            0            0
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       251552            0                                 251552       251552            0                                 251552
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+
+Testmode and Global statistics after commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.93  96.49       242915       242573            0          162          180       251552       242573            0          162         8817
+Collapsed Static    99.94  95.64       190856       190582            0          155          119       199417       190582            0          155         8680
+PI Static          100.00  87.50           21           21            0            0            0           24           21            0            0            3
+PO Static          100.00 100.00           10           10            0            0            0           10           10            0            0            0
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       251552            0                                 251552       251552            0                                 251552
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression is saved to the master test vectors odometers: 1.1.1.2.1 to 1.1.1.15.2 (Relative test numbers 1 to 179).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 1
+  tester loops    = 1
+  test procedures = 15
+  test sequence   = 179
+  init sequencess = 1
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+         600995 /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60/tbdata/TBDbin.COMPRESSION 
+        2768896 /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_60/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           23,994,112  bytes
+
+                      CPU Time =    0:00:00.07
+                  Elapsed Time =    0:00:00.11                    [end TDA_001]
+
+     Date Ended:  Friday Jul 17 12:17:05 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression odometers prior to commit_tests: 1.1.1.2.1 thru 1.1.1.15.2 (Relative test numbers 1 thru 179).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression is saved to the master test vectors odometers: 1.1.1.2.1 to 1.1.1.15.2 (Relative test numbers 1 to 179).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

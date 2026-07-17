@@ -1,0 +1,119 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign -testmode COMPRESSION_DECOMP -workdir /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100 -stdout no  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_071726121117-977549000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Friday Jul 17 12:11:17 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 481629.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100
+            -TESTMODE COMPRESSION_DECOMP
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_071726121117-977549000
+            -MODEDEF COMPRESSION
+            -STDOUT no
+[end TDA_009]
+MODEDEFPATH set to:  /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/modedef 
+TDRPATH set to: /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  COMPACTOR 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 91.13% active logic,  8.87% inactive logic and  0.00% constraint logic.   [end THM_814] 
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+           coverage is impacted when too little of the logic is visible.   [end TTM_347] 
+INFO (TTM-357): There are 198 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TTM-352): There are 2 Channel Mask Load chains.   [end TTM_352] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  COMPRESSION_DECOMP
+
+Information for Test Mode:  COMPRESSION_DECOMP
+-------------------------
+
+         Scan Type = GSD
+
+  Test Mode uses Linear Decompression.
+  Test Mode uses Linear Compression.
+
+ Latch Summary for Test Mode:  COMPRESSION_DECOMP
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        4           1           5 
+ Finite State    (FSM)           0           0           0 
+
+WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  TC    (Test Constraint)           Pins
+          3  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          2  SI    (Scan Input)                Pins
+          2  SO    (Scan Output)               Pins
+          2  CMI   (Channel Mask Input)        Pins
+          1  CME   (Channel Mask Enable)       Pins
+          1  CML   (Channel Mask Load)         Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          5      PI  -SC                                  RST_N / RST_N
+          4      PI  -EC  -SC                             REF_CLK / REF_CLK
+         10      PI  -EC  -SC                             UART_CLK / UART_CLK
+          1      PI  -CML                                 DFT_mask_clk / DFT_mask_clk
+          2      PI  -TC  -CME                            DFT_mask_enable / DFT_mask_enable
+          9      PI  +TI                                  TestMode / TestMode
+          0      PI  +SE                                  DFT_compression_enable / DFT_compression_enable
+          3      PI  +SE                                  DFT_spreader / DFT_spreader
+          6      PI  +SE                                  ScanEnable / ScanEnable
+          7      PI   SI   CMI                            ScanIn_1 / ScanIn_1
+          8      PI   SI1  CMI                            ScanIn_2 / ScanIn_2
+         12      PO   SO                                  ScanOut_1 / ScanOut_1
+         13      PO   SO1                                 ScanOut_2 / ScanOut_2
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+               Total Memory =           80,722,864  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.81
+               Elapsed Time =   0:00:00.92
+
+

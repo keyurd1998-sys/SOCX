@@ -1,0 +1,149 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            write_vectors -language verilog -inexperiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression -testmode FULLSCAN -scanformat serial -workdir /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100 -outputvectors no -outputmainsim no -stdout no  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_write_vectors_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121310-512013000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Friday Jul 17 12:13:10 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 482512.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/logs/log_write_vectors_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726121310-512013000
+            -STDOUT no
+            -outputmainsim no
+            -outputvectors no
+          + -language verilog
+          + -scanformat serial
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TVE-001): Verilog write vectors started.   [end TVE_001] 
+INFO (TVE-103): There was no specified TEST offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 8.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-103): There was no specified SCAN offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 16.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-103): There was no specified TEST offset for this clock 'pin REF_CLK'.  A default clock offset of 8.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-103): There was no specified SCAN offset for this clock 'pin REF_CLK'.  A default clock offset of 16.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-103): There was no specified TEST offset for this clock 'pin UART_CLK'.  A default clock offset of 8.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-103): There was no specified SCAN offset for this clock 'pin UART_CLK'.  A default clock offset of 16.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-967): Temporary output files are created in /tmp directory. [end TVE_967] 
+INFO (TVE-004): Reading test section 1.1. Test section type equals logic.   [end TVE_004] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/verilog/cycleMap.FULLSCAN.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression.   [end TVE_003] 
+INFO (TVE-005): Created 269871 total cycles, of which 357 are test cycles, 269514 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.   [end TVE_005] 
+INFO (TVE-008): Created 530578 total measures, of which 305 are PO measures and 530273 are SO (Scan Out) measures.  [end TVE_008] 
+
+INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+    Test       | Global    | Global    | Global    | Global    | Global    | Global    | Sequence   | Overlapped | Total      | 
+    Sequence   | Static    | Static    | Static    | Dynamic   | Dynamic   | Dynamic   | Cycle      | Cycle      | Cycle      | 
+               | Total     | Delta     | Adjusted  | Total     | Delta     | Adjusted  | Count      | Count      | Count      | 
+               | Coverage  | Coverage  | Total     | Coverage  | Coverage  | Total     |            |            |            | 
+               |           |           | Coverage  |           |           | Coverage  |            |            |            | 
+     1.1.1.1.1 |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |          1 |          0 |          1 |
+     1.1.1.2.1 |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |       8701 |       4348 |       8702 |
+     1.1.1.2.2 |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      13055 |
+     1.1.1.2.3 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      17408 |
+     1.1.1.2.4 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      21761 |
+     1.1.1.2.5 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      26114 |
+     1.1.1.2.6 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      30467 |
+     1.1.1.2.7 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      34820 |
+     1.1.1.2.8 |  0.01     |  0.00     |  0.01     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      39173 |
+     1.1.1.2.9 |  0.02     |  0.00     |  0.02     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      43526 |
+    1.1.1.2.10 |  0.02     |  0.00     |  0.02     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      47879 |
+    1.1.1.2.11 |  0.02     |  0.00     |  0.02     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      52232 |
+    1.1.1.2.12 |  0.02     |  0.00     |  0.02     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      56585 |
+    1.1.1.2.13 |  0.02     |  0.00     |  0.02     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      60938 |
+    1.1.1.2.14 |  0.03     |  0.01     |  0.03     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      65291 |
+    1.1.1.2.15 |  0.03     |  0.00     |  0.03     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      69644 |
+    1.1.1.2.16 |  0.03     |  0.00     |  0.03     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      73997 |
+     1.1.1.3.1 |  0.03     |  0.00     |  0.03     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      78350 |
+     1.1.1.3.2 |  0.03     |  0.00     |  0.03     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      82703 |
+     1.1.1.3.3 |  0.04     |  0.00     |  0.04     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      87056 |
+     1.1.1.3.4 |  0.04     |  0.00     |  0.04     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      91409 |
+     1.1.1.3.5 |  0.04     |  0.00     |  0.04     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |      95762 |
+     1.1.1.3.6 |  0.04     |  0.00     |  0.04     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     100115 |
+     1.1.1.3.7 |  0.04     |  0.00     |  0.04     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     104468 |
+     1.1.1.3.8 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     108821 |
+     1.1.1.3.9 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     113174 |
+    1.1.1.3.10 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     117527 |
+    1.1.1.3.11 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     121880 |
+    1.1.1.3.12 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     126233 |
+    1.1.1.3.13 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     130586 |
+    1.1.1.3.14 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     134939 |
+    1.1.1.3.15 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     139292 |
+    1.1.1.3.16 |  0.05     |  0.00     |  0.05     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     143645 |
+     1.1.1.4.1 |  0.06     |  0.00     |  0.06     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     147998 |
+     1.1.1.4.2 |  0.06     |  0.00     |  0.06     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     152351 |
+     1.1.1.4.3 |  0.06     |  0.00     |  0.06     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     156704 |
+     1.1.1.4.4 |  0.06     |  0.00     |  0.06     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     161057 |
+     1.1.1.4.5 |  0.06     |  0.00     |  0.06     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     165410 |
+     1.1.1.4.6 |  0.07     |  0.01     |  0.07     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     169763 |
+     1.1.1.4.7 |  0.07     |  0.00     |  0.07     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     174116 |
+     1.1.1.4.8 |  0.07     |  0.00     |  0.07     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     178469 |
+     1.1.1.4.9 |  0.07     |  0.00     |  0.07     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     182822 |
+    1.1.1.4.10 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     187175 |
+    1.1.1.4.11 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     191528 |
+    1.1.1.4.12 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     195881 |
+    1.1.1.4.13 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     200234 |
+    1.1.1.4.14 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     204587 |
+    1.1.1.4.15 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     208940 |
+    1.1.1.4.16 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     213293 |
+     1.1.1.5.1 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     217646 |
+     1.1.1.5.2 |  0.08     |  0.00     |  0.08     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     221999 |
+     1.1.1.5.3 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     226352 |
+     1.1.1.5.4 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     230705 |
+     1.1.1.5.5 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     235058 |
+     1.1.1.5.6 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     239411 |
+     1.1.1.5.7 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4353 |       4348 |     243764 |
+     1.1.1.6.1 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4351 |       4348 |     248115 |
+     1.1.1.6.2 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4351 |       4348 |     252466 |
+     1.1.1.6.3 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4351 |       4348 |     256817 |
+     1.1.1.7.1 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4351 |       4348 |     261168 |
+     1.1.1.7.2 |  0.09     |  0.00     |  0.09     |  0.00     |  0.00     |  0.00     |       4351 |       4348 |     265519 |
+     1.1.1.7.3 |  0.10     |  0.00     |  0.10     |  0.00     |  0.00     |  0.00     |       4352 |          0 |     269871 |
+  [end TVE_050] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           35,057,504  bytes
+
+                      CPU Time =    0:00:00.10
+                  Elapsed Time =    0:00:00.14                    [end TDA_001]
+
+     Date Ended:  Friday Jul 17 12:13:10 2026  IST
+
+INFO (TVE-002): Verilog write vectors has completed.   [end TVE_002] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      1 INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/DFT/4_SCAN_COMPRESSION_ANALYSIS/Compression_Analysis/test_scripts_ratio_100/testresults/verilog/cycleMap.FULLSCAN.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression.    
+      1 INFO (TVE-004): Reading test section 1.1. Test section type equals logic.    
+      1 INFO (TVE-005): Created 269871 total cycles, of which 357 are test cycles, 269514 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      1 INFO (TVE-008): Created 530578 total measures, of which 305 are PO measures and 530273 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      6 INFO (TVE-103): There was no specified TEST offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 8.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

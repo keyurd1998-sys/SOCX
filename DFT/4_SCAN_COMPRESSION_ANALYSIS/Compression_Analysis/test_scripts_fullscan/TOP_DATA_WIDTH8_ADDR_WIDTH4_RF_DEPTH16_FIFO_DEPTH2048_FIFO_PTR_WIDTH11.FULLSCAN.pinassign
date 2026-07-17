@@ -1,0 +1,9 @@
+assign pin=TestMode 	test_function= +TI; 	# test_mode
+assign pin=RST_N 	test_function= -SC; 	# test_mode
+assign pin=ScanEnable 	test_function= +SE; 	# shift_enable
+assign pin=REF_CLK 	test_function= -ES; 	
+assign pin=UART_CLK 	test_function= -ES; 	
+assign pin=ScanIn_1 	test_function= SI0;
+assign pin=ScanOut_1 	test_function= SO0;
+assign pin=ScanIn_2 	test_function= SI1;
+assign pin=ScanOut_2 	test_function= SO1;
