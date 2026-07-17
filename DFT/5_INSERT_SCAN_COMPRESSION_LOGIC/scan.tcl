@@ -179,7 +179,7 @@ connect_scan_chains -auto_create
 # Insert compression Logic
 # =========================================================
 compress_scan_chains \
-    -ratio 150 \
+    -ratio 100 \
     -compressor xor \
     -decompressor xor \
     -mask wide1 \
