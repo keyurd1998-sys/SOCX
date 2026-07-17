@@ -43170,20 +43170,20 @@
 "object":"/designs/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/instances_hier/U1_RST_SYNC_UART/instances_seq/sync_reg_reg[0]",
 "type":"instance"},
 {"index": "1", 
- "date": "Fri Jul 17 07:35:46 UTC 2026",
- "seconds": 1784273746.58409,
+ "date": "Fri Jul 17 08:12:59 UTC 2026",
+ "seconds": 1784275979.8480968,
  "netlist": "fv/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/fv_map.v.gz", 
  "netlist_exists": "1", 
  "netlist_normalize": "/home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/fv/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/fv_map.v.gz", 
- "netlist_mtime": "1784273733", 
- "netlist_timestamp": "Fri Jul 17 07:35:33 UTC 2026", 
+ "netlist_mtime": "1784275967", 
+ "netlist_timestamp": "Fri Jul 17 08:12:47 UTC 2026", 
  "netlist_size": "373726", 
- "netlist_cksum": "1303981196", 
+ "netlist_cksum": "3767411506", 
  "design_name": "TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11", 
  "synth_workdir": "/home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 12.684567999999999 
+ "write_verif_file_runtime": 12.66194 
  }
 ]

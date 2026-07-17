@@ -29,7 +29,7 @@ xrun \
    +sdf_file+DEFAULT.sdf \
    +xmerror+CUSFNF \
    +define+TIMING \
-   +xmlibdirname+$WORKDIR/Inca_libs_13_06_34 \
+   +xmlibdirname+$WORKDIR/Inca_libs_13_43_41 \
    -l $WORKDIR/ncverilog_COMPRESSION_DECOMP_TIMED.log \
   -v /home/admin/DFT/Library/verilog/typical.v \
 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v \

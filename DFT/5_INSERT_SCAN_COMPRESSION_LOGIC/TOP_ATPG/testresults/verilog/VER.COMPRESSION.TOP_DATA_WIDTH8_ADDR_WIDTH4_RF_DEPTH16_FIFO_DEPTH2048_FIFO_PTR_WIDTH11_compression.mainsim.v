@@ -3,7 +3,7 @@
 // Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025  //
 //***************************************************************************//
 //                                                                           //
-//  FILE CREATED..............July 17, 2026 at 13:12:40                      //
+//  FILE CREATED..............July 17, 2026 at 13:46:00                      //
 //                                                                           //
 //  PROJECT NAME..............TOP_ATPG                                       //
 //                                                                           //
@@ -28,10 +28,6 @@
 //                                                                           //
 //                                                                           //
 //   Individually set PIs                                                    //
-//  "DFT_mask_clk" (PI # 2)                                                  //
-//  TEST OFFSET...............0.000                                          //
-//  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
-//                                                                           //
 //  "REF_CLK" (PI # 5)                                                       //
 //  TEST OFFSET...............8.000    PULSE WIDTH...............8.000       //
 //  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
@@ -66,20 +62,10 @@
 //                   DEFINE VARIABLES FOR ALL SHIFT CHAINS                   //
 //***************************************************************************//
 
-  reg [1:29] stim_CR_1;   reg [1:29] stim_CR_2;   
+  reg [1:43] stim_CR_1;   reg [1:43] stim_CR_2;   
 
-  reg [1:29] meas_OR_1;   reg [1:29] meas_OR_2;   
+  reg [1:43] meas_OR_1;   reg [1:43] meas_OR_2;   
 
-
-//***************************************************************************//
-//       DEFINE VARIABLES FOR ALL CHANNEL MASK AND MASK ENABLE CHAINS        //
-//***************************************************************************//
-
-  reg [1:147] stim_CMSR_1;   reg [1:147] stim_CMSR_2;   
-
-
-
-  reg [1:29] stim_CME_0;   
 
 //***************************************************************************//
 //                             OTHER DEFINITIONS                             //
@@ -122,7 +108,7 @@
       .DFT_compression_enable ( part_PIs[0001] ),      // pinName = DFT_compression_enable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .DFT_spreader           ( part_PIs[0004] ),      // pinName = DFT_spreader;  tf = -SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .DFT_mask_enable        ( part_PIs[0003] ),      // pinName = DFT_mask_enable;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      .DFT_mask_clk           ( part_PIs[0002] )     // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      .DFT_mask_clk           ( part_PIs[0002] )     // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       );
 
 //***************************************************************************//
@@ -274,12 +260,10 @@
       if ( $test$plusargs ( "FAILSET" ) )  failset = 1'b1; 
 
       stim_PIs = {12{1'bX}};   
-      stim_CIs = 12'bX0XX0XXXXX0X; 
+      stim_CIs = 12'bXXXX0XXXXX0X; 
       meas_POs = {5{1'bX}};   
-      stim_CR_1 = {29{1'b0}};   stim_CR_2 = {29{1'b0}};   
-      meas_OR_1 = {29{1'bX}};   meas_OR_2 = {29{1'bX}};   
-      stim_CME_0 = {29{1'b0}};   
-      stim_CMSR_1 = {147{1'b0}};   stim_CMSR_2 = {147{1'b0}};   
+      stim_CR_1 = {43{1'b0}};   stim_CR_2 = {43{1'b0}};   
+      meas_OR_1 = {43{1'bX}};   meas_OR_2 = {43{1'bX}};   
 
     end  
   endtask  
@@ -393,7 +377,7 @@
       SERIALCYCLE = SERIALCYCLE + 1; 
      #0.000000;        // 0.000000 ns;  From the start of the cycle.
       part_PIs [1] = stim_PIs [1];      // pinName = DFT_compression_enable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      part_PIs [2] = stim_PIs [2];      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      part_PIs [2] = stim_PIs [2];      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [3] = stim_PIs [3];      // pinName = DFT_mask_enable;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [4] = stim_PIs [4];      // pinName = DFT_spreader;  tf = -SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [6] = stim_PIs [6];      // pinName = RST_N;  tf = -SC  ; testOffset = 0.000000;  scanOffset = 0.000000;  
@@ -454,36 +438,6 @@
   endtask  
 
 //***************************************************************************//
-//                DEFINE CHANNEL MASK SCAN SEQUENCE PROCEDURE                //
-//***************************************************************************//
-
-  task ChannelMask_Cycle_Sequence_TM_2_SEQ_2_SOP_1; 
-    begin 
-
-      PROCESSNAME = "CHANNEL MASK SCAN SEQUENCE (ChannelMask_Cycle_Sequence)";
-      START = MAX - NUM_SHIFTS; 
-      for ( SCANCYCLE = 1; SCANCYCLE <= MAX; SCANCYCLE = SCANCYCLE + 1 ) begin 
-        CYCLE = CYCLE + 1; 
-        SERIALCYCLE = SERIALCYCLE + 1; 
-     #0.000000;        // 0.000000 ns;  From the start of the cycle.
-        part_PIs [8] = stim_CMSR_1 [ 0 + SCANCYCLE ];      // pinName = ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-        part_PIs [9] = stim_CMSR_2 [ 0 + SCANCYCLE ];      // pinName = ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-     #16.000000;        // 16.000000 ns;  From the start of the cycle.
-        part_PIs [2] = 1'b1;      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #8.000000;        // 24.000000 ns;  From the start of the cycle.
-        part_PIs [2] = 1'b0;      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #56.000000;        // 80.000000 ns;  From the start of the cycle.
-      end  
-      stim_CMSR_1 = {147{1'b0}};   stim_CMSR_2 = {147{1'b0}};   
-      stim_PIs = part_PIs; 
-      SCANCYCLE = 0; 
-      NUM_SHIFTS = 0; 
-      PROCESSNAME = "";
-
-    end  
-  endtask  
-
-//***************************************************************************//
 //                      DEFINE SCAN SEQUENCE PROCEDURE                       //
 //***************************************************************************//
 
@@ -498,7 +452,6 @@
         CYCLE = CYCLE + 1; 
         SERIALCYCLE = SERIALCYCLE + 1; 
      #0.000000;        // 0.000000 ns;  From the start of the cycle.
-        part_PIs [3] = stim_CME_0 [ 0 + SCANCYCLE ];      // pinName = DFT_mask_enable;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
         part_PIs [8] = stim_CR_1 [ 0 + SCANCYCLE ];      // pinName = ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
         part_PIs [9] = stim_CR_2 [ 0 + SCANCYCLE ];      // pinName = ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
      #8.000000;        // 8.000000 ns;  From the start of the cycle.
@@ -550,9 +503,8 @@
         part_PIs [5] = 1'b0;      // pinName = REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
      #56.000000;        // 80.000000 ns;  From the start of the cycle.
       end  
-      meas_OR_1 = {29{1'bX}};   meas_OR_2 = {29{1'bX}};   
-      stim_CR_1 = {29{1'b0}};   stim_CR_2 = {29{1'b0}};   
-      stim_CME_0 = {29{1'b0}};   
+      meas_OR_1 = {43{1'bX}};   meas_OR_2 = {43{1'bX}};   
+      stim_CR_1 = {43{1'b0}};   stim_CR_2 = {43{1'b0}};   
       stim_PIs = part_PIs; 
       SCANCYCLE = 0; 
       NUM_SHIFTS = 0; 
@@ -591,6 +543,7 @@
       end 
      #0.000000;        // 0.000000 ns;  From the start of the cycle.
       part_PIs [1] = stim_PIs [1];      // pinName = DFT_compression_enable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
+      part_PIs [2] = stim_PIs [2];      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [3] = stim_PIs [3];      // pinName = DFT_mask_enable;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [4] = stim_PIs [4];      // pinName = DFT_spreader;  tf = -SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [6] = stim_PIs [6];      // pinName = RST_N;  tf = -SC  ; testOffset = 0.000000;  scanOffset = 0.000000;  
@@ -619,11 +572,9 @@
         else if ( meas_POs [ POnum ] !== 1'bX )  good_compares = good_compares + 1; 
       end  
      #8.000000;        // 16.000000 ns;  From the start of the cycle.
-      part_PIs [2] = stim_PIs [2];      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
       part_PIs [5] = stim_PIs [5];      // pinName = REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
       part_PIs [11] = stim_PIs [11];      // pinName = UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
      #8.000000;        // 24.000000 ns;  From the start of the cycle.
-      part_PIs [2] = stim_CIs [2];      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
       part_PIs [5] = stim_CIs [5];      // pinName = REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
       part_PIs [11] = stim_CIs [11];      // pinName = UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
      #56.000000;        // 80.000000 ns;  From the start of the cycle.
@@ -761,7 +712,7 @@
                     1: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CR_1 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", stim_CR_1 [1:43] ); 
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
                       end  
@@ -770,7 +721,7 @@
                     2: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CR_2 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", stim_CR_2 [1:43] ); 
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
                       end  
@@ -801,7 +752,7 @@
                     1: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", meas_OR_1 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", meas_OR_1 [1:43] ); 
                         if (sim_range_measure == 1'b0 ) meas_OR_1 = 'bx;
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
@@ -811,7 +762,7 @@
                     2: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", meas_OR_2 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", meas_OR_2 [1:43] ); 
                         if (sim_range_measure == 1'b0 ) meas_OR_2 = 'bx;
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
@@ -819,66 +770,6 @@
                     end  
 
                   endcase  
-                end  
-              end  
-
-            endcase  
-          end  
-        end  
-
-        302: begin 
-          rc_read = $fscanf ( DATAID, "%d", MODENUM ); 
-          if ( rc_read <= 0 )  bad_cmd_code; 
-          else  begin 
-
-            case ( MODENUM ) 
-
-              2: begin 
-                rc_read = $fscanf ( DATAID, "%d", SCANNUM ); 
-                if ( rc_read <= 0 )  bad_cmd_code; 
-                else  begin 
-
-                  case ( SCANNUM ) 
-
-                    0: begin 
-
-                      if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CME_0 [1:29] ); 
-                        if ( rc_read <= 0 )  bad_cmd_code; 
-                        line_number = line_number + 1; 
-                      end  
-                    end  
-
-                  endcase  
-                end  
-              end  
-
-            endcase  
-          end  
-        end  
-
-        303: begin 
-          rc_read = $fscanf ( DATAID, "%d", SCANNUM ); 
-          if ( rc_read <= 0 )  bad_cmd_code; 
-          else  begin 
-
-            case ( SCANNUM ) 
-
-              1: begin 
-
-                if ( rc_read > 0 )  begin 
-                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_1 [1:147] ); 
-                  if ( rc_read <= 0 )  bad_cmd_code; 
-                  line_number = line_number + 1; 
-                end  
-              end  
-
-              2: begin 
-
-                if ( rc_read > 0 )  begin 
-                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_2 [1:147] ); 
-                  if ( rc_read <= 0 )  bad_cmd_code; 
-                  line_number = line_number + 1; 
                 end  
               end  
 
@@ -943,15 +834,6 @@
                       rc_read = $fscanf ( DATAID, "%d", MAX ); 
                       if ( rc_read > 0 )  begin 
                         if ( sim_range )  Scan_Preconditioning_Sequence_TM_2_SEQ_1_SOP_1; 
-                      end  
-                      else  bad_cmd_code; 
-                      line_number = line_number + 1; 
-                    end  
-
-                    2: begin 
-                      rc_read = $fscanf ( DATAID, "%d", MAX ); 
-                      if ( rc_read > 0 )  begin 
-                        if ( sim_range )  ChannelMask_Cycle_Sequence_TM_2_SEQ_2_SOP_1; 
                       end  
                       else  bad_cmd_code; 
                       line_number = line_number + 1; 

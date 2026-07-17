@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_071726130701-545346000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_071726134405-695287000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Friday Jul 17 13:07:01 2026  IST
+            Date Started: Friday Jul 17 13:44:05 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 510272.
+            This job is process number 527962.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,10 +20,10 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE FULLSCAN
 
             -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
-            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_071726130701-545346000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_071726134405-695287000
             -STDOUT summary
 [end TDA_009]
-INFO (TSV-900): verify_test_structures processing has started Fri Jul 17 13:07:01 2026    [end TSV_900] 
+INFO (TSV-900): verify_test_structures processing has started Fri Jul 17 13:44:05 2026    [end TSV_900] 
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 ------------------- verify_test_structures Process Preview ---------------------
   apply constraints ...................................... constraints=yes    
@@ -57,9 +57,9 @@ INFO (TLM-055): Design Summary
                 --------------
 
 Hierarchical Model:                  Flattened Model:
-        369,067  Blocks                     193,008  Blocks
-      1,149,514  Pins                       193,008  Nodes
-        605,952  Nets
+        365,605  Blocks                     191,468  Blocks
+      1,138,369  Pins                       191,468  Nodes
+        598,745  Nets
 
 Primary Inputs:                      Primary Outputs:
          12  Input Only                         5  Output Only
@@ -79,14 +79,14 @@ Selected Primitive Functions:
           0  TSDs
           0  Resistors
           0  Transistors
-     17,212  MUX2s
+     17,116  MUX2s
           4  Latches
 
 
-      8,789  Rising  Edge Flop w/Set-Dominant and Reset Port
-      8,789  Total Flops
+      8,693  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,693  Total Flops
 
-     27,715  Technology Library Cell Instances
+     27,135  Technology Library Cell Instances
 
 [end TLM_055] 
 
@@ -127,35 +127,35 @@ Test Function Pin Information for Test Mode:  FULLSCAN
    Analyze test clocks' control of memory elements    
 
 Analyze test clocks' control of memory elements process has completed.
-                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.04
   
    Analyze three-state drivers for contention 
 
 Analyze three-state drivers for contention process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.02
   
    Analyze feedback loops and keeper devices          
 
 Analyze feedback loops and keeper devices process has completed.
-                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.02
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
   
    Analyze clock choppers                             
 
 Analyze clock choppers process has completed.
-                             CPU time =  0:00:00.06  Elapsed time =  0:00:00.10
+                             CPU time =  0:00:00.05  Elapsed time =  0:00:00.09
   
    Analyze flip-flop and latch scan characteristics   
-INFO (TSV-068): The length of the longest scan chain is 4395 bit positions, which is 100% of the average scan chain length 4395 (based on 8789 total scan chain bits and 2 valid scan chains).   [end TSV_068] 
-INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 4395 bit positions.   [end TSV_378] 
-INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 4394 bit positions.   [end TSV_378] 
+INFO (TSV-068): The length of the longest scan chain is 4347 bit positions, which is 100% of the average scan chain length 4347 (based on 8693 total scan chain bits and 2 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 4347 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 4346 bit positions.   [end TSV_378] 
 INFO (TSV-567): There are 2 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
 INFO (TSV-568): There are 2 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
 WARNING (TSV-390): There are 1 inactive (non-scan) latches.   [end TSV_390] 
-WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg1_reg[146].__iNsT0.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_ALU_16B.\ALU_OUT_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
+WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg1_reg[98].__iNsT0.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_ALU_16B.\ALU_OUT_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
 WARNING (TSV-163): Scan chain flop or latch block U0_SYS_CTRL.\current_state_reg[3].__iNsT2.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
-WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg0_reg[146].__iNsT0.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
+WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg0_reg[98].__iNsT0.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
 
 Analyze flip-flop and latch scan characteristics process has completed.
                              CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
@@ -169,7 +169,7 @@ Analyze explicit fixed value latches process has completed.
    Check for mutually exclusive gating logic (MEG)    
 
 Analyze potential clock signal races process has completed.
-                             CPU time =  0:00:00.10  Elapsed time =  0:00:00.13
+                             CPU time =  0:00:00.11  Elapsed time =  0:00:00.13
   
    Analyze internal scan chains 
 
@@ -184,11 +184,11 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           45,972,704  bytes
+                  Total Memory =           45,461,520  bytes
 
-                      CPU Time =    0:00:00.33
+                      CPU Time =    0:00:00.32
                   Elapsed Time =    0:00:00.59                    [end TDA_001]
 
-     Date Ended:  Friday Jul 17 13:07:02 2026  IST
+     Date Ended:  Friday Jul 17 13:44:06 2026  IST
 
 

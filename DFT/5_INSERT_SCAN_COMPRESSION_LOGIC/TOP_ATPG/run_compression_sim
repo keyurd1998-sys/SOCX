@@ -17,7 +17,7 @@ xrun \
    +xmoverride_timescale \
    +xmseq_udp_delay+2ps \
    +libext+.v+.V+.z+.Z+.gz \
-   +xmlibdirname+$WORKDIR/Inca_libs_13_06_34 \
+   +xmlibdirname+$WORKDIR/Inca_libs_13_43_41 \
    -l $WORKDIR/ncverilog_COMPRESSION.log \
   -v /home/admin/DFT/Library/verilog/typical.v \
 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v \

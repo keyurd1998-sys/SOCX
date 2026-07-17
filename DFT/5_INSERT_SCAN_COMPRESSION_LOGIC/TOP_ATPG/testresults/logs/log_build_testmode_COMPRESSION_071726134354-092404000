@@ -1,16 +1,16 @@
 Starting Command: build_testmode 
 
 INFO (TDA-005): Command Line Invocation: 
-            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign -testmode COMPRESSION_DECOMP -workdir /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG -stdout summary  [end TDA_005]
+            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION.pinassign -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG -stdout summary  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_071726130651-936533000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_071726134354-092404000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Friday Jul 17 13:06:51 2026  IST
+            Date Started: Friday Jul 17 13:43:54 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 510124.
+            This job is process number 527785.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -18,11 +18,11 @@ INFO (TDA-009): Options/Values information.
              options marked with '+' were specified to default.)
 
             -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
-            -TESTMODE COMPRESSION_DECOMP
+            -TESTMODE COMPRESSION
 
-            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION.pinassign
           * update_assign_file=
-            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_071726130651-936533000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_071726134354-092404000
             -MODEDEF COMPRESSION
             -STDOUT summary
 [end TDA_009]
@@ -41,24 +41,23 @@ Modus Build Test Mode(s) beginning...
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
 INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
-INFO (THM-814): Testmode contains 91.20% active logic,  8.80% inactive logic and  0.00% constraint logic.   [end THM_814] 
+INFO (THM-814): Testmode contains 91.13% active logic,  8.87% inactive logic and  0.00% constraint logic.   [end THM_814] 
 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
            coverage is impacted when too little of the logic is visible.   [end TTM_347] 
-INFO (TTM-357): There are 294 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TTM-357): There are 198 scan chains which are controllable and observable.   [end TTM_357] 
 INFO (TTM-352): There are 2 Channel Mask Load chains.   [end TTM_352] 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
-There are no PPIs for Test Mode:  COMPRESSION_DECOMP
+There are no PPIs for Test Mode:  COMPRESSION
 
-Information for Test Mode:  COMPRESSION_DECOMP
+Information for Test Mode:  COMPRESSION
 -------------------------
 
          Scan Type = GSD
 
-  Test Mode uses Linear Decompression.
   Test Mode uses Linear Compression.
 
- Latch Summary for Test Mode:  COMPRESSION_DECOMP
+ Latch Summary for Test Mode:  COMPRESSION
  Latch Type                #Active   #Inactive       Total
  ---------------------   ---------   ---------   ---------
  Test Constraint (TC)            0           0           0 
@@ -67,10 +66,10 @@ Information for Test Mode:  COMPRESSION_DECOMP
  Floating                        4           1           5 
  Finite State    (FSM)           0           0           0 
 
-WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+WARNING (TTM-809): Test mode COMPRESSION has been created, WARNINGs have been generated -
            see preceding message(s) for details. [end TTM_809] 
 
-Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
+Test Function Pin Information for Test Mode:  COMPRESSION
 -------------------------------------------
 
           3  SC    (System  Clock)             Pins
@@ -100,7 +99,7 @@ Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
           2      PI  -TC  -CME                            DFT_mask_enable / DFT_mask_enable
           9      PI  +TI                                  TestMode / TestMode
           0      PI  +SE                                  DFT_compression_enable / DFT_compression_enable
-          3      PI  +SE                                  DFT_spreader / DFT_spreader
+          3      PI  -SE                                  DFT_spreader / DFT_spreader
           6      PI  +SE                                  ScanEnable / ScanEnable
           7      PI   SI   CMI                            ScanIn_1 / ScanIn_1
           8      PI   SI1  CMI                            ScanIn_2 / ScanIn_2
@@ -111,11 +110,11 @@ Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
 
 Modus Build Test Mode(s) completed. Highest severity is (WARNING).
 
-               Total Memory =           81,750,144  bytes
+               Total Memory =           80,552,032  bytes
 
             Cumulative Time in hours:minutes:seconds:
-                   CPU Time =   0:00:00.84
-               Elapsed Time =   0:00:00.95
+                   CPU Time =   0:00:00.81
+               Elapsed Time =   0:00:00.93
 
 
 
@@ -129,15 +128,15 @@ Modus Build Test Mode(s) completed. Highest severity is (WARNING).
   INFO Messages...
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   
-      1 INFO (THM-814): Testmode contains 91.20% active logic,  8.80% inactive logic and  0.00% constraint logic.    
+      1 INFO (THM-814): Testmode contains 91.13% active logic,  8.87% inactive logic and  0.00% constraint logic.    
       1 INFO (TTM-352): There are 2 Channel Mask Load chains.    
-      1 INFO (TTM-357): There are 294 scan chains which are controllable and observable.    
+      1 INFO (TTM-357): There are 198 scan chains which are controllable and observable.    
       1 INFO (TTM-387): A default scanop sequence will be generated.    
       1 INFO (TTM-391): A default modeinit sequence will be generated.    
 
   WARNING Messages...
       1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
-      1 WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+      1 WARNING (TTM-809): Test mode COMPRESSION has been created, WARNINGs have been generated -
 
  For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
 

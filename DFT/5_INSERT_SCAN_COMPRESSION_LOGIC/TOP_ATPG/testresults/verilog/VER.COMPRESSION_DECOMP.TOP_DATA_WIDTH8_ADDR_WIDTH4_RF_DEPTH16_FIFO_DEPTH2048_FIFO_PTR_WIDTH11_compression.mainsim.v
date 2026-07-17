@@ -3,7 +3,7 @@
 // Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025  //
 //***************************************************************************//
 //                                                                           //
-//  FILE CREATED..............July 17, 2026 at 13:10:22                      //
+//  FILE CREATED..............July 17, 2026 at 13:45:38                      //
 //                                                                           //
 //  PROJECT NAME..............TOP_ATPG                                       //
 //                                                                           //
@@ -66,20 +66,20 @@
 //                   DEFINE VARIABLES FOR ALL SHIFT CHAINS                   //
 //***************************************************************************//
 
-  reg [1:29] stim_CR_1;   reg [1:29] stim_CR_2;   
+  reg [1:43] stim_CR_1;   reg [1:43] stim_CR_2;   
 
-  reg [1:29] meas_OR_1;   reg [1:29] meas_OR_2;   
+  reg [1:43] meas_OR_1;   reg [1:43] meas_OR_2;   
 
 
 //***************************************************************************//
 //       DEFINE VARIABLES FOR ALL CHANNEL MASK AND MASK ENABLE CHAINS        //
 //***************************************************************************//
 
-  reg [1:147] stim_CMSR_1;   reg [1:147] stim_CMSR_2;   
+  reg [1:99] stim_CMSR_1;   reg [1:99] stim_CMSR_2;   
 
 
 
-  reg [1:29] stim_CME_0;   
+  reg [1:43] stim_CME_0;   
 
 //***************************************************************************//
 //                             OTHER DEFINITIONS                             //
@@ -276,10 +276,10 @@
       stim_PIs = {12{1'bX}};   
       stim_CIs = 12'bX0XX0XXXXX0X; 
       meas_POs = {5{1'bX}};   
-      stim_CR_1 = {29{1'b0}};   stim_CR_2 = {29{1'b0}};   
-      meas_OR_1 = {29{1'bX}};   meas_OR_2 = {29{1'bX}};   
-      stim_CME_0 = {29{1'b0}};   
-      stim_CMSR_1 = {147{1'b0}};   stim_CMSR_2 = {147{1'b0}};   
+      stim_CR_1 = {43{1'b0}};   stim_CR_2 = {43{1'b0}};   
+      meas_OR_1 = {43{1'bX}};   meas_OR_2 = {43{1'bX}};   
+      stim_CME_0 = {43{1'b0}};   
+      stim_CMSR_1 = {99{1'b0}};   stim_CMSR_2 = {99{1'b0}};   
 
     end  
   endtask  
@@ -474,7 +474,7 @@
         part_PIs [2] = 1'b0;      // pinName = DFT_mask_clk;  tf = -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
      #56.000000;        // 80.000000 ns;  From the start of the cycle.
       end  
-      stim_CMSR_1 = {147{1'b0}};   stim_CMSR_2 = {147{1'b0}};   
+      stim_CMSR_1 = {99{1'b0}};   stim_CMSR_2 = {99{1'b0}};   
       stim_PIs = part_PIs; 
       SCANCYCLE = 0; 
       NUM_SHIFTS = 0; 
@@ -550,9 +550,9 @@
         part_PIs [5] = 1'b0;      // pinName = REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
      #56.000000;        // 80.000000 ns;  From the start of the cycle.
       end  
-      meas_OR_1 = {29{1'bX}};   meas_OR_2 = {29{1'bX}};   
-      stim_CR_1 = {29{1'b0}};   stim_CR_2 = {29{1'b0}};   
-      stim_CME_0 = {29{1'b0}};   
+      meas_OR_1 = {43{1'bX}};   meas_OR_2 = {43{1'bX}};   
+      stim_CR_1 = {43{1'b0}};   stim_CR_2 = {43{1'b0}};   
+      stim_CME_0 = {43{1'b0}};   
       stim_PIs = part_PIs; 
       SCANCYCLE = 0; 
       NUM_SHIFTS = 0; 
@@ -761,7 +761,7 @@
                     1: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CR_1 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", stim_CR_1 [1:43] ); 
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
                       end  
@@ -770,7 +770,7 @@
                     2: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CR_2 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", stim_CR_2 [1:43] ); 
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
                       end  
@@ -801,7 +801,7 @@
                     1: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", meas_OR_1 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", meas_OR_1 [1:43] ); 
                         if (sim_range_measure == 1'b0 ) meas_OR_1 = 'bx;
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
@@ -811,7 +811,7 @@
                     2: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", meas_OR_2 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", meas_OR_2 [1:43] ); 
                         if (sim_range_measure == 1'b0 ) meas_OR_2 = 'bx;
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
@@ -843,7 +843,7 @@
                     0: begin 
 
                       if ( rc_read > 0 )  begin 
-                        rc_read = $fscanf ( DATAID, "%b", stim_CME_0 [1:29] ); 
+                        rc_read = $fscanf ( DATAID, "%b", stim_CME_0 [1:43] ); 
                         if ( rc_read <= 0 )  bad_cmd_code; 
                         line_number = line_number + 1; 
                       end  
@@ -867,7 +867,7 @@
               1: begin 
 
                 if ( rc_read > 0 )  begin 
-                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_1 [1:147] ); 
+                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_1 [1:99] ); 
                   if ( rc_read <= 0 )  bad_cmd_code; 
                   line_number = line_number + 1; 
                 end  
@@ -876,7 +876,7 @@
               2: begin 
 
                 if ( rc_read > 0 )  begin 
-                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_2 [1:147] ); 
+                  rc_read = $fscanf ( DATAID, "%b", stim_CMSR_2 [1:99] ); 
                   if ( rc_read <= 0 )  bad_cmd_code; 
                   line_number = line_number + 1; 
                 end  

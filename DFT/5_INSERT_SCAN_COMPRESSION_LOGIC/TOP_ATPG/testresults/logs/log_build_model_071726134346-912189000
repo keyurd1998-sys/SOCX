@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_model_071726130642-355034000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_model_071726134346-912189000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Friday Jul 17 13:06:42 2026  IST
+            Date Started: Friday Jul 17 13:43:46 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 509982.
+            This job is process number 527679.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -22,7 +22,7 @@ INFO (TDA-009): Options/Values information.
             -designtop TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11
             -TECHLIB /home/admin/DFT/Library/verilog/typical.v
             -allowmissingmodules yes
-            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_model_071726130642-355034000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_model_071726134346-912189000
             -STDOUT summary
             -messagecounteach 100
             -DESIGNSOURCE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v
@@ -38,7 +38,7 @@ Search Order  2:  "/home/admin/DFT/Library/verilog/typical.v"
 
 Reading Verilog data from /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v
 
-Verilog Parser complete - 330 modules, 2 gates, 0 user defined primitives.
+Verilog Parser complete - 234 modules, 2 gates, 0 user defined primitives.
 
 
 Reading Verilog data from /home/admin/DFT/Library/verilog/typical.v
@@ -53,9 +53,9 @@ WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connecti
 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
 
 
-Number of blocks in the hierarchical model is: 369,067.
+Number of blocks in the hierarchical model is: 365,605.
 
-Number of technology library cell instances in the hierarchical model is: 27,715.
+Number of technology library cell instances in the hierarchical model is: 27,135.
 
 
 INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
@@ -72,9 +72,9 @@ INFO (TLM-055): Design Summary
                 --------------
 
 Hierarchical Model:                  Flattened Model:
-        369,067  Blocks                     193,008  Blocks
-      1,149,514  Pins                       193,008  Nodes
-        605,952  Nets
+        365,605  Blocks                     191,468  Blocks
+      1,138,369  Pins                       191,468  Nodes
+        598,745  Nets
 
 Primary Inputs:                      Primary Outputs:
          12  Input Only                         5  Output Only
@@ -94,21 +94,21 @@ Selected Primitive Functions:
           0  TSDs
           0  Resistors
           0  Transistors
-     17,212  MUX2s
+     17,116  MUX2s
           4  Latches
 
 
-      8,789  Rising  Edge Flop w/Set-Dominant and Reset Port
-      8,789  Total Flops
+      8,693  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,693  Total Flops
 
-     27,715  Technology Library Cell Instances
+     27,135  Technology Library Cell Instances
 
 [end TLM_055] 
 Optimization removed logic for 6 of 81 cells in this design.
 
-Optimization removed a total of 1,204 tied Latch Ports.
-Optimization removed a total of 9,989 non-controlling inputs.
-Optimization removed a total of 113,161 dangling logic nodes.
+Optimization removed a total of 820 tied Latch Ports.
+Optimization removed a total of 9,509 non-controlling inputs.
+Optimization removed a total of 112,297 dangling logic nodes.
 
 
 
@@ -117,10 +117,10 @@ INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =          141,403,648  bytes
+                  Total Memory =          139,156,832  bytes
 
-                      CPU Time =    0:00:02.56
-                  Elapsed Time =    0:00:04.50                    [end TDA_001]
+                      CPU Time =    0:00:02.29
+                  Elapsed Time =    0:00:04.11                    [end TDA_001]
 
 
 
