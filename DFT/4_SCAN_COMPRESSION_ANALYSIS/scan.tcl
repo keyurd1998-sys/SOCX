@@ -2,12 +2,12 @@
 # Top Design and Library Setup
 # =========================================================
 set DESIGN_NAME "TOP"                      ;# Top module name
-set HDL_PATH    "../../RTL"        ;# RTL file path
-set SCRIPT_PATH "../../CONSTRAINTS"               ;# Script path
-set LIB_PATH    "../../../Library/timing"             ;# Library path
-set LIB_LIST "slow.lib"
-set EFFORT      "high"                     ;# Synthesis effort level
-set VERILOG_LIB "../../../Library/verilog/typical.v"
+set HDL_PATH    [file normalize "../../RTL"]        
+set SCRIPT_PATH [file normalize "../../CONSTRAINTS"]               
+set LIB_PATH    [file normalize "../../../Library/timing"]             
+set LIB_LIST    "slow.lib"
+set EFFORT      "high"                     
+set VERILOG_LIB [file normalize "../../../Library/verilog/typical.v"]
 
 # =========================================================
 # Work Directory Setup
@@ -145,6 +145,12 @@ syn_map                                      ;# Map generic cells to library gat
 # Chain Configuration
 # =========================================================
 set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
+
+# =========================================================
+# MULTI-CLOCK COMPATIBILITY FIX
+# =========================================================
+# Tell Genus that all test clocks can be treated as synchronous during test shifting
+set_compatible_test_clocks -all
 
 # =========================================================
 # build Scan Chains
