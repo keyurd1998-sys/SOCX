@@ -1,14 +1,13 @@
 # =========================================================
 # Top Design and Library Setup
 # =========================================================
-set DESIGN_NAME "TOP"                      ;# Top module name
+set DESIGN_NAME "TOP_WRAPPER"                      ;# Top module name
 set HDL_PATH    [file normalize "../../RTL"]        
 set SCRIPT_PATH [file normalize "../../CONSTRAINTS"]               
 set LIB_PATH    [file normalize "../../../Library/timing"]             
-set LIB_LIST    "slow.lib"
+set LIB_LIST    "slow.lib pads.lib"
 set EFFORT      "high"                     
-set VERILOG_LIB [file normalize "../../../Library/verilog/typical.v"]
-
+set VERILOG_LIB "[file normalize ../../../Library/verilog/typical.v] [file normalize ../../../Library/verilog/pads.v]"
 # =========================================================
 # Work Directory Setup
 # =========================================================
@@ -45,14 +44,18 @@ read_libs $LIB_LIST
 read_hdl -sv [glob "$HDL_PATH/*.sv"] 
 read_hdl -sv [glob "$HDL_PATH/*.v"] 
 
-elaborate $DESIGN_NAME -parameters {8 4 16 2048 11}                      ;# Build design tree & resolve parameters
+elaborate $DESIGN_NAME                      ;# Build design tree & resolve parameters
 check_design -unresolved                     ;# Check for missing sub-modules
 set_db auto_ungroup none
+
+# PREVENT OPTIMIZATION OF ALL FLOATING DFT & JTAG PADS
+# Tell Genus not to delete these pads during syn_map
+set_db [get_cells {pad_tck pad_tms pad_tdi pad_tdo pad_trst pad_si_1 pad_si_2 pad_so_1 pad_so_2 pad_se pad_tm}] .preserve true
 
 # =========================================================
 # Read Constraints
 # =========================================================
-source cons.tcl                              
+source TOP_cons.tcl                              
 
 # Lint the SDC constraints to catch missing constraints 
 check_timing_intent -verbose > $REPORT_DIR/${DESIGN_NAME}_timing_lint.rpt
@@ -66,45 +69,41 @@ set_db dft_scan_style muxed_scan
 # =========================================================
 # Define Test signal
 # =========================================================
-# Create scan enable
+# Scan enable (mapped to the physical wrapper pin)
 define_test_signal \
--function shift_enable \
--active high \
--create_port \
--default_shift_enable \
-ScanEnable
+    -function shift_enable \
+    -active high \
+    -default_shift_enable \
+    [get_ports PIN_ScanEnable]
 
-# Create test mode
+# Test mode (mapped to the physical wrapper pin)
 define_test_signal \
--function test_mode \
--active high \
--create_port \
-TestMode
+    -function test_mode \
+    -active high \
+    [get_ports PIN_TestMode]
 
-#Define  Asynchronous Reset/Set
+# Asynchronous Reset/Set
 define_test_signal \
--function async_set_reset \
--active low \
-[get_ports RST_N]
+    -function async_set_reset \
+    -active low \
+    [get_ports PIN_RST_N]
 
 # =========================================================
 # Define Test Clocks
 # =========================================================
-# 1. Define Master REF_CLK for testing
 define_test_clock \
     -name ScanClock \
     -function test_clock \
     -period 20000 \
     -controllable \
-    [get_ports REF_CLK]
+    [get_ports PIN_REF_CLK]
 
-# 2. explicitly Define UART_CLK for testing (Match the period!)
 define_test_clock \
     -name UART_TestClock \
     -function test_clock \
     -period 20000 \
     -controllable \
-    [get_ports UART_CLK]
+    [get_ports PIN_UART_CLK]
 
 # =========================================================
 # MULTI-CLOCK COMPATIBILITY FIX
@@ -115,23 +114,15 @@ set_compatible_test_clocks -all
 # =========================================================
 # Define Scan Chains
 # =========================================================
-
 set NUM_SCAN_CHAINS 2
 
 for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
-create_port \
-    -direction in \
-    -name ScanIn_$i 
-
-create_port \
-    -direction out \
-    -name ScanOut_$i 
-
-define_scan_chain \
+    # We no longer create the ports; we just grab the existing ones from the wrapper
+    define_scan_chain \
         -name chain_$i \
-        -sdi [get_ports ScanIn_$i] \
-        -sdo [get_ports ScanOut_$i]
-    }
+        -sdi [get_ports PIN_ScanIn_$i] \
+        -sdo [get_ports PIN_ScanOut_$i]
+}
 
 
 # =========================================================
@@ -144,13 +135,13 @@ check_dft_rules
 # =========================================================
 
 #fix async reset violation
-fix_dft_violations -async_reset -test_control TestMode
+fix_dft_violations -async_reset -test_control PIN_TestMode
 
 #fix async set violation
-fix_dft_violations -async_set -test_control TestMode
+fix_dft_violations -async_set -test_control PIN_TestMode
 
 #fix clock violation
-fix_dft_violations -clock -test_control TestMode
+fix_dft_violations -clock -test_control PIN_TestMode
 
 # =========================================================
 # GTECH mapping 
@@ -181,7 +172,12 @@ define_jtag_instruction -name BYPASS  -opcode 11
 
 # 3. Insert the JTAG Macro
 # -create_ports will auto-generate tdi, tdo, tck, tms, and trst at the top level
-add_jtag_macro -add_without_pad_logic -create_ports
+add_jtag_macro \
+    -tck  [get_ports PIN_TCK] \
+    -tms  [get_ports PIN_TMS] \
+    -tdi  [get_ports PIN_TDI] \
+    -tdo  [get_ports PIN_TDO] \
+    -trst [get_ports PIN_TRST]
 
 # 4. Insert the Boundary Scan Logic
 # This wraps all physical I/O pins in boundary scan cells and hooks them to the TAP controller
@@ -205,8 +201,10 @@ compress_scan_chains \
     -compressor xor \
     -decompressor xor \
     -mask wide1 \
-    -auto_create
-
+    -compression_enable PIN_TestMode \
+    -spread_enable PIN_TestMode \
+    -mask_enable PIN_TestMode \
+    -mask_clock PIN_REF_CLK -allow_shared_clocks
 # =========================================================
 # Report Scan 
 # =========================================================
