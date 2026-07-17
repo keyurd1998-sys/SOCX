@@ -174,10 +174,10 @@ puts "INFO: Building JTAG TAP Controller and Boundary Scan..."
 define_jtag_instruction_register -name JTAG_IR 
 
 # 2. Define the mandatory IEEE 1149.1 instructions 
-define_jtag_instruction -name EXTEST  -opcode 0000
-define_jtag_instruction -name SAMPLE  -opcode 0001
-define_jtag_instruction -name PRELOAD -opcode 0010
-define_jtag_instruction -name BYPASS  -opcode 1111
+define_jtag_instruction -name EXTEST  -opcode 00
+define_jtag_instruction -name SAMPLE  -opcode 01
+define_jtag_instruction -name PRELOAD -opcode 10
+define_jtag_instruction -name BYPASS  -opcode 11
 
 # 3. Insert the JTAG Macro
 # -create_ports will auto-generate tdi, tdo, tck, tms, and trst at the top level
