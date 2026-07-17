@@ -81,13 +81,30 @@ define_test_signal \
 -active low \
 [get_ports RST_N]
 
-# Define Scan Clock
+# =========================================================
+# Define Test Clocks
+# =========================================================
+# 1. Define Master REF_CLK for testing
 define_test_clock \
     -name ScanClock \
     -function test_clock \
     -period 20000 \
     -controllable \
     [get_ports REF_CLK]
+
+# 2. explicitly Define UART_CLK for testing (Match the period!)
+define_test_clock \
+    -name UART_TestClock \
+    -function test_clock \
+    -period 20000 \
+    -controllable \
+    [get_ports UART_CLK]
+
+# =========================================================
+# MULTI-CLOCK COMPATIBILITY FIX
+# =========================================================
+# Tell Genus that all test clocks can be treated as synchronous during test shifting
+set_compatible_test_clocks -all
 
 # =========================================================
 # Define Scan Chains
@@ -146,11 +163,7 @@ syn_map                                      ;# Map generic cells to library gat
 # =========================================================
 set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
 
-# =========================================================
-# MULTI-CLOCK COMPATIBILITY FIX
-# =========================================================
-# Tell Genus that all test clocks can be treated as synchronous during test shifting
-set_compatible_test_clocks -all
+
 
 # =========================================================
 # build Scan Chains
