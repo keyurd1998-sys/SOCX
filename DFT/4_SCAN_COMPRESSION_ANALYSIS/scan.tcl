@@ -110,7 +110,7 @@ set_compatible_test_clocks -all
 # Define Scan Chains
 # =========================================================
 
-set NUM_SCAN_CHAINS 80
+set NUM_SCAN_CHAINS 2
 
 for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
 create_port \
@@ -162,8 +162,6 @@ syn_map                                      ;# Map generic cells to library gat
 # Chain Configuration
 # =========================================================
 set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
-
-
 
 # =========================================================
 # build Scan Chains
