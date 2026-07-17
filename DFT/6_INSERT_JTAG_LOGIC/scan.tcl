@@ -187,8 +187,7 @@ add_jtag_macro \
 
 # 4. Insert the Boundary Scan Logic
 # This wraps all physical I/O pins in boundary scan cells and hooks them to the TAP controller
-add_jtag_boundary_scan
-
+add_jtag_boundary_scan -exclude_ports {PIN_comp_en PIN_spread_en PIN_mask_en PIN_mask_load PIN_mask_clk}
 # =========================================================
 # Chain Configuration
 # =========================================================
