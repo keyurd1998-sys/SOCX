@@ -175,7 +175,7 @@ puts "INFO: Starting Scan Compressibility Analysis Setup..."
 
 # We sweep compression ratios of 50x, 60x, and 70x assuming 2 scan I/O pins.
 analyze_scan_compressibility \
-    -ratios {90 110 130} \
+    -ratios {60 80 100 120 150 200} \
     -compressor xor \
     -compression_method compress_scan_chains \
     -library $VERILOG_LIB \
