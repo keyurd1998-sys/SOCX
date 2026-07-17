@@ -5,7 +5,7 @@ set DESIGN_NAME "TOP_WRAPPER"                      ;# Top module name
 set HDL_PATH    [file normalize "../../RTL"]        
 set SCRIPT_PATH [file normalize "../../CONSTRAINTS"]               
 set LIB_PATH    [file normalize "../../../Library/timing"]             
-set LIB_LIST    "slow.lib pads.lib"
+set LIB_LIST    "slow.lib pads_FF_s1vg.lib"
 set EFFORT      "high"                     
 set VERILOG_LIB "[file normalize ../../../Library/verilog/typical.v] [file normalize ../../../Library/verilog/pads.v]"
 # =========================================================
