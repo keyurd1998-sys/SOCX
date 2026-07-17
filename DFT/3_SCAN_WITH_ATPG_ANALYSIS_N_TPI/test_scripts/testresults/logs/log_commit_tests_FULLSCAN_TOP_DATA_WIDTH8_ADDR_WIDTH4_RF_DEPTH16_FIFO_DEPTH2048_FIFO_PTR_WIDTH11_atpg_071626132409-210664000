@@ -1,0 +1,122 @@
+Starting Command: commit_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_commit_tests_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg_071626132409-210664000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Thursday Jul 16 13:24:09 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 2271442.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg
+            -LOGFILE /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/testresults/logs/log_commit_tests_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg_071626132409-210664000
+            -STDOUT summary
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+        9369001 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/tbdata/TBDbin.FULLSCAN.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg
+
+INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.158.2 (Relative test numbers 1 thru 2440).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       238535            0            0            0       238535       247172            0            0            0       247172
+Collapsed Static     0.00   0.00       188554            0            0            0       188554       197115            0            0            0       197115
+PI Static            0.00   0.00          169            0            0            0          169          172            0            0            0          172
+PO Static            0.00   0.00          166            0            0            0          166          166            0            0            0          166
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       247172            0                                 247172       247172            0                                 247172
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+
+Testmode and Global statistics after commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.99  96.49       238535       238467            0           42           26       247172       238467            0           42         8663
+Collapsed Static    99.99  95.64       188554       188493            0           35           26       197115       188493            0           35         8587
+PI Static          100.00  98.26          169          169            0            0            0          172          169            0            0            3
+PO Static          100.00 100.00          166          166            0            0            0          166          166            0            0            0
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       247172            0                                 247172       247172            0                                 247172
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.158.2 (Relative test numbers 1 to 2440).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 2
+  tester loops    = 2
+  test procedures = 160
+  test sequence   = 2440
+  init sequencess = 2
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+        9369001 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/tbdata/TBDbin.FULLSCAN 
+        1294336 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/test_scripts/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           24,119,328  bytes
+
+                      CPU Time =    0:00:00.12
+                  Elapsed Time =    0:00:00.17                    [end TDA_001]
+
+     Date Ended:  Thursday Jul 16 13:24:09 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.158.2 (Relative test numbers 1 thru 2440).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.158.2 (Relative test numbers 1 to 2440).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

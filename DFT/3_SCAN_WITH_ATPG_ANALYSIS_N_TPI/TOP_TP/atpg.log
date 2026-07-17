@@ -1,0 +1,1252 @@
+
+ 
+Copyright (C) 2002-2025 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 25.10-p027_1, built Mar 13 2025 (linux26_64)
+Options : -no_gui -log TOP_TP/atpg -overwrite
+Date    : Thu, July 16 13:22:37 2026
+Host    : Pine-06 (x86_64 Linux 5.14.0-611.30.1.el9_7.x86_64) (6*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB)
+OS      : Red Hat Enterprise Linux release 9.7 (Plow)
+@modus:root:/ 1> set code [catch { source TOP_TP/runmodus.init.tcl ; source TOP_TP/runmodus.atpg.tcl ;}]; exit $code
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_build_model_071626132237-897430000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
+
+
+Search Order  1:  "/home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/test_netlist.v"
+Search Order  2:  "../../../Library/verilog/typical.v"
+
+
+
+Reading Verilog data from /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/test_netlist.v
+
+Verilog Parser complete - 31 modules, 74 gates, 0 user defined primitives.
+
+
+Reading Verilog data from ../../../Library/verilog/typical.v
+
+Verilog Parser complete - 477 modules, 2799 gates, 3 user defined primitives.
+
+
+
+INFO (TEI-196): Build Model - Hierarchical Model Build starting: [end TEI_196] 
+
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.  [end TEI_110] 
+
+
+Number of blocks in the hierarchical model is: 358,670.
+
+Number of technology library cell instances in the hierarchical model is: 26,036.
+
+
+INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
+
+
+
+INFO (TEI-198): Build Model - Flat Model Build starting: [end TEI_198] 
+
+ defaultTIE = X
+ defaultDFN = T
+
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        358,670  Blocks                     188,527  Blocks
+      1,116,061  Pins                       188,527  Nodes
+        584,493  Nets
+
+Primary Inputs:                      Primary Outputs:
+         86  Input Only                        83  Output Only
+          0  Input/Output                       0  Input/Output
+         86  Total Inputs                      83  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+     16,978  Tied to 0                          0  Two-State
+      8,495  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+     25,473  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+     16,914  MUX2s
+          1  Latches
+
+
+      8,495  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,495  Total Flops
+
+     26,036  Technology Library Cell Instances
+
+[end TLM_055] 
+Optimization removed logic for 4 of 77 cells in this design.
+
+Optimization removed a total of 22 tied Latch Ports.
+Optimization removed a total of 8,513 non-controlling inputs.
+Optimization removed a total of 110,469 dangling logic nodes.
+
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          132,394,416  bytes
+
+                      CPU Time =    0:00:01.70
+                  Elapsed Time =    0:00:03.37                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: build_testmode 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_build_testmode_SCAN_071626132242-413231000 [end TDA_015]
+
+TDRPATH set to: /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 90.99% active logic,  9.01% inactive logic and  0.00% constraint logic.   [end THM_814] 
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+           coverage is impacted when too little of the logic is visible.   [end TTM_347] 
+INFO (TTM-357): There are 80 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  SCAN
+
+Information for Test Mode:  SCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  SCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        0           1           1 
+ Finite State    (FSM)           0           0           0 
+
+WARNING (TTM-809): Test mode SCAN has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  SCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         80  SI    (Scan Input)                Pins
+         80  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         84      PI  -EC  -SC                             UART_CLK / UART_CLK
+         83      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         25      PI   SI2                                 ScanIn_3 / ScanIn_3
+         36      PI   SI3                                 ScanIn_4 / ScanIn_4
+         47      PI   SI4                                 ScanIn_5 / ScanIn_5
+         58      PI   SI5                                 ScanIn_6 / ScanIn_6
+         69      PI   SI6                                 ScanIn_7 / ScanIn_7
+         80      PI   SI7                                 ScanIn_8 / ScanIn_8
+         82      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         16      PI   SI20                                ScanIn_21 / ScanIn_21
+         17      PI   SI21                                ScanIn_22 / ScanIn_22
+         18      PI   SI22                                ScanIn_23 / ScanIn_23
+         19      PI   SI23                                ScanIn_24 / ScanIn_24
+         20      PI   SI24                                ScanIn_25 / ScanIn_25
+         21      PI   SI25                                ScanIn_26 / ScanIn_26
+         22      PI   SI26                                ScanIn_27 / ScanIn_27
+         23      PI   SI27                                ScanIn_28 / ScanIn_28
+         24      PI   SI28                                ScanIn_29 / ScanIn_29
+         26      PI   SI29                                ScanIn_30 / ScanIn_30
+         27      PI   SI30                                ScanIn_31 / ScanIn_31
+         28      PI   SI31                                ScanIn_32 / ScanIn_32
+         29      PI   SI32                                ScanIn_33 / ScanIn_33
+         30      PI   SI33                                ScanIn_34 / ScanIn_34
+         31      PI   SI34                                ScanIn_35 / ScanIn_35
+         32      PI   SI35                                ScanIn_36 / ScanIn_36
+         33      PI   SI36                                ScanIn_37 / ScanIn_37
+         34      PI   SI37                                ScanIn_38 / ScanIn_38
+         35      PI   SI38                                ScanIn_39 / ScanIn_39
+         37      PI   SI39                                ScanIn_40 / ScanIn_40
+         38      PI   SI40                                ScanIn_41 / ScanIn_41
+         39      PI   SI41                                ScanIn_42 / ScanIn_42
+         40      PI   SI42                                ScanIn_43 / ScanIn_43
+         41      PI   SI43                                ScanIn_44 / ScanIn_44
+         42      PI   SI44                                ScanIn_45 / ScanIn_45
+         43      PI   SI45                                ScanIn_46 / ScanIn_46
+         44      PI   SI46                                ScanIn_47 / ScanIn_47
+         45      PI   SI47                                ScanIn_48 / ScanIn_48
+         46      PI   SI48                                ScanIn_49 / ScanIn_49
+         48      PI   SI49                                ScanIn_50 / ScanIn_50
+         49      PI   SI50                                ScanIn_51 / ScanIn_51
+         50      PI   SI51                                ScanIn_52 / ScanIn_52
+         51      PI   SI52                                ScanIn_53 / ScanIn_53
+         52      PI   SI53                                ScanIn_54 / ScanIn_54
+         53      PI   SI54                                ScanIn_55 / ScanIn_55
+         54      PI   SI55                                ScanIn_56 / ScanIn_56
+         55      PI   SI56                                ScanIn_57 / ScanIn_57
+         56      PI   SI57                                ScanIn_58 / ScanIn_58
+         57      PI   SI58                                ScanIn_59 / ScanIn_59
+         59      PI   SI59                                ScanIn_60 / ScanIn_60
+         60      PI   SI60                                ScanIn_61 / ScanIn_61
+         61      PI   SI61                                ScanIn_62 / ScanIn_62
+         62      PI   SI62                                ScanIn_63 / ScanIn_63
+         63      PI   SI63                                ScanIn_64 / ScanIn_64
+         64      PI   SI64                                ScanIn_65 / ScanIn_65
+         65      PI   SI65                                ScanIn_66 / ScanIn_66
+         66      PI   SI66                                ScanIn_67 / ScanIn_67
+         67      PI   SI67                                ScanIn_68 / ScanIn_68
+         68      PI   SI68                                ScanIn_69 / ScanIn_69
+         70      PI   SI69                                ScanIn_70 / ScanIn_70
+         71      PI   SI70                                ScanIn_71 / ScanIn_71
+         72      PI   SI71                                ScanIn_72 / ScanIn_72
+         73      PI   SI72                                ScanIn_73 / ScanIn_73
+         74      PI   SI73                                ScanIn_74 / ScanIn_74
+         75      PI   SI74                                ScanIn_75 / ScanIn_75
+         76      PI   SI75                                ScanIn_76 / ScanIn_76
+         77      PI   SI76                                ScanIn_77 / ScanIn_77
+         78      PI   SI77                                ScanIn_78 / ScanIn_78
+         79      PI   SI78                                ScanIn_79 / ScanIn_79
+         81      PI   SI79                                ScanIn_80 / ScanIn_80
+         86      PO   SO                                  ScanOut_1 / ScanOut_1
+         97      PO   SO1                                 ScanOut_2 / ScanOut_2
+        108      PO   SO2                                 ScanOut_3 / ScanOut_3
+        119      PO   SO3                                 ScanOut_4 / ScanOut_4
+        130      PO   SO4                                 ScanOut_5 / ScanOut_5
+        141      PO   SO5                                 ScanOut_6 / ScanOut_6
+        152      PO   SO6                                 ScanOut_7 / ScanOut_7
+        163      PO   SO7                                 ScanOut_8 / ScanOut_8
+        165      PO   SO8                                 ScanOut_9 / ScanOut_9
+         87      PO   SO9                                 ScanOut_10 / ScanOut_10
+         88      PO   SO10                                ScanOut_11 / ScanOut_11
+         89      PO   SO11                                ScanOut_12 / ScanOut_12
+         90      PO   SO12                                ScanOut_13 / ScanOut_13
+         91      PO   SO13                                ScanOut_14 / ScanOut_14
+         92      PO   SO14                                ScanOut_15 / ScanOut_15
+         93      PO   SO15                                ScanOut_16 / ScanOut_16
+         94      PO   SO16                                ScanOut_17 / ScanOut_17
+         95      PO   SO17                                ScanOut_18 / ScanOut_18
+         96      PO   SO18                                ScanOut_19 / ScanOut_19
+         98      PO   SO19                                ScanOut_20 / ScanOut_20
+         99      PO   SO20                                ScanOut_21 / ScanOut_21
+        100      PO   SO21                                ScanOut_22 / ScanOut_22
+        101      PO   SO22                                ScanOut_23 / ScanOut_23
+        102      PO   SO23                                ScanOut_24 / ScanOut_24
+        103      PO   SO24                                ScanOut_25 / ScanOut_25
+        104      PO   SO25                                ScanOut_26 / ScanOut_26
+        105      PO   SO26                                ScanOut_27 / ScanOut_27
+        106      PO   SO27                                ScanOut_28 / ScanOut_28
+        107      PO   SO28                                ScanOut_29 / ScanOut_29
+        109      PO   SO29                                ScanOut_30 / ScanOut_30
+        110      PO   SO30                                ScanOut_31 / ScanOut_31
+        111      PO   SO31                                ScanOut_32 / ScanOut_32
+        112      PO   SO32                                ScanOut_33 / ScanOut_33
+        113      PO   SO33                                ScanOut_34 / ScanOut_34
+        114      PO   SO34                                ScanOut_35 / ScanOut_35
+        115      PO   SO35                                ScanOut_36 / ScanOut_36
+        116      PO   SO36                                ScanOut_37 / ScanOut_37
+        117      PO   SO37                                ScanOut_38 / ScanOut_38
+        118      PO   SO38                                ScanOut_39 / ScanOut_39
+        120      PO   SO39                                ScanOut_40 / ScanOut_40
+        121      PO   SO40                                ScanOut_41 / ScanOut_41
+        122      PO   SO41                                ScanOut_42 / ScanOut_42
+        123      PO   SO42                                ScanOut_43 / ScanOut_43
+        124      PO   SO43                                ScanOut_44 / ScanOut_44
+        125      PO   SO44                                ScanOut_45 / ScanOut_45
+        126      PO   SO45                                ScanOut_46 / ScanOut_46
+        127      PO   SO46                                ScanOut_47 / ScanOut_47
+        128      PO   SO47                                ScanOut_48 / ScanOut_48
+        129      PO   SO48                                ScanOut_49 / ScanOut_49
+        131      PO   SO49                                ScanOut_50 / ScanOut_50
+        132      PO   SO50                                ScanOut_51 / ScanOut_51
+        133      PO   SO51                                ScanOut_52 / ScanOut_52
+        134      PO   SO52                                ScanOut_53 / ScanOut_53
+        135      PO   SO53                                ScanOut_54 / ScanOut_54
+        136      PO   SO54                                ScanOut_55 / ScanOut_55
+        137      PO   SO55                                ScanOut_56 / ScanOut_56
+        138      PO   SO56                                ScanOut_57 / ScanOut_57
+        139      PO   SO57                                ScanOut_58 / ScanOut_58
+        140      PO   SO58                                ScanOut_59 / ScanOut_59
+        142      PO   SO59                                ScanOut_60 / ScanOut_60
+        143      PO   SO60                                ScanOut_61 / ScanOut_61
+        144      PO   SO61                                ScanOut_62 / ScanOut_62
+        145      PO   SO62                                ScanOut_63 / ScanOut_63
+        146      PO   SO63                                ScanOut_64 / ScanOut_64
+        147      PO   SO64                                ScanOut_65 / ScanOut_65
+        148      PO   SO65                                ScanOut_66 / ScanOut_66
+        149      PO   SO66                                ScanOut_67 / ScanOut_67
+        150      PO   SO67                                ScanOut_68 / ScanOut_68
+        151      PO   SO68                                ScanOut_69 / ScanOut_69
+        153      PO   SO69                                ScanOut_70 / ScanOut_70
+        154      PO   SO70                                ScanOut_71 / ScanOut_71
+        155      PO   SO71                                ScanOut_72 / ScanOut_72
+        156      PO   SO72                                ScanOut_73 / ScanOut_73
+        157      PO   SO73                                ScanOut_74 / ScanOut_74
+        158      PO   SO74                                ScanOut_75 / ScanOut_75
+        159      PO   SO75                                ScanOut_76 / ScanOut_76
+        160      PO   SO76                                ScanOut_77 / ScanOut_77
+        161      PO   SO77                                ScanOut_78 / ScanOut_78
+        162      PO   SO78                                ScanOut_79 / ScanOut_79
+        164      PO   SO79                                ScanOut_80 / ScanOut_80
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+               Total Memory =           77,775,696  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.69
+               Elapsed Time =   0:00:00.79
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 90.99% active logic,  9.01% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 80 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode SCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_build_faultmodel_071626132244-281837000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count                10
+Global Ignored Dynamic Fault Count                0
+
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00       247172            0            0            0       247172
+Collapsed Static     0.00       197115            0            0            0       197115
+PI Static            0.00          172            0            0            0          172
+PO Static            0.00          166            0            0            0          166
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00       247172            0                                 247172
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: SCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       238535            0            0            0       238535       247172            0            0            0       247172
+Collapsed Static     0.00   0.00       188554            0            0            0       188554       197115            0            0            0       197115
+PI Static            0.00   0.00          169            0            0            0          169          172            0            0            0          172
+PO Static            0.00   0.00          166            0            0            0          166          166            0            0            0          166
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       247172            0                                 247172       247172            0                                 247172
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static        96.51       247172       238535         8637
+Collapsed Static    95.66       197115       188554         8561
+PI Static           98.26          172          169            3
+PO Static          100.00          166          166            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      SCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           70,181,120  bytes
+
+                      CPU Time =    0:00:00.21
+                  Elapsed Time =    0:00:00.27                    [end TDA_001]
+
+     Date Ended:  Thursday Jul 16 13:22:44 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+#@ Begin verbose source TOP_TP/runmodus.atpg.tcl
+@file(TOP_TP/runmodus.atpg.tcl) 13: set_db workdir TOP_TP;
+@file(TOP_TP/runmodus.atpg.tcl) 14: set   WORKDIR [get_db workdir]
+@file(TOP_TP/runmodus.atpg.tcl) 17: set_option stdout     all;                                     # Not printing output for each command to the terminal
+@file(TOP_TP/runmodus.atpg.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(TOP_TP/runmodus.atpg.tcl) 20: set_db stop_on_severity error;
+@file(TOP_TP/runmodus.atpg.tcl) 25: verify_test_structures \
+    -testmode	 SCAN \
+ 
+Starting Command: verify_test_structures 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_verify_test_structures_SCAN_071626132245-691992000 [end TDA_015]
+
+INFO (TSV-900): verify_test_structures processing has started Thu Jul 16 13:22:45 2026    [end TSV_900] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Re-run verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        358,670  Blocks                     188,527  Blocks
+      1,116,061  Pins                       188,527  Nodes
+        584,493  Nets
+
+Primary Inputs:                      Primary Outputs:
+         86  Input Only                        83  Output Only
+          0  Input/Output                       0  Input/Output
+         86  Total Inputs                      83  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+     16,978  Tied to 0                          0  Two-State
+      8,495  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+     25,473  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+     16,914  MUX2s
+          1  Latches
+
+
+      8,495  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,495  Total Flops
+
+     26,036  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  SCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         80  SI    (Scan Input)                Pins
+         80  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         84      PI  -EC  -SC                             UART_CLK / UART_CLK
+         83      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         25      PI   SI2                                 ScanIn_3 / ScanIn_3
+         36      PI   SI3                                 ScanIn_4 / ScanIn_4
+         47      PI   SI4                                 ScanIn_5 / ScanIn_5
+         58      PI   SI5                                 ScanIn_6 / ScanIn_6
+         69      PI   SI6                                 ScanIn_7 / ScanIn_7
+         80      PI   SI7                                 ScanIn_8 / ScanIn_8
+         82      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         16      PI   SI20                                ScanIn_21 / ScanIn_21
+         17      PI   SI21                                ScanIn_22 / ScanIn_22
+         18      PI   SI22                                ScanIn_23 / ScanIn_23
+         19      PI   SI23                                ScanIn_24 / ScanIn_24
+         20      PI   SI24                                ScanIn_25 / ScanIn_25
+         21      PI   SI25                                ScanIn_26 / ScanIn_26
+         22      PI   SI26                                ScanIn_27 / ScanIn_27
+         23      PI   SI27                                ScanIn_28 / ScanIn_28
+         24      PI   SI28                                ScanIn_29 / ScanIn_29
+         26      PI   SI29                                ScanIn_30 / ScanIn_30
+         27      PI   SI30                                ScanIn_31 / ScanIn_31
+         28      PI   SI31                                ScanIn_32 / ScanIn_32
+         29      PI   SI32                                ScanIn_33 / ScanIn_33
+         30      PI   SI33                                ScanIn_34 / ScanIn_34
+         31      PI   SI34                                ScanIn_35 / ScanIn_35
+         32      PI   SI35                                ScanIn_36 / ScanIn_36
+         33      PI   SI36                                ScanIn_37 / ScanIn_37
+         34      PI   SI37                                ScanIn_38 / ScanIn_38
+         35      PI   SI38                                ScanIn_39 / ScanIn_39
+         37      PI   SI39                                ScanIn_40 / ScanIn_40
+         38      PI   SI40                                ScanIn_41 / ScanIn_41
+         39      PI   SI41                                ScanIn_42 / ScanIn_42
+         40      PI   SI42                                ScanIn_43 / ScanIn_43
+         41      PI   SI43                                ScanIn_44 / ScanIn_44
+         42      PI   SI44                                ScanIn_45 / ScanIn_45
+         43      PI   SI45                                ScanIn_46 / ScanIn_46
+         44      PI   SI46                                ScanIn_47 / ScanIn_47
+         45      PI   SI47                                ScanIn_48 / ScanIn_48
+         46      PI   SI48                                ScanIn_49 / ScanIn_49
+         48      PI   SI49                                ScanIn_50 / ScanIn_50
+         49      PI   SI50                                ScanIn_51 / ScanIn_51
+         50      PI   SI51                                ScanIn_52 / ScanIn_52
+         51      PI   SI52                                ScanIn_53 / ScanIn_53
+         52      PI   SI53                                ScanIn_54 / ScanIn_54
+         53      PI   SI54                                ScanIn_55 / ScanIn_55
+         54      PI   SI55                                ScanIn_56 / ScanIn_56
+         55      PI   SI56                                ScanIn_57 / ScanIn_57
+         56      PI   SI57                                ScanIn_58 / ScanIn_58
+         57      PI   SI58                                ScanIn_59 / ScanIn_59
+         59      PI   SI59                                ScanIn_60 / ScanIn_60
+         60      PI   SI60                                ScanIn_61 / ScanIn_61
+         61      PI   SI61                                ScanIn_62 / ScanIn_62
+         62      PI   SI62                                ScanIn_63 / ScanIn_63
+         63      PI   SI63                                ScanIn_64 / ScanIn_64
+         64      PI   SI64                                ScanIn_65 / ScanIn_65
+         65      PI   SI65                                ScanIn_66 / ScanIn_66
+         66      PI   SI66                                ScanIn_67 / ScanIn_67
+         67      PI   SI67                                ScanIn_68 / ScanIn_68
+         68      PI   SI68                                ScanIn_69 / ScanIn_69
+         70      PI   SI69                                ScanIn_70 / ScanIn_70
+         71      PI   SI70                                ScanIn_71 / ScanIn_71
+         72      PI   SI71                                ScanIn_72 / ScanIn_72
+         73      PI   SI72                                ScanIn_73 / ScanIn_73
+         74      PI   SI73                                ScanIn_74 / ScanIn_74
+         75      PI   SI74                                ScanIn_75 / ScanIn_75
+         76      PI   SI75                                ScanIn_76 / ScanIn_76
+         77      PI   SI76                                ScanIn_77 / ScanIn_77
+         78      PI   SI77                                ScanIn_78 / ScanIn_78
+         79      PI   SI78                                ScanIn_79 / ScanIn_79
+         81      PI   SI79                                ScanIn_80 / ScanIn_80
+         86      PO   SO                                  ScanOut_1 / ScanOut_1
+         97      PO   SO1                                 ScanOut_2 / ScanOut_2
+        108      PO   SO2                                 ScanOut_3 / ScanOut_3
+        119      PO   SO3                                 ScanOut_4 / ScanOut_4
+        130      PO   SO4                                 ScanOut_5 / ScanOut_5
+        141      PO   SO5                                 ScanOut_6 / ScanOut_6
+        152      PO   SO6                                 ScanOut_7 / ScanOut_7
+        163      PO   SO7                                 ScanOut_8 / ScanOut_8
+        165      PO   SO8                                 ScanOut_9 / ScanOut_9
+         87      PO   SO9                                 ScanOut_10 / ScanOut_10
+         88      PO   SO10                                ScanOut_11 / ScanOut_11
+         89      PO   SO11                                ScanOut_12 / ScanOut_12
+         90      PO   SO12                                ScanOut_13 / ScanOut_13
+         91      PO   SO13                                ScanOut_14 / ScanOut_14
+         92      PO   SO14                                ScanOut_15 / ScanOut_15
+         93      PO   SO15                                ScanOut_16 / ScanOut_16
+         94      PO   SO16                                ScanOut_17 / ScanOut_17
+         95      PO   SO17                                ScanOut_18 / ScanOut_18
+         96      PO   SO18                                ScanOut_19 / ScanOut_19
+         98      PO   SO19                                ScanOut_20 / ScanOut_20
+         99      PO   SO20                                ScanOut_21 / ScanOut_21
+        100      PO   SO21                                ScanOut_22 / ScanOut_22
+        101      PO   SO22                                ScanOut_23 / ScanOut_23
+        102      PO   SO23                                ScanOut_24 / ScanOut_24
+        103      PO   SO24                                ScanOut_25 / ScanOut_25
+        104      PO   SO25                                ScanOut_26 / ScanOut_26
+        105      PO   SO26                                ScanOut_27 / ScanOut_27
+        106      PO   SO27                                ScanOut_28 / ScanOut_28
+        107      PO   SO28                                ScanOut_29 / ScanOut_29
+        109      PO   SO29                                ScanOut_30 / ScanOut_30
+        110      PO   SO30                                ScanOut_31 / ScanOut_31
+        111      PO   SO31                                ScanOut_32 / ScanOut_32
+        112      PO   SO32                                ScanOut_33 / ScanOut_33
+        113      PO   SO33                                ScanOut_34 / ScanOut_34
+        114      PO   SO34                                ScanOut_35 / ScanOut_35
+        115      PO   SO35                                ScanOut_36 / ScanOut_36
+        116      PO   SO36                                ScanOut_37 / ScanOut_37
+        117      PO   SO37                                ScanOut_38 / ScanOut_38
+        118      PO   SO38                                ScanOut_39 / ScanOut_39
+        120      PO   SO39                                ScanOut_40 / ScanOut_40
+        121      PO   SO40                                ScanOut_41 / ScanOut_41
+        122      PO   SO41                                ScanOut_42 / ScanOut_42
+        123      PO   SO42                                ScanOut_43 / ScanOut_43
+        124      PO   SO43                                ScanOut_44 / ScanOut_44
+        125      PO   SO44                                ScanOut_45 / ScanOut_45
+        126      PO   SO45                                ScanOut_46 / ScanOut_46
+        127      PO   SO46                                ScanOut_47 / ScanOut_47
+        128      PO   SO47                                ScanOut_48 / ScanOut_48
+        129      PO   SO48                                ScanOut_49 / ScanOut_49
+        131      PO   SO49                                ScanOut_50 / ScanOut_50
+        132      PO   SO50                                ScanOut_51 / ScanOut_51
+        133      PO   SO51                                ScanOut_52 / ScanOut_52
+        134      PO   SO52                                ScanOut_53 / ScanOut_53
+        135      PO   SO53                                ScanOut_54 / ScanOut_54
+        136      PO   SO54                                ScanOut_55 / ScanOut_55
+        137      PO   SO55                                ScanOut_56 / ScanOut_56
+        138      PO   SO56                                ScanOut_57 / ScanOut_57
+        139      PO   SO57                                ScanOut_58 / ScanOut_58
+        140      PO   SO58                                ScanOut_59 / ScanOut_59
+        142      PO   SO59                                ScanOut_60 / ScanOut_60
+        143      PO   SO60                                ScanOut_61 / ScanOut_61
+        144      PO   SO61                                ScanOut_62 / ScanOut_62
+        145      PO   SO62                                ScanOut_63 / ScanOut_63
+        146      PO   SO63                                ScanOut_64 / ScanOut_64
+        147      PO   SO64                                ScanOut_65 / ScanOut_65
+        148      PO   SO65                                ScanOut_66 / ScanOut_66
+        149      PO   SO66                                ScanOut_67 / ScanOut_67
+        150      PO   SO67                                ScanOut_68 / ScanOut_68
+        151      PO   SO68                                ScanOut_69 / ScanOut_69
+        153      PO   SO69                                ScanOut_70 / ScanOut_70
+        154      PO   SO70                                ScanOut_71 / ScanOut_71
+        155      PO   SO71                                ScanOut_72 / ScanOut_72
+        156      PO   SO72                                ScanOut_73 / ScanOut_73
+        157      PO   SO73                                ScanOut_74 / ScanOut_74
+        158      PO   SO74                                ScanOut_75 / ScanOut_75
+        159      PO   SO75                                ScanOut_76 / ScanOut_76
+        160      PO   SO76                                ScanOut_77 / ScanOut_77
+        161      PO   SO77                                ScanOut_78 / ScanOut_78
+        162      PO   SO78                                ScanOut_79 / ScanOut_79
+        164      PO   SO79                                ScanOut_80 / ScanOut_80
+
+  
+   Analyze test clocks' control of memory elements    
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.06  Elapsed time =  0:00:00.10
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-068): The length of the longest scan chain is 107 bit positions, which is 101% of the average scan chain length 107 (based on 8495 total scan chain bits and 80 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 96 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_3' and ending at 'pin ScanOut_3' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_4' and ending at 'pin ScanOut_4' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_5' and ending at 'pin ScanOut_5' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_6' and ending at 'pin ScanOut_6' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_7' and ending at 'pin ScanOut_7' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_8' and ending at 'pin ScanOut_8' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_9' and ending at 'pin ScanOut_9' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_10' and ending at 'pin ScanOut_10' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_11' and ending at 'pin ScanOut_11' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_12' and ending at 'pin ScanOut_12' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_13' and ending at 'pin ScanOut_13' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_14' and ending at 'pin ScanOut_14' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_15' and ending at 'pin ScanOut_15' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_16' and ending at 'pin ScanOut_16' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_17' and ending at 'pin ScanOut_17' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_18' and ending at 'pin ScanOut_18' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_19' and ending at 'pin ScanOut_19' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_20' and ending at 'pin ScanOut_20' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_21' and ending at 'pin ScanOut_21' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_22' and ending at 'pin ScanOut_22' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_23' and ending at 'pin ScanOut_23' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_24' and ending at 'pin ScanOut_24' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_25' and ending at 'pin ScanOut_25' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_26' and ending at 'pin ScanOut_26' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_27' and ending at 'pin ScanOut_27' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_28' and ending at 'pin ScanOut_28' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_29' and ending at 'pin ScanOut_29' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_30' and ending at 'pin ScanOut_30' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_31' and ending at 'pin ScanOut_31' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_32' and ending at 'pin ScanOut_32' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_33' and ending at 'pin ScanOut_33' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_34' and ending at 'pin ScanOut_34' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_35' and ending at 'pin ScanOut_35' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_36' and ending at 'pin ScanOut_36' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_37' and ending at 'pin ScanOut_37' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_38' and ending at 'pin ScanOut_38' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_39' and ending at 'pin ScanOut_39' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_40' and ending at 'pin ScanOut_40' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_41' and ending at 'pin ScanOut_41' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_42' and ending at 'pin ScanOut_42' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_43' and ending at 'pin ScanOut_43' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_44' and ending at 'pin ScanOut_44' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_45' and ending at 'pin ScanOut_45' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_46' and ending at 'pin ScanOut_46' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_47' and ending at 'pin ScanOut_47' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_48' and ending at 'pin ScanOut_48' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_49' and ending at 'pin ScanOut_49' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_50' and ending at 'pin ScanOut_50' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_51' and ending at 'pin ScanOut_51' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_52' and ending at 'pin ScanOut_52' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_53' and ending at 'pin ScanOut_53' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_54' and ending at 'pin ScanOut_54' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_55' and ending at 'pin ScanOut_55' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_56' and ending at 'pin ScanOut_56' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_57' and ending at 'pin ScanOut_57' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_58' and ending at 'pin ScanOut_58' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_59' and ending at 'pin ScanOut_59' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_60' and ending at 'pin ScanOut_60' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_61' and ending at 'pin ScanOut_61' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_62' and ending at 'pin ScanOut_62' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_63' and ending at 'pin ScanOut_63' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_64' and ending at 'pin ScanOut_64' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_65' and ending at 'pin ScanOut_65' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_66' and ending at 'pin ScanOut_66' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_67' and ending at 'pin ScanOut_67' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_68' and ending at 'pin ScanOut_68' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_69' and ending at 'pin ScanOut_69' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_70' and ending at 'pin ScanOut_70' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_71' and ending at 'pin ScanOut_71' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_72' and ending at 'pin ScanOut_72' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_73' and ending at 'pin ScanOut_73' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_74' and ending at 'pin ScanOut_74' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_75' and ending at 'pin ScanOut_75' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_76' and ending at 'pin ScanOut_76' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_77' and ending at 'pin ScanOut_77' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_78' and ending at 'pin ScanOut_78' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_79' and ending at 'pin ScanOut_79' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_80' and ending at 'pin ScanOut_80' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-567): There are 80 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 80 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+WARNING (TSV-390): There are 1 inactive (non-scan) latches.   [end TSV_390] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.10  Elapsed time =  0:00:00.13
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+
+--------------------File Information----------------------
+          61440 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/TSVmessageFile.SCAN 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           44,539,040  bytes
+
+                      CPU Time =    0:00:00.33
+                  Elapsed Time =    0:00:00.59                    [end TDA_001]
+
+     Date Ended:  Thursday Jul 16 13:22:46 2026  IST
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 107 bit positions, which is 101% of the average scan chain length 107 (based on 8495 total scan chain bits and 80 valid scan chains).    
+     80 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 107 bit positions.    
+      1 INFO (TSV-567): There are 80 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 80 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Thu Jul 16 13:22:45 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      1 WARNING (TSV-390): There are 1 inactive (non-scan) latches.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_TP/runmodus.atpg.tcl) 32: analyze_testability \
+    -testmode	 SCAN \
+  -faultsample 14 \
+
+
+Starting Command: analyze_testability 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_analyze_testability_SCAN_071626132247-426882000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: SCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 33394            0            0            0        33394   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                247172            0            0            0       247172   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Scan Test generation                                                   [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      0       0       9768    29.25%    3.95%        23626           00:00.27    [end TDA_220] 
+INFO (TTC-110): Ending Scan Test generation                                                     [end TTC_110] 
+*************************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16      10043    59.33%    8.02%        13582           00:01.84    [end TDA_220] 
+INFO (TDA-220):     32      32        145    59.76%    8.07%        13437           00:02.91    [end TDA_220] 
+INFO (TDA-220):     48      48       3200    69.34%    9.37%        10237           00:03.00    [end TDA_220] 
+INFO (TDA-220):     64      64        195    69.93%    9.45%        10042           00:03.05    [end TDA_220] 
+INFO (TDA-220):     80      80        111    70.26%    9.49%         9931           00:03.12    [end TDA_220] 
+INFO (TDA-220):     96      96         84    70.51%    9.53%         9847           00:03.18    [end TDA_220] 
+INFO (TDA-220):    112     112        246    71.25%    9.63%         9601           00:03.21    [end TDA_220] 
+INFO (TDA-220):    128     128         94    71.53%    9.66%         9507           00:03.27    [end TDA_220] 
+INFO (TDA-220):    144     144        168    72.03%    9.73%         9339           00:03.31    [end TDA_220] 
+INFO (TDA-220):    160     160         52    72.19%    9.75%         9287           00:03.35    [end TDA_220] 
+INFO (TDA-220):    176     176         82    72.43%    9.79%         9205           00:03.41    [end TDA_220] 
+INFO (TDA-220):    192     192        149    72.88%    9.85%         9056           00:03.44    [end TDA_220] 
+INFO (TDA-220):    208     208         78    73.11%    9.88%         8978           00:03.50    [end TDA_220] 
+INFO (TDA-220):    224     224        140    73.53%    9.93%         8838           00:03.54    [end TDA_220] 
+INFO (TDA-220):    240     240         51    73.69%    9.96%         8787           00:03.58    [end TDA_220] 
+INFO (TDA-220):    256     256         55    73.85%    9.98%         8732           00:03.64    [end TDA_220] 
+INFO (TDA-220):    272     272         98    74.14%   10.02%         8634           00:03.67    [end TDA_220] 
+INFO (TDA-220):    288     288         43    74.27%   10.03%         8591           00:03.73    [end TDA_220] 
+INFO (TDA-220):    304     304         41    74.40%   10.05%         8550           00:03.77    [end TDA_220] 
+INFO (TDA-220):    320     320        111    74.73%   10.10%         8439           00:03.80    [end TDA_220] 
+INFO (TDA-220):    336     336         41    74.85%   10.11%         8398           00:03.84    [end TDA_220] 
+INFO (TDA-220):    352     352         45    74.99%   10.13%         8353           00:03.89    [end TDA_220] 
+INFO (TDA-220):    368     368         97    75.28%   10.17%         8256           00:03.92    [end TDA_220] 
+INFO (TDA-220):    384     384         46    75.41%   10.19%         8210           00:03.96    [end TDA_220] 
+INFO (TDA-220):    400     400         43    75.54%   10.21%         8167           00:04.01    [end TDA_220] 
+INFO (TDA-220):    416     416        116    75.89%   10.25%         8051           00:04.03    [end TDA_220] 
+INFO (TDA-220):    432     432         56    76.06%   10.28%         7995           00:04.08    [end TDA_220] 
+INFO (TDA-220):    448     448        115    76.40%   10.32%         7880           00:04.12    [end TDA_220] 
+INFO (TDA-220):    464     464         51    76.55%   10.34%         7829           00:04.15    [end TDA_220] 
+INFO (TDA-220):    480     480         42    76.68%   10.36%         7787           00:04.19    [end TDA_220] 
+INFO (TDA-220):    496     496         79    76.92%   10.39%         7708           00:04.22    [end TDA_220] 
+INFO (TDA-220):    512     512         42    77.04%   10.41%         7666           00:04.25    [end TDA_220] 
+INFO (TDA-220):    528     528         33    77.14%   10.42%         7633           00:04.30    [end TDA_220] 
+INFO (TDA-220):    544     544         81    77.38%   10.45%         7552           00:04.32    [end TDA_220] 
+INFO (TDA-220):    560     560         33    77.48%   10.47%         7519           00:04.36    [end TDA_220] 
+INFO (TDA-220):    576     576         40    77.60%   10.48%         7479           00:04.40    [end TDA_220] 
+INFO (TDA-220):    592     592         84    77.85%   10.52%         7395           00:04.43    [end TDA_220] 
+INFO (TDA-220):    608     607         49    78.00%   10.54%         7346           00:04.46    [end TDA_220] 
+INFO (TDA-220):    624     623         47    78.14%   10.56%         7299           00:04.51    [end TDA_220] 
+INFO (TDA-220):    640     639        101    78.44%   10.60%         7198           00:04.54    [end TDA_220] 
+INFO (TDA-220):    656     655         29    78.53%   10.61%         7169           00:04.58    [end TDA_220] 
+INFO (TDA-220):    672     671        100    78.83%   10.65%         7069           00:04.61    [end TDA_220] 
+INFO (TDA-220):    688     687         38    78.94%   10.67%         7031           00:04.65    [end TDA_220] 
+INFO (TDA-220):    704     703         88    79.21%   10.70%         6943           00:04.68    [end TDA_220] 
+INFO (TDA-220):    720     719         47    79.35%   10.72%         6896           00:04.71    [end TDA_220] 
+INFO (TDA-220):    736     735         47    79.49%   10.74%         6849           00:04.76    [end TDA_220] 
+INFO (TDA-220):    752     751         94    79.77%   10.78%         6755           00:04.79    [end TDA_220] 
+INFO (TDA-220):    768     767         37    79.88%   10.79%         6718           00:04.82    [end TDA_220] 
+INFO (TDA-220):    784     783         31    79.97%   10.80%         6687           00:04.86    [end TDA_220] 
+INFO (TDA-220):    800     799         94    80.26%   10.84%         6593           00:04.90    [end TDA_220] 
+INFO (TDA-220):    816     815         36    80.36%   10.86%         6557           00:04.93    [end TDA_220] 
+INFO (TDA-220):    832     831         36    80.47%   10.87%         6521           00:04.96    [end TDA_220] 
+INFO (TDA-220):    848     847         38    80.59%   10.89%         6483           00:05.01    [end TDA_220] 
+INFO (TDA-220):    864     863         77    80.82%   10.92%         6406           00:05.03    [end TDA_220] 
+INFO (TDA-220):    880     879         44    80.95%   10.94%         6362           00:05.07    [end TDA_220] 
+INFO (TDA-220):    896     895         82    81.19%   10.97%         6280           00:05.11    [end TDA_220] 
+INFO (TDA-220):    912     911         40    81.31%   10.99%         6240           00:05.14    [end TDA_220] 
+INFO (TDA-220):    928     927         66    81.51%   11.01%         6174           00:05.18    [end TDA_220] 
+INFO (TDA-220):    944     943         45    81.65%   11.03%         6129           00:05.21    [end TDA_220] 
+INFO (TDA-220):    960     959         45    81.78%   11.05%         6084           00:05.26    [end TDA_220] 
+INFO (TDA-220):    976     975         85    82.04%   11.08%         5999           00:05.28    [end TDA_220] 
+INFO (TDA-220):    992     991         40    82.16%   11.10%         5958           00:05.32    [end TDA_220] 
+INFO (TDA-220):   1008    1007         49    82.30%   11.12%         5909           00:05.37    [end TDA_220] 
+INFO (TDA-220):   1024    1023         70    82.51%   11.15%         5839           00:05.39    [end TDA_220] 
+INFO (TDA-220):   1040    1039         41    82.64%   11.16%         5798           00:05.44    [end TDA_220] 
+INFO (TDA-220):   1056    1055         75    82.86%   11.19%         5723           00:05.46    [end TDA_220] 
+INFO (TDA-220):   1072    1071         44    82.99%   11.21%         5679           00:05.51    [end TDA_220] 
+INFO (TDA-220):   1088    1087         81    83.24%   11.24%         5598           00:05.54    [end TDA_220] 
+INFO (TDA-220):   1104    1103         35    83.34%   11.26%         5563           00:05.57    [end TDA_220] 
+INFO (TDA-220):   1120    1119         42    83.47%   11.28%         5521           00:05.62    [end TDA_220] 
+INFO (TDA-220):   1136    1135         60    83.65%   11.30%         5461           00:05.63    [end TDA_220] 
+INFO (TDA-220):   1152    1151         44    83.78%   11.32%         5417           00:05.69    [end TDA_220] 
+INFO (TDA-220):   1168    1167         95    84.06%   11.36%         5322           00:05.71    [end TDA_220] 
+INFO (TDA-220):   1184    1183         48    84.21%   11.38%         5274           00:05.75    [end TDA_220] 
+INFO (TDA-220):   1200    1199         62    84.39%   11.40%         5212           00:05.78    [end TDA_220] 
+INFO (TDA-220):   1216    1215         33    84.49%   11.41%         5179           00:05.82    [end TDA_220] 
+INFO (TDA-220):   1232    1231         84    84.74%   11.45%         5095           00:05.85    [end TDA_220] 
+INFO (TDA-220):   1248    1247         40    84.86%   11.46%         5055           00:05.89    [end TDA_220] 
+INFO (TDA-220):   1264    1263         60    85.04%   11.49%         4995           00:05.92    [end TDA_220] 
+INFO (TDA-220):   1280    1279         41    85.16%   11.51%         4954           00:05.96    [end TDA_220] 
+INFO (TDA-220):   1296    1295         79    85.40%   11.54%         4875           00:05.99    [end TDA_220] 
+INFO (TDA-220):   1312    1311         44    85.53%   11.56%         4831           00:06.03    [end TDA_220] 
+INFO (TDA-220):   1328    1327         37    85.64%   11.57%         4794           00:06.08    [end TDA_220] 
+INFO (TDA-220):   1344    1343         86    85.90%   11.60%         4708           00:06.10    [end TDA_220] 
+INFO (TDA-220):   1360    1359         39    86.02%   11.62%         4669           00:06.15    [end TDA_220] 
+INFO (TDA-220):   1376    1375         71    86.23%   11.65%         4598           00:06.17    [end TDA_220] 
+INFO (TDA-220):   1392    1391         34    86.33%   11.66%         4564           00:06.21    [end TDA_220] 
+INFO (TDA-220):   1408    1407         81    86.57%   11.70%         4483           00:06.25    [end TDA_220] 
+INFO (TDA-220):   1424    1423         44    86.71%   11.71%         4439           00:06.28    [end TDA_220] 
+INFO (TDA-220):   1440    1439         36    86.81%   11.73%         4403           00:06.33    [end TDA_220] 
+INFO (TDA-220):   1456    1455         77    87.04%   11.76%         4326           00:06.35    [end TDA_220] 
+INFO (TDA-220):   1472    1471         41    87.17%   11.78%         4285           00:06.40    [end TDA_220] 
+INFO (TDA-220):   1488    1487         68    87.37%   11.80%         4217           00:06.43    [end TDA_220] 
+INFO (TDA-220):   1504    1503         40    87.49%   11.82%         4177           00:06.46    [end TDA_220] 
+INFO (TDA-220):   1520    1519         91    87.76%   11.86%         4086           00:06.50    [end TDA_220] 
+INFO (TDA-220):   1536    1535         31    87.86%   11.87%         4055           00:06.53    [end TDA_220] 
+INFO (TDA-220):   1552    1551         73    88.07%   11.90%         3982           00:06.58    [end TDA_220] 
+INFO (TDA-220):   1568    1567         33    88.17%   11.91%         3949           00:06.60    [end TDA_220] 
+INFO (TDA-220):   1584    1583         38    88.29%   11.93%         3911           00:06.66    [end TDA_220] 
+INFO (TDA-220):   1600    1599         70    88.50%   11.96%         3841           00:06.67    [end TDA_220] 
+INFO (TDA-220):   1616    1615         37    88.61%   11.97%         3804           00:06.73    [end TDA_220] 
+INFO (TDA-220):   1632    1631         55    88.77%   11.99%         3749           00:06.75    [end TDA_220] 
+INFO (TDA-220):   1648    1647         33    88.87%   12.01%         3716           00:06.80    [end TDA_220] 
+INFO (TDA-220):   1664    1663         64    89.06%   12.03%         3652           00:06.82    [end TDA_220] 
+INFO (TDA-220):   1680    1679         36    89.17%   12.05%         3616           00:06.87    [end TDA_220] 
+INFO (TDA-220):   1696    1695         55    89.34%   12.07%         3561           00:06.89    [end TDA_220] 
+INFO (TDA-220):   1712    1711         46    89.47%   12.09%         3515           00:06.93    [end TDA_220] 
+INFO (TDA-220):   1728    1727         26    89.55%   12.10%         3489           00:06.97    [end TDA_220] 
+INFO (TDA-220):   1744    1743         71    89.76%   12.13%         3418           00:06.99    [end TDA_220] 
+INFO (TDA-220):   1760    1759         37    89.87%   12.14%         3381           00:07.03    [end TDA_220] 
+INFO (TDA-220):   1776    1775         32    89.97%   12.15%         3349           00:07.08    [end TDA_220] 
+INFO (TDA-220):   1792    1791         89    90.24%   12.19%         3260           00:07.10    [end TDA_220] 
+INFO (TDA-220):   1808    1806         30    90.33%   12.20%         3230           00:07.14    [end TDA_220] 
+INFO (TDA-220):   1824    1822         27    90.41%   12.21%         3203           00:07.18    [end TDA_220] 
+INFO (TDA-220):   1840    1838         74    90.63%   12.24%         3129           00:07.21    [end TDA_220] 
+INFO (TDA-220):   1856    1854         34    90.73%   12.26%         3095           00:07.25    [end TDA_220] 
+INFO (TDA-220):   1872    1870         58    90.91%   12.28%         3037           00:07.29    [end TDA_220] 
+INFO (TDA-220):   1888    1886         37    91.02%   12.30%         3000           00:07.33    [end TDA_220] 
+INFO (TDA-220):   1904    1902         70    91.23%   12.32%         2930           00:07.36    [end TDA_220] 
+INFO (TDA-220):   1920    1918         33    91.32%   12.34%         2897           00:07.39    [end TDA_220] 
+INFO (TDA-220):   1936    1934         35    91.43%   12.35%         2862           00:07.44    [end TDA_220] 
+INFO (TDA-220):   1952    1950         65    91.62%   12.38%         2797           00:07.47    [end TDA_220] 
+INFO (TDA-220):   1968    1966         37    91.73%   12.39%         2760           00:07.50    [end TDA_220] 
+INFO (TDA-220):   1984    1982         57    91.91%   12.42%         2703           00:07.52    [end TDA_220] 
+INFO (TDA-220):   2000    1998         57    92.08%   12.44%         2646           00:07.54    [end TDA_220] 
+INFO (TDA-220):   2016    2014         82    92.32%   12.47%         2564           00:07.56    [end TDA_220] 
+INFO (TDA-220):   2032    2030         66    92.52%   12.50%         2498           00:07.57    [end TDA_220] 
+INFO (TDA-220):   2048    2046         73    92.74%   12.53%         2425           00:07.59    [end TDA_220] 
+INFO (TDA-220):   2064    2062         75    92.96%   12.56%         2350           00:07.61    [end TDA_220] 
+INFO (TDA-220):   2080    2078         77    93.19%   12.59%         2273           00:07.63    [end TDA_220] 
+INFO (TDA-220):   2096    2094         77    93.42%   12.62%         2196           00:07.65    [end TDA_220] 
+INFO (TDA-220):   2112    2110         73    93.64%   12.65%         2123           00:07.67    [end TDA_220] 
+INFO (TDA-220):   2128    2126         69    93.85%   12.68%         2054           00:07.68    [end TDA_220] 
+INFO (TDA-220):   2144    2142         57    94.02%   12.70%         1997           00:07.70    [end TDA_220] 
+INFO (TDA-220):   2160    2158         59    94.20%   12.73%         1938           00:07.72    [end TDA_220] 
+INFO (TDA-220):   2176    2174         55    94.36%   12.75%         1883           00:07.73    [end TDA_220] 
+INFO (TDA-220):   2192    2190         58    94.53%   12.77%         1825           00:07.75    [end TDA_220] 
+INFO (TDA-220):   2208    2206         66    94.73%   12.80%         1759           00:07.77    [end TDA_220] 
+INFO (TDA-220):   2224    2222         54    94.89%   12.82%         1705           00:07.78    [end TDA_220] 
+INFO (TDA-220):   2240    2238         63    95.08%   12.85%         1642           00:07.80    [end TDA_220] 
+INFO (TDA-220):   2256    2254         49    95.23%   12.87%         1593           00:07.82    [end TDA_220] 
+INFO (TDA-220):   2272    2270         47    95.37%   12.88%         1546           00:07.83    [end TDA_220] 
+INFO (TDA-220):   2288    2286         49    95.52%   12.90%         1497           00:07.85    [end TDA_220] 
+INFO (TDA-220):   2304    2302         47    95.66%   12.92%         1450           00:07.87    [end TDA_220] 
+INFO (TDA-220):   2320    2318         39    95.77%   12.94%         1411           00:07.89    [end TDA_220] 
+INFO (TDA-220):   2336    2334         39    95.89%   12.95%         1372           00:07.91    [end TDA_220] 
+INFO (TDA-220):   2352    2350         37    96.00%   12.97%         1335           00:07.93    [end TDA_220] 
+INFO (TDA-220):   2368    2366         36    96.11%   12.98%         1299           00:07.96    [end TDA_220] 
+INFO (TDA-220):   2384    2382         29    96.20%   13.00%         1270           00:07.99    [end TDA_220] 
+INFO (TDA-220):   2400    2398         27    96.28%   13.01%         1243           00:08.01    [end TDA_220] 
+INFO (TDA-220):   2416    2414         31    96.37%   13.02%         1212           00:08.04    [end TDA_220] 
+INFO (TDA-220):   2432    2430         26    96.45%   13.03%         1186           00:08.06    [end TDA_220] 
+INFO (TDA-220):   2448    2446         29    96.54%   13.04%         1157           00:08.09    [end TDA_220] 
+INFO (TDA-220):   2464    2462         34    96.64%   13.06%         1123           00:08.10    [end TDA_220] 
+INFO (TDA-220):   2480    2478         44    96.77%   13.07%         1079           00:08.12    [end TDA_220] 
+INFO (TDA-220):   2496    2494         40    96.89%   13.09%         1039           00:08.13    [end TDA_220] 
+INFO (TDA-220):   2512    2510         36    97.00%   13.10%         1003           00:08.15    [end TDA_220] 
+INFO (TDA-220):   2528    2526         28    97.08%   13.12%          975           00:08.17    [end TDA_220] 
+INFO (TDA-220):   2544    2542         26    97.16%   13.13%          949           00:08.19    [end TDA_220] 
+INFO (TDA-220):   2560    2558         33    97.26%   13.14%          916           00:08.22    [end TDA_220] 
+INFO (TDA-220):   2576    2574         41    97.38%   13.16%          875           00:08.24    [end TDA_220] 
+INFO (TDA-220):   2592    2590         31    97.47%   13.17%          844           00:08.27    [end TDA_220] 
+INFO (TDA-220):   2608    2606         35    97.58%   13.18%          809           00:08.29    [end TDA_220] 
+INFO (TDA-220):   2624    2622         27    97.66%   13.19%          782           00:08.32    [end TDA_220] 
+INFO (TDA-220):   2640    2638         29    97.74%   13.21%          753           00:08.34    [end TDA_220] 
+INFO (TDA-220):   2656    2654         30    97.83%   13.22%          723           00:08.36    [end TDA_220] 
+INFO (TDA-220):   2672    2670         27    97.92%   13.23%          696           00:08.39    [end TDA_220] 
+INFO (TDA-220):   2688    2686         26    97.99%   13.24%          670           00:08.41    [end TDA_220] 
+INFO (TDA-220):   2704    2702         26    98.07%   13.25%          644           00:08.44    [end TDA_220] 
+INFO (TDA-220):   2720    2718         31    98.16%   13.26%          613           00:08.46    [end TDA_220] 
+INFO (TDA-220):   2736    2734         26    98.24%   13.27%          587           00:08.49    [end TDA_220] 
+INFO (TDA-220):   2752    2750         26    98.32%   13.28%          561           00:08.51    [end TDA_220] 
+INFO (TDA-220):   2768    2766         30    98.41%   13.29%          531           00:08.53    [end TDA_220] 
+INFO (TDA-220):   2784    2782         26    98.49%   13.31%          505           00:08.55    [end TDA_220] 
+INFO (TDA-220):   2800    2798         22    98.55%   13.31%          483           00:08.58    [end TDA_220] 
+INFO (TDA-220):   2816    2814         23    98.62%   13.32%          460           00:08.60    [end TDA_220] 
+INFO (TDA-220):   2832    2830         22    98.69%   13.33%          438           00:08.62    [end TDA_220] 
+INFO (TDA-220):   2848    2846         20    98.75%   13.34%          418           00:08.65    [end TDA_220] 
+INFO (TDA-220):   2864    2862         19    98.81%   13.35%          399           00:08.68    [end TDA_220] 
+INFO (TDA-220):   2880    2878         20    98.86%   13.36%          379           00:08.70    [end TDA_220] 
+INFO (TDA-220):   2896    2894         22    98.93%   13.37%          357           00:08.72    [end TDA_220] 
+INFO (TDA-220):   2912    2910         23    99.00%   13.37%          334           00:08.75    [end TDA_220] 
+INFO (TDA-220):   2928    2925         18    99.05%   13.38%          316           00:08.77    [end TDA_220] 
+INFO (TDA-220):   2944    2941         21    99.12%   13.39%          295           00:08.79    [end TDA_220] 
+INFO (TDA-220):   2960    2957         19    99.17%   13.40%          276           00:08.82    [end TDA_220] 
+INFO (TDA-220):   2976    2973         18    99.23%   13.41%          258           00:08.84    [end TDA_220] 
+INFO (TDA-220):   2992    2989         18    99.28%   13.41%          240           00:08.86    [end TDA_220] 
+INFO (TDA-220):   3008    3005         27    99.36%   13.42%          213           00:08.88    [end TDA_220] 
+INFO (TDA-220):   3024    3021         25    99.44%   13.43%          188           00:08.89    [end TDA_220] 
+INFO (TDA-220):   3040    3037         25    99.51%   13.44%          163           00:08.91    [end TDA_220] 
+INFO (TDA-220):   3056    3053         28    99.60%   13.46%          135           00:08.92    [end TDA_220] 
+INFO (TDA-220):   3072    3069         16    99.64%   13.46%          119           00:08.95    [end TDA_220] 
+INFO (TDA-220):   3088    3085         17    99.69%   13.47%          102           00:08.97    [end TDA_220] 
+INFO (TDA-220):   3104    3101         17    99.75%   13.48%           85           00:08.99    [end TDA_220] 
+INFO (TDA-220):   3120    3117         16    99.79%   13.48%           69           00:09.02    [end TDA_220] 
+INFO (TDA-220):   3136    3133         16    99.84%   13.49%           53           00:09.04    [end TDA_220] 
+INFO (TDA-220):   3152    3149         16    99.89%   13.49%           37           00:09.07    [end TDA_220] 
+INFO (TDA-220):   3168    3165         17    99.94%   13.50%           20           00:09.09    [end TDA_220] 
+INFO (TDA-220):   3183    3180         15    99.99%   13.51%            5           00:09.11    [end TDA_220] 
+INFO (TDA-220):   3185    3182          3    99.99%   13.51%            2           00:09.12    [end TDA_220] 
+INFO (TDA-220):   3186    3182          0    99.99%   13.51%            2           00:09.14    [end TDA_220] 
+INFO (TDA-221):   3186    3182          0    99.99%   13.51%            2           00:09.14    [end TDA_221] 
+INFO (TDA-220):   3186    3182          0    99.99%   13.51%            0           00:09.38    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation - processing limit reached                  [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: SCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 33394        33390            0            4            0  99.99 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                247172        33390            0            4       213778  13.51  13.51
+****************************************************************************************************
+
+(I) File(s) generated (bytes and name):
+
+         847872 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/faultStatus.SCAN.TFA
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           57,662,192  bytes
+
+                      CPU Time =    0:00:09.11
+                  Elapsed Time =    0:00:09.42                    [end TDA_001]
+
+     Date Ended:  Thursday Jul 16 13:22:56 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+    207 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):   3186    3182          0    99.99%   13.51%            2           00:09.14     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+#@ End verbose source TOP_TP/runmodus.atpg.tcl

@@ -1,0 +1,276 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[12:38:36.455609] Configured Lic search path (25.01-s002): 5280@pine-server
+
+Version: 25.10-p002_1, built Thu Apr 17 03:05:38 PDT 2025
+Options: -files drc_check.tcl -overwrite 
+Date:    Thu Jul 16 12:38:36 2026
+Host:    Pine-06 (x86_64 w/Linux 5.14.0-611.30.1.el9_7.x86_64) (6cores*6cpus*1physical cpu*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB) (7671852KB)
+PID:     2245901
+OS:      Red Hat Enterprise Linux 9.7 (Plow)
+
+Checking out license: Genus_Synthesis
+[12:38:36.320161] Periodic Lic check successful
+[12:38:36.844464] Feature usage summary:
+[12:38:36.844465] Genus_Synthesis  
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (17 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source drc_check.tcl
+#@ Begin verbose source ./drc_check.tcl
+@file(drc_check.tcl) 4: set DESIGN_NAME "TOP"                      ;# Top module name
+@file(drc_check.tcl) 5: set HDL_PATH    "../../RTL"                ;# RTL file path
+@file(drc_check.tcl) 6: set LIB_PATH    "../../../Library/timing"             ;# Library path
+@file(drc_check.tcl) 7: set LIB_LIST "slow.lib"
+@file(drc_check.tcl) 12: set_db init_lib_search_path $LIB_PATH
+  Setting attribute of root '/': 'init_lib_search_path' = ../../../Library/timing
+@file(drc_check.tcl) 13: set_db init_hdl_search_path $HDL_PATH
+  Setting attribute of root '/': 'init_hdl_search_path' = ../../RTL
+@file(drc_check.tcl) 18: read_libs $LIB_LIST
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX2'.  Ignoring the test_cell.
+        : Review the definition of the test_cell's function or its parent library-cell's function.  An inconsistency between the two may exist.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRXL'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX1'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX4'.  Ignoring the test_cell.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX2' is assumed to be ' CKN'.
+        : The tool derives the clock polarity from the sequential timing arcs specified through the Liberty 'timing_type' attribute. For the positive-edge triggered cells a positive value is expected for the 'clocked_on' or 'enable' attribute while an inverted value is expected for the negative-edge triggered sequential cells.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRXL' is assumed to be ' CKN'.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX1' is assumed to be ' CKN'.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX4' is assumed to be ' CKN'.
+@file(drc_check.tcl) 23: read_hdl -sv [glob "$HDL_PATH/*.sv"] 
+@file(drc_check.tcl) 24: read_hdl -sv [glob "$HDL_PATH/*.v"] 
+@file(drc_check.tcl) 26: elaborate $DESIGN_NAME -parameters {8 4 16 2048 11}                       ;# Build design tree & resolve parameters
+  Library has 324 usable logic and 126 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' from file './../../RTL/TOP.sv'.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1024]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+        : Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the RTL.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1025]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1026]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1027]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1028]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1029]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1030]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1031]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1032]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1033]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1034]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1035]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1036]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1037]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1038]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1039]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1040]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1041]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1042]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1043]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG-508'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'UART_TX_MUX' in file './../../RTL/UART_TX_MUX.sv' on line 26.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       1 |       0 |        0.02 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.21 | 
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.02 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.21 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(drc_check.tcl) 27: check_design -unresolved                     ;# Check for missing sub-modules
+
+
+ 	 Check Design Report (c)
+	 ------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'
+
+No empty modules in design 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'
+
+  Done Checking the design.
+@file(drc_check.tcl) 28: set_db auto_ungroup none
+  Setting attribute of root '/': 'auto_ungroup' = none
+@file(drc_check.tcl) 34: set_db dft_scan_style muxed_scan
+  Setting attribute of root '/': 'dft_scan_style' = muxed_scan
+@file(drc_check.tcl) 40: define_test_signal \
+-function shift_enable \
+-active high \
+-create_port \
+-default_shift_enable \
+ScanEnable
+@file(drc_check.tcl) 48: define_test_signal \
+-function test_mode \
+-active high \
+-create_port \
+TestMode
+@file(drc_check.tcl) 55: define_test_signal \
+-function async_set_reset \
+-active low \
+[get_ports RST_N]
+@file(drc_check.tcl) 61: define_test_clock \
+    -name ScanClock \
+    -function test_clock \
+    -period 20000 \
+    -controllable \
+    [get_ports REF_CLK]
+@file(drc_check.tcl) 71: check_dft_rules > drc_violations.rpt
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|   Id   |  Sev  |Count|                                             Message Text                                             |
+-------------------------------------------------------------------------------------------------------------------------------
+|CDFG-472|Warning|    1|Unreachable statements for case item.                                                                 |
+|CDFG-508|Warning|   20|Removing unused register.                                                                             |
+|        |       |     |Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the       |
+|        |       |     | flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the   |
+|        |       |     | RTL.                                                                                                 |
+|ELAB-1  |Info   |    1|Elaborating Design.                                                                                   |
+|ELAB-3  |Info   |    1|Done Elaborating Design.                                                                              |
+|LBR-64  |Warning|    4|Malformed test_cell.                                                                                  |
+|        |       |     |Review the definition of the test_cell's function or its parent library-cell's function.  An          |
+|        |       |     | inconsistency between the two may exist.                                                             |
+|LBR-409 |Info   |    4|Found conflicting clock polarity information.                                                         |
+|        |       |     |The tool derives the clock polarity from the sequential timing arcs specified through the Liberty     |
+|        |       |     | 'timing_type' attribute. For the positive-edge triggered cells a positive value is expected for the  |
+|        |       |     | 'clocked_on' or 'enable' attribute while an inverted value is expected for the negative-edge         |
+|        |       |     | triggered sequential cells.                                                                          |
+|LBR-412 |Info   |    1|Created nominal operating condition.                                                                  |
+|        |       |     |The nominal operating condition is represented, either by the nominal PVT values specified in the     |
+|        |       |     | library source (via nom_process,nom_voltage and nom_temperature respectively)                        |
+|        |       |     | , or by the default PVT values (1.0,1.0,1.0).                                                        |
+|MESG-11 |Warning|    1|Maximum message print count reached.                                                                  |
+-------------------------------------------------------------------------------------------------------------------------------
+Info    : Initiating DFT command. [DFT-145]
+        : Initiating check_dft_rules command.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+Detected 26 DFT rule violation(s)
+    ... see the log file for more details
+Warning : Suppressed printing of details of some DFT violations. [DFT-314]
+        : Did not print details of 6 message(s).
+        : Limited printing of details on DFT violations to avoid excessive data in the log file. To control the number of violations printed to the log file, use the '-max_print_violations' option. To print all details to the log file, use '-max_print_violations -1'. To print the output to a file, use '>' to redirect the file.
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules: 8542
+      Number of registers that pass DFT rules:   3
+  Percentage of total registers that are scannable:  0%
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for check_dft_rules is 0.175000 seconds.
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed check_dft_rules command.
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|  Id   |  Sev  |Count|                                             Message Text                                              |
+-------------------------------------------------------------------------------------------------------------------------------
+|DFT-145|Info   |    1|Initiating DFT command.                                                                                |
+|DFT-146|Info   |    1|Successfully completed DFT command.                                                                    |
+|DFT-147|Info   |    1|Reporting runtime for DFT command.                                                                     |
+|DFT-314|Warning|    1|Suppressed printing of details of some DFT violations.                                                 |
+|       |       |     |Limited printing of details on DFT violations to avoid excessive data in the log file. To control the  |
+|       |       |     | number of violations printed to the log file, use the '-max_print_violations' option. To print all    |
+|       |       |     | details to the log file, use '-max_print_violations -1'. To print the output to a file, use '>' to    |
+|       |       |     | redirect the file.                                                                                    |
+-------------------------------------------------------------------------------------------------------------------------------
+#@ End verbose source ./drc_check.tcl
+WARNING: This version of the tool is 454 days old.
+@genus:root: 2> gui_show
+Warning : A required object parameter could not be found. [TUI-78]
+        : An object named "" could not be found for attribute 'hnet'.
+        : Check if a previous get_db or find returned an empty string.
+@genus:root: 3> exit
+
+Lic Summary:
+[12:44:46.119546] Cdslmd servers: pine-server
+[12:44:46.119561] Feature usage summary:
+[12:44:46.119562] Genus_Synthesis  
+Normal exit.

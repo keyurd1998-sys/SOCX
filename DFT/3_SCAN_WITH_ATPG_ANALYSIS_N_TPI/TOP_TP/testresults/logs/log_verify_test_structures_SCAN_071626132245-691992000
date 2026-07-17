@@ -1,0 +1,447 @@
+Starting Command: verify_test_structures 
+
+INFO (TDA-005): Command Line Invocation: 
+            verify_test_structures -testmode SCAN -workdir /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_verify_test_structures_SCAN_071626132245-691992000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Thursday Jul 16 13:22:45 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 2269658.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP
+            -TESTMODE SCAN
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/testresults/logs/log_verify_test_structures_SCAN_071626132245-691992000
+[end TDA_009]
+INFO (TSV-900): verify_test_structures processing has started Thu Jul 16 13:22:45 2026    [end TSV_900] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Re-run verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        358,670  Blocks                     188,527  Blocks
+      1,116,061  Pins                       188,527  Nodes
+        584,493  Nets
+
+Primary Inputs:                      Primary Outputs:
+         86  Input Only                        83  Output Only
+          0  Input/Output                       0  Input/Output
+         86  Total Inputs                      83  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+     16,978  Tied to 0                          0  Two-State
+      8,495  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+     25,473  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+     16,914  MUX2s
+          1  Latches
+
+
+      8,495  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,495  Total Flops
+
+     26,036  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  SCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         80  SI    (Scan Input)                Pins
+         80  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         84      PI  -EC  -SC                             UART_CLK / UART_CLK
+         83      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         25      PI   SI2                                 ScanIn_3 / ScanIn_3
+         36      PI   SI3                                 ScanIn_4 / ScanIn_4
+         47      PI   SI4                                 ScanIn_5 / ScanIn_5
+         58      PI   SI5                                 ScanIn_6 / ScanIn_6
+         69      PI   SI6                                 ScanIn_7 / ScanIn_7
+         80      PI   SI7                                 ScanIn_8 / ScanIn_8
+         82      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         16      PI   SI20                                ScanIn_21 / ScanIn_21
+         17      PI   SI21                                ScanIn_22 / ScanIn_22
+         18      PI   SI22                                ScanIn_23 / ScanIn_23
+         19      PI   SI23                                ScanIn_24 / ScanIn_24
+         20      PI   SI24                                ScanIn_25 / ScanIn_25
+         21      PI   SI25                                ScanIn_26 / ScanIn_26
+         22      PI   SI26                                ScanIn_27 / ScanIn_27
+         23      PI   SI27                                ScanIn_28 / ScanIn_28
+         24      PI   SI28                                ScanIn_29 / ScanIn_29
+         26      PI   SI29                                ScanIn_30 / ScanIn_30
+         27      PI   SI30                                ScanIn_31 / ScanIn_31
+         28      PI   SI31                                ScanIn_32 / ScanIn_32
+         29      PI   SI32                                ScanIn_33 / ScanIn_33
+         30      PI   SI33                                ScanIn_34 / ScanIn_34
+         31      PI   SI34                                ScanIn_35 / ScanIn_35
+         32      PI   SI35                                ScanIn_36 / ScanIn_36
+         33      PI   SI36                                ScanIn_37 / ScanIn_37
+         34      PI   SI37                                ScanIn_38 / ScanIn_38
+         35      PI   SI38                                ScanIn_39 / ScanIn_39
+         37      PI   SI39                                ScanIn_40 / ScanIn_40
+         38      PI   SI40                                ScanIn_41 / ScanIn_41
+         39      PI   SI41                                ScanIn_42 / ScanIn_42
+         40      PI   SI42                                ScanIn_43 / ScanIn_43
+         41      PI   SI43                                ScanIn_44 / ScanIn_44
+         42      PI   SI44                                ScanIn_45 / ScanIn_45
+         43      PI   SI45                                ScanIn_46 / ScanIn_46
+         44      PI   SI46                                ScanIn_47 / ScanIn_47
+         45      PI   SI47                                ScanIn_48 / ScanIn_48
+         46      PI   SI48                                ScanIn_49 / ScanIn_49
+         48      PI   SI49                                ScanIn_50 / ScanIn_50
+         49      PI   SI50                                ScanIn_51 / ScanIn_51
+         50      PI   SI51                                ScanIn_52 / ScanIn_52
+         51      PI   SI52                                ScanIn_53 / ScanIn_53
+         52      PI   SI53                                ScanIn_54 / ScanIn_54
+         53      PI   SI54                                ScanIn_55 / ScanIn_55
+         54      PI   SI55                                ScanIn_56 / ScanIn_56
+         55      PI   SI56                                ScanIn_57 / ScanIn_57
+         56      PI   SI57                                ScanIn_58 / ScanIn_58
+         57      PI   SI58                                ScanIn_59 / ScanIn_59
+         59      PI   SI59                                ScanIn_60 / ScanIn_60
+         60      PI   SI60                                ScanIn_61 / ScanIn_61
+         61      PI   SI61                                ScanIn_62 / ScanIn_62
+         62      PI   SI62                                ScanIn_63 / ScanIn_63
+         63      PI   SI63                                ScanIn_64 / ScanIn_64
+         64      PI   SI64                                ScanIn_65 / ScanIn_65
+         65      PI   SI65                                ScanIn_66 / ScanIn_66
+         66      PI   SI66                                ScanIn_67 / ScanIn_67
+         67      PI   SI67                                ScanIn_68 / ScanIn_68
+         68      PI   SI68                                ScanIn_69 / ScanIn_69
+         70      PI   SI69                                ScanIn_70 / ScanIn_70
+         71      PI   SI70                                ScanIn_71 / ScanIn_71
+         72      PI   SI71                                ScanIn_72 / ScanIn_72
+         73      PI   SI72                                ScanIn_73 / ScanIn_73
+         74      PI   SI73                                ScanIn_74 / ScanIn_74
+         75      PI   SI74                                ScanIn_75 / ScanIn_75
+         76      PI   SI75                                ScanIn_76 / ScanIn_76
+         77      PI   SI76                                ScanIn_77 / ScanIn_77
+         78      PI   SI77                                ScanIn_78 / ScanIn_78
+         79      PI   SI78                                ScanIn_79 / ScanIn_79
+         81      PI   SI79                                ScanIn_80 / ScanIn_80
+         86      PO   SO                                  ScanOut_1 / ScanOut_1
+         97      PO   SO1                                 ScanOut_2 / ScanOut_2
+        108      PO   SO2                                 ScanOut_3 / ScanOut_3
+        119      PO   SO3                                 ScanOut_4 / ScanOut_4
+        130      PO   SO4                                 ScanOut_5 / ScanOut_5
+        141      PO   SO5                                 ScanOut_6 / ScanOut_6
+        152      PO   SO6                                 ScanOut_7 / ScanOut_7
+        163      PO   SO7                                 ScanOut_8 / ScanOut_8
+        165      PO   SO8                                 ScanOut_9 / ScanOut_9
+         87      PO   SO9                                 ScanOut_10 / ScanOut_10
+         88      PO   SO10                                ScanOut_11 / ScanOut_11
+         89      PO   SO11                                ScanOut_12 / ScanOut_12
+         90      PO   SO12                                ScanOut_13 / ScanOut_13
+         91      PO   SO13                                ScanOut_14 / ScanOut_14
+         92      PO   SO14                                ScanOut_15 / ScanOut_15
+         93      PO   SO15                                ScanOut_16 / ScanOut_16
+         94      PO   SO16                                ScanOut_17 / ScanOut_17
+         95      PO   SO17                                ScanOut_18 / ScanOut_18
+         96      PO   SO18                                ScanOut_19 / ScanOut_19
+         98      PO   SO19                                ScanOut_20 / ScanOut_20
+         99      PO   SO20                                ScanOut_21 / ScanOut_21
+        100      PO   SO21                                ScanOut_22 / ScanOut_22
+        101      PO   SO22                                ScanOut_23 / ScanOut_23
+        102      PO   SO23                                ScanOut_24 / ScanOut_24
+        103      PO   SO24                                ScanOut_25 / ScanOut_25
+        104      PO   SO25                                ScanOut_26 / ScanOut_26
+        105      PO   SO26                                ScanOut_27 / ScanOut_27
+        106      PO   SO27                                ScanOut_28 / ScanOut_28
+        107      PO   SO28                                ScanOut_29 / ScanOut_29
+        109      PO   SO29                                ScanOut_30 / ScanOut_30
+        110      PO   SO30                                ScanOut_31 / ScanOut_31
+        111      PO   SO31                                ScanOut_32 / ScanOut_32
+        112      PO   SO32                                ScanOut_33 / ScanOut_33
+        113      PO   SO33                                ScanOut_34 / ScanOut_34
+        114      PO   SO34                                ScanOut_35 / ScanOut_35
+        115      PO   SO35                                ScanOut_36 / ScanOut_36
+        116      PO   SO36                                ScanOut_37 / ScanOut_37
+        117      PO   SO37                                ScanOut_38 / ScanOut_38
+        118      PO   SO38                                ScanOut_39 / ScanOut_39
+        120      PO   SO39                                ScanOut_40 / ScanOut_40
+        121      PO   SO40                                ScanOut_41 / ScanOut_41
+        122      PO   SO41                                ScanOut_42 / ScanOut_42
+        123      PO   SO42                                ScanOut_43 / ScanOut_43
+        124      PO   SO43                                ScanOut_44 / ScanOut_44
+        125      PO   SO44                                ScanOut_45 / ScanOut_45
+        126      PO   SO45                                ScanOut_46 / ScanOut_46
+        127      PO   SO46                                ScanOut_47 / ScanOut_47
+        128      PO   SO47                                ScanOut_48 / ScanOut_48
+        129      PO   SO48                                ScanOut_49 / ScanOut_49
+        131      PO   SO49                                ScanOut_50 / ScanOut_50
+        132      PO   SO50                                ScanOut_51 / ScanOut_51
+        133      PO   SO51                                ScanOut_52 / ScanOut_52
+        134      PO   SO52                                ScanOut_53 / ScanOut_53
+        135      PO   SO53                                ScanOut_54 / ScanOut_54
+        136      PO   SO54                                ScanOut_55 / ScanOut_55
+        137      PO   SO55                                ScanOut_56 / ScanOut_56
+        138      PO   SO56                                ScanOut_57 / ScanOut_57
+        139      PO   SO57                                ScanOut_58 / ScanOut_58
+        140      PO   SO58                                ScanOut_59 / ScanOut_59
+        142      PO   SO59                                ScanOut_60 / ScanOut_60
+        143      PO   SO60                                ScanOut_61 / ScanOut_61
+        144      PO   SO61                                ScanOut_62 / ScanOut_62
+        145      PO   SO62                                ScanOut_63 / ScanOut_63
+        146      PO   SO63                                ScanOut_64 / ScanOut_64
+        147      PO   SO64                                ScanOut_65 / ScanOut_65
+        148      PO   SO65                                ScanOut_66 / ScanOut_66
+        149      PO   SO66                                ScanOut_67 / ScanOut_67
+        150      PO   SO67                                ScanOut_68 / ScanOut_68
+        151      PO   SO68                                ScanOut_69 / ScanOut_69
+        153      PO   SO69                                ScanOut_70 / ScanOut_70
+        154      PO   SO70                                ScanOut_71 / ScanOut_71
+        155      PO   SO71                                ScanOut_72 / ScanOut_72
+        156      PO   SO72                                ScanOut_73 / ScanOut_73
+        157      PO   SO73                                ScanOut_74 / ScanOut_74
+        158      PO   SO74                                ScanOut_75 / ScanOut_75
+        159      PO   SO75                                ScanOut_76 / ScanOut_76
+        160      PO   SO76                                ScanOut_77 / ScanOut_77
+        161      PO   SO77                                ScanOut_78 / ScanOut_78
+        162      PO   SO78                                ScanOut_79 / ScanOut_79
+        164      PO   SO79                                ScanOut_80 / ScanOut_80
+
+  
+   Analyze test clocks' control of memory elements    
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.06  Elapsed time =  0:00:00.10
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-068): The length of the longest scan chain is 107 bit positions, which is 101% of the average scan chain length 107 (based on 8495 total scan chain bits and 80 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_2' and ending at 'pin ScanOut_2' is controllable and observable. The length of the scan chain is 96 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_3' and ending at 'pin ScanOut_3' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_4' and ending at 'pin ScanOut_4' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_5' and ending at 'pin ScanOut_5' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_6' and ending at 'pin ScanOut_6' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_7' and ending at 'pin ScanOut_7' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_8' and ending at 'pin ScanOut_8' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_9' and ending at 'pin ScanOut_9' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_10' and ending at 'pin ScanOut_10' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_11' and ending at 'pin ScanOut_11' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_12' and ending at 'pin ScanOut_12' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_13' and ending at 'pin ScanOut_13' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_14' and ending at 'pin ScanOut_14' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_15' and ending at 'pin ScanOut_15' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_16' and ending at 'pin ScanOut_16' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_17' and ending at 'pin ScanOut_17' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_18' and ending at 'pin ScanOut_18' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_19' and ending at 'pin ScanOut_19' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_20' and ending at 'pin ScanOut_20' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_21' and ending at 'pin ScanOut_21' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_22' and ending at 'pin ScanOut_22' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_23' and ending at 'pin ScanOut_23' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_24' and ending at 'pin ScanOut_24' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_25' and ending at 'pin ScanOut_25' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_26' and ending at 'pin ScanOut_26' is controllable and observable. The length of the scan chain is 107 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_27' and ending at 'pin ScanOut_27' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_28' and ending at 'pin ScanOut_28' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_29' and ending at 'pin ScanOut_29' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_30' and ending at 'pin ScanOut_30' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_31' and ending at 'pin ScanOut_31' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_32' and ending at 'pin ScanOut_32' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_33' and ending at 'pin ScanOut_33' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_34' and ending at 'pin ScanOut_34' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_35' and ending at 'pin ScanOut_35' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_36' and ending at 'pin ScanOut_36' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_37' and ending at 'pin ScanOut_37' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_38' and ending at 'pin ScanOut_38' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_39' and ending at 'pin ScanOut_39' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_40' and ending at 'pin ScanOut_40' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_41' and ending at 'pin ScanOut_41' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_42' and ending at 'pin ScanOut_42' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_43' and ending at 'pin ScanOut_43' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_44' and ending at 'pin ScanOut_44' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_45' and ending at 'pin ScanOut_45' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_46' and ending at 'pin ScanOut_46' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_47' and ending at 'pin ScanOut_47' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_48' and ending at 'pin ScanOut_48' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_49' and ending at 'pin ScanOut_49' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_50' and ending at 'pin ScanOut_50' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_51' and ending at 'pin ScanOut_51' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_52' and ending at 'pin ScanOut_52' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_53' and ending at 'pin ScanOut_53' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_54' and ending at 'pin ScanOut_54' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_55' and ending at 'pin ScanOut_55' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_56' and ending at 'pin ScanOut_56' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_57' and ending at 'pin ScanOut_57' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_58' and ending at 'pin ScanOut_58' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_59' and ending at 'pin ScanOut_59' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_60' and ending at 'pin ScanOut_60' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_61' and ending at 'pin ScanOut_61' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_62' and ending at 'pin ScanOut_62' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_63' and ending at 'pin ScanOut_63' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_64' and ending at 'pin ScanOut_64' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_65' and ending at 'pin ScanOut_65' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_66' and ending at 'pin ScanOut_66' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_67' and ending at 'pin ScanOut_67' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_68' and ending at 'pin ScanOut_68' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_69' and ending at 'pin ScanOut_69' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_70' and ending at 'pin ScanOut_70' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_71' and ending at 'pin ScanOut_71' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_72' and ending at 'pin ScanOut_72' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_73' and ending at 'pin ScanOut_73' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_74' and ending at 'pin ScanOut_74' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_75' and ending at 'pin ScanOut_75' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_76' and ending at 'pin ScanOut_76' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_77' and ending at 'pin ScanOut_77' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_78' and ending at 'pin ScanOut_78' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_79' and ending at 'pin ScanOut_79' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin ScanIn_80' and ending at 'pin ScanOut_80' is controllable and observable. The length of the scan chain is 106 bit positions.   [end TSV_378] 
+INFO (TSV-567): There are 80 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 80 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+WARNING (TSV-390): There are 1 inactive (non-scan) latches.   [end TSV_390] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.10  Elapsed time =  0:00:00.13
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.02
+
+--------------------File Information----------------------
+          61440 /home/admin/DFT/SOCX/DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/TOP_TP/tbdata/TSVmessageFile.SCAN 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           44,539,040  bytes
+
+                      CPU Time =    0:00:00.33
+                  Elapsed Time =    0:00:00.59                    [end TDA_001]
+
+     Date Ended:  Thursday Jul 16 13:22:46 2026  IST
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 107 bit positions, which is 101% of the average scan chain length 107 (based on 8495 total scan chain bits and 80 valid scan chains).    
+     80 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 107 bit positions.    
+      1 INFO (TSV-567): There are 80 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 80 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Thu Jul 16 13:22:45 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      1 WARNING (TSV-390): There are 1 inactive (non-scan) latches.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

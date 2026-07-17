@@ -1,0 +1,288 @@
+Starting Command: build_testmode 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_testmode -modedef FULLSCAN -assignfile /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.FULLSCAN.pinassign -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG/testresults/logs/log_build_testmode_FULLSCAN_071626130339-424938000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Thursday Jul 16 13:03:39 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 2259610.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.FULLSCAN.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/DFT/2_SCAN_INITIAL/TOP_ATPG/testresults/logs/log_build_testmode_FULLSCAN_071626130339-424938000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+MODEDEFPATH set to:  /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/modedef 
+TDRPATH set to: /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 90.98% active logic,  9.02% inactive logic and  0.00% constraint logic.   [end THM_814] 
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+           coverage is impacted when too little of the logic is visible.   [end TTM_347] 
+INFO (TTM-357): There are 80 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  FULLSCAN
+
+Information for Test Mode:  FULLSCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  FULLSCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        0           1           1 
+ Finite State    (FSM)           0           0           0 
+
+WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+           see preceding message(s) for details. [end TTM_809] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          1  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+         80  SI    (Scan Input)                Pins
+         80  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          1      PI  -SC                                  RST_N / RST_N
+          0      PI  -EC  -SC                             REF_CLK / REF_CLK
+         84      PI  -EC  -SC                             UART_CLK / UART_CLK
+         83      PI  +TI                                  TestMode / TestMode
+          2      PI  +SE                                  ScanEnable / ScanEnable
+          3      PI   SI                                  ScanIn_1 / ScanIn_1
+         14      PI   SI1                                 ScanIn_2 / ScanIn_2
+         25      PI   SI2                                 ScanIn_3 / ScanIn_3
+         36      PI   SI3                                 ScanIn_4 / ScanIn_4
+         47      PI   SI4                                 ScanIn_5 / ScanIn_5
+         58      PI   SI5                                 ScanIn_6 / ScanIn_6
+         69      PI   SI6                                 ScanIn_7 / ScanIn_7
+         80      PI   SI7                                 ScanIn_8 / ScanIn_8
+         82      PI   SI8                                 ScanIn_9 / ScanIn_9
+          4      PI   SI9                                 ScanIn_10 / ScanIn_10
+          5      PI   SI10                                ScanIn_11 / ScanIn_11
+          6      PI   SI11                                ScanIn_12 / ScanIn_12
+          7      PI   SI12                                ScanIn_13 / ScanIn_13
+          8      PI   SI13                                ScanIn_14 / ScanIn_14
+          9      PI   SI14                                ScanIn_15 / ScanIn_15
+         10      PI   SI15                                ScanIn_16 / ScanIn_16
+         11      PI   SI16                                ScanIn_17 / ScanIn_17
+         12      PI   SI17                                ScanIn_18 / ScanIn_18
+         13      PI   SI18                                ScanIn_19 / ScanIn_19
+         15      PI   SI19                                ScanIn_20 / ScanIn_20
+         16      PI   SI20                                ScanIn_21 / ScanIn_21
+         17      PI   SI21                                ScanIn_22 / ScanIn_22
+         18      PI   SI22                                ScanIn_23 / ScanIn_23
+         19      PI   SI23                                ScanIn_24 / ScanIn_24
+         20      PI   SI24                                ScanIn_25 / ScanIn_25
+         21      PI   SI25                                ScanIn_26 / ScanIn_26
+         22      PI   SI26                                ScanIn_27 / ScanIn_27
+         23      PI   SI27                                ScanIn_28 / ScanIn_28
+         24      PI   SI28                                ScanIn_29 / ScanIn_29
+         26      PI   SI29                                ScanIn_30 / ScanIn_30
+         27      PI   SI30                                ScanIn_31 / ScanIn_31
+         28      PI   SI31                                ScanIn_32 / ScanIn_32
+         29      PI   SI32                                ScanIn_33 / ScanIn_33
+         30      PI   SI33                                ScanIn_34 / ScanIn_34
+         31      PI   SI34                                ScanIn_35 / ScanIn_35
+         32      PI   SI35                                ScanIn_36 / ScanIn_36
+         33      PI   SI36                                ScanIn_37 / ScanIn_37
+         34      PI   SI37                                ScanIn_38 / ScanIn_38
+         35      PI   SI38                                ScanIn_39 / ScanIn_39
+         37      PI   SI39                                ScanIn_40 / ScanIn_40
+         38      PI   SI40                                ScanIn_41 / ScanIn_41
+         39      PI   SI41                                ScanIn_42 / ScanIn_42
+         40      PI   SI42                                ScanIn_43 / ScanIn_43
+         41      PI   SI43                                ScanIn_44 / ScanIn_44
+         42      PI   SI44                                ScanIn_45 / ScanIn_45
+         43      PI   SI45                                ScanIn_46 / ScanIn_46
+         44      PI   SI46                                ScanIn_47 / ScanIn_47
+         45      PI   SI47                                ScanIn_48 / ScanIn_48
+         46      PI   SI48                                ScanIn_49 / ScanIn_49
+         48      PI   SI49                                ScanIn_50 / ScanIn_50
+         49      PI   SI50                                ScanIn_51 / ScanIn_51
+         50      PI   SI51                                ScanIn_52 / ScanIn_52
+         51      PI   SI52                                ScanIn_53 / ScanIn_53
+         52      PI   SI53                                ScanIn_54 / ScanIn_54
+         53      PI   SI54                                ScanIn_55 / ScanIn_55
+         54      PI   SI55                                ScanIn_56 / ScanIn_56
+         55      PI   SI56                                ScanIn_57 / ScanIn_57
+         56      PI   SI57                                ScanIn_58 / ScanIn_58
+         57      PI   SI58                                ScanIn_59 / ScanIn_59
+         59      PI   SI59                                ScanIn_60 / ScanIn_60
+         60      PI   SI60                                ScanIn_61 / ScanIn_61
+         61      PI   SI61                                ScanIn_62 / ScanIn_62
+         62      PI   SI62                                ScanIn_63 / ScanIn_63
+         63      PI   SI63                                ScanIn_64 / ScanIn_64
+         64      PI   SI64                                ScanIn_65 / ScanIn_65
+         65      PI   SI65                                ScanIn_66 / ScanIn_66
+         66      PI   SI66                                ScanIn_67 / ScanIn_67
+         67      PI   SI67                                ScanIn_68 / ScanIn_68
+         68      PI   SI68                                ScanIn_69 / ScanIn_69
+         70      PI   SI69                                ScanIn_70 / ScanIn_70
+         71      PI   SI70                                ScanIn_71 / ScanIn_71
+         72      PI   SI71                                ScanIn_72 / ScanIn_72
+         73      PI   SI72                                ScanIn_73 / ScanIn_73
+         74      PI   SI73                                ScanIn_74 / ScanIn_74
+         75      PI   SI74                                ScanIn_75 / ScanIn_75
+         76      PI   SI75                                ScanIn_76 / ScanIn_76
+         77      PI   SI76                                ScanIn_77 / ScanIn_77
+         78      PI   SI77                                ScanIn_78 / ScanIn_78
+         79      PI   SI78                                ScanIn_79 / ScanIn_79
+         81      PI   SI79                                ScanIn_80 / ScanIn_80
+         86      PO   SO                                  ScanOut_1 / ScanOut_1
+         97      PO   SO1                                 ScanOut_2 / ScanOut_2
+        108      PO   SO2                                 ScanOut_3 / ScanOut_3
+        119      PO   SO3                                 ScanOut_4 / ScanOut_4
+        130      PO   SO4                                 ScanOut_5 / ScanOut_5
+        141      PO   SO5                                 ScanOut_6 / ScanOut_6
+        152      PO   SO6                                 ScanOut_7 / ScanOut_7
+        163      PO   SO7                                 ScanOut_8 / ScanOut_8
+        165      PO   SO8                                 ScanOut_9 / ScanOut_9
+         87      PO   SO9                                 ScanOut_10 / ScanOut_10
+         88      PO   SO10                                ScanOut_11 / ScanOut_11
+         89      PO   SO11                                ScanOut_12 / ScanOut_12
+         90      PO   SO12                                ScanOut_13 / ScanOut_13
+         91      PO   SO13                                ScanOut_14 / ScanOut_14
+         92      PO   SO14                                ScanOut_15 / ScanOut_15
+         93      PO   SO15                                ScanOut_16 / ScanOut_16
+         94      PO   SO16                                ScanOut_17 / ScanOut_17
+         95      PO   SO17                                ScanOut_18 / ScanOut_18
+         96      PO   SO18                                ScanOut_19 / ScanOut_19
+         98      PO   SO19                                ScanOut_20 / ScanOut_20
+         99      PO   SO20                                ScanOut_21 / ScanOut_21
+        100      PO   SO21                                ScanOut_22 / ScanOut_22
+        101      PO   SO22                                ScanOut_23 / ScanOut_23
+        102      PO   SO23                                ScanOut_24 / ScanOut_24
+        103      PO   SO24                                ScanOut_25 / ScanOut_25
+        104      PO   SO25                                ScanOut_26 / ScanOut_26
+        105      PO   SO26                                ScanOut_27 / ScanOut_27
+        106      PO   SO27                                ScanOut_28 / ScanOut_28
+        107      PO   SO28                                ScanOut_29 / ScanOut_29
+        109      PO   SO29                                ScanOut_30 / ScanOut_30
+        110      PO   SO30                                ScanOut_31 / ScanOut_31
+        111      PO   SO31                                ScanOut_32 / ScanOut_32
+        112      PO   SO32                                ScanOut_33 / ScanOut_33
+        113      PO   SO33                                ScanOut_34 / ScanOut_34
+        114      PO   SO34                                ScanOut_35 / ScanOut_35
+        115      PO   SO35                                ScanOut_36 / ScanOut_36
+        116      PO   SO36                                ScanOut_37 / ScanOut_37
+        117      PO   SO37                                ScanOut_38 / ScanOut_38
+        118      PO   SO38                                ScanOut_39 / ScanOut_39
+        120      PO   SO39                                ScanOut_40 / ScanOut_40
+        121      PO   SO40                                ScanOut_41 / ScanOut_41
+        122      PO   SO41                                ScanOut_42 / ScanOut_42
+        123      PO   SO42                                ScanOut_43 / ScanOut_43
+        124      PO   SO43                                ScanOut_44 / ScanOut_44
+        125      PO   SO44                                ScanOut_45 / ScanOut_45
+        126      PO   SO45                                ScanOut_46 / ScanOut_46
+        127      PO   SO46                                ScanOut_47 / ScanOut_47
+        128      PO   SO47                                ScanOut_48 / ScanOut_48
+        129      PO   SO48                                ScanOut_49 / ScanOut_49
+        131      PO   SO49                                ScanOut_50 / ScanOut_50
+        132      PO   SO50                                ScanOut_51 / ScanOut_51
+        133      PO   SO51                                ScanOut_52 / ScanOut_52
+        134      PO   SO52                                ScanOut_53 / ScanOut_53
+        135      PO   SO53                                ScanOut_54 / ScanOut_54
+        136      PO   SO54                                ScanOut_55 / ScanOut_55
+        137      PO   SO55                                ScanOut_56 / ScanOut_56
+        138      PO   SO56                                ScanOut_57 / ScanOut_57
+        139      PO   SO57                                ScanOut_58 / ScanOut_58
+        140      PO   SO58                                ScanOut_59 / ScanOut_59
+        142      PO   SO59                                ScanOut_60 / ScanOut_60
+        143      PO   SO60                                ScanOut_61 / ScanOut_61
+        144      PO   SO61                                ScanOut_62 / ScanOut_62
+        145      PO   SO62                                ScanOut_63 / ScanOut_63
+        146      PO   SO63                                ScanOut_64 / ScanOut_64
+        147      PO   SO64                                ScanOut_65 / ScanOut_65
+        148      PO   SO65                                ScanOut_66 / ScanOut_66
+        149      PO   SO66                                ScanOut_67 / ScanOut_67
+        150      PO   SO67                                ScanOut_68 / ScanOut_68
+        151      PO   SO68                                ScanOut_69 / ScanOut_69
+        153      PO   SO69                                ScanOut_70 / ScanOut_70
+        154      PO   SO70                                ScanOut_71 / ScanOut_71
+        155      PO   SO71                                ScanOut_72 / ScanOut_72
+        156      PO   SO72                                ScanOut_73 / ScanOut_73
+        157      PO   SO73                                ScanOut_74 / ScanOut_74
+        158      PO   SO74                                ScanOut_75 / ScanOut_75
+        159      PO   SO75                                ScanOut_76 / ScanOut_76
+        160      PO   SO76                                ScanOut_77 / ScanOut_77
+        161      PO   SO77                                ScanOut_78 / ScanOut_78
+        162      PO   SO78                                ScanOut_79 / ScanOut_79
+        164      PO   SO79                                ScanOut_80 / ScanOut_80
+
+
+
+Modus Build Test Mode(s) completed. Highest severity is (WARNING).
+
+               Total Memory =           77,695,568  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.81
+               Elapsed Time =   0:00:01.23
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 90.98% active logic,  9.02% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 80 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

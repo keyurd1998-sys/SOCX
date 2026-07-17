@@ -1,0 +1,538 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[12:48:43.455601] Configured Lic search path (25.01-s002): 5280@pine-server
+
+Version: 25.10-p002_1, built Thu Apr 17 03:05:38 PDT 2025
+Options: -files drc_fix.tcl -overwrite 
+Date:    Thu Jul 16 12:48:43 2026
+Host:    Pine-06 (x86_64 w/Linux 5.14.0-611.30.1.el9_7.x86_64) (6cores*6cpus*1physical cpu*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB) (7671852KB)
+PID:     2250222
+OS:      Red Hat Enterprise Linux 9.7 (Plow)
+
+Checking out license: Genus_Synthesis
+[12:48:43.056554] Periodic Lic check successful
+[12:48:43.580858] Feature usage summary:
+[12:48:43.580859] Genus_Synthesis  
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (16 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source drc_fix.tcl
+#@ Begin verbose source ./drc_fix.tcl
+@file(drc_fix.tcl) 4: set DESIGN_NAME "TOP"                      ;# Top module name
+@file(drc_fix.tcl) 5: set HDL_PATH    "../../RTL"        ;# RTL file path
+@file(drc_fix.tcl) 6: set LIB_PATH    "../../../Library/timing"             ;# Library path
+@file(drc_fix.tcl) 7: set LIB_LIST "slow.lib"
+@file(drc_fix.tcl) 12: set_db init_lib_search_path $LIB_PATH
+  Setting attribute of root '/': 'init_lib_search_path' = ../../../Library/timing
+@file(drc_fix.tcl) 13: set_db init_hdl_search_path $HDL_PATH
+  Setting attribute of root '/': 'init_hdl_search_path' = ../../RTL
+@file(drc_fix.tcl) 18: read_libs $LIB_LIST
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX2'.  Ignoring the test_cell.
+        : Review the definition of the test_cell's function or its parent library-cell's function.  An inconsistency between the two may exist.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRXL'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX1'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFNSRX4'.  Ignoring the test_cell.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX2' is assumed to be ' CKN'.
+        : The tool derives the clock polarity from the sequential timing arcs specified through the Liberty 'timing_type' attribute. For the positive-edge triggered cells a positive value is expected for the 'clocked_on' or 'enable' attribute while an inverted value is expected for the negative-edge triggered sequential cells.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRXL' is assumed to be ' CKN'.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX1' is assumed to be ' CKN'.
+Info    : Found conflicting clock polarity information. [LBR-409]
+        : The clock polarity specified through the Liberty 'clocked_on' attribute in libcell 'SDFFNSRX4' is assumed to be ' CKN'.
+@file(drc_fix.tcl) 23: read_hdl -sv [glob "$HDL_PATH/*.sv"] 
+@file(drc_fix.tcl) 24: read_hdl -sv [glob "$HDL_PATH/*.v"] 
+@file(drc_fix.tcl) 26: elaborate $DESIGN_NAME -parameters {8 4 16 2048 11}                       ;# Build design tree & resolve parameters
+  Library has 324 usable logic and 126 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' from file './../../RTL/TOP.sv'.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1024]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+        : Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the RTL.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1025]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1026]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1027]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1028]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1029]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1030]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1031]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1032]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1033]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1034]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1035]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1036]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1037]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1038]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1039]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1040]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1041]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1042]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'FIFO_MEM[1043]' in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11' in file './../../RTL/fifo_mem.v' on line 34.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG-508'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'UART_TX_MUX' in file './../../RTL/UART_TX_MUX.sv' on line 26.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       1 |       0 |        0.02 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.22 | 
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.02 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.22 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.001s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(drc_fix.tcl) 27: check_design -unresolved                     ;# Check for missing sub-modules
+
+
+ 	 Check Design Report (c)
+	 ------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'
+
+No empty modules in design 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'
+
+  Done Checking the design.
+@file(drc_fix.tcl) 28: set_db auto_ungroup none
+  Setting attribute of root '/': 'auto_ungroup' = none
+@file(drc_fix.tcl) 35: set_db dft_scan_style muxed_scan
+  Setting attribute of root '/': 'dft_scan_style' = muxed_scan
+@file(drc_fix.tcl) 42: define_test_signal \
+-function shift_enable \
+-active high \
+-create_port \
+-default_shift_enable \
+ScanEnable
+@file(drc_fix.tcl) 50: define_test_signal \
+-function test_mode \
+-active high \
+-create_port \
+TestMode
+@file(drc_fix.tcl) 57: define_test_signal \
+-function async_set_reset \
+-active low \
+[get_ports RST_N]
+@file(drc_fix.tcl) 63: define_test_clock \
+    -name ScanClock \
+    -function test_clock \
+    -period 20000 \
+    -controllable \
+    [get_ports REF_CLK]
+@file(drc_fix.tcl) 74: check_dft_rules
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|   Id   |  Sev  |Count|                                             Message Text                                             |
+-------------------------------------------------------------------------------------------------------------------------------
+|CDFG-472|Warning|    1|Unreachable statements for case item.                                                                 |
+|CDFG-508|Warning|   20|Removing unused register.                                                                             |
+|        |       |     |Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the       |
+|        |       |     | flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the   |
+|        |       |     | RTL.                                                                                                 |
+|ELAB-1  |Info   |    1|Elaborating Design.                                                                                   |
+|ELAB-3  |Info   |    1|Done Elaborating Design.                                                                              |
+|LBR-64  |Warning|    4|Malformed test_cell.                                                                                  |
+|        |       |     |Review the definition of the test_cell's function or its parent library-cell's function.  An          |
+|        |       |     | inconsistency between the two may exist.                                                             |
+|LBR-409 |Info   |    4|Found conflicting clock polarity information.                                                         |
+|        |       |     |The tool derives the clock polarity from the sequential timing arcs specified through the Liberty     |
+|        |       |     | 'timing_type' attribute. For the positive-edge triggered cells a positive value is expected for the  |
+|        |       |     | 'clocked_on' or 'enable' attribute while an inverted value is expected for the negative-edge         |
+|        |       |     | triggered sequential cells.                                                                          |
+|LBR-412 |Info   |    1|Created nominal operating condition.                                                                  |
+|        |       |     |The nominal operating condition is represented, either by the nominal PVT values specified in the     |
+|        |       |     | library source (via nom_process,nom_voltage and nom_temperature respectively)                        |
+|        |       |     | , or by the default PVT values (1.0,1.0,1.0).                                                        |
+|MESG-11 |Warning|    1|Maximum message print count reached.                                                                  |
+-------------------------------------------------------------------------------------------------------------------------------
+Info    : Initiating DFT command. [DFT-145]
+        : Initiating check_dft_rules command.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+Detected 26 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 44
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 0
+	      Tied constant clock net: 2
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 0
+	      Tied active async net: 24
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+   Total number of DFT violations: 26
+
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 5 <vid_5_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11', net 'n_8193', inst/pin 'U0_Async_fifo/u_fifo_mem/FIFO_MEM_reg[0][0]/aclr'   [ASYNC-02]
+        : Async signal is not controllable. Affected registers will be excluded from scan design.
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 24 <vid_24_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'Register_File_ADDR_WIDTH4_DATA_WIDTH8_MEM_DEPTH16', net 'n_140', inst/pin 'U0_Register_File/RdData_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Clock Rule Violation. [DFT-301]
+        : # 0 <vid_0_clock>: clock signal driven to a constant value in module 'bmux_2', net 'z', inst/pin 'U0_Integer_Clock_Divider_TX/mux_o_div_clk_69_7/g1/z'   [CLOCK-02]
+        : Clock signal is not controllable. Affected registers will be excluded from scan design. You might want to define a clock if required, or use report_dft_trace_back to identify the root cause for the non-controllability of a correctly defined clock. The root_node attribute of the DFT Clock Rule Violation is a good starting point for any further debug.
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 23 <vid_23_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'SYS_CTRL_ADDR_WIDTH4_DATA_WIDTH8', net 'n_265', inst/pin 'U0_SYS_CTRL/current_state_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 7 <vid_7_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'BIT_SYNC_NUM_STAGES2_BUS_WIDTH11', net 'n_23', inst/pin 'U0_Async_fifo/u_w2r_sync/sync_reg_reg[0][0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 8 <vid_8_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'fifo_wr_P_SIZE11', net 'n_200', inst/pin 'U0_Async_fifo/u_fifo_wr/w_ptr_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 9 <vid_9_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'BIT_SYNC_NUM_STAGES2_BUS_WIDTH11', net 'n_23', inst/pin 'U0_Async_fifo/u_r2w_sync/sync_reg_reg[0][0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 6 <vid_6_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'fifo_rd_P_SIZE11', net 'n_200', inst/pin 'U0_Async_fifo/u_fifo_rd/rd_ptr_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Clock Rule Violation. [DFT-301]
+        : # 1 <vid_1_clock>: clock signal driven to a constant value in module 'CLK_GATE', net 'GATED_CLK', inst/pin 'U0_CLK_GATE/U0_TLATNCAX12M/ECK'   [CLOCK-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 25 <vid_25_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'ALU_16B_OPER_WIDTH8_OUT_WIDTH16', net 'n_149', inst/pin 'U0_ALU_16B/ALU_OUT_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 13 <vid_13_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_TX_serializer', net 'n_34', inst/pin 'U0_UART/U0_UART_TX/U0_serializer/ser_done_reg/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 4 <vid_4_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'DATA_SYNC_NUM_STAGES2_BUS_WIDTH8', net 'n_13', inst/pin 'U0_DATA_SYNC/sync_reg_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 17 <vid_17_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_RX_edge_bit_counter', net 'n_27', inst/pin 'U0_UART/U0_UART_RX/U0_edge_bit_counter/bit_cnt_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 19 <vid_19_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_RX_deserializer', net 'n_17', inst/pin 'U0_UART/U0_UART_RX/U0_deserializer/P_DATA_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 15 <vid_15_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_TX_parity_Calc', net 'n_9', inst/pin 'U0_UART/U0_UART_TX/U0_parity_Calc/parallel_data_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 12 <vid_12_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'Integer_Clock_Divider', net 'n_27', inst/pin 'U1_Integer_Clock_Divider_RX/counter_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 11 <vid_11_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'Integer_Clock_Divider', net 'n_27', inst/pin 'U0_Integer_Clock_Divider_TX/counter_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 14 <vid_14_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_TX_FSM', net 'n_59', inst/pin 'U0_UART/U0_UART_TX/U0_FSM/current_state_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 16 <vid_16_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_RX_FSM', net 'n_129', inst/pin 'U0_UART/U0_UART_RX/U0_FSM/current_state_reg[0]/aclr'   [ASYNC-02]
+Warning : DFT Async Rule Violation. [DFT-302]
+        : # 20 <vid_20_async>: async signal driven to a constant active value, possibly due to a polarity conflict in module 'UART_RX_parity_check', net 'n_11', inst/pin 'U0_UART/U0_UART_RX/U0_parity_check/par_err_reg/aclr'   [ASYNC-02]
+Warning : Suppressed printing of details of some DFT violations. [DFT-314]
+        : Did not print details of 6 message(s).
+        : Limited printing of details on DFT violations to avoid excessive data in the log file. To control the number of violations printed to the log file, use the '-max_print_violations' option. To print all details to the log file, use '-max_print_violations -1'. To print the output to a file, use '>' to redirect the file.
+  Total number of Test Clock Domains: 2
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules: 8542
+      Number of registers that pass DFT rules:   3
+  Percentage of total registers that are scannable:  0%
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for check_dft_rules is 0.175000 seconds.
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed check_dft_rules command.
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|  Id   |  Sev  |Count|                                             Message Text                                              |
+-------------------------------------------------------------------------------------------------------------------------------
+|DFT-145|Info   |    1|Initiating DFT command.                                                                                |
+|DFT-146|Info   |    1|Successfully completed DFT command.                                                                    |
+|DFT-147|Info   |    1|Reporting runtime for DFT command.                                                                     |
+|DFT-301|Warning|    2|DFT Clock Rule Violation.                                                                              |
+|       |       |     |Clock signal is not controllable. Affected registers will be excluded from scan design. You might want |
+|       |       |     | to define a clock if required, or use report_dft_trace_back to identify the root cause for the        |
+|       |       |     | non-controllability of a correctly defined clock. The root_node attribute of the DFT Clock Rule       |
+|       |       |     | Violation is a good starting point for any further debug.                                             |
+|DFT-302|Warning|   18|DFT Async Rule Violation.                                                                              |
+|       |       |     |Async signal is not controllable. Affected registers will be excluded from scan design.                |
+|DFT-314|Warning|    1|Suppressed printing of details of some DFT violations.                                                 |
+|       |       |     |Limited printing of details on DFT violations to avoid excessive data in the log file. To control the  |
+|       |       |     | number of violations printed to the log file, use the '-max_print_violations' option. To print all    |
+|       |       |     | details to the log file, use '-max_print_violations -1'. To print the output to a file, use '>' to    |
+|       |       |     | redirect the file.                                                                                    |
+-------------------------------------------------------------------------------------------------------------------------------
+@file(drc_fix.tcl) 81: fix_dft_violations -async_reset -test_control TestMode
+Warning : Uniquifying design. [DFT-115]
+        : Uniquifying top-level module 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11'.
+        : A DFT operation requires the design to be uniquified.
+  Total number of violation points: 8538.
+  Total number of test points inserted: 24.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+  Checking DFT rules for clock pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for async. pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for shift registers.
+Detected 5 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 44
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 3
+	      Tied constant clock net: 0
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 2
+	      Tied active async net: 0
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+   Total number of DFT violations: 5
+
+Warning : Suppressed printing of details of some DFT violations. [DFT-314]
+        : Did not print details of 5 message(s).
+  Total number of Test Clock Domains: 2
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules: 119
+      Number of registers that pass DFT rules: 8426
+  Percentage of total registers that are scannable: 98.6%
+@file(drc_fix.tcl) 84: fix_dft_violations -async_set -test_control TestMode
+  Total number of violation points: 4.
+  Total number of test points inserted: 2.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+  Checking DFT rules for clock pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for async. pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for shift registers.
+Detected 3 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 44
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 3
+	      Tied constant clock net: 0
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 0
+	      Tied active async net: 0
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+   Total number of DFT violations: 3
+
+Warning : Suppressed printing of details of some DFT violations. [DFT-314]
+        : Did not print details of 3 message(s).
+  Total number of Test Clock Domains: 2
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules: 116
+      Number of registers that pass DFT rules: 8429
+  Percentage of total registers that are scannable: 98.6%
+@file(drc_fix.tcl) 87: fix_dft_violations -clock -test_control TestMode
+Warning : Modified the clock path. [DFT-111]
+        : The testpoint inserted pin 'pin:TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11/U0_CLK_GATE/U0_TLATNCAX12M/ECK' affects the clock path.
+        : A testpoint inserted in the clock path can adversely affect the timing of the design.
+Warning : Inferred datapath logic has changed and cannot be considered for datapath optimizations. [RTLOPT-55]
+        : Module 'bmux_2_78' has been invalidated for datapath optimizations.
+        : For best results, ensure this command is issued after syn_map, when all datapath optimizations have finished.
+Warning : Inferred datapath logic has changed and cannot be considered for datapath optimizations. [RTLOPT-55]
+        : Module 'bmux_2_6' has been invalidated for datapath optimizations.
+  Total number of violation points: 116.
+  Total number of test points inserted: 3.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+  Checking DFT rules for clock pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for async. pins
+     ... Processed 250 registers
+     ... Processed 500 registers
+     ... Processed 1000 registers
+     ... Processed 2000 registers
+     ... Processed 4000 registers
+     ... Processed 8000 registers
+  Checking DFT rules for shift registers.
+Detected 0 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 44
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 0
+	      Tied constant clock net: 0
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 0
+	      Tied active async net: 0
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+   Total number of DFT violations: 0
+
+  Total number of Test Clock Domains: 2
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules:   0
+      Number of registers that pass DFT rules: 8545
+  Percentage of total registers that are scannable: 100%
+@file(drc_fix.tcl) 92: check_dft_rules > drc_violations_after_fix.rpt
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|   Id    |  Sev  |Count|                                            Message Text                                             |
+-------------------------------------------------------------------------------------------------------------------------------
+|DFT-111  |Warning|    1|Modified the clock path.                                                                             |
+|         |       |     |A testpoint inserted in the clock path can adversely affect the timing of the design.                |
+|DFT-115  |Warning|    1|Uniquifying design.                                                                                  |
+|         |       |     |A DFT operation requires the design to be uniquified.                                                |
+|DFT-314  |Warning|    2|Suppressed printing of details of some DFT violations.                                               |
+|         |       |     |Limited printing of details on DFT violations to avoid excessive data in the log file. To control the|
+|         |       |     | number of violations printed to the log file, use the '-max_print_violations' option. To print all  |
+|         |       |     | details to the log file, use '-max_print_violations -1'. To print the output to a file, use '>' to  |
+|         |       |     | redirect the file.                                                                                  |
+|RTLOPT-55|Warning|    2|Inferred datapath logic has changed and cannot be considered for datapath optimizations.             |
+|         |       |     |For best results, ensure this command is issued after syn_map, when all datapath optimizations have  |
+|         |       |     | finished.                                                                                           |
+-------------------------------------------------------------------------------------------------------------------------------
+Info    : Initiating DFT command. [DFT-145]
+        : Initiating check_dft_rules command.
+  Checking DFT rules for 'TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11' module under 'muxed_scan' style
+
+Detected 0 DFT rule violation(s)
+    ... see the log file for more details
+  Number of user specified non-Scan registers:   0
+      Number of registers that fail DFT rules:   0
+      Number of registers that pass DFT rules: 8545
+  Percentage of total registers that are scannable: 100%
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for check_dft_rules is 0.119000 seconds.
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed check_dft_rules command.
+  =================
+   Message Summary
+  =================
+--------------------------------------------------------
+|  Id   |Sev |Count|           Message Text            |
+--------------------------------------------------------
+|DFT-145|Info|    1|Initiating DFT command.            |
+|DFT-146|Info|    1|Successfully completed DFT command.|
+|DFT-147|Info|    1|Reporting runtime for DFT command. |
+--------------------------------------------------------
+#@ End verbose source ./drc_fix.tcl
+WARNING: This version of the tool is 454 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[12:50:07.281992] Cdslmd servers: pine-server
+[12:50:07.282008] Feature usage summary:
+[12:50:07.282009] Genus_Synthesis  
+Normal exit.
