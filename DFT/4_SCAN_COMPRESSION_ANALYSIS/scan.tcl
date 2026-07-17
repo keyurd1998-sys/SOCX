@@ -132,8 +132,9 @@ analyze_scan_compressibility \
     -compressor xor \
     -compression_method compress_scan_chains \
     -library $VERILOG_LIB \
-    -directory $COMP_DIR 
+    -directory $COMP_DIR \
+    -dont_run_atpg
 
-report_scan_compressibility -directory $COMP_DIR > $REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
+# report_scan_compressibility -directory $COMP_DIR > $REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
 
 puts "INFO: Compressibility analysis complete."
