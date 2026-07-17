@@ -50,8 +50,7 @@ set_db auto_ungroup none
 
 # PREVENT OPTIMIZATION OF ALL FLOATING DFT & JTAG PADS
 # Tell Genus not to delete these pads during syn_map
-set_db [get_cells {pad_tck pad_tms pad_tdi pad_tdo pad_trst pad_si_1 pad_si_2 pad_so_1 pad_so_2 pad_se pad_tm}] .preserve true
-
+set_db [get_cells {pad_tck pad_tms pad_tdi pad_tdo pad_trst pad_si_1 pad_si_2 pad_so_1 pad_so_2 pad_se pad_tm pad_comp_en pad_spread_en pad_mask_en pad_mask_load pad_mask_clk}] .preserve true
 # =========================================================
 # Read Constraints
 # =========================================================
@@ -104,6 +103,13 @@ define_test_clock \
     -period 20000 \
     -controllable \
     [get_ports PIN_UART_CLK]
+
+define_test_clock \
+    -name MaskClock \
+    -function test_clock \
+    -period 20000 \
+    -controllable \
+    [get_ports PIN_mask_clk]
 
 # =========================================================
 # MULTI-CLOCK COMPATIBILITY FIX
@@ -196,15 +202,19 @@ connect_scan_chains -auto_create
 # =========================================================
 # Insert compression Logic
 # =========================================================
+# =========================================================
+# Insert compression Logic
+# =========================================================
 compress_scan_chains \
     -ratio 100 \
     -compressor xor \
     -decompressor xor \
     -mask wide1 \
-    -compression_enable PIN_TestMode \
-    -spread_enable PIN_TestMode \
-    -mask_enable PIN_TestMode \
-    -mask_clock PIN_REF_CLK -allow_shared_clocks
+    -compression_enable PIN_comp_en \
+    -spread_enable PIN_spread_en \
+    -mask_enable PIN_mask_en \
+    -mask_load PIN_mask_load \
+    -mask_clock PIN_mask_clk
 # =========================================================
 # Report Scan 
 # =========================================================

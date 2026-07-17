@@ -26,7 +26,14 @@ module TOP_WRAPPER (
     input  wire PIN_TMS,
     input  wire PIN_TDI,
     input  wire PIN_TRST,
-    output wire PIN_TDO
+    output wire PIN_TDO,
+
+    // Dedicated Compression & Masking Pins
+    input  wire PIN_comp_en,
+    input  wire PIN_spread_en,
+    input  wire PIN_mask_en,
+    input  wire PIN_mask_load,
+    input  wire PIN_mask_clk
 );
 
     // ---------------------------------------------------------
@@ -86,5 +93,13 @@ module TOP_WRAPPER (
     PADDI pad_tdi  (.PAD(PIN_TDI),  .Y(core_tdi));
     PADDI pad_trst (.PAD(PIN_TRST), .Y(core_trst));
     PADDOZ pad_tdo (.A(core_tdo),   .OEN(tdo_enable), .PAD(PIN_TDO));
+    
+    wire core_comp_en, core_spread_en, core_mask_en, core_mask_load, core_mask_clk;
 
+    PADDI pad_comp_en   (.PAD(PIN_comp_en),   .Y(core_comp_en));
+    PADDI pad_spread_en (.PAD(PIN_spread_en), .Y(core_spread_en));
+    PADDI pad_mask_en   (.PAD(PIN_mask_en),   .Y(core_mask_en));
+    PADDI pad_mask_load (.PAD(PIN_mask_load), .Y(core_mask_load));
+    PADDI pad_mask_clk  (.PAD(PIN_mask_clk),  .Y(core_mask_clk));
+    
 endmodule
