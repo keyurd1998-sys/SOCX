@@ -199,8 +199,13 @@ set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
 connect_scan_chains -auto_create
 
 # =========================================================
-# Insert compression Logic
+# # Compression Control Signals
 # =========================================================
+define_test_signal -function test_mode -active high [get_ports PIN_comp_en]
+define_test_signal -function test_mode -active high [get_ports PIN_spread_en]
+define_test_signal -function test_mode -active high [get_ports PIN_mask_en]
+define_test_signal -function test_mode -active high [get_ports PIN_mask_load]
+
 # =========================================================
 # Insert compression Logic
 # =========================================================
