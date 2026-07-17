@@ -90,6 +90,27 @@ define_test_clock \
     [get_ports REF_CLK]
 
 # =========================================================
+# Define Scan Chains
+# =========================================================
+
+set NUM_SCAN_CHAINS 80
+
+for {set i 1} {$i <= $NUM_SCAN_CHAINS} {incr i} {
+create_port \
+    -direction in \
+    -name ScanIn_$i 
+
+create_port \
+    -direction out \
+    -name ScanOut_$i 
+
+define_scan_chain \
+        -name chain_$i \
+        -sdi [get_ports ScanIn_$i] \
+        -sdo [get_ports ScanOut_$i]
+    }
+
+# =========================================================
 # Check DRC Violation
 # =========================================================
 check_dft_rules
@@ -121,20 +142,28 @@ set_db syn_map_effort $EFFORT
 syn_map                                      ;# Map generic cells to library gates
 
 # =========================================================
+# Chain Configuration
+# =========================================================
+set_db [current_design] .dft_min_number_of_scan_chains $NUM_SCAN_CHAINS
+
+# =========================================================
+# build Scan Chains
+# =========================================================
+connect_scan_chains -auto_create
+
+# =========================================================
 # Analyze Scan Compressibility
 # =========================================================
 puts "INFO: Starting Scan Compressibility Analysis Setup..."
 
 # We sweep compression ratios of 50x, 60x, and 70x assuming 2 scan I/O pins.
 analyze_scan_compressibility \
-    -scanins 2 \
     -ratios {60 70 80} \
     -compressor xor \
     -compression_method compress_scan_chains \
     -library $VERILOG_LIB \
-    -directory $COMP_DIR \
-    -dont_run_atpg
+    -directory $COMP_DIR 
 
-# report_scan_compressibility -directory $COMP_DIR > $REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
+report_scan_compressibility -directory $COMP_DIR > $REPORT_DIR/${DESIGN_NAME}_scan_compressibility.rpt
 
 puts "INFO: Compressibility analysis complete."
