@@ -1,0 +1,1248 @@
+
+ 
+Copyright (C) 2002-2025 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 25.10-p027_1, built Mar 13 2025 (linux26_64)
+Options : -files TOP_ATPG/runmodus.atpg.tcl
+Date    : Fri, July 17 13:06:41 2026
+Host    : Pine-06 (x86_64 Linux 5.14.0-611.30.1.el9_7.x86_64) (6*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB)
+OS      : Red Hat Enterprise Linux release 9.7 (Plow)
+#@ Processing -files option
+@modus:root:/ 1>  source TOP_ATPG/runmodus.atpg.tcl
+#@ Begin verbose source TOP_ATPG/runmodus.atpg.tcl
+@file(TOP_ATPG/runmodus.atpg.tcl) 13: set_db workdir TOP_ATPG;
+@file(TOP_ATPG/runmodus.atpg.tcl) 14: set   WORKDIR [get_db workdir]
+@file(TOP_ATPG/runmodus.atpg.tcl) 17: set_option stdout     summary;                                # Only print a summary for each command to the terminal
+@file(TOP_ATPG/runmodus.atpg.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(TOP_ATPG/runmodus.atpg.tcl) 20: set_db stop_on_severity error;
+@file(TOP_ATPG/runmodus.atpg.tcl) 22: file delete -force $WORKDIR/tbdata;                       # Delete Test Database
+@file(TOP_ATPG/runmodus.atpg.tcl) 23: file delete -force $WORKDIR/testresults;                  # Delete Test Output Files/Logs
+@file(TOP_ATPG/runmodus.atpg.tcl) 30: build_model \
+    -cell	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11 \
+    -techlib	 /home/admin/DFT/Library/verilog/typical.v \
+    -designsource	 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v \
+    -allowmissingmodules	 yes \
+    -messagecounteach	 100 \
+
+ 
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+
+            -designtop TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11
+            -TECHLIB /home/admin/DFT/Library/verilog/typical.v
+            -allowmissingmodules yes
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_model_071726130642-355034000
+            -STDOUT summary
+            -messagecounteach 100
+            -DESIGNSOURCE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.test_netlist.v
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/home/admin/DFT/Library/verilog/typical.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 41: build_testmode \
+    -testmode	 FULLSCAN \
+    -assignfile	 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.FULLSCAN.pinassign \
+    -modedef	 FULLSCAN \
+ 
+Starting Command: build_testmode 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.FULLSCAN.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_FULLSCAN_071726130647-984108000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 91.20% active logic,  8.80% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 2 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 50: build_testmode \
+    -testmode	 COMPRESSION \
+    -assignfile	 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION.pinassign \
+    -modedef	 COMPRESSION \
+ 
+Starting Command: build_testmode 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_071726130649-882509000
+            -MODEDEF COMPRESSION
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 91.20% active logic,  8.80% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-352): There are 2 Channel Mask Load chains.    
+      1 INFO (TTM-357): There are 294 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode COMPRESSION has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 59: build_testmode \
+    -testmode	 COMPRESSION_DECOMP \
+    -assignfile	 $WORKDIR/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign \
+    -modedef	 COMPRESSION \
+ 
+Starting Command: build_testmode 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11.COMPRESSION_DECOMP.pinassign
+          * update_assign_file=
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_071726130651-936533000
+            -MODEDEF COMPRESSION
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 91.20% active logic,  8.80% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-352): There are 2 Channel Mask Load chains.    
+      1 INFO (TTM-357): There are 294 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+
+  WARNING Messages...
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 68: report_test_structures \
+    -testmode	 COMPRESSION \
+    -reportscanchain	 all \
+    -reportchannelio	 yes \
+    -reportchannelmaskscanchain	 yes \
+    -reportchannelmaskstate	 yes \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_071726130653-966835000
+            -STDOUT summary
+            -reportchannelmaskchain yes
+            -reportchannelmaskstate yes
+            -reportchannelio yes
+            -reportscanchain all
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 79: report_test_structures \
+    -testmode	 COMPRESSION_DECOMP \
+    -reportscanchain	 all \
+    -reportchannelio	 yes \
+    -reportchannelmaskscanchain	 yes \
+    -reportchannelmaskstate	 yes \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_DECOMP_071726130655-243404000
+            -STDOUT summary
+            -reportchannelmaskchain yes
+            -reportchannelmaskstate yes
+            -reportchannelio yes
+            -reportscanchain all
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 90: report_test_structures \
+    -testmode	 FULLSCAN \
+    -reportscanchain	 all \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_report_test_structures_FULLSCAN_071726130656-508252000
+            -STDOUT summary
+            -reportscanchain all
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 98: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 COMPRESSION \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_071726130657-753913000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 29 bit positions, which is 101% of the average scan chain length 29 (based on 8495 total scan chain bits and 294 valid scan chains).    
+      2 INFO (TSV-107): X source summary for  Channel Masking Scan Register block COMPACTOR.compressor.\mreg0_reg[146].__iNsT0.dff_primitive : Total Observe Points: 1 : Safe Observe Points: 0, Unsafe Observe Points: 1, Unverified Observed Points: 0   
+      1 INFO (TSV-328): The length of the longest Channel Mask Scan Register is 147 bit positions, which is 100% of the average Channel Mask Scan Register length of 147 (based on 294 total Channel Mask Scan Register bits and 2 Channel Mask Scan Registers). In addition, there are a total of 1 Channel Mask Registers and each has a length of 294 bits.    
+    294 INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.\mreg0_reg[0].__iNsT1.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.   
+    294 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin COMPACTOR.compressor.g_276.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 29 bit positions.    
+      1 INFO (TSV-383): There are 4 floating latches.    
+      1 INFO (TSV-567): There are 2 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 294 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Fri Jul 17 13:06:57 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      1 WARNING (TSV-163): Scan chain flop or latch block U0_SYS_CTRL.\current_state_reg[3].__iNsT2.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.   
+      1 WARNING (TSV-372): The Masking scan chain length exceeds the longest scan chain. Excessive tester cycles may be required. Please consider using Masking sharing techniques. The longest Masking chain depth is 147, the longest scan channel depth is 29.  
+      1 WARNING (TSV-390): There are 1 inactive (non-scan) latches.    
+
+  WARNING [Severe] Messages...
+      2 WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.\mreg0_reg[146].__iNsT0.dff_primitive may be observed at block U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 106: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 COMPRESSION_DECOMP \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_DECOMP_071726130659-626522000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 29 bit positions, which is 101% of the average scan chain length 29 (based on 8495 total scan chain bits and 294 valid scan chains).    
+      2 INFO (TSV-107): X source summary for  Channel Masking Scan Register block COMPACTOR.compressor.\mreg0_reg[146].__iNsT0.dff_primitive : Total Observe Points: 1 : Safe Observe Points: 0, Unsafe Observe Points: 1, Unverified Observed Points: 0   
+      1 INFO (TSV-328): The length of the longest Channel Mask Scan Register is 147 bit positions, which is 100% of the average Channel Mask Scan Register length of 147 (based on 294 total Channel Mask Scan Register bits and 2 Channel Mask Scan Registers). In addition, there are a total of 1 Channel Mask Registers and each has a length of 294 bits.    
+    294 INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.\mreg0_reg[0].__iNsT1.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.   
+    294 INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.drc_bufs284.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_276.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 29 bit positions.    
+      1 INFO (TSV-383): There are 4 floating latches.    
+      1 INFO (TSV-567): There are 3 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 294 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Fri Jul 17 13:06:59 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      1 WARNING (TSV-163): Scan chain flop or latch block U0_SYS_CTRL.\current_state_reg[3].__iNsT2.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_Async_fifo.u_fifo_rd.\gray_rd_ptr_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.   
+      1 WARNING (TSV-372): The Masking scan chain length exceeds the longest scan chain. Excessive tester cycles may be required. Please consider using Masking sharing techniques. The longest Masking chain depth is 147, the longest scan channel depth is 29.  
+      1 WARNING (TSV-390): There are 1 inactive (non-scan) latches.    
+
+  WARNING [Severe] Messages...
+      2 WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.\mreg0_reg[146].__iNsT0.dff_primitive may be observed at block U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 114: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 FULLSCAN \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_071726130701-545346000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 4395 bit positions, which is 100% of the average scan chain length 4395 (based on 8789 total scan chain bits and 2 valid scan chains).    
+      2 INFO (TSV-378): Scan chain beginning at 'pin ScanIn_1' and ending at 'pin ScanOut_1' is controllable and observable. The length of the scan chain is 4395 bit positions.    
+      1 INFO (TSV-567): There are 2 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 2 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Fri Jul 17 13:07:01 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      3 WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg1_reg[146].__iNsT0.dff_primitive changes value during the same scan cycle as scan chain flop or latch block U0_ALU_16B.\ALU_OUT_reg[0].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.   
+      1 WARNING (TSV-390): There are 1 inactive (non-scan) latches.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 122: build_faultmodel \
+    -includedynamic	 no \
+ 
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_faultmodel_071726130703-222764000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 129: create_logic_tests \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION_DECOMP \
+
+
+Starting Command: create_logic_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_DECOMP_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726130704-830793000
+            -STDOUT summary
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      9       9      78131    31.36%   30.31%       170988           00:00.58    [end TDA_220] 
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16      94451    69.28%   66.96%        76535           00:03.74    [end TDA_220] 
+INFO (TDA-220):     32      32       2768    70.39%   68.03%        73767           00:04.27    [end TDA_220] 
+INFO (TDA-220):     48      48       1490    70.99%   68.61%        72279           00:04.74    [end TDA_220] 
+INFO (TDA-220):     64      64       1221    71.48%   69.08%        71058           00:05.20    [end TDA_220] 
+INFO (TDA-220):     80      80       1181    71.95%   69.54%        69877           00:05.66    [end TDA_220] 
+INFO (TDA-220):     96      96       1172    72.42%   70.00%        68705           00:06.11    [end TDA_220] 
+INFO (TDA-220):    112     112       1023    72.83%   70.39%        67682           00:06.52    [end TDA_220] 
+INFO (TDA-220):    128     128        886    73.19%   70.74%        66796           00:06.98    [end TDA_220] 
+INFO (TDA-220):    144     144        762    73.49%   71.03%        66034           00:07.44    [end TDA_220] 
+INFO (TDA-220):    160     160        648    73.75%   71.28%        65386           00:07.86    [end TDA_220] 
+INFO (TDA-220):    176     176       1214    74.24%   71.76%        64172           00:08.27    [end TDA_220] 
+INFO (TDA-220):    192     192        764    74.55%   72.05%        63408           00:08.72    [end TDA_220] 
+INFO (TDA-220):    208     208        959    74.93%   72.42%        62449           00:09.08    [end TDA_220] 
+INFO (TDA-220):    224     224        632    75.19%   72.67%        61817           00:09.46    [end TDA_220] 
+INFO (TDA-220):    240     240        474    75.38%   72.85%        61343           00:09.91    [end TDA_220] 
+INFO (TDA-220):    256     256        617    75.62%   73.09%        60726           00:10.46    [end TDA_220] 
+INFO (TDA-220):    272     272        518    75.83%   73.29%        60208           00:10.85    [end TDA_220] 
+INFO (TDA-220):    288     288        597    76.07%   73.53%        59611           00:11.22    [end TDA_220] 
+INFO (TDA-220):    304     304        527    76.28%   73.73%        59084           00:11.58    [end TDA_220] 
+INFO (TDA-220):    320     320        528    76.49%   73.93%        58556           00:11.95    [end TDA_220] 
+INFO (TDA-220):    336     336        505    76.70%   74.13%        58051           00:12.31    [end TDA_220] 
+INFO (TDA-220):    352     352        450    76.88%   74.30%        57601           00:12.65    [end TDA_220] 
+INFO (TDA-220):    368     368        608    77.12%   74.54%        56993           00:13.04    [end TDA_220] 
+INFO (TDA-220):    384     384        519    77.33%   74.74%        56474           00:13.39    [end TDA_220] 
+INFO (TDA-220):    400     400        442    77.51%   74.91%        56032           00:13.76    [end TDA_220] 
+INFO (TDA-220):    416     416        423    77.68%   75.08%        55609           00:14.14    [end TDA_220] 
+INFO (TDA-220):    432     432        476    77.87%   75.26%        55133           00:14.55    [end TDA_220] 
+INFO (TDA-220):    448     448        640    78.13%   75.51%        54493           00:14.92    [end TDA_220] 
+INFO (TDA-220):    464     464        541    78.34%   75.72%        53952           00:15.26    [end TDA_220] 
+INFO (TDA-220):    480     480        494    78.54%   75.91%        53458           00:15.62    [end TDA_220] 
+INFO (TDA-220):    496     496        441    78.72%   76.08%        53017           00:15.98    [end TDA_220] 
+INFO (TDA-220):    512     512        431    78.89%   76.25%        52586           00:16.32    [end TDA_220] 
+INFO (TDA-220):    528     528        475    79.08%   76.43%        52111           00:16.71    [end TDA_220] 
+INFO (TDA-220):    544     544        541    79.30%   76.64%        51570           00:17.08    [end TDA_220] 
+INFO (TDA-220):    560     560        517    79.51%   76.85%        51053           00:17.43    [end TDA_220] 
+INFO (TDA-220):    576     576        411    79.67%   77.00%        50642           00:17.81    [end TDA_220] 
+INFO (TDA-220):    592     592        392    79.83%   77.16%        50250           00:18.13    [end TDA_220] 
+INFO (TDA-220):    608     608        376    79.98%   77.30%        49874           00:18.50    [end TDA_220] 
+INFO (TDA-220):    624     624        403    80.14%   77.46%        49471           00:18.89    [end TDA_220] 
+INFO (TDA-220):    640     640        460    80.33%   77.64%        49011           00:19.20    [end TDA_220] 
+INFO (TDA-220):    656     656        425    80.50%   77.80%        48586           00:19.57    [end TDA_220] 
+INFO (TDA-220):    672     672        378    80.65%   77.95%        48208           00:19.89    [end TDA_220] 
+INFO (TDA-220):    688     688        419    80.82%   78.11%        47789           00:20.20    [end TDA_220] 
+INFO (TDA-220):    704     704        423    80.99%   78.28%        47366           00:20.57    [end TDA_220] 
+INFO (TDA-220):    720     720        338    81.12%   78.41%        47028           00:20.88    [end TDA_220] 
+INFO (TDA-220):    736     736        396    81.28%   78.56%        46632           00:21.23    [end TDA_220] 
+INFO (TDA-220):    752     752        372    81.43%   78.71%        46260           00:21.55    [end TDA_220] 
+INFO (TDA-220):    768     768        373    81.58%   78.85%        45887           00:21.89    [end TDA_220] 
+INFO (TDA-220):    784     784        382    81.73%   79.00%        45505           00:22.25    [end TDA_220] 
+INFO (TDA-220):    800     800        400    81.89%   79.15%        45105           00:22.59    [end TDA_220] 
+INFO (TDA-220):    816     816        486    82.09%   79.34%        44619           00:22.97    [end TDA_220] 
+INFO (TDA-220):    832     832        328    82.22%   79.47%        44291           00:23.33    [end TDA_220] 
+INFO (TDA-220):    848     848        434    82.40%   79.64%        43856           00:23.67    [end TDA_220] 
+INFO (TDA-220):    864     864        319    82.52%   79.76%        43537           00:24.03    [end TDA_220] 
+INFO (TDA-220):    880     880        346    82.66%   79.90%        43191           00:24.34    [end TDA_220] 
+INFO (TDA-220):    896     896        363    82.81%   80.04%        42828           00:24.66    [end TDA_220] 
+INFO (TDA-220):    912     912        381    82.96%   80.18%        42447           00:25.00    [end TDA_220] 
+INFO (TDA-220):    928     928        312    83.09%   80.31%        42135           00:25.31    [end TDA_220] 
+INFO (TDA-220):    944     944        382    83.24%   80.45%        41753           00:25.63    [end TDA_220] 
+INFO (TDA-220):    960     960        325    83.37%   80.58%        41428           00:25.98    [end TDA_220] 
+INFO (TDA-220):    976     976        418    83.54%   80.74%        41010           00:26.35    [end TDA_220] 
+INFO (TDA-220):    992     992        338    83.67%   80.87%        40672           00:26.70    [end TDA_220] 
+INFO (TDA-220):   1008    1008        367    83.82%   81.02%        40305           00:27.06    [end TDA_220] 
+INFO (TDA-220):   1024    1024        326    83.95%   81.14%        39979           00:27.38    [end TDA_220] 
+INFO (TDA-220):   1040    1040        386    84.11%   81.29%        39593           00:27.70    [end TDA_220] 
+INFO (TDA-220):   1056    1056        347    84.25%   81.43%        39246           00:28.14    [end TDA_220] 
+INFO (TDA-220):   1072    1072        331    84.38%   81.55%        38915           00:28.49    [end TDA_220] 
+INFO (TDA-220):   1088    1088        314    84.50%   81.68%        38601           00:28.80    [end TDA_220] 
+INFO (TDA-220):   1104    1104        363    84.65%   81.82%        38238           00:29.18    [end TDA_220] 
+INFO (TDA-220):   1120    1120        380    84.80%   81.96%        37858           00:29.49    [end TDA_220] 
+INFO (TDA-220):   1136    1136        393    84.96%   82.12%        37465           00:29.82    [end TDA_220] 
+INFO (TDA-220):   1152    1152        326    85.09%   82.24%        37139           00:30.17    [end TDA_220] 
+INFO (TDA-220):   1168    1168        360    85.24%   82.38%        36779           00:30.49    [end TDA_220] 
+INFO (TDA-220):   1184    1184        376    85.39%   82.53%        36403           00:30.85    [end TDA_220] 
+INFO (TDA-220):   1200    1200        363    85.53%   82.67%        36040           00:31.15    [end TDA_220] 
+INFO (TDA-220):   1216    1216        315    85.66%   82.79%        35725           00:31.53    [end TDA_220] 
+INFO (TDA-220):   1232    1232        252    85.76%   82.89%        35473           00:31.86    [end TDA_220] 
+INFO (TDA-220):   1248    1248        244    85.86%   82.98%        35229           00:32.27    [end TDA_220] 
+INFO (TDA-220):   1264    1264        347    86.00%   83.12%        34882           00:32.60    [end TDA_220] 
+INFO (TDA-220):   1280    1280        334    86.13%   83.25%        34548           00:32.96    [end TDA_220] 
+INFO (TDA-220):   1296    1296        245    86.23%   83.34%        34303           00:33.27    [end TDA_220] 
+INFO (TDA-220):   1312    1312        324    86.36%   83.47%        33979           00:33.57    [end TDA_220] 
+INFO (TDA-220):   1328    1328        313    86.49%   83.59%        33666           00:33.88    [end TDA_220] 
+INFO (TDA-220):   1344    1344        302    86.61%   83.71%        33364           00:34.17    [end TDA_220] 
+INFO (TDA-220):   1360    1360        268    86.71%   83.81%        33096           00:34.51    [end TDA_220] 
+INFO (TDA-220):   1376    1376        315    86.84%   83.93%        32781           00:34.85    [end TDA_220] 
+INFO (TDA-220):   1392    1392        289    86.96%   84.05%        32492           00:35.18    [end TDA_220] 
+INFO (TDA-220):   1408    1408        282    87.07%   84.16%        32210           00:35.50    [end TDA_220] 
+INFO (TDA-220):   1424    1424        301    87.19%   84.27%        31909           00:35.85    [end TDA_220] 
+INFO (TDA-220):   1440    1440        245    87.29%   84.37%        31664           00:36.23    [end TDA_220] 
+INFO (TDA-220):   1456    1456        307    87.41%   84.49%        31357           00:36.57    [end TDA_220] 
+INFO (TDA-220):   1472    1472        290    87.53%   84.60%        31067           00:36.85    [end TDA_220] 
+INFO (TDA-220):   1488    1488        259    87.63%   84.70%        30808           00:37.16    [end TDA_220] 
+INFO (TDA-220):   1504    1504        334    87.77%   84.83%        30474           00:37.50    [end TDA_220] 
+INFO (TDA-220):   1520    1520        323    87.90%   84.95%        30151           00:37.87    [end TDA_220] 
+INFO (TDA-220):   1536    1536        232    87.99%   85.04%        29919           00:38.17    [end TDA_220] 
+INFO (TDA-220):   1552    1552        249    88.09%   85.14%        29670           00:38.52    [end TDA_220] 
+INFO (TDA-220):   1568    1568        266    88.20%   85.24%        29404           00:38.87    [end TDA_220] 
+INFO (TDA-220):   1584    1584        328    88.33%   85.37%        29076           00:39.30    [end TDA_220] 
+INFO (TDA-220):   1600    1600        285    88.44%   85.48%        28791           00:39.63    [end TDA_220] 
+INFO (TDA-220):   1616    1616        271    88.55%   85.59%        28520           00:39.98    [end TDA_220] 
+INFO (TDA-220):   1632    1632        235    88.65%   85.68%        28285           00:40.34    [end TDA_220] 
+INFO (TDA-220):   1648    1648        257    88.75%   85.78%        28028           00:40.71    [end TDA_220] 
+INFO (TDA-220):   1664    1664        270    88.86%   85.88%        27758           00:41.02    [end TDA_220] 
+INFO (TDA-220):   1680    1680        242    88.95%   85.98%        27516           00:41.34    [end TDA_220] 
+INFO (TDA-220):   1696    1696        303    89.08%   86.09%        27213           00:41.68    [end TDA_220] 
+INFO (TDA-220):   1712    1712        266    89.18%   86.20%        26947           00:41.99    [end TDA_220] 
+INFO (TDA-220):   1728    1728        222    89.27%   86.28%        26725           00:42.32    [end TDA_220] 
+INFO (TDA-220):   1744    1744        237    89.37%   86.38%        26488           00:42.65    [end TDA_220] 
+INFO (TDA-220):   1760    1760        307    89.49%   86.50%        26181           00:42.96    [end TDA_220] 
+INFO (TDA-220):   1776    1776        241    89.59%   86.59%        25940           00:43.32    [end TDA_220] 
+INFO (TDA-220):   1792    1792        244    89.69%   86.68%        25696           00:43.65    [end TDA_220] 
+INFO (TDA-220):   1808    1808        276    89.80%   86.79%        25420           00:44.05    [end TDA_220] 
+INFO (TDA-220):   1824    1824        226    89.89%   86.88%        25194           00:44.40    [end TDA_220] 
+INFO (TDA-220):   1840    1840        227    89.98%   86.97%        24967           00:44.80    [end TDA_220] 
+INFO (TDA-220):   1856    1856        275    90.09%   87.07%        24692           00:45.16    [end TDA_220] 
+INFO (TDA-220):   1872    1872        234    90.18%   87.16%        24458           00:45.57    [end TDA_220] 
+INFO (TDA-220):   1888    1888        179    90.25%   87.23%        24279           00:45.92    [end TDA_220] 
+INFO (TDA-220):   1904    1904        233    90.35%   87.32%        24046           00:46.25    [end TDA_220] 
+INFO (TDA-220):   1920    1920        262    90.45%   87.43%        23784           00:46.62    [end TDA_220] 
+INFO (TDA-220):   1936    1936        251    90.55%   87.52%        23533           00:46.98    [end TDA_220] 
+INFO (TDA-220):   1952    1952        222    90.64%   87.61%        23311           00:47.32    [end TDA_220] 
+INFO (TDA-220):   1968    1968        199    90.72%   87.69%        23112           00:47.72    [end TDA_220] 
+INFO (TDA-220):   1984    1984        225    90.81%   87.77%        22887           00:48.13    [end TDA_220] 
+INFO (TDA-220):   2000    2000        263    90.92%   87.88%        22624           00:48.47    [end TDA_220] 
+INFO (TDA-220):   2016    2016        216    91.01%   87.96%        22408           00:48.87    [end TDA_220] 
+INFO (TDA-220):   2032    2032        191    91.08%   88.03%        22217           00:49.24    [end TDA_220] 
+INFO (TDA-220):   2048    2048        217    91.17%   88.12%        22000           00:49.75    [end TDA_220] 
+INFO (TDA-220):   2064    2064        238    91.26%   88.21%        21762           00:50.13    [end TDA_220] 
+INFO (TDA-220):   2080    2080        220    91.35%   88.30%        21542           00:50.49    [end TDA_220] 
+INFO (TDA-220):   2096    2096        176    91.42%   88.36%        21366           00:50.88    [end TDA_220] 
+INFO (TDA-220):   2112    2112        218    91.51%   88.45%        21148           00:51.29    [end TDA_220] 
+INFO (TDA-220):   2128    2128        176    91.58%   88.52%        20972           00:51.60    [end TDA_220] 
+INFO (TDA-220):   2144    2144        229    91.67%   88.61%        20743           00:51.96    [end TDA_220] 
+INFO (TDA-220):   2160    2160        180    91.75%   88.67%        20563           00:52.42    [end TDA_220] 
+INFO (TDA-220):   2176    2176        179    91.82%   88.74%        20384           00:52.74    [end TDA_220] 
+INFO (TDA-220):   2192    2192        188    91.89%   88.82%        20196           00:53.09    [end TDA_220] 
+INFO (TDA-220):   2208    2208        193    91.97%   88.89%        20003           00:53.57    [end TDA_220] 
+INFO (TDA-220):   2224    2224        230    92.06%   88.98%        19773           00:53.98    [end TDA_220] 
+INFO (TDA-220):   2240    2240        187    92.14%   89.05%        19586           00:54.37    [end TDA_220] 
+INFO (TDA-220):   2256    2256        246    92.24%   89.15%        19340           00:54.83    [end TDA_220] 
+INFO (TDA-220):   2272    2272        205    92.32%   89.23%        19135           00:55.27    [end TDA_220] 
+INFO (TDA-220):   2288    2288        170    92.39%   89.29%        18965           00:55.73    [end TDA_220] 
+INFO (TDA-220):   2304    2304        209    92.47%   89.38%        18756           00:56.09    [end TDA_220] 
+INFO (TDA-220):   2320    2320        173    92.54%   89.44%        18583           00:56.43    [end TDA_220] 
+INFO (TDA-220):   2336    2336        195    92.62%   89.52%        18388           00:56.91    [end TDA_220] 
+INFO (TDA-220):   2352    2352        191    92.70%   89.59%        18197           00:57.33    [end TDA_220] 
+INFO (TDA-220):   2368    2368        171    92.76%   89.66%        18026           00:57.70    [end TDA_220] 
+INFO (TDA-220):   2384    2384        189    92.84%   89.73%        17837           00:58.25    [end TDA_220] 
+INFO (TDA-220):   2400    2400        217    92.93%   89.82%        17620           00:58.68    [end TDA_220] 
+INFO (TDA-220):   2416    2416        189    93.00%   89.89%        17431           00:59.28    [end TDA_220] 
+INFO (TDA-220):   2432    2432        178    93.07%   89.96%        17253           00:59.83    [end TDA_220] 
+INFO (TDA-220):   2448    2448        169    93.14%   90.02%        17084           01:00.23    [end TDA_220] 
+INFO (TDA-220):   2464    2464        150    93.20%   90.08%        16934           01:00.69    [end TDA_220] 
+INFO (TDA-220):   2480    2480        143    93.26%   90.14%        16791           01:01.29    [end TDA_220] 
+INFO (TDA-220):   2496    2496        140    93.32%   90.19%        16651           01:01.81    [end TDA_220] 
+INFO (TDA-220):   2512    2512        175    93.39%   90.26%        16475           01:02.51    [end TDA_220] 
+INFO (TDA-220):   2528    2528        204    93.47%   90.34%        16271           01:03.12    [end TDA_220] 
+INFO (TDA-220):   2544    2544        170    93.54%   90.41%        16101           01:03.67    [end TDA_220] 
+INFO (TDA-220):   2560    2560        174    93.61%   90.47%        15927           01:04.13    [end TDA_220] 
+INFO (TDA-220):   2576    2576        176    93.68%   90.54%        15751           01:04.74    [end TDA_220] 
+INFO (TDA-220):   2592    2592        166    93.74%   90.61%        15585           01:05.67    [end TDA_220] 
+INFO (TDA-220):   2608    2608        147    93.80%   90.66%        15438           01:06.22    [end TDA_220] 
+INFO (TDA-220):   2624    2624        174    93.87%   90.73%        15264           01:06.74    [end TDA_220] 
+INFO (TDA-220):   2640    2640        162    93.94%   90.79%        15102           01:07.46    [end TDA_220] 
+INFO (TDA-220):   2656    2656        143    94.00%   90.85%        14959           01:08.08    [end TDA_220] 
+INFO (TDA-220):   2672    2672        148    94.05%   90.91%        14811           01:08.88    [end TDA_220] 
+INFO (TDA-220):   2688    2688        148    94.11%   90.96%        14663           01:09.76    [end TDA_220] 
+INFO (TDA-220):   2704    2704        163    94.18%   91.03%        14500           01:10.39    [end TDA_220] 
+INFO (TDA-220):   2720    2720        141    94.24%   91.08%        14359           01:11.08    [end TDA_220] 
+INFO (TDA-220):   2736    2736        139    94.29%   91.14%        14220           01:11.61    [end TDA_220] 
+INFO (TDA-220):   2752    2752        156    94.35%   91.20%        14064           01:12.38    [end TDA_220] 
+INFO (TDA-220):   2768    2768        149    94.41%   91.25%        13914           01:13.44    [end TDA_220] 
+INFO (TDA-220):   2784    2784        123    94.46%   91.30%        13791           01:14.59    [end TDA_220] 
+INFO (TDA-220):   2800    2800        158    94.53%   91.36%        13633           01:15.70    [end TDA_220] 
+INFO (TDA-220):   2816    2816        157    94.59%   91.42%        13476           01:17.26    [end TDA_220] 
+INFO (TDA-220):   2832    2832        104    94.63%   91.46%        13372           01:18.46    [end TDA_220] 
+INFO (TDA-220):   2848    2848        113    94.68%   91.51%        13258           01:20.85    [end TDA_220] 
+INFO (TDA-220):   2864    2864        111    94.72%   91.55%        13146           01:22.46    [end TDA_220] 
+INFO (TDA-220):   2880    2880        121    94.77%   91.60%        13024           01:25.11    [end TDA_220] 
+INFO (TDA-220):   2896    2896        136    94.83%   91.65%        12888           01:26.44    [end TDA_220] 
+INFO (TDA-220):   2912    2912        101    94.87%   91.69%        12787           01:27.30    [end TDA_220] 
+INFO (TDA-220):   2928    2928        114    94.91%   91.74%        12672           01:28.56    [end TDA_220] 
+INFO (TDA-220):   2944    2944        141    94.97%   91.79%        12531           01:29.66    [end TDA_220] 
+INFO (TDA-220):   2960    2960        125    95.02%   91.84%        12405           01:31.38    [end TDA_220] 
+INFO (TDA-220):   2976    2976        105    95.06%   91.88%        12300           01:32.55    [end TDA_220] 
+INFO (TDA-220):   2992    2992        106    95.10%   91.92%        12194           01:33.93    [end TDA_220] 
+INFO (TDA-220):   3008    3008         97    95.14%   91.96%        12097           01:35.95    [end TDA_220] 
+INFO (TDA-220):   3024    3024         93    95.18%   92.00%        12003           01:38.32    [end TDA_220] 
+INFO (TDA-220):   3040    3040         82    95.21%   92.03%        11921           01:42.73    [end TDA_220] 
+INFO (TDA-220):   3056    3056         72    95.24%   92.06%        11848           01:48.39    [end TDA_220] 
+INFO (TDA-220):   3057    3057          2    95.25%   92.06%        11841           02:13.34    [end TDA_220] 
+INFO (TDA-220):   3071    3071         39    95.26%   92.07%        11802           02:13.41    [end TDA_220] 
+INFO (TDA-220):   3087    3087        113    95.31%   92.12%        11689           02:13.53    [end TDA_220] 
+INFO (TDA-220):   3088    3087          0    95.31%   92.12%        11689           02:13.56    [end TDA_220] 
+INFO (TDA-220):   3098    3088         16    95.31%   92.12%        11673           02:13.66    [end TDA_220] 
+INFO (TDA-220):   3100    3090         13    95.32%   92.13%        11660           02:13.75    [end TDA_220] 
+INFO (TDA-220):   3116    3096         12    95.32%   92.13%        11648           02:50.71    [end TDA_220] 
+INFO (TDA-220):   3121    3101         21    95.33%   92.14%        11627           02:59.15    [end TDA_220] 
+INFO (TDA-220):   3127    3102          2    95.33%   92.14%        11625           02:59.19    [end TDA_220] 
+INFO (TDA-220):   3137    3103          2    95.33%   92.14%        11623           02:59.27    [end TDA_220] 
+INFO (TDA-220):   3145    3111         57    95.36%   92.17%        11566           02:59.34    [end TDA_220] 
+INFO (TDA-220):   3145    3111          0    95.48%   92.28%        11245           03:02.24    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+    208 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):   3100    3090          0    95.32%   92.13%        11660           02:13.75     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+
+  WARNING [Severe] Messages...
+      1 WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 137: write_toggle_gram \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION_DECOMP \
+
+#-------------------------------------------------------------------------------
+Starting Command: write_toggle_gram 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_toggle_gram_COMPRESSION_DECOMP_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131008-290658000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 3120 and for capture is 3111.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+  WARNING Messages...
+      1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
+      1 WARNING (TBM-109):The test patterns analyzed for toggle calculations contain X values for unknown latch/flop states. The X values can impact toggle numbers significantly. The default latch fill policy for X values (if not specified otherwise) is the 'dontcare' option set to 'random'.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 144: write_vectors \
+    -inexperiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION_DECOMP \
+    -language	 verilog \
+    -scanformat	 serial \
+
+
+Starting Command: write_vectors 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_vectors_COMPRESSION_DECOMP_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131021-254076000
+            -STDOUT summary
+          + -language verilog
+          + -scanformat serial
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      4 INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/verilog/cycleMap.COMPRESSION_DECOMP.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression.    
+      2 INFO (TVE-004): Reading test section 1.1. Test section type equals scan.    
+      2 INFO (TVE-005): Created 1341 total cycles, of which 12 are test cycles, 1329 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      2 INFO (TVE-008): Created 522 total measures, of which 0 are PO measures and 522 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      5 INFO (TVE-103): There was no specified SCAN offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 16.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 154: commit_tests \
+    -inexperiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION_DECOMP 
+INFO (TUI-772): The command 'commit_tests' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: commit_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION_DECOMP
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_commit_tests_COMPRESSION_DECOMP_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131023-736657000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.202.8 (Relative test numbers 1 thru 3120).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.202.8 (Relative test numbers 1 to 3120).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 162: create_logic_tests \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION \
+    -testscan	 no \
+
+
+Starting Command: create_logic_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131025-216393000
+            -STDOUT summary
+            -testscan no
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16        158    95.54%   92.34%        11087           00:19.66    [end TDA_220] 
+INFO (TDA-220):     32      32        157    95.61%   92.40%        10930           00:23.81    [end TDA_220] 
+INFO (TDA-220):     48      48        151    95.67%   92.46%        10779           00:30.90    [end TDA_220] 
+INFO (TDA-220):     64      64        121    95.72%   92.51%        10658           01:29.04    [end TDA_220] 
+INFO (TDA-220):     80      80         78    95.75%   92.54%        10580           01:29.14    [end TDA_220] 
+INFO (TDA-220):     96      96         48    95.77%   92.56%        10532           01:29.22    [end TDA_220] 
+INFO (TDA-220):    112     112         64    95.79%   92.58%        10468           01:29.32    [end TDA_220] 
+INFO (TDA-220):    128     128         40    95.81%   92.60%        10428           01:29.39    [end TDA_220] 
+INFO (TDA-220):    144     144         53    95.83%   92.62%        10375           01:29.46    [end TDA_220] 
+INFO (TDA-220):    160     160         35    95.84%   92.63%        10340           01:29.53    [end TDA_220] 
+INFO (TDA-220):    171     171         83    95.88%   92.66%        10257           01:29.63    [end TDA_220] 
+INFO (TDA-220):    185     171          0    95.88%   92.66%        10257           01:29.72    [end TDA_220] 
+INFO (TDA-220):    201     187         30    95.89%   92.68%        10227           01:29.79    [end TDA_220] 
+INFO (TDA-220):    217     203         33    95.90%   92.69%        10194           01:29.86    [end TDA_220] 
+INFO (TDA-220):    233     219         23    95.91%   92.70%        10171           01:29.93    [end TDA_220] 
+INFO (TDA-220):    249     235         22    95.92%   92.71%        10149           01:30.00    [end TDA_220] 
+INFO (TDA-220):    250     236          1    95.92%   92.71%        10148           01:30.05    [end TDA_220] 
+INFO (TDA-220):    266     252         23    95.93%   92.72%        10125           02:08.28    [end TDA_220] 
+INFO (TDA-220):    282     268         19    95.94%   92.72%        10106           02:08.34    [end TDA_220] 
+INFO (TDA-220):    298     284         17    95.94%   92.73%        10089           02:08.41    [end TDA_220] 
+INFO (TDA-220):    314     300         22    95.95%   92.74%        10067           02:08.45    [end TDA_220] 
+INFO (TDA-220):    328     300          0    95.95%   92.74%        10067           02:08.52    [end TDA_220] 
+INFO (TDA-220):    335     307          7    95.96%   92.74%        10060           02:08.58    [end TDA_220] 
+INFO (TDA-220):    341     313          9    95.96%   92.74%        10051           02:08.62    [end TDA_220] 
+INFO (TDA-220):    342     314          2    95.96%   92.74%        10049           02:08.67    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     27 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    250     236          0    95.92%   92.71%        10148           01:30.05     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING [Severe] Messages...
+      1 WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 171: write_toggle_gram \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION \
+
+#-------------------------------------------------------------------------------
+Starting Command: write_toggle_gram 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_toggle_gram_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131237-967376000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 314 and for capture is 314.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+  WARNING Messages...
+      1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
+      1 WARNING (TBM-109):The test patterns analyzed for toggle calculations contain X values for unknown latch/flop states. The X values can impact toggle numbers significantly. The default latch fill policy for X values (if not specified otherwise) is the 'dontcare' option set to 'random'.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 178: write_vectors \
+    -inexperiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION \
+    -language	 verilog \
+    -scanformat	 serial \
+
+
+Starting Command: write_vectors 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_vectors_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131240-080862000
+            -STDOUT summary
+          + -language verilog
+          + -scanformat serial
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      3 INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/verilog/cycleMap.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression.    
+      1 INFO (TVE-004): Reading test section 1.1. Test section type equals logic.    
+      1 INFO (TVE-005): Created 11192 total cycles, of which 1595 are test cycles, 9597 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      1 INFO (TVE-008): Created 19730 total measures, of which 1570 are PO measures and 18160 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      5 INFO (TVE-103): There was no specified SCAN offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 16.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 188: commit_tests \
+    -inexperiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 COMPRESSION 
+INFO (TUI-772): The command 'commit_tests' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: commit_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE COMPRESSION
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_commit_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131241-442145000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression odometers prior to commit_tests: 1.1.1.2.1 thru 1.1.1.24.1 (Relative test numbers 1 thru 314).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression is saved to the master test vectors odometers: 1.1.1.2.1 to 1.1.1.24.1 (Relative test numbers 1 to 314).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 196: create_logic_tests \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 FULLSCAN \
+    -testscan	 no \
+
+
+Starting Command: create_logic_tests 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131242-812072000
+            -STDOUT summary
+            -testscan no
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16        333    96.09%   92.87%         9716           00:00.83    [end TDA_220] 
+INFO (TDA-220):     32      32        294    96.21%   92.99%         9422           00:00.98    [end TDA_220] 
+INFO (TDA-220):     48      48        266    96.32%   93.09%         9156           00:01.13    [end TDA_220] 
+INFO (TDA-220):     64      64        266    96.43%   93.19%         8890           00:01.27    [end TDA_220] 
+INFO (TDA-220):     80      80        296    96.55%   93.31%         8594           00:01.43    [end TDA_220] 
+INFO (TDA-220):     96      96        273    96.66%   93.42%         8321           00:01.57    [end TDA_220] 
+INFO (TDA-220):    112     112        281    96.77%   93.53%         8040           00:01.71    [end TDA_220] 
+INFO (TDA-220):    128     128        243    96.87%   93.62%         7797           00:01.86    [end TDA_220] 
+INFO (TDA-220):    144     144        261    96.97%   93.72%         7536           00:02.00    [end TDA_220] 
+INFO (TDA-220):    160     160        255    97.07%   93.82%         7281           00:02.14    [end TDA_220] 
+INFO (TDA-220):    176     176        199    97.15%   93.90%         7082           00:02.28    [end TDA_220] 
+INFO (TDA-220):    192     192        255    97.26%   94.00%         6827           00:02.41    [end TDA_220] 
+INFO (TDA-220):    208     208        242    97.35%   94.09%         6585           00:02.55    [end TDA_220] 
+INFO (TDA-220):    224     224        272    97.46%   94.20%         6313           00:02.70    [end TDA_220] 
+INFO (TDA-220):    240     240        215    97.55%   94.28%         6098           00:02.84    [end TDA_220] 
+INFO (TDA-220):    256     256        209    97.63%   94.36%         5889           00:02.97    [end TDA_220] 
+INFO (TDA-220):    272     272        210    97.72%   94.44%         5679           00:03.11    [end TDA_220] 
+INFO (TDA-220):    288     288        215    97.80%   94.53%         5464           00:03.25    [end TDA_220] 
+INFO (TDA-220):    304     304        259    97.91%   94.63%         5205           00:03.39    [end TDA_220] 
+INFO (TDA-220):    320     320        246    98.01%   94.72%         4959           00:03.53    [end TDA_220] 
+INFO (TDA-220):    336     336        163    98.07%   94.79%         4796           00:03.66    [end TDA_220] 
+INFO (TDA-220):    352     352        172    98.14%   94.85%         4624           00:03.81    [end TDA_220] 
+INFO (TDA-220):    368     368        184    98.22%   94.92%         4440           00:03.94    [end TDA_220] 
+INFO (TDA-220):    384     384        230    98.31%   95.01%         4210           00:04.07    [end TDA_220] 
+INFO (TDA-220):    400     400        200    98.39%   95.09%         4010           00:04.20    [end TDA_220] 
+INFO (TDA-220):    416     416        161    98.45%   95.15%         3849           00:04.34    [end TDA_220] 
+INFO (TDA-220):    432     432        215    98.54%   95.24%         3634           00:04.47    [end TDA_220] 
+INFO (TDA-220):    448     448        164    98.61%   95.30%         3470           00:04.60    [end TDA_220] 
+INFO (TDA-220):    464     464        155    98.67%   95.36%         3315           00:04.73    [end TDA_220] 
+INFO (TDA-220):    480     480        200    98.75%   95.44%         3115           00:04.87    [end TDA_220] 
+INFO (TDA-220):    496     496        161    98.81%   95.50%         2954           00:04.99    [end TDA_220] 
+INFO (TDA-220):    512     512        172    98.88%   95.57%         2782           00:05.13    [end TDA_220] 
+INFO (TDA-220):    528     528        155    98.94%   95.63%         2627           00:05.25    [end TDA_220] 
+INFO (TDA-220):    544     544        188    99.02%   95.70%         2439           00:05.39    [end TDA_220] 
+INFO (TDA-220):    560     560        204    99.10%   95.78%         2235           00:05.53    [end TDA_220] 
+INFO (TDA-220):    576     576        147    99.16%   95.84%         2088           00:05.65    [end TDA_220] 
+INFO (TDA-220):    592     592        186    99.24%   95.91%         1902           00:05.78    [end TDA_220] 
+INFO (TDA-220):    608     608        160    99.30%   95.97%         1742           00:05.91    [end TDA_220] 
+INFO (TDA-220):    624     624        129    99.35%   96.02%         1613           00:06.03    [end TDA_220] 
+INFO (TDA-220):    640     640        129    99.40%   96.07%         1484           00:06.16    [end TDA_220] 
+INFO (TDA-220):    656     656        173    99.47%   96.14%         1311           00:06.30    [end TDA_220] 
+INFO (TDA-220):    672     672        165    99.54%   96.20%         1146           00:06.43    [end TDA_220] 
+INFO (TDA-220):    688     688        167    99.61%   96.27%          979           00:06.57    [end TDA_220] 
+INFO (TDA-220):    704     704        142    99.66%   96.32%          837           00:06.69    [end TDA_220] 
+INFO (TDA-220):    720     720        149    99.72%   96.38%          688           00:06.83    [end TDA_220] 
+INFO (TDA-220):    736     736        148    99.78%   96.44%          540           00:06.96    [end TDA_220] 
+INFO (TDA-220):    752     752        164    99.85%   96.50%          376           00:07.09    [end TDA_220] 
+INFO (TDA-220):    768     768        136    99.90%   96.56%          240           00:07.23    [end TDA_220] 
+INFO (TDA-220):    784     784        136    99.96%   96.61%          104           00:07.38    [end TDA_220] 
+INFO (TDA-220):    800     800         33    99.97%   96.62%           71           00:07.47    [end TDA_220] 
+INFO (TDA-220):    816     816         29    99.98%   96.63%           42           00:07.58    [end TDA_220] 
+INFO (TDA-220):    819     819          5    99.99%   96.63%           37           00:07.63    [end TDA_220] 
+INFO (TDA-220):    835     835         20    99.99%   96.64%           17           00:07.68    [end TDA_220] 
+INFO (TDA-220):    841     841          6    99.99%   96.64%           11           00:07.73    [end TDA_220] 
+INFO (TDA-220):    845     845          4    99.99%   96.65%            7           00:07.75    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     57 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    819     819          0    99.99%   96.63%           37           00:07.63     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 205: write_toggle_gram \
+    -experiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 FULLSCAN \
+
+#-------------------------------------------------------------------------------
+Starting Command: write_toggle_gram 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_toggle_gram_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131251-868930000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 845 and for capture is 845.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+  WARNING Messages...
+      1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 212: write_vectors \
+    -inexperiment	 TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression \
+    -testmode	 FULLSCAN \
+    -language	 verilog \
+    -scanformat	 parallel \
+
+
+Starting Command: write_vectors 
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_write_vectors_FULLSCAN_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_071726131255-244717000
+            -STDOUT summary
+            -scanformat parallel
+          + -language verilog
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      3 INFO (TVE-003): Verilog write vectors output file will be: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/verilog/cycleMap.FULLSCAN.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression.    
+      1 INFO (TVE-004): Reading test section 1.1. Test section type equals logic.    
+      1 INFO (TVE-008): Created 7430930 total measures, of which 4225 are PO measures and 7426705 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      6 INFO (TVE-103): There was no specified TEST offset for this clock 'pin DFT_mask_clk'.  A default clock offset of 8.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(TOP_ATPG/runmodus.atpg.tcl) 219: exit

@@ -1,0 +1,164 @@
+Starting Command: build_faultmodel 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_faultmodel -includedynamic no -workdir /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_faultmodel_071726130703-222764000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Friday Jul 17 13:07:03 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 510297.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/testresults/logs/log_build_faultmodel_071726130703-222764000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count                10
+Global Ignored Dynamic Fault Count                0
+
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00       257746            0            0            0       257746
+Collapsed Static     0.00       202868            0            0            0       202868
+PI Static            0.00           24            0            0            0           24
+PO Static            0.00           10            0            0            0           10
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00       257746            0                                 257746
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: FULLSCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       249119            0            0            0       249119       257746            0            0            0       257746
+Collapsed Static     0.00   0.00       194311            0            0            0       194311       202868            0            0            0       202868
+PI Static            0.00   0.00           21            0            0            0           21           24            0            0            0           24
+PO Static            0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       257746            0                                 257746       257746            0                                 257746
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+                           Testmode Statistics: COMPRESSION
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       249119            0            0            0       249119       257746            0            0            0       257746
+Collapsed Static     0.00   0.00       194311            0            0            0       194311       202868            0            0            0       202868
+PI Static            0.00   0.00           21            0            0            0           21           24            0            0            0           24
+PO Static            0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       257746            0                                 257746       257746            0                                 257746
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+                           Testmode Statistics: COMPRESSION_DECOMP
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       249119            0            0            0       249119       257746            0            0            0       257746
+Collapsed Static     0.00   0.00       194311            0            0            0       194311       202868            0            0            0       202868
+PI Static            0.00   0.00           21            0            0            0           21           24            0            0            0           24
+PO Static            0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       257746            0                                 257746       257746            0                                 257746
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static        96.65       257746       249119         8627
+Collapsed Static    95.78       202868       194311         8557
+PI Static           87.50           24           21            3
+PO Static          100.00           10           10            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 3 test mode(s) defined:
+      FULLSCAN
+      COMPRESSION
+      COMPRESSION_DECOMP
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           72,095,664  bytes
+
+                      CPU Time =    0:00:00.29
+                  Elapsed Time =    0:00:00.35                    [end TDA_001]
+
+     Date Ended:  Friday Jul 17 13:07:03 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/TOP_ATPG/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,241 @@
+
+Design Name
+===========
+    TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11
+
+Scan Style
+==========
+    muxed_scan
+Design has a valid DFT rule check status
+
+Global Constraints
+==================
+    Minimum number of scan chains: 2
+    Maximum length of scan chains: no_value
+    Lock-up element type: preferred_level_sensitive
+    Mix clock edges in scan chain: false
+    Prefix for unnamed scan objects: DFT_
+
+Test signal objects
+===================
+    shift_enable: 
+          object name: ScanEnable 
+          pin name: ScanEnable 
+          hookup_pin: ScanEnable 
+          hookup_polarity: non_inverted 
+          function: shift_enable 
+          active: high 
+          ideal: false 
+          user defined: true
+
+    test_mode: 
+          object name: TestMode 
+          pin name: TestMode 
+          hookup_pin: TestMode 
+          hookup_polarity: non_inverted 
+          function: test_mode 
+          active: high 
+          ideal: false 
+          user defined: true
+
+    test_mode: 
+          object name: RST_N 
+          pin name: RST_N 
+          hookup_pin: RST_N 
+          hookup_polarity: non_inverted 
+          function: async_set_reset 
+          active: low 
+          ideal: false 
+          user defined: true
+
+    test_mode: 
+          object name: DFT_compression_enable 
+          pin name: DFT_compression_enable 
+          hookup_pin: DFT_compression_enable 
+          hookup_polarity: non_inverted 
+          function: test_mode 
+          active: high 
+          ideal: false 
+          user defined: false
+
+    test_mode: 
+          object name: DFT_spreader 
+          pin name: DFT_spreader 
+          hookup_pin: DFT_spreader 
+          hookup_polarity: non_inverted 
+          function: test_mode 
+          active: high 
+          ideal: false 
+          user defined: false
+
+    test_mode: 
+          object name: DFT_mask_enable 
+          pin name: DFT_mask_enable 
+          hookup_pin: DFT_mask_enable 
+          hookup_polarity: non_inverted 
+          function: test_mode 
+          active: high 
+          ideal: false 
+          user defined: false
+
+
+DFT configuration object
+========================
+    Configuration mode:
+          object name: FULLSCAN
+          mode_enable_high: 
+          mode_enable_low: DFT_compression_enable 
+
+    Configuration mode:
+          object name: COMPRESSION
+          mode_enable_high: DFT_compression_enable 
+          mode_enable_low: DFT_spreader 
+
+    Configuration mode:
+          object name: COMPRESSION_DECOMP
+          mode_enable_high: DFT_compression_enable DFT_spreader 
+          mode_enable_low: 
+
+
+Test clock objects
+==================
+    test_clock:
+          object name: ScanClock 
+          test_clock_domain: ScanClock 
+          user defined: true 
+          source: REF_CLK  
+          root source: REF_CLK  
+          root source polarity: non_inverting
+          hookup_pin: REF_CLK 
+          period: 20000.0
+
+    test_clock:
+          object name: UART_TestClock 
+          test_clock_domain: ScanClock 
+          user defined: true 
+          source: UART_CLK  
+          root source: UART_CLK  
+          root source polarity: non_inverting
+          hookup_pin: UART_CLK 
+          period: 20000.0
+
+    test_clock:
+          object name: DFT_mask_clk 
+          test_clock_domain: ScanClock 
+          user defined: false 
+          source: DFT_mask_clk  
+          root source: DFT_mask_clk  
+          root source polarity: non_inverting
+          hookup_pin: DFT_mask_clk 
+          period: 20000.0
+
+
+DFT controllable objects
+========================
+
+DFT don't scan objects
+======================
+    Instance: U0_SYS_CTRL/DFT_lockup_latch_neg_edge
+    Instance: DFT_lockup_latch_neg_edge12
+    Instance: DFT_lockup_latch_neg_edge
+
+DFT abstract don't scan objects
+===============================
+    Instance: COMPACTOR
+
+DFT scan segment constraints
+============================
+    Segment:
+          object name: DFT_segment_1 
+          scan-in: COMPACTOR/msi[0] 
+          scan-out: COMPACTOR/mso[0] 
+          shift-enable: internal 
+          connected_shift_enable: true 
+          length: 147 
+          type: abstract 
+          head_clock: CK
+          head_clock_edge: rise
+          instance: COMPACTOR
+          tail_clock: CK
+          tail_clock_edge: rise
+          skew_safe: false
+          dft_dont_scan: false
+          compression_segment: true
+
+    Segment:
+          object name: DFT_segment_2 
+          scan-in: COMPACTOR/msi[1] 
+          scan-out: COMPACTOR/mso[1] 
+          shift-enable: internal 
+          connected_shift_enable: true 
+          length: 147 
+          type: abstract 
+          head_clock: CK
+          head_clock_edge: rise
+          instance: COMPACTOR
+          tail_clock: CK
+          tail_clock_edge: rise
+          skew_safe: false
+          dft_dont_scan: false
+          compression_segment: true
+
+
+DFT scan chain constraints
+==========================
+    User Chain: 
+          object name: chain_1 
+          scan-in: ScanIn_1 
+          scan-in hookup_pin: ScanIn_1
+          scan-out: ScanOut_1 
+          scan-out hookup_pin: ScanOut_1
+          shared out: false 
+          shift_enable object name: none
+          max length: no_value
+          complete: false
+
+    User Chain: 
+          object name: chain_2 
+          scan-in: ScanIn_2 
+          scan-in hookup_pin: ScanIn_2
+          scan-out: ScanOut_2 
+          scan-out hookup_pin: ScanOut_2
+          shared out: false 
+          shift_enable object name: none
+          max length: no_value
+          complete: false
+
+
+DFT actual scan chains
+======================
+    Actual Chain:
+          object name: chain_1 
+          scan-in: ScanIn_1 
+          scan-in hookup_pin: ScanIn_1 
+          scan-out: ScanOut_1 
+          scan-out hookup_pin: ScanOut_1 
+          shared out: false
+          shift_enable: ScanEnable 
+          length: 4395
+          segment objects: DFT_segment_2  
+          analyzed: false
+          test_clock domain: ScanClock
+          test_clock edge: rise
+          compressed: true
+          internal scan channel objects: chain_1_0 chain_1_1 chain_1_2 chain_1_3 chain_1_4 chain_1_5 chain_1_6 chain_1_7 chain_1_8 chain_1_9 chain_1_10 chain_1_11 chain_1_12 chain_1_13 chain_1_14 chain_1_15 chain_1_16 chain_1_17 chain_1_18 chain_1_19 chain_1_20 chain_1_21 chain_1_22 chain_1_23 chain_1_24 chain_1_25 chain_1_26 chain_1_27 chain_1_28 chain_1_29 chain_1_30 chain_1_31 chain_1_32 chain_1_33 chain_1_34 chain_1_35 chain_1_36 chain_1_37 chain_1_38 chain_1_39 chain_1_40 chain_1_41 chain_1_42 chain_1_43 chain_1_44 chain_1_45 chain_1_46 chain_1_47 chain_1_48 chain_1_49 chain_1_50 chain_1_51 chain_1_52 chain_1_53 chain_1_54 chain_1_55 chain_1_56 chain_1_57 chain_1_58 chain_1_59 chain_1_60 chain_1_61 chain_1_62 chain_1_63 chain_1_64 chain_1_65 chain_1_66 chain_1_67 chain_1_68 chain_1_69 chain_1_70 chain_1_71 chain_1_72 chain_1_73 chain_1_74 chain_1_75 chain_1_76 chain_1_77 chain_1_78 chain_1_79 chain_1_80 chain_1_81 chain_1_82 chain_1_83 chain_1_84 chain_1_85 chain_1_86 chain_1_87 chain_1_88 chain_1_89 chain_1_90 chain_1_91 chain_1_92 chain_1_93 chain_1_94 chain_1_95 chain_1_96 chain_1_97 chain_1_98 chain_1_99 chain_1_100 chain_1_101 chain_1_102 chain_1_103 chain_1_104 chain_1_105 chain_1_106 chain_1_107 chain_1_108 chain_1_109 chain_1_110 chain_1_111 chain_1_112 chain_1_113 chain_1_114 chain_1_115 chain_1_116 chain_1_117 chain_1_118 chain_1_119 chain_1_120 chain_1_121 chain_1_122 chain_1_123 chain_1_124 chain_1_125 chain_1_126 chain_1_127 chain_1_128 chain_1_129 chain_1_130 chain_1_131 chain_1_132 chain_1_133 chain_1_134 chain_1_135 chain_1_136 chain_1_137 chain_1_138 chain_1_139 chain_1_140 chain_1_141 chain_1_142 chain_1_143 chain_1_144 chain_1_145 chain_1_146
+
+    Actual Chain:
+          object name: chain_2 
+          scan-in: ScanIn_2 
+          scan-in hookup_pin: ScanIn_2 
+          scan-out: ScanOut_2 
+          scan-out hookup_pin: ScanOut_2 
+          shared out: false
+          shift_enable: ScanEnable 
+          length: 4394
+          segment objects: DFT_segment_1  
+          analyzed: false
+          test_clock domain: ScanClock
+          test_clock edge: rise
+          compressed: true
+          internal scan channel objects: chain_2_147 chain_2_148 chain_2_149 chain_2_150 chain_2_151 chain_2_152 chain_2_153 chain_2_154 chain_2_155 chain_2_156 chain_2_157 chain_2_158 chain_2_159 chain_2_160 chain_2_161 chain_2_162 chain_2_163 chain_2_164 chain_2_165 chain_2_166 chain_2_167 chain_2_168 chain_2_169 chain_2_170 chain_2_171 chain_2_172 chain_2_173 chain_2_174 chain_2_175 chain_2_176 chain_2_177 chain_2_178 chain_2_179 chain_2_180 chain_2_181 chain_2_182 chain_2_183 chain_2_184 chain_2_185 chain_2_186 chain_2_187 chain_2_188 chain_2_189 chain_2_190 chain_2_191 chain_2_192 chain_2_193 chain_2_194 chain_2_195 chain_2_196 chain_2_197 chain_2_198 chain_2_199 chain_2_200 chain_2_201 chain_2_202 chain_2_203 chain_2_204 chain_2_205 chain_2_206 chain_2_207 chain_2_208 chain_2_209 chain_2_210 chain_2_211 chain_2_212 chain_2_213 chain_2_214 chain_2_215 chain_2_216 chain_2_217 chain_2_218 chain_2_219 chain_2_220 chain_2_221 chain_2_222 chain_2_223 chain_2_224 chain_2_225 chain_2_226 chain_2_227 chain_2_228 chain_2_229 chain_2_230 chain_2_231 chain_2_232 chain_2_233 chain_2_234 chain_2_235 chain_2_236 chain_2_237 chain_2_238 chain_2_239 chain_2_240 chain_2_241 chain_2_242 chain_2_243 chain_2_244 chain_2_245 chain_2_246 chain_2_247 chain_2_248 chain_2_249 chain_2_250 chain_2_251 chain_2_252 chain_2_253 chain_2_254 chain_2_255 chain_2_256 chain_2_257 chain_2_258 chain_2_259 chain_2_260 chain_2_261 chain_2_262 chain_2_263 chain_2_264 chain_2_265 chain_2_266 chain_2_267 chain_2_268 chain_2_269 chain_2_270 chain_2_271 chain_2_272 chain_2_273 chain_2_274 chain_2_275 chain_2_276 chain_2_277 chain_2_278 chain_2_279 chain_2_280 chain_2_281 chain_2_282 chain_2_283 chain_2_284 chain_2_285 chain_2_286 chain_2_287 chain_2_288 chain_2_289 chain_2_290 chain_2_291 chain_2_292 chain_2_293
+
