@@ -1,16 +1,16 @@
 Starting Command: build_testmode 
 
 INFO (TDA-005): Command Line Invocation: 
-            build_testmode -modedef FULLSCAN -assignfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.FULLSCAN.pinassign -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
+            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign -testmode COMPRESSION_DECOMP -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_FULLSCAN_080626092058-842160000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 09:20:58 2026  IST
+            Date Started: Thursday Aug 06 13:20:26 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 364371.
+            This job is process number 472475.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -18,12 +18,12 @@ INFO (TDA-009): Options/Values information.
              options marked with '+' were specified to default.)
 
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
-            -TESTMODE FULLSCAN
+            -TESTMODE COMPRESSION_DECOMP
 
-            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.FULLSCAN.pinassign
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign
           * update_assign_file=
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_FULLSCAN_080626092058-842160000
-            -MODEDEF FULLSCAN
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000
+            -MODEDEF COMPRESSION
             -STDOUT summary
 [end TDA_009]
 MODEDEFPATH set to:  /mnt/22b703da-ca2b-42dd-9641-48ed3afe6614/cadence/installs/MODUS251/tools.lnx86/tb/defaults/rules/modedef 
@@ -36,7 +36,7 @@ Modus Build Test Mode(s) beginning...
    SCAN_TYPE     =  GSD 
    BOUNDARY      =  NONE 
    IN            =  PI 
-   OUT           =  PO 
+   OUT           =  COMPACTOR 
 
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
@@ -44,30 +44,33 @@ INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387]
 INFO (THM-814): Testmode contains 90.89% active logic,  9.11% inactive logic and  0.00% constraint logic.   [end THM_814] 
 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
            coverage is impacted when too little of the logic is visible.   [end TTM_347] 
-INFO (TTM-357): There are 2 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TTM-357): There are 198 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TTM-352): There are 2 Channel Mask Load chains.   [end TTM_352] 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
-There are no PPIs for Test Mode:  FULLSCAN
+There are no PPIs for Test Mode:  COMPRESSION_DECOMP
 
-Information for Test Mode:  FULLSCAN
+Information for Test Mode:  COMPRESSION_DECOMP
 -------------------------
 
          Scan Type = GSD
 
+  Test Mode uses Linear Decompression.
+  Test Mode uses Linear Compression.
 
- Latch Summary for Test Mode:  FULLSCAN
+ Latch Summary for Test Mode:  COMPRESSION_DECOMP
  Latch Type                #Active   #Inactive       Total
  ---------------------   ---------   ---------   ---------
  Test Constraint (TC)            0           0           0 
  Scan Enable     (SE)            4           0           4 
  Fixed Value     (FV)            4          21          25 
- Floating                        0          22          22 
+ Floating                        4          22          26 
  Finite State    (FSM)           0           0           0 
 
-WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
            see preceding message(s) for details. [end TTM_809] 
 
-Test Function Pin Information for Test Mode:  FULLSCAN
+Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
 -------------------------------------------
 
           5  SC    (System  Clock)             Pins
@@ -77,12 +80,17 @@ Test Function Pin Information for Test Mode:  FULLSCAN
           0  OSC   (Oscillator)                Pins
 
           2  TI    (Test Inhibit)              Pins
-          5  SE    (Scan Enable)               Pins
+          1  TC    (Test Constraint)           Pins
+          4  SE    (Scan Enable)               Pins
           0  CI    (Clock Isolation)           Pins
           0  OI    (Output Inhibit)            Pins
 
           2  SI    (Scan Input)                Pins
           2  SO    (Scan Output)               Pins
+          2  CMI   (Channel Mask Input)        Pins
+          1  CME   (Channel Mask Enable)       Pins
+          1  CMLE  (Channel Mask Load Enable)  Pins
+          1  CML   (Channel Mask Load)         Pins
 
   Pin Index    Type Test Function                         Pin Name / Net Name
   ---------    ---- ----------------------------------    -------------------
@@ -90,16 +98,16 @@ Test Function Pin Information for Test Mode:  FULLSCAN
           0      PI  -EC  -SC                             PIN_REF_CLK / PIN_REF_CLK
           5      PI  -EC  -SC                             PIN_TCK / PIN_TCK
          10      PI  -EC  -SC                             PIN_UART_CLK / PIN_UART_CLK
-         13      PI  -EC  -SC                             PIN_mask_clk / PIN_mask_clk
+         13      PI  -EC  -SC  -CML                       PIN_mask_clk / PIN_mask_clk
+         14      PI  -TC  -CME                            PIN_mask_en / PIN_mask_en
           8      PI  -TI                                  PIN_TRST / PIN_TRST
           9      PI  +TI                                  PIN_TestMode / PIN_TestMode
           2      PI  +SE                                  PIN_ScanEnable / PIN_ScanEnable
-         12      PI  -SE                                  PIN_comp_en / PIN_comp_en
-         14      PI  -SE                                  PIN_mask_en / PIN_mask_en
-         15      PI  +SE                                  PIN_mask_load / PIN_mask_load
-         16      PI  -SE                                  PIN_spread_en / PIN_spread_en
-          3      PI   SI                                  PIN_ScanIn_1 / PIN_ScanIn_1
-          4      PI   SI1                                 PIN_ScanIn_2 / PIN_ScanIn_2
+         12      PI  +SE                                  PIN_comp_en / PIN_comp_en
+         15      PI  -SE  +CMLE                           PIN_mask_load / PIN_mask_load
+         16      PI  +SE                                  PIN_spread_en / PIN_spread_en
+          3      PI   SI   CMI                            PIN_ScanIn_1 / PIN_ScanIn_1
+          4      PI   SI1  CMI                            PIN_ScanIn_2 / PIN_ScanIn_2
          17      PO   SO                                  PIN_ScanOut_1 / PIN_ScanOut_1
          18      PO   SO1                                 PIN_ScanOut_2 / PIN_ScanOut_2
 
@@ -107,11 +115,11 @@ Test Function Pin Information for Test Mode:  FULLSCAN
 
 Modus Build Test Mode(s) completed. Highest severity is (WARNING).
 
-               Total Memory =           79,375,280  bytes
+               Total Memory =           81,021,408  bytes
 
             Cumulative Time in hours:minutes:seconds:
                    CPU Time =   0:00:00.82
-               Elapsed Time =   0:00:01.12
+               Elapsed Time =   0:00:00.93
 
 
 
@@ -126,13 +134,14 @@ Modus Build Test Mode(s) completed. Highest severity is (WARNING).
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   
       1 INFO (THM-814): Testmode contains 90.89% active logic,  9.11% inactive logic and  0.00% constraint logic.    
-      1 INFO (TTM-357): There are 2 scan chains which are controllable and observable.    
+      1 INFO (TTM-352): There are 2 Channel Mask Load chains.    
+      1 INFO (TTM-357): There are 198 scan chains which are controllable and observable.    
       1 INFO (TTM-387): A default scanop sequence will be generated.    
       1 INFO (TTM-391): A default modeinit sequence will be generated.    
 
   WARNING Messages...
       1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
-      1 WARNING (TTM-809): Test mode FULLSCAN has been created, WARNINGs have been generated -
+      1 WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
 
  For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
 

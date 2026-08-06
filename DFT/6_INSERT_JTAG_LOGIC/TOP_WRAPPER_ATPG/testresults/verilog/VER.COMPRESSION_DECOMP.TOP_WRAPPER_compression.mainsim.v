@@ -3,7 +3,7 @@
 // Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025  //
 //***************************************************************************//
 //                                                                           //
-//  FILE CREATED..............August 06, 2026 at 09:22:47                    //
+//  FILE CREATED..............August 06, 2026 at 13:33:55                    //
 //                                                                           //
 //  PROJECT NAME..............TOP_WRAPPER_ATPG                               //
 //                                                                           //
@@ -13,36 +13,36 @@
 //                                                                           //
 //  TDR.......................dummy.tdr                                      //
 //                                                                           //
-//  TEST PERIOD...............80.000   TEST TIME UNITS...........ns          //
-//  TEST PULSE WIDTH..........8.000                                          //
-//  TEST STROBE OFFSET........72.000   TEST STROBE TYPE..........edge        //
+//  TEST PERIOD...............80000.000TEST TIME UNITS...........ps          //
+//  TEST PULSE WIDTH..........8000.000                                       //
+//  TEST STROBE OFFSET........72000.000TEST STROBE TYPE..........edge        //
 //  TEST BIDI OFFSET..........0.000                                          //
 //  TEST PI OFFSET............0.000    X VALUE...................X           //
 //                                                                           //
 //  SCAN FORMAT...............serial   SCAN OVERLAP..............yes         //
-//  SCAN PERIOD...............80.000   SCAN TIME UNITS...........ns          //
-//  SCAN PULSE WIDTH..........8.000                                          //
-//  SCAN STROBE OFFSET........8.000    SCAN STROBE TYPE..........edge        //
+//  SCAN PERIOD...............80000.000SCAN TIME UNITS...........ps          //
+//  SCAN PULSE WIDTH..........8000.000                                       //
+//  SCAN STROBE OFFSET........8000.000 SCAN STROBE TYPE..........edge        //
 //  SCAN BIDI OFFSET..........0.000                                          //
 //  SCAN PI OFFSET............0.000    X VALUE...................X           //
 //                                                                           //
 //                                                                           //
 //   Individually set PIs                                                    //
 //  "PIN_REF_CLK" (PI # 1)                                                   //
-//  TEST OFFSET...............8.000    PULSE WIDTH...............8.000       //
-//  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
+//  TEST OFFSET...............8000.000 PULSE WIDTH...............8000.000    //
+//  SCAN OFFSET...............16000.000PULSE WIDTH...............8000.000    //
 //                                                                           //
 //  "PIN_TCK" (PI # 6)                                                       //
 //  TEST OFFSET...............0.000                                          //
-//  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
+//  SCAN OFFSET...............16000.000PULSE WIDTH...............8000.000    //
 //                                                                           //
 //  "PIN_UART_CLK" (PI # 11)                                                 //
-//  TEST OFFSET...............8.000    PULSE WIDTH...............8.000       //
-//  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
+//  TEST OFFSET...............8000.000 PULSE WIDTH...............8000.000    //
+//  SCAN OFFSET...............16000.000PULSE WIDTH...............8000.000    //
 //                                                                           //
 //  "PIN_mask_clk" (PI # 14)                                                 //
 //  TEST OFFSET...............0.000                                          //
-//  SCAN OFFSET...............16.000   PULSE WIDTH...............8.000       //
+//  SCAN OFFSET...............16000.000PULSE WIDTH...............8000.000    //
 //                                                                           //
 //  Active TESTMODEs TM = 3 ..COMPRESSION_DECOMP                             //
 //                                                                           //
@@ -50,7 +50,7 @@
 
 // Command Line: write_vectors -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -TESTMODE COMPRESSION_DECOMP -INEXPERIMENT TOP_WRAPPER_compression -STDOUT summary -language verilog -scanformat serial
 
-  `timescale 1 ns / 1 ps
+  `timescale 1 ps / 1 fs
 
   module TOP_WRAPPER_ATPG_COMPRESSION_DECOMP_TOP_WRAPPER_compression ;
 
@@ -116,20 +116,20 @@
       .PIN_UART_TX_O ( part_POs [4] ),      // pinName = PIN_UART_TX_O; 
       .PIN_framing_error ( part_POs [5] ),      // pinName = PIN_framing_error; 
       .PIN_parity_error ( part_POs [6] ),      // pinName = PIN_parity_error; 
-      .PIN_REF_CLK  ( part_PIs [1] ),      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
+      .PIN_REF_CLK  ( part_PIs [1] ),      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
       .PIN_RST_N    ( part_PIs [2] ),      // pinName = PIN_RST_N;  tf = -SC  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_ScanEnable ( part_PIs [3] ),      // pinName = PIN_ScanEnable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_ScanIn_1 ( part_PIs [4] ),      // pinName = PIN_ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_ScanIn_2 ( part_PIs [5] ),      // pinName = PIN_ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      .PIN_TCK      ( part_PIs [6] ),      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      .PIN_TCK      ( part_PIs [6] ),      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
       .PIN_TDI      ( part_PIs [7] ),      // pinName = PIN_TDI; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_TMS      ( part_PIs [8] ),      // pinName = PIN_TMS; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_TRST     ( part_PIs [9] ),      // pinName = PIN_TRST;  tf = -TI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_TestMode ( part_PIs [10] ),      // pinName = PIN_TestMode;  tf = +TI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      .PIN_UART_CLK ( part_PIs [11] ),      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
+      .PIN_UART_CLK ( part_PIs [11] ),      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
       .PIN_UART_RX_IN ( part_PIs [12] ),      // pinName = PIN_UART_RX_IN; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_comp_en  ( part_PIs [13] ),      // pinName = PIN_comp_en;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      .PIN_mask_clk ( part_PIs [14] ),      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      .PIN_mask_clk ( part_PIs [14] ),      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
       .PIN_mask_en  ( part_PIs [15] ),      // pinName = PIN_mask_en;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_mask_load ( part_PIs [16] ),      // pinName = PIN_mask_load;  tf = -SE  +CMLE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       .PIN_spread_en ( part_PIs [17] ));      // pinName = PIN_spread_en;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
@@ -402,29 +402,29 @@
 
       CYCLE = CYCLE + 1; 
       SERIALCYCLE = SERIALCYCLE + 1; 
-     #0.000000;        // 0.000000 ns;  From the start of the cycle.
+     #0.000000;        // 0.000000 ps;  From the start of the cycle.
       part_PIs [2] = stim_PIs [2];      // pinName = PIN_RST_N;  tf = -SC  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [3] = stim_PIs [3];      // pinName = PIN_ScanEnable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [4] = stim_PIs [4];      // pinName = PIN_ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [5] = stim_PIs [5];      // pinName = PIN_ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      part_PIs [6] = stim_PIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      part_PIs [6] = stim_PIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
       part_PIs [7] = stim_PIs [7];      // pinName = PIN_TDI; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [8] = stim_PIs [8];      // pinName = PIN_TMS; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [9] = stim_PIs [9];      // pinName = PIN_TRST;  tf = -TI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [10] = stim_PIs [10];      // pinName = PIN_TestMode;  tf = +TI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [12] = stim_PIs [12];      // pinName = PIN_UART_RX_IN; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [13] = stim_PIs [13];      // pinName = PIN_comp_en;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-      part_PIs [14] = stim_PIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
+      part_PIs [14] = stim_PIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
       part_PIs [15] = stim_PIs [15];      // pinName = PIN_mask_en;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [16] = stim_PIs [16];      // pinName = PIN_mask_load;  tf = -SE  +CMLE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [17] = stim_PIs [17];      // pinName = PIN_spread_en;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-     #8.000000;        // 8.000000 ns;  From the start of the cycle.
-      part_PIs [1] = stim_PIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [11] = stim_PIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-     #8.000000;        // 16.000000 ns;  From the start of the cycle.
-      part_PIs [1] = stim_CIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [11] = stim_CIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-     #56.000000;        // 72.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 8000.000000 ps;  From the start of the cycle.
+      part_PIs [1] = stim_PIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [11] = stim_PIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+     #8000.000000;        // 16000.000000 ps;  From the start of the cycle.
+      part_PIs [1] = stim_CIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [11] = stim_CIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+     #56000.000000;        // 72000.000000 ps;  From the start of the cycle.
 
       for ( POnum = 1; POnum <= 6; POnum = POnum + 1 ) begin 
         if (( part_POs [ POnum ] !== meas_POs [ POnum ] ) & ( meas_POs [ POnum ] !== 1'bX )) begin 
@@ -443,7 +443,7 @@
         end  
         else if ( meas_POs [ POnum ] !== 1'bX )  good_compares = good_compares + 1; 
       end  
-     #8.000000;        // 80.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 80000.000000 ps;  From the start of the cycle.
       meas_POs = {6{1'bX}}; 
 
     end  
@@ -498,14 +498,14 @@
       for ( SCANCYCLE = 1; SCANCYCLE <= MAX; SCANCYCLE = SCANCYCLE + 1 ) begin 
         CYCLE = CYCLE + 1; 
         SERIALCYCLE = SERIALCYCLE + 1; 
-     #0.000000;        // 0.000000 ns;  From the start of the cycle.
+     #0.000000;        // 0.000000 ps;  From the start of the cycle.
         part_PIs [4] = stim_CMSR_1 [ 0 + SCANCYCLE ];      // pinName = PIN_ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
         part_PIs [5] = stim_CMSR_2 [ 0 + SCANCYCLE ];      // pinName = PIN_ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-     #16.000000;        // 16.000000 ns;  From the start of the cycle.
-        part_PIs [14] = 1'b1;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #8.000000;        // 24.000000 ns;  From the start of the cycle.
-        part_PIs [14] = 1'b0;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #56.000000;        // 80.000000 ns;  From the start of the cycle.
+     #16000.000000;        // 16000.000000 ps;  From the start of the cycle.
+        part_PIs [14] = 1'b1;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+     #8000.000000;        // 24000.000000 ps;  From the start of the cycle.
+        part_PIs [14] = 1'b0;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+     #56000.000000;        // 80000.000000 ps;  From the start of the cycle.
       end  
       stim_CMSR_1 = {99{1'b0}};   stim_CMSR_2 = {99{1'b0}};   
       stim_PIs = part_PIs; 
@@ -546,11 +546,11 @@
       for ( SCANCYCLE = 1; SCANCYCLE <= MAX; SCANCYCLE = SCANCYCLE + 1 ) begin 
         CYCLE = CYCLE + 1; 
         SERIALCYCLE = SERIALCYCLE + 1; 
-     #0.000000;        // 0.000000 ns;  From the start of the cycle.
+     #0.000000;        // 0.000000 ps;  From the start of the cycle.
         part_PIs [15] = stim_CME_0 [ 0 + SCANCYCLE ];      // pinName = PIN_mask_en;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
         part_PIs [4] = stim_CR_1 [ 0 + SCANCYCLE ];      // pinName = PIN_ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
         part_PIs [5] = stim_CR_2 [ 0 + SCANCYCLE ];      // pinName = PIN_ScanIn_2;  tf =  SI1  CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-     #8.000000;        // 8.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 8000.000000 ps;  From the start of the cycle.
 
         if (( part_POs [1] !== meas_OR_1 [ 0 + SCANCYCLE ] ) & ( meas_OR_1 [ 0 + SCANCYCLE ] !== 1'bX )) begin      // pinName = PIN_ScanOut_1;  tf =  SO  ; 
           if ( test_num != failed_test_num )  begin 
@@ -591,17 +591,17 @@
             good_compares = good_compares + 1;
           end 
         end 
-     #8.000000;        // 16.000000 ns;  From the start of the cycle.
-        part_PIs [6] = 1'b1;      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-        part_PIs [11] = 1'b1;      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-        part_PIs [14] = 1'b1;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-        part_PIs [1] = 1'b1;      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-     #8.000000;        // 24.000000 ns;  From the start of the cycle.
-        part_PIs [6] = 1'b0;      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-        part_PIs [11] = 1'b0;      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-        part_PIs [14] = 1'b0;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-        part_PIs [1] = 1'b0;      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-     #56.000000;        // 80.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 16000.000000 ps;  From the start of the cycle.
+        part_PIs [6] = 1'b1;      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+        part_PIs [11] = 1'b1;      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+        part_PIs [14] = 1'b1;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+        part_PIs [1] = 1'b1;      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+     #8000.000000;        // 24000.000000 ps;  From the start of the cycle.
+        part_PIs [6] = 1'b0;      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+        part_PIs [11] = 1'b0;      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+        part_PIs [14] = 1'b0;      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+        part_PIs [1] = 1'b0;      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+     #56000.000000;        // 80000.000000 ps;  From the start of the cycle.
       end  
       meas_OR_1 = {43{1'bX}};   meas_OR_2 = {43{1'bX}};   
       stim_CR_1 = {43{1'b0}};   stim_CR_2 = {43{1'b0}};   
@@ -632,6 +632,102 @@
   endtask  
 
 //***************************************************************************//
+//                        DEFINE TIMED TEST PROCEDURE                        //
+//***************************************************************************//
+
+  task TBphantomLogicSeq1_20260806075043__0; 
+    begin 
+
+      if ( sim_trace )  $display ( "\nRunning task:  TBphantomLogicSeq1_20260806075043__0 " ); 
+
+      CYCLE = CYCLE + 1; 
+      SERIALCYCLE = SERIALCYCLE + 1; 
+     #25.000000;        // 25.000000 ps;  From the start of the cycle.
+      part_PIs[0001] = stim_PIs[0001]; 
+     #1200.000000;        // 1225.000000 ps;  From the start of the cycle.
+      part_PIs[0001] = stim_CIs[0001]; 
+     #7675.000000;        // 8900.000000 ps;  From the start of the cycle.
+      stim_PIs[0001] = 1'b0; 
+      stim_PIs[0006] = 1'b0; 
+      stim_PIs[0011] = 1'b0; 
+      stim_PIs[0014] = 1'b0; 
+
+    end  
+  endtask  
+
+//***************************************************************************//
+//                        DEFINE TIMED TEST PROCEDURE                        //
+//***************************************************************************//
+
+  task TBphantomLogicSeq1_20260806075043__1; 
+    begin 
+
+      if ( sim_trace )  $display ( "\nRunning task:  TBphantomLogicSeq1_20260806075043__1 " ); 
+
+      CYCLE = CYCLE + 1; 
+      SERIALCYCLE = SERIALCYCLE + 1; 
+     #25.000000;        // 25.000000 ps;  From the start of the cycle.
+      part_PIs[0001] = stim_PIs[0001]; 
+     #1200.000000;        // 1225.000000 ps;  From the start of the cycle.
+      part_PIs[0001] = stim_CIs[0001]; 
+     #1275.000000;        // 2500.000000 ps;  From the start of the cycle.
+      stim_PIs[0001] = 1'b0; 
+      stim_PIs[0006] = 1'b0; 
+      stim_PIs[0011] = 1'b0; 
+      stim_PIs[0014] = 1'b0; 
+
+    end  
+  endtask  
+
+//***************************************************************************//
+//                        DEFINE TIMED TEST PROCEDURE                        //
+//***************************************************************************//
+
+  task TBphantomLogicSeq2_20260806075801__0; 
+    begin 
+
+      if ( sim_trace )  $display ( "\nRunning task:  TBphantomLogicSeq2_20260806075801__0 " ); 
+
+      CYCLE = CYCLE + 1; 
+      SERIALCYCLE = SERIALCYCLE + 1; 
+     #25.000000;        // 25.000000 ps;  From the start of the cycle.
+      part_PIs[0011] = stim_PIs[0011]; 
+     #1200.000000;        // 1225.000000 ps;  From the start of the cycle.
+      part_PIs[0011] = stim_CIs[0011]; 
+     #7675.000000;        // 8900.000000 ps;  From the start of the cycle.
+      stim_PIs[0001] = 1'b0; 
+      stim_PIs[0006] = 1'b0; 
+      stim_PIs[0011] = 1'b0; 
+      stim_PIs[0014] = 1'b0; 
+
+    end  
+  endtask  
+
+//***************************************************************************//
+//                        DEFINE TIMED TEST PROCEDURE                        //
+//***************************************************************************//
+
+  task TBphantomLogicSeq2_20260806075801__1; 
+    begin 
+
+      if ( sim_trace )  $display ( "\nRunning task:  TBphantomLogicSeq2_20260806075801__1 " ); 
+
+      CYCLE = CYCLE + 1; 
+      SERIALCYCLE = SERIALCYCLE + 1; 
+     #25.000000;        // 25.000000 ps;  From the start of the cycle.
+      part_PIs[0011] = stim_PIs[0011]; 
+     #1200.000000;        // 1225.000000 ps;  From the start of the cycle.
+      part_PIs[0011] = stim_CIs[0011]; 
+     #1275.000000;        // 2500.000000 ps;  From the start of the cycle.
+      stim_PIs[0001] = 1'b0; 
+      stim_PIs[0006] = 1'b0; 
+      stim_PIs[0011] = 1'b0; 
+      stim_PIs[0014] = 1'b0; 
+
+    end  
+  endtask  
+
+//***************************************************************************//
 //                           DEFINE SCAN PROCEDURE                           //
 //***************************************************************************//
 
@@ -642,7 +738,7 @@
         CYCLE = CYCLE + 1; 
         SERIALCYCLE = SERIALCYCLE + 1; 
       end 
-     #0.000000;        // 0.000000 ns;  From the start of the cycle.
+     #0.000000;        // 0.000000 ps;  From the start of the cycle.
       part_PIs [2] = stim_PIs [2];      // pinName = PIN_RST_N;  tf = -SC  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [3] = stim_PIs [3];      // pinName = PIN_ScanEnable;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [4] = stim_PIs [4];      // pinName = PIN_ScanIn_1;  tf =  SI   CMI  ; testOffset = 0.000000;  scanOffset = 0.000000;  
@@ -656,7 +752,7 @@
       part_PIs [15] = stim_PIs [15];      // pinName = PIN_mask_en;  tf = -TC  -CME  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [16] = stim_PIs [16];      // pinName = PIN_mask_load;  tf = -SE  +CMLE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
       part_PIs [17] = stim_PIs [17];      // pinName = PIN_spread_en;  tf = +SE  ; testOffset = 0.000000;  scanOffset = 0.000000;  
-     #8.000000;        // 8.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 8000.000000 ps;  From the start of the cycle.
 
       for ( POnum = 1; POnum <= 6; POnum = POnum + 1 ) begin 
         if (( part_POs [ POnum ] !== meas_POs [ POnum ] ) & ( meas_POs [ POnum ] !== 1'bX )) begin 
@@ -675,17 +771,17 @@
         end  
         else if ( meas_POs [ POnum ] !== 1'bX )  good_compares = good_compares + 1; 
       end  
-     #8.000000;        // 16.000000 ns;  From the start of the cycle.
-      part_PIs [1] = stim_PIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [6] = stim_PIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-      part_PIs [11] = stim_PIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [14] = stim_PIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #8.000000;        // 24.000000 ns;  From the start of the cycle.
-      part_PIs [1] = stim_CIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [6] = stim_CIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-      part_PIs [11] = stim_CIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8.000000;  scanOffset = 16.000000;  
-      part_PIs [14] = stim_CIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16.000000;  
-     #56.000000;        // 80.000000 ns;  From the start of the cycle.
+     #8000.000000;        // 16000.000000 ps;  From the start of the cycle.
+      part_PIs [1] = stim_PIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [6] = stim_PIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+      part_PIs [11] = stim_PIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [14] = stim_PIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+     #8000.000000;        // 24000.000000 ps;  From the start of the cycle.
+      part_PIs [1] = stim_CIs [1];      // pinName = PIN_REF_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [6] = stim_CIs [6];      // pinName = PIN_TCK;  tf = -ES  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+      part_PIs [11] = stim_CIs [11];      // pinName = PIN_UART_CLK;  tf = -ES  ; testOffset = 8000.000000;  scanOffset = 16000.000000;  
+      part_PIs [14] = stim_CIs [14];      // pinName = PIN_mask_clk;  tf = -ES  -CML  ; testOffset = 0.000000;  scanOffset = 16000.000000;  
+     #56000.000000;        // 80000.000000 ps;  From the start of the cycle.
       meas_POs = {6{1'bX}}; 
 
     end  
@@ -1058,6 +1154,34 @@
 
             endcase  
           end  
+        end  
+
+        850: begin 
+          rc_read = $fscanf ( DATAID, "%d", TASKNUM ); 
+          if ( rc_read <= 0 )  bad_cmd_code; 
+          else  begin 
+
+            case ( TASKNUM ) 
+
+              1: begin 
+                if ( sim_range )  TBphantomLogicSeq1_20260806075043__0; 
+              end  
+
+              2: begin 
+                if ( sim_range )  TBphantomLogicSeq1_20260806075043__1; 
+              end  
+
+              3: begin 
+                if ( sim_range )  TBphantomLogicSeq2_20260806075801__0; 
+              end  
+
+              4: begin 
+                if ( sim_range )  TBphantomLogicSeq2_20260806075801__1; 
+              end  
+
+            endcase  
+          end  
+          line_number = line_number + 1; 
         end  
 
         900: begin 

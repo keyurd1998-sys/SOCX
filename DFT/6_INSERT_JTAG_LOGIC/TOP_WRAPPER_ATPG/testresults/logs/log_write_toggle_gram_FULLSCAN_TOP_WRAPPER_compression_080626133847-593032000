@@ -1,16 +1,16 @@
 Starting Command: write_toggle_gram 
 
 INFO (TDA-005): Command Line Invocation: 
-            write_toggle_gram -experiment TOP_WRAPPER_compression -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
+            write_toggle_gram -experiment TOP_WRAPPER_compression -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_write_toggle_gram_COMPRESSION_TOP_WRAPPER_compression_080626092308-254696000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_write_toggle_gram_FULLSCAN_TOP_WRAPPER_compression_080626133847-593032000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 09:23:08 2026  IST
+            Date Started: Thursday Aug 06 13:38:47 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 365376.
+            This job is process number 480393.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -18,15 +18,14 @@ INFO (TDA-009): Options/Values information.
              options marked with '+' were specified to default.)
 
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
-            -TESTMODE COMPRESSION
+            -TESTMODE FULLSCAN
             -EXPERIMENT TOP_WRAPPER_compression
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_write_toggle_gram_COMPRESSION_TOP_WRAPPER_compression_080626092308-254696000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_write_toggle_gram_FULLSCAN_TOP_WRAPPER_compression_080626133847-593032000
             -STDOUT summary
 [end TDA_009]
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
-INFO (TBM-088): The total number of test to be analyzed for scan is 199 and for capture is 199. [end TBM_088] 
-WARNING (TBM-109):The test patterns analyzed for toggle calculations contain X values for unknown latch/flop states. The X values can impact toggle numbers significantly. The default latch fill policy for X values (if not specified otherwise) is the 'dontcare' option set to 'random'. [end TBM_109] 
+INFO (TBM-088): The total number of test to be analyzed for scan is 698 and for capture is 698. [end TBM_088] 
 
 
 ***************************************************************************************************
@@ -86,16 +85,16 @@ INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE [end TBM_054]
 |             |          | Switching  | Start-End  | Switching |Switching  |Switching  |  Odometer       |  Odometer       |
 |             |          | Percentage | Scan Cycle | Percentage|Percentage |Percentage |                 |                 |
 +=============+==========+============+============+===========+===========+===========+=================+=================+
-|1.1.1.11.14  |     141  |    66.51   |   25-27    |    62.90  |    32.83  |    30.06  |1.1.1.11.14.5.1  |1.1.1.12.1.1.1   |
-|1.1.1.14.5   |     163  |    65.88   |   41-43    |    60.89  |    32.19  |    28.70  |1.1.1.14.5.5.1   |1.1.1.14.6.1.1   |
-|1.1.1.15.4   |     178  |    64.71   |   37-39    |    58.30  |    31.61  |    26.68  |1.1.1.15.4.5.1   |1.1.1.15.5.1.1   |
-|1.1.1.14.6   |     164  |    64.37   |    2-4     |    59.59  |    25.52  |    34.06  |1.1.1.14.6.5.1   |1.1.1.14.7.1.1   |
-|1.1.1.2.11   |      11  |    64.04   |   10-12    |    61.42  |    31.33  |    30.08  |1.1.1.2.11.5.1   |1.1.1.2.12.1.1   |
-|1.1.1.15.5   |     179  |    63.79   |    5-7     |    57.88  |    25.65  |    32.22  |1.1.1.15.5.5.1   |1.1.1.15.6.1.1   |
-|1.1.1.9.8    |     106  |    63.54   |   41-43    |    58.72  |    31.64  |    27.08  |1.1.1.9.8.5.1    |1.1.1.9.9.1.1    |
-|1.1.1.13.8   |     150  |    63.34   |   16-18    |    57.35  |    28.09  |    29.26  |1.1.1.13.8.5.1   |1.1.1.13.9.1.1   |
-|1.1.1.9.9    |     107  |    62.92   |    2-4     |    52.15  |    21.16  |    30.99  |1.1.1.9.9.5.1    |1.1.1.9.10.1.1   |
-|1.1.1.3.4    |      20  |    62.13   |    7-9     |    54.56  |    25.01  |    29.54  |1.1.1.3.4.5.1    |1.1.1.3.5.1.1    |
+|1.1.1.35.14  |     541  |    52.06   | 1394-1396  |    51.35  |    25.63  |    25.71  |1.1.1.35.14.4.1  |1.1.1.35.15.1.1  |
+|1.1.1.25.5   |     373  |    52.02   |  808-810   |    51.15  |    25.33  |    25.81  |1.1.1.25.5.4.1   |1.1.1.25.6.1.1   |
+|1.1.1.17.9   |     249  |    51.83   | 1390-1392  |    50.98  |    25.36  |    25.61  |1.1.1.17.9.4.1   |1.1.1.17.10.1.1  |
+|1.1.1.21.5   |     309  |    51.75   | 4246-4248  |    50.20  |    25.64  |    24.56  |1.1.1.21.5.4.1   |1.1.1.21.6.1.1   |
+|1.1.1.10.4   |     132  |    51.72   |  553-555   |    50.96  |    25.57  |    25.38  |1.1.1.10.4.4.1   |1.1.1.10.5.1.1   |
+|1.1.1.18.4   |     260  |    51.72   | 3888-3890  |    50.93  |    25.51  |    25.42  |1.1.1.18.4.4.1   |1.1.1.18.5.1.1   |
+|1.1.1.25.4   |     372  |    51.66   | 4248-4250  |    50.59  |    25.68  |    24.91  |1.1.1.25.4.4.1   |1.1.1.25.5.1.1   |
+|1.1.1.16.5   |     229  |    51.62   |  759-761   |    50.90  |    25.26  |    25.64  |1.1.1.16.5.4.1   |1.1.1.16.6.1.1   |
+|1.1.1.19.12  |     284  |    51.57   | 2685-2687  |    50.82  |    25.74  |    25.07  |1.1.1.19.12.4.1  |1.1.1.19.13.1.1  |
+|1.1.1.27.14  |     414  |    51.56   | 4257-4259  |    50.61  |    25.59  |    25.02  |1.1.1.27.14.4.1  |1.1.1.27.15.1.1  |
 +=============+==========+============+============+===========+===========+===========+=================+=================+
 
 INFO (TBM-054): Scan Shift Toggle report categorized by SCAN CYCLE [end TBM_054] 
@@ -106,16 +105,16 @@ INFO (TBM-054): Scan Shift Toggle report categorized by SCAN CYCLE [end TBM_054]
 |             | Sequence | Cycle | Switching | Switching | Switching |  Event          |  Event          |
 |             |          | Number| Percentage| Percentage| Percentage|  Odometer       |  Odometer       |
 +=============+==========+=======+===========+===========+===========+=================+=================+
-|1.1.1.11.14  |    141   |   25  |    67.29  |    39.63  |    27.66  |1.1.1.11.14.5.1  |1.1.1.12.1.1.1   |
-|1.1.1.14.5   |    163   |   43  |    66.28  |    66.28  |     0.00  |1.1.1.14.5.5.1   |1.1.1.14.6.1.1   |
-|1.1.1.14.6   |    164   |    3  |    65.15  |     4.67  |    60.48  |1.1.1.14.6.5.1   |1.1.1.14.7.1.1   |
-|1.1.1.15.4   |    178   |   38  |    65.10  |    57.02  |     8.08  |1.1.1.15.4.5.1   |1.1.1.15.5.1.1   |
-|1.1.1.2.11   |     11   |   32  |    65.03  |    47.80  |    17.23  |1.1.1.2.11.5.1   |1.1.1.2.12.1.1   |
-|1.1.1.9.8    |    106   |   41  |    63.91  |    60.48  |     3.43  |1.1.1.9.8.5.1    |1.1.1.9.9.1.1    |
-|1.1.1.15.5   |    179   |   13  |    63.83  |    18.65  |    45.17  |1.1.1.15.5.5.1   |1.1.1.15.6.1.1   |
-|1.1.1.13.8   |    150   |   17  |    63.71  |    24.47  |    39.24  |1.1.1.13.8.5.1   |1.1.1.13.9.1.1   |
-|1.1.1.9.9    |    107   |    3  |    63.70  |     3.50  |    60.20  |1.1.1.9.9.5.1    |1.1.1.9.10.1.1   |
-|1.1.1.10.7   |    121   |   23  |    62.63  |    34.99  |    27.63  |1.1.1.10.7.7.1   |1.1.1.10.8.1.1   |
+|1.1.1.35.14  |    541   | 1394  |    52.06  |    16.89  |    35.16  |1.1.1.35.14.4.1  |1.1.1.35.15.1.1  |
+|1.1.1.25.5   |    373   |  810  |    52.03  |     9.72  |    42.30  |1.1.1.25.5.4.1   |1.1.1.25.6.1.1   |
+|1.1.1.17.9   |    249   | 1390  |    51.83  |    16.58  |    35.24  |1.1.1.17.9.4.1   |1.1.1.17.10.1.1  |
+|1.1.1.21.5   |    309   | 4248  |    51.76  |    50.60  |     1.16  |1.1.1.21.5.4.1   |1.1.1.21.6.1.1   |
+|1.1.1.18.4   |    260   | 3876  |    51.73  |    45.84  |     5.88  |1.1.1.18.4.4.1   |1.1.1.18.5.1.1   |
+|1.1.1.10.4   |    132   |  554  |    51.73  |     6.94  |    44.78  |1.1.1.10.4.4.1   |1.1.1.10.5.1.1   |
+|1.1.1.25.4   |    372   | 4248  |    51.66  |    50.55  |     1.10  |1.1.1.25.4.4.1   |1.1.1.25.5.1.1   |
+|1.1.1.16.5   |    229   |  759  |    51.62  |     9.06  |    42.56  |1.1.1.16.5.4.1   |1.1.1.16.6.1.1   |
+|1.1.1.19.12  |    284   | 2686  |    51.58  |    32.18  |    19.39  |1.1.1.19.12.4.1  |1.1.1.19.13.1.1  |
+|1.1.1.27.14  |    414   | 4257  |    51.57  |    50.38  |     1.18  |1.1.1.27.14.4.1  |1.1.1.27.15.1.1  |
 +=============+==========+=======+===========+===========+===========+=================+=================+
 
 INFO (TBM-054): Scan Shift Toggle report categorized by FLOP [end TBM_054] 
@@ -126,16 +125,16 @@ INFO (TBM-054): Scan Shift Toggle report categorized by FLOP [end TBM_054]
 | Switching |  Weight    |  Instance Name                                           |
 | Percentage|            |                                                          |
 +===========+============+==========================================================+
-|     50.35 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[533][7]    |
-|     50.34 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[534][0]    |
-|     50.33 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[534][1]    |
-|     50.33 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[533][6]    |
-|     50.30 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[781][1]    |
-|     50.30 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[72][6]     |
-|     50.30 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[533][5]    |
-|     50.29 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[781][2]    |
-|     50.29 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[72][7]     |
-|     50.29 |          1 | u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[533][4]    |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[7]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[6]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[4]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[2]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[1]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\w_ptr_reg[0]             |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[3]        |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[2]        |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[1]        |
+|     50.06 |          1 | u_core.U0_Async_fifo.u_fifo_wr.\gray_w_ptr_reg[0]        |
 +===========+============+==========================================================+
 
 INFO (TBM-054): Capture Toggle report categorized by SEQUENCE [end TBM_054] 
@@ -147,16 +146,16 @@ INFO (TBM-054): Capture Toggle report categorized by SEQUENCE [end TBM_054]
 |             |           | Pulses     | Switching | Percentage|
 |             |           |            | Percentage|           |
 +=============+===========+============+===========+===========+
-|1.1.1.10.2   |      116  |         3  |    19.31  |    57.48  |
-|1.1.1.10.9   |      123  |         3  |    19.29  |    57.50  |
-|1.1.1.10.8   |      122  |         3  |    19.29  |    57.48  |
-|1.1.1.10.7   |      121  |         3  |    18.55  |    55.22  |
-|1.1.1.10.3   |      117  |         3  |    17.01  |    50.60  |
-|1.1.1.10.12  |      126  |         3  |    17.00  |    50.58  |
-|1.1.1.10.10  |      124  |         3  |    16.24  |    48.31  |
-|1.1.1.10.13  |      127  |         3  |    15.55  |    46.00  |
-|1.1.1.10.11  |      125  |         3  |    15.51  |    45.95  |
-|1.1.1.10.1   |      115  |         3  |    15.50  |    46.00  |
+|1.2.1.7.1    |      696  |         1  |    47.63  |    47.63  |
+|1.2.1.2.2    |      630  |         3  |    16.94  |    49.01  |
+|1.2.1.4.9    |      669  |         3  |    16.74  |    48.59  |
+|1.2.1.4.1    |      661  |         3  |     0.59  |     1.27  |
+|1.2.1.4.2    |      662  |         3  |     0.57  |     1.19  |
+|1.1.1.32.8   |      487  |         2  |     0.33  |     0.39  |
+|1.1.1.38.7   |      582  |         2  |     0.32  |     0.39  |
+|1.2.1.8.1    |      698  |         1  |     0.32  |     0.32  |
+|1.1.1.35.11  |      538  |         2  |     0.31  |     0.39  |
+|1.1.1.33.10  |      505  |         2  |     0.31  |     0.34  |
 +=============+===========+============+===========+===========+
 
 INFO (TBM-054): Capture Toggle report categorized by CAPTURE CYCLE [end TBM_054] 
@@ -167,16 +166,16 @@ INFO (TBM-054): Capture Toggle report categorized by CAPTURE CYCLE [end TBM_054]
 |             | Sequence | Odometer        | Switching |                                                       |
 |             |          |                 | Percentage|                                                       |
 +=============+==========+=================+===========+=======================================================+
-|1.1.1.10.9   |      123 |1.1.1.10.9.3.1   |    57.50  | PIN_REF_CLK                                           |
-|1.1.1.10.8   |      122 |1.1.1.10.8.3.1   |    57.48  | PIN_REF_CLK                                           |
-|1.1.1.10.2   |      116 |1.1.1.10.2.3.1   |    57.48  | PIN_REF_CLK                                           |
-|1.1.1.10.7   |      121 |1.1.1.10.7.3.1   |    55.22  | PIN_REF_CLK                                           |
-|1.1.1.10.3   |      117 |1.1.1.10.3.3.1   |    50.60  | PIN_REF_CLK                                           |
-|1.1.1.10.12  |      126 |1.1.1.10.12.3.1  |    50.58  | PIN_REF_CLK                                           |
-|1.1.1.10.10  |      124 |1.1.1.10.10.3.1  |    48.31  | PIN_REF_CLK                                           |
-|1.1.1.10.4   |      118 |1.1.1.10.4.3.1   |    46.03  | PIN_REF_CLK                                           |
-|1.1.1.10.13  |      127 |1.1.1.10.13.3.1  |    46.00  | PIN_REF_CLK                                           |
-|1.1.1.10.1   |      115 |1.1.1.10.1.3.1   |    46.00  | PIN_REF_CLK                                           |
+|1.2.1.2.2    |      630 |1.2.1.2.2.3.3    |    49.01  | PIN_REF_CLK                                           |
+|1.2.1.4.9    |      669 |1.2.1.4.9.3.3    |    48.59  | PIN_REF_CLK                                           |
+|1.2.1.7.1    |      696 |1.2.1.7.1.3.1    |    47.63  | PIN_REF_CLK                                           |
+|1.2.1.4.1    |      661 |1.2.1.4.1.3.2    |     1.27  | PIN_mask_clk                                          |
+|1.2.1.2.2    |      630 |1.2.1.2.2.3.2    |     1.27  | PIN_mask_clk                                          |
+|1.2.1.4.2    |      662 |1.2.1.4.2.3.2    |     1.19  | PIN_mask_clk                                          |
+|1.2.1.4.9    |      669 |1.2.1.4.9.3.2    |     1.11  | PIN_mask_clk                                          |
+|1.2.1.2.2    |      630 |1.2.1.2.2.3.1    |     0.54  | PIN_UART_CLK                                          |
+|1.2.1.4.9    |      669 |1.2.1.4.9.3.1    |     0.52  | PIN_UART_CLK                                          |
+|1.2.1.2.10   |      638 |1.2.1.2.10.3.1   |     0.42  | PIN_UART_CLK                                          |
 +=============+==========+=================+===========+=======================================================+
 
 
@@ -186,7 +185,7 @@ INFO (TBM-054): Capture Toggle report categorized by CAPTURE CYCLE [end TBM_054]
   Average Switching   Average Scan Load      Average Scan Unload    Max Switching 
      Percentage      Switching Percentage    Switching Percentage    Percentage   
  -------------------------------------------------------------------------------- 
-     49.91               25.54                     24.37                67.29          
+     49.91               24.97                     24.94                52.06          
  -------------------------------------------------------------------------------- 
 
 
@@ -196,7 +195,7 @@ INFO (TBM-054): Capture Toggle report categorized by CAPTURE CYCLE [end TBM_054]
       Average Switching           Max Switching            
          Percentage                Percentage              
  --------------------------------------------------------- 
-          2.04                       57.50                  
+          0.29                       49.01                  
  --------------------------------------------------------- 
 
 
@@ -205,12 +204,12 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           55,538,624  bytes
+                  Total Memory =           59,076,704  bytes
 
-                      CPU Time =    0:00:00.56
-                  Elapsed Time =    0:00:00.63                    [end TDA_001]
+                      CPU Time =    0:00:01.82
+                  Elapsed Time =    0:00:01.90                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 09:23:08 2026  IST
+     Date Ended:  Thursday Aug 06 13:38:49 2026  IST
 
 
 
@@ -223,13 +222,12 @@ INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:
 
   INFO Messages...
       5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
-      1 INFO (TBM-088): The total number of test to be analyzed for scan is 199 and for capture is 199.  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 698 and for capture is 698.  
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   
 
   WARNING Messages...
       1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
-      1 WARNING (TBM-109):The test patterns analyzed for toggle calculations contain X values for unknown latch/flop states. The X values can impact toggle numbers significantly. The default latch fill policy for X values (if not specified otherwise) is the 'dontcare' option set to 'random'.  
 
  For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
 

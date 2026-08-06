@@ -120,15 +120,25 @@ verify_test_structures \
 # BUILD THE FAULT MODEL
 #-------------------------------------------------------------------------------
 build_faultmodel \
-    -includedynamic	 no \
+    -includedynamic	 yes \
  
  
+#-------------------------------------------------------------------------------
+# ATPG - DELAY TEST GENERATION
+#-------------------------------------------------------------------------------
+create_logic_delay_tests \
+    -experiment	 TOP_WRAPPER_compression \
+    -testmode	 COMPRESSION_DECOMP \
+
+
 #-------------------------------------------------------------------------------
 # ATPG - TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_tests \
     -experiment	 TOP_WRAPPER_compression \
+    -append	 yes \
     -testmode	 COMPRESSION_DECOMP \
+    -testscan	 no \
 
 
 #-------------------------------------------------------------------------------
@@ -157,10 +167,20 @@ commit_tests \
 
 
 #-------------------------------------------------------------------------------
+# ATPG - DELAY TEST GENERATION
+#-------------------------------------------------------------------------------
+create_logic_delay_tests \
+    -experiment	 TOP_WRAPPER_compression \
+    -testscan	 no \
+    -testmode	 COMPRESSION \
+
+
+#-------------------------------------------------------------------------------
 # ATPG - TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_tests \
     -experiment	 TOP_WRAPPER_compression \
+    -append	 yes \
     -testmode	 COMPRESSION \
     -testscan	 no \
 
@@ -191,10 +211,20 @@ commit_tests \
 
 
 #-------------------------------------------------------------------------------
+# ATPG - DELAY TEST GENERATION
+#-------------------------------------------------------------------------------
+create_logic_delay_tests \
+    -experiment	 TOP_WRAPPER_compression \
+    -testscan	 no \
+    -testmode	 FULLSCAN \
+
+
+#-------------------------------------------------------------------------------
 # ATPG - TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_tests \
     -experiment	 TOP_WRAPPER_compression \
+    -append	 yes \
     -testmode	 FULLSCAN \
     -testscan	 no \
 

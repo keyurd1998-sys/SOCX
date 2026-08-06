@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626092103-168964000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 09:21:03 2026  IST
+            Date Started: Thursday Aug 06 13:20:26 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 364440.
+            This job is process number 472475.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -21,7 +21,7 @@ INFO (TDA-009): Options/Values information.
 
             -ASSIGNFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign
           * update_assign_file=
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626092103-168964000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000
             -MODEDEF COMPRESSION
             -STDOUT summary
 [end TDA_009]
@@ -114,10 +114,10 @@ Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
 
 Modus Build Test Mode(s) completed. Highest severity is (WARNING).
 
-               Total Memory =           81,024,080  bytes
+               Total Memory =           81,021,408  bytes
 
             Cumulative Time in hours:minutes:seconds:
-                   CPU Time =   0:00:00.84
-               Elapsed Time =   0:00:00.95
+                   CPU Time =   0:00:00.82
+               Elapsed Time =   0:00:00.93
 
 

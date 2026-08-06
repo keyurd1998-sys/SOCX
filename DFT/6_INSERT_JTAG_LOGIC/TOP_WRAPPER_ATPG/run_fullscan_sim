@@ -11,13 +11,14 @@ xrun \
    +xmstatus \
    +xm64bit \
    +TESTFILE1=$WORKDIR/testresults/verilog/VER.FULLSCAN.TOP_WRAPPER_compression.data.logic.ex1.ts1.verilog \
+   +TESTFILE2=$WORKDIR/testresults/verilog/VER.FULLSCAN.TOP_WRAPPER_compression.data.logic.ex1.ts2.verilog \
    +HEARTBEAT \
    +FAILSET \
    +xmtimescale+1ns/1ps \
    +xmoverride_timescale \
    +xmseq_udp_delay+2ps \
    +libext+.v+.V+.z+.Z+.gz \
-   +xmlibdirname+$WORKDIR/Inca_libs_09_20_46 \
+   +xmlibdirname+$WORKDIR/Inca_libs_13_19_00 \
    -l $WORKDIR/ncverilog_FULLSCAN.log \
   -v /home/admin/DFT/Library/verilog/typical.v \
   -v /home/admin/DFT/Library/verilog/pads.v \

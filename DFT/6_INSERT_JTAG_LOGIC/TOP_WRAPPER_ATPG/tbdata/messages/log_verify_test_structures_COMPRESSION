@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_080626092109-130705000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_080626132031-740714000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 09:21:09 2026  IST
+            Date Started: Thursday Aug 06 13:20:31 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 364534.
+            This job is process number 472565.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,10 +20,10 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE COMPRESSION
 
             -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_080626092109-130705000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_COMPRESSION_080626132031-740714000
             -STDOUT summary
 [end TDA_009]
-INFO (TSV-900): verify_test_structures processing has started Thu Aug  6 09:21:09 2026    [end TSV_900] 
+INFO (TSV-900): verify_test_structures processing has started Thu Aug  6 13:20:31 2026    [end TSV_900] 
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 ------------------- verify_test_structures Process Preview ---------------------
   apply constraints ...................................... constraints=yes    
@@ -151,7 +151,7 @@ Analyze feedback loops and keeper devices process has completed.
    Analyze clock choppers                             
 
 Analyze clock choppers process has completed.
-                             CPU time =  0:00:00.05  Elapsed time =  0:00:00.10
+                             CPU time =  0:00:00.06  Elapsed time =  0:00:00.10
   
    Analyze flip-flop and latch scan characteristics   
 INFO (TSV-068): The length of the longest scan chain is 43 bit positions, which is 101% of the average scan chain length 43 (based on 8495 total scan chain bits and 198 valid scan chains).   [end TSV_068] 
@@ -562,7 +562,7 @@ WARNING (TSV-163): Scan chain flop or latch block u_core.U0_SYS_CTRL.\current_st
 WARNING (TSV-372): The Masking scan chain length exceeds the longest scan chain. Excessive tester cycles may be required. Please consider using Masking sharing techniques. The longest Masking chain depth is 99, the longest scan channel depth is 43. [end TSV_372] 
 
 Analyze flip-flop and latch scan characteristics process has completed.
-                             CPU time =  0:00:00.03  Elapsed time =  0:00:00.04
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
   
    Analyze explicit fixed value latches 
 
@@ -573,7 +573,7 @@ Analyze explicit fixed value latches process has completed.
    Check for mutually exclusive gating logic (MEG)    
 
 Analyze potential clock signal races process has completed.
-                             CPU time =  0:00:00.11  Elapsed time =  0:00:00.16
+                             CPU time =  0:00:00.11  Elapsed time =  0:00:00.14
   
    Ensure X-sources cannot be observed 
 WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.\mreg0_reg[98].__iNsT1.dff_primitive may be observed at block u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive.   [end TSV_101] 
@@ -582,7 +582,7 @@ WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking
 INFO (TSV-107): X source summary for  Channel Masking Scan Register block COMPACTOR.compressor.\mreg1_reg[98].__iNsT1.dff_primitive : Total Observe Points: 1 : Safe Observe Points: 0, Unsafe Observe Points: 1, Unverified Observed Points: 0  [end TSV_107] 
 
 Analyze X-sources to ensure they cannot be observed process has completed.
-                             CPU time =  0:00:00.15  Elapsed time =  0:00:00.21
+                             CPU time =  0:00:00.16  Elapsed time =  0:00:00.21
   
    Analyze internal scan chains 
 
@@ -597,11 +597,11 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           68,193,696  bytes
+                  Total Memory =           68,191,280  bytes
 
                       CPU Time =    0:00:00.47
-                  Elapsed Time =    0:00:00.83                    [end TDA_001]
+                  Elapsed Time =    0:00:00.78                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 09:21:10 2026  IST
+     Date Ended:  Thursday Aug 06 13:20:32 2026  IST
 
 

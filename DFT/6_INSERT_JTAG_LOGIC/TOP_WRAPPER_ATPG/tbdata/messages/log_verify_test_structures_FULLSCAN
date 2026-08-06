@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_080626092112-977583000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_080626132035-529864000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 09:21:12 2026  IST
+            Date Started: Thursday Aug 06 13:20:35 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 364587.
+            This job is process number 472621.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,10 +20,10 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE FULLSCAN
 
             -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_080626092112-977583000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_verify_test_structures_FULLSCAN_080626132035-529864000
             -STDOUT summary
 [end TDA_009]
-INFO (TSV-900): verify_test_structures processing has started Thu Aug  6 09:21:13 2026    [end TSV_900] 
+INFO (TSV-900): verify_test_structures processing has started Thu Aug  6 13:20:35 2026    [end TSV_900] 
 INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
 ------------------- verify_test_structures Process Preview ---------------------
   apply constraints ...................................... constraints=yes    
@@ -130,7 +130,7 @@ Test Function Pin Information for Test Mode:  FULLSCAN
    Analyze test clocks' control of memory elements    
 
 Analyze test clocks' control of memory elements process has completed.
-                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.04
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
   
    Analyze three-state drivers for contention 
 
@@ -145,7 +145,7 @@ Analyze feedback loops and keeper devices process has completed.
    Analyze clock choppers                             
 
 Analyze clock choppers process has completed.
-                             CPU time =  0:00:00.07  Elapsed time =  0:00:00.10
+                             CPU time =  0:00:00.06  Elapsed time =  0:00:00.10
   
    Analyze flip-flop and latch scan characteristics   
 INFO (TSV-068): The length of the longest scan chain is 4347 bit positions, which is 100% of the average scan chain length 4347 (based on 8693 total scan chain bits and 2 valid scan chains).   [end TSV_068] 
@@ -161,7 +161,7 @@ WARNING (TSV-163): Scan chain flop or latch block u_core.U0_SYS_CTRL.\current_st
 WARNING (TSV-163): Scan chain flop or latch block COMPACTOR.compressor.\mreg0_reg[98].__iNsT1.dff_primitive changes value during the same scan cycle as scan chain flop or latch block u_core.U0_Async_fifo.u_fifo_mem.\FIFO_MEM_reg[528][7].__iNsT2.dff_primitive. The upstream and downstream flops or latches are changing on the same scan cycle but the clocks are in different domains which may cause the scan chain to fail to shift properly.  [end TSV_163] 
 
 Analyze flip-flop and latch scan characteristics process has completed.
-                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.05
+                             CPU time =  0:00:00.02  Elapsed time =  0:00:00.04
   
    Analyze explicit fixed value latches 
 
@@ -172,7 +172,7 @@ Analyze explicit fixed value latches process has completed.
    Check for mutually exclusive gating logic (MEG)    
 
 Analyze potential clock signal races process has completed.
-                             CPU time =  0:00:00.12  Elapsed time =  0:00:00.15
+                             CPU time =  0:00:00.12  Elapsed time =  0:00:00.14
   
    Analyze internal scan chains 
 
@@ -187,11 +187,11 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           46,462,992  bytes
+                  Total Memory =           46,460,448  bytes
 
-                      CPU Time =    0:00:00.35
-                  Elapsed Time =    0:00:00.63                    [end TDA_001]
+                      CPU Time =    0:00:00.33
+                  Elapsed Time =    0:00:00.59                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 09:21:13 2026  IST
+     Date Ended:  Thursday Aug 06 13:20:36 2026  IST
 
 

@@ -17,6 +17,7 @@ xrun \
    +xmstatus \
    +xm64bit \
    +TESTFILE1=$WORKDIR/testresults/verilog/VER.COMPRESSION_TIMED.TOP_WRAPPER_compression.data.logic.ex1.ts1.verilog \
+   +TESTFILE2=$WORKDIR/testresults/verilog/VER.COMPRESSION_TIMED.TOP_WRAPPER_compression.data.logic.ex1.ts2.verilog \
    +HEARTBEAT \
    +FAILSET \
    +xmtimescale+1ns/1ps \
@@ -28,7 +29,7 @@ xrun \
    +sdf_file+DEFAULT.sdf \
    +xmerror+CUSFNF \
    +define+TIMING \
-   +xmlibdirname+$WORKDIR/Inca_libs_09_20_46 \
+   +xmlibdirname+$WORKDIR/Inca_libs_13_19_00 \
    -l $WORKDIR/ncverilog_COMPRESSION_TIMED.log \
   -v /home/admin/DFT/Library/verilog/typical.v \
   -v /home/admin/DFT/Library/verilog/pads.v \
