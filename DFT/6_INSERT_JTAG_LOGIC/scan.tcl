@@ -219,6 +219,34 @@ compress_scan_chains \
     -mask_enable PIN_mask_en \
     -mask_load PIN_mask_load \
     -mask_clock PIN_mask_clk
+
+    # =========================================================
+# ATPG Analysis and Test Point Insertion
+# =========================================================
+# 1. Perform ATPG analysis
+analyze_atpg_testability -directory $TP_DIR  -library $VERILOG_LIB [current_design]
+
+# 2. Generate the DFA scripts
+# The tool automatically writes the scripts (e.g., runmodus.dfa.tcl) to './test_scripts'
+write_dft_deterministic_test_points -library $VERILOG_LIB
+
+# 3. Invoke Modus analysis via OS command
+puts "Running Modus analysis..."
+exec modus -files ./test_scripts/runmodus.dfa.tcl
+
+# 4. Insert the identified test points into the design
+add_analyzed_test_points -input_test_point_file ./test_scripts/${DESIGN_NAME}.dfa.tpfile
+
+# 5. Update DFT status of the new registers
+check_dft_rules
+
+# =========================================================
+# re-create Scan Chains
+# =========================================================
+# Re-stitch chains to include new test point flip-flops
+connect_scan_chains -auto_create
+
+
 # =========================================================
 # Report Scan 
 # =========================================================
