@@ -237,11 +237,6 @@ syn_opt                                      ;# Fix electrical & timing violatio
 write_netlist > $NETLIST_DIR/${DESIGN_NAME}_Scan_Netlist.v
 write_sdc >     $NETLIST_DIR/${DESIGN_NAME}_mapped.sdc
 write_dft_atpg -compression -delay -library  $VERILOG_LIB -directory $ATPG_DIR -generate_config_file [current_design]
-# =========================================================
-# RUN ATPG
-# =========================================================
-puts "Running Modus ATPG..."
-exec modus -files $ATPG_DIR/runmodus.atpg.tcl
 
 # =========================================================
 # Reports Generation
