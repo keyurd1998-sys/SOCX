@@ -228,7 +228,7 @@ analyze_atpg_testability -directory $TP_DIR  -library $VERILOG_LIB [current_desi
 
 # 2. Generate the DFA scripts
 # The tool automatically writes the scripts (e.g., runmodus.dfa.tcl) to './test_scripts'
-write_dft_deterministic_test_points -library $VERILOG_LIB
+write_dft_compression_test_points -library $VERILOG_LIB
 
 # 3. Invoke Modus analysis via OS command
 puts "Running Modus analysis..."
