@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_WRAPPER_compression_080626133634-120142000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_WRAPPER_compression_080626145014-858717000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 13:36:34 2026  IST
+            Date Started: Thursday Aug 06 14:50:14 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 479507.
+            This job is process number 510286.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -21,7 +21,7 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE COMPRESSION
             -EXPERIMENT TOP_WRAPPER_compression
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_WRAPPER_compression_080626133634-120142000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_WRAPPER_compression_080626145014-858717000
             -STDOUT summary
             -append yes
             -testscan no
@@ -60,28 +60,28 @@ INFO (TTC-110): Starting Static Logic Test generation                           
 
 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
 INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
-INFO (TDA-220):     16      16        158    99.59%   95.97%         1006           00:01.49    [end TDA_220] 
-INFO (TDA-220):     32      32        137    99.64%   96.02%          869           00:02.44    [end TDA_220] 
-INFO (TDA-220):     48      48        126    99.69%   96.07%          743           00:02.90    [end TDA_220] 
-INFO (TDA-220):     64      64         93    99.73%   96.11%          650           00:04.30    [end TDA_220] 
-INFO (TDA-220):     80      65          1    99.73%   96.11%          649           00:04.40    [end TDA_220] 
-INFO (TDA-220):     96      68          4    99.73%   96.11%          645           00:04.50    [end TDA_220] 
-INFO (TDA-220):    112      69          1    99.73%   96.11%          644           00:04.60    [end TDA_220] 
-INFO (TDA-220):    128      85         44    99.75%   96.13%          600           00:04.67    [end TDA_220] 
-INFO (TDA-220):    144      87          3    99.75%   96.13%          597           00:04.77    [end TDA_220] 
-INFO (TDA-220):    159     102         72    99.78%   96.15%          525           00:04.88    [end TDA_220] 
-INFO (TDA-220):    163     102          0    99.78%   96.15%          525           00:04.97    [end TDA_220] 
-INFO (TDA-220):    166     105          4    99.78%   96.16%          521           00:05.04    [end TDA_220] 
-INFO (TDA-221):    166     105          0    99.78%   96.16%          521           00:05.04    [end TDA_221] 
-INFO (TDA-220):    182     105          0    99.78%   96.16%          521           00:15.99    [end TDA_220] 
-INFO (TDA-220):    198     106          2    99.78%   96.16%          519           00:16.07    [end TDA_220] 
-INFO (TDA-220):    214     107          1    99.78%   96.16%          518           00:16.14    [end TDA_220] 
-INFO (TDA-220):    230     107          0    99.78%   96.16%          518           00:16.21    [end TDA_220] 
-INFO (TDA-220):    246     122         20    99.79%   96.17%          498           00:16.27    [end TDA_220] 
-INFO (TDA-220):    262     137         15    99.80%   96.17%          483           00:16.34    [end TDA_220] 
-INFO (TDA-220):    269     144          7    99.80%   96.17%          476           00:16.40    [end TDA_220] 
-INFO (TDA-220):    272     147          5    99.80%   96.18%          471           00:16.45    [end TDA_220] 
-INFO (TDA-220):    275     147          0    99.80%   96.18%          471           00:16.51    [end TDA_220] 
+INFO (TDA-220):     16      16        158    99.59%   95.97%         1006           00:01.48    [end TDA_220] 
+INFO (TDA-220):     32      32        137    99.64%   96.02%          869           00:02.41    [end TDA_220] 
+INFO (TDA-220):     48      48        126    99.69%   96.07%          743           00:02.86    [end TDA_220] 
+INFO (TDA-220):     64      64         93    99.73%   96.11%          650           00:04.22    [end TDA_220] 
+INFO (TDA-220):     80      65          1    99.73%   96.11%          649           00:04.32    [end TDA_220] 
+INFO (TDA-220):     96      68          4    99.73%   96.11%          645           00:04.41    [end TDA_220] 
+INFO (TDA-220):    112      69          1    99.73%   96.11%          644           00:04.50    [end TDA_220] 
+INFO (TDA-220):    128      85         44    99.75%   96.13%          600           00:04.58    [end TDA_220] 
+INFO (TDA-220):    144      87          3    99.75%   96.13%          597           00:04.67    [end TDA_220] 
+INFO (TDA-220):    159     102         72    99.78%   96.15%          525           00:04.78    [end TDA_220] 
+INFO (TDA-220):    163     102          0    99.78%   96.15%          525           00:04.87    [end TDA_220] 
+INFO (TDA-220):    166     105          4    99.78%   96.16%          521           00:04.94    [end TDA_220] 
+INFO (TDA-221):    166     105          0    99.78%   96.16%          521           00:04.94    [end TDA_221] 
+INFO (TDA-220):    182     105          0    99.78%   96.16%          521           00:15.67    [end TDA_220] 
+INFO (TDA-220):    198     106          2    99.78%   96.16%          519           00:15.74    [end TDA_220] 
+INFO (TDA-220):    214     107          1    99.78%   96.16%          518           00:15.81    [end TDA_220] 
+INFO (TDA-220):    230     107          0    99.78%   96.16%          518           00:15.88    [end TDA_220] 
+INFO (TDA-220):    246     122         20    99.79%   96.17%          498           00:15.93    [end TDA_220] 
+INFO (TDA-220):    262     137         15    99.80%   96.17%          483           00:16.00    [end TDA_220] 
+INFO (TDA-220):    269     144          7    99.80%   96.17%          476           00:16.06    [end TDA_220] 
+INFO (TDA-220):    272     147          5    99.80%   96.18%          471           00:16.11    [end TDA_220] 
+INFO (TDA-220):    275     147          0    99.80%   96.18%          471           00:16.17    [end TDA_220] 
 INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
 *************************************************************************************************************
 
@@ -115,12 +115,12 @@ Total Dynamic               255663       194571            0           29       
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           62,381,328  bytes
+                  Total Memory =           62,381,456  bytes
 
-                      CPU Time =    0:00:16.46
-                  Elapsed Time =    0:00:16.77                    [end TDA_001]
+                      CPU Time =    0:00:16.15
+                  Elapsed Time =    0:00:16.42                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 13:36:50 2026  IST
+     Date Ended:  Thursday Aug 06 14:50:31 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
@@ -134,7 +134,7 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
   INFO Messages...
      23 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
-      1 INFO (TDA-221):    166     105          0    99.78%   96.16%          521           00:05.04     
+      1 INFO (TDA-221):    166     105          0    99.78%   96.16%          521           00:04.94     
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   
       2 INFO (TTC-110): Starting Static Logic Test generation                                            

@@ -1,16 +1,16 @@
 Starting Command: build_testmode 
 
 INFO (TDA-005): Command Line Invocation: 
-            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign -testmode COMPRESSION_DECOMP -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
+            build_testmode -modedef COMPRESSION -assignfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION.pinassign -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_080626143407-033831000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 13:20:26 2026  IST
+            Date Started: Thursday Aug 06 14:34:07 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 472475.
+            This job is process number 504220.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -18,11 +18,11 @@ INFO (TDA-009): Options/Values information.
              options marked with '+' were specified to default.)
 
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
-            -TESTMODE COMPRESSION_DECOMP
+            -TESTMODE COMPRESSION
 
-            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign
+            -ASSIGNFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/TOP_WRAPPER.COMPRESSION.pinassign
           * update_assign_file=
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_DECOMP_080626132025-990923000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_testmode_COMPRESSION_080626143407-033831000
             -MODEDEF COMPRESSION
             -STDOUT summary
 [end TDA_009]
@@ -48,17 +48,16 @@ INFO (TTM-357): There are 198 scan chains which are controllable and observable.
 INFO (TTM-352): There are 2 Channel Mask Load chains.   [end TTM_352] 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
-There are no PPIs for Test Mode:  COMPRESSION_DECOMP
+There are no PPIs for Test Mode:  COMPRESSION
 
-Information for Test Mode:  COMPRESSION_DECOMP
+Information for Test Mode:  COMPRESSION
 -------------------------
 
          Scan Type = GSD
 
-  Test Mode uses Linear Decompression.
   Test Mode uses Linear Compression.
 
- Latch Summary for Test Mode:  COMPRESSION_DECOMP
+ Latch Summary for Test Mode:  COMPRESSION
  Latch Type                #Active   #Inactive       Total
  ---------------------   ---------   ---------   ---------
  Test Constraint (TC)            0           0           0 
@@ -67,10 +66,10 @@ Information for Test Mode:  COMPRESSION_DECOMP
  Floating                        4          22          26 
  Finite State    (FSM)           0           0           0 
 
-WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+WARNING (TTM-809): Test mode COMPRESSION has been created, WARNINGs have been generated -
            see preceding message(s) for details. [end TTM_809] 
 
-Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
+Test Function Pin Information for Test Mode:  COMPRESSION
 -------------------------------------------
 
           5  SC    (System  Clock)             Pins
@@ -105,7 +104,7 @@ Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
           2      PI  +SE                                  PIN_ScanEnable / PIN_ScanEnable
          12      PI  +SE                                  PIN_comp_en / PIN_comp_en
          15      PI  -SE  +CMLE                           PIN_mask_load / PIN_mask_load
-         16      PI  +SE                                  PIN_spread_en / PIN_spread_en
+         16      PI  -SE                                  PIN_spread_en / PIN_spread_en
           3      PI   SI   CMI                            PIN_ScanIn_1 / PIN_ScanIn_1
           4      PI   SI1  CMI                            PIN_ScanIn_2 / PIN_ScanIn_2
          17      PO   SO                                  PIN_ScanOut_1 / PIN_ScanOut_1
@@ -115,11 +114,11 @@ Test Function Pin Information for Test Mode:  COMPRESSION_DECOMP
 
 Modus Build Test Mode(s) completed. Highest severity is (WARNING).
 
-               Total Memory =           81,021,408  bytes
+               Total Memory =           80,935,136  bytes
 
             Cumulative Time in hours:minutes:seconds:
                    CPU Time =   0:00:00.82
-               Elapsed Time =   0:00:00.93
+               Elapsed Time =   0:00:00.92
 
 
 
@@ -141,7 +140,7 @@ Modus Build Test Mode(s) completed. Highest severity is (WARNING).
 
   WARNING Messages...
       1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
-      1 WARNING (TTM-809): Test mode COMPRESSION_DECOMP has been created, WARNINGs have been generated -
+      1 WARNING (TTM-809): Test mode COMPRESSION has been created, WARNINGs have been generated -
 
  For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
 

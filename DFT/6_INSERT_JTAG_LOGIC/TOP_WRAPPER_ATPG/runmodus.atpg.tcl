@@ -245,5 +245,5 @@ write_vectors \
     -language	 verilog \
     -scanformat	 parallel \
 
-
+report_fault_ststistics > $WORKDIR/final_coverage_summary.rpt
 exit

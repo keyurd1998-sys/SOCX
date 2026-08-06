@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_FULLSCAN_080626132030-475186000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_FULLSCAN_080626143414-046012000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 13:20:30 2026  IST
+            Date Started: Thursday Aug 06 14:34:14 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 472547.
+            This job is process number 504325.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,7 +20,7 @@ INFO (TDA-009): Options/Values information.
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
             -TESTMODE FULLSCAN
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_FULLSCAN_080626132030-475186000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_FULLSCAN_080626143414-046012000
             -STDOUT summary
             -reportscanchain all
 [end TDA_009]
@@ -8826,7 +8826,7 @@ INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:
                       CPU Time =    0:00:00.07
                   Elapsed Time =    0:00:00.11                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 13:20:30 2026  IST
+     Date Ended:  Thursday Aug 06 14:34:14 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 

@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_080626132027-995833000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_080626143411-254911000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 13:20:28 2026  IST
+            Date Started: Thursday Aug 06 14:34:11 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 472508.
+            This job is process number 504286.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -20,7 +20,7 @@ INFO (TDA-009): Options/Values information.
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
             -TESTMODE COMPRESSION
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_080626132027-995833000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_report_test_structures_COMPRESSION_080626143411-254911000
             -STDOUT summary
             -reportchannelmaskchain yes
             -reportchannelmaskstate yes
@@ -11012,10 +11012,10 @@ INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:
 
                   Total Memory =           33,585,280  bytes
 
-                      CPU Time =    0:00:00.09
+                      CPU Time =    0:00:00.10
                   Elapsed Time =    0:00:00.13                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 13:20:28 2026  IST
+     Date Ended:  Thursday Aug 06 14:34:11 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 

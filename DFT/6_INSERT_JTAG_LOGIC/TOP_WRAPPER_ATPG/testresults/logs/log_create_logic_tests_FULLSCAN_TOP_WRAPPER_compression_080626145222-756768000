@@ -5,12 +5,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_WRAPPER_compression_080626133844-961448000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_WRAPPER_compression_080626145222-756768000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 13:38:44 2026  IST
+            Date Started: Thursday Aug 06 14:52:22 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 480364.
+            This job is process number 511130.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -21,7 +21,7 @@ INFO (TDA-009): Options/Values information.
             -TESTMODE FULLSCAN
             -EXPERIMENT TOP_WRAPPER_compression
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_WRAPPER_compression_080626133844-961448000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_create_logic_tests_FULLSCAN_TOP_WRAPPER_compression_080626145222-756768000
             -STDOUT summary
             -append yes
             -testscan no
@@ -60,14 +60,14 @@ INFO (TTC-110): Starting Static Logic Test generation                           
 
 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
 INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
-INFO (TDA-220):     16      16        147    99.86%   96.23%          324           00:00.74    [end TDA_220] 
+INFO (TDA-220):     16      16        147    99.86%   96.23%          324           00:00.75    [end TDA_220] 
 INFO (TDA-220):     32      32        110    99.91%   96.28%          214           00:00.86    [end TDA_220] 
 INFO (TDA-220):     48      48        119    99.96%   96.32%           95           00:00.99    [end TDA_220] 
-INFO (TDA-220):     64      63         64    99.98%   96.35%           31           00:01.13    [end TDA_220] 
-INFO (TDA-220):     68      67          7    99.98%   96.35%           24           00:01.19    [end TDA_220] 
-INFO (TDA-221):     68      67          0    99.98%   96.35%           24           00:01.19    [end TDA_221] 
-INFO (TDA-220):     70      69          6    99.99%   96.35%           18           00:01.26    [end TDA_220] 
-INFO (TDA-220):     71      70          2    99.99%   96.35%           16           00:01.30    [end TDA_220] 
+INFO (TDA-220):     64      63         64    99.98%   96.35%           31           00:01.11    [end TDA_220] 
+INFO (TDA-220):     68      67          7    99.98%   96.35%           24           00:01.17    [end TDA_220] 
+INFO (TDA-221):     68      67          0    99.98%   96.35%           24           00:01.17    [end TDA_221] 
+INFO (TDA-220):     70      69          6    99.99%   96.35%           18           00:01.24    [end TDA_220] 
+INFO (TDA-220):     71      70          2    99.99%   96.35%           16           00:01.27    [end TDA_220] 
 INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
 *************************************************************************************************************
 
@@ -101,12 +101,12 @@ Total Dynamic               255663       196789            0           29       
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           61,504,368  bytes
+                  Total Memory =           61,504,048  bytes
 
-                      CPU Time =    0:00:01.35
-                  Elapsed Time =    0:00:01.53                    [end TDA_001]
+                      CPU Time =    0:00:01.32
+                  Elapsed Time =    0:00:01.50                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 13:38:46 2026  IST
+     Date Ended:  Thursday Aug 06 14:52:24 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
@@ -120,7 +120,7 @@ INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119]
 
   INFO Messages...
       9 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
-      1 INFO (TDA-221):     68      67          0    99.98%   96.35%           24           00:01.19     
+      1 INFO (TDA-221):     68      67          0    99.98%   96.35%           24           00:01.17     
       1 INFO (TFW-117): Modus checked out a modus_atpg license.   
       1 INFO (TFW-119): Modus checked in a modus_atpg license.   
       2 INFO (TTC-110): Starting Static Logic Test generation                                            
