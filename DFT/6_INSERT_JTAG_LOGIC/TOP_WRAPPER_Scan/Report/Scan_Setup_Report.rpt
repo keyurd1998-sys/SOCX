@@ -163,8 +163,10 @@ DFT don't scan objects
 ======================
     Subdesign: JTAG_MACRO
     Instance: u_core/U0_SYS_CTRL/DFT_lockup_latch_neg_edge
+    Instance: u_core/U0_SYS_CTRL/DFT_lockup_latch_neg_edge2520
     Instance: DFT_lockup_latch_neg_edge11
     Instance: DFT_lockup_latch_neg_edge
+    Instance: DFT_lockup_latch_neg_edge13
     Instance: JTAG_MODULE
     Instance: TBB_BSC_PIN_framing_error_5
     Instance: TBB_BSC_PIN_parity_error_4
@@ -249,13 +251,11 @@ DFT actual scan chains
           scan-out hookup_pin: pad_so_1/A 
           shared out: false
           shift_enable: PIN_ScanEnable 
-          length: 4347
-          segment objects: DFT_segment_2  
+          length: 4354
+          segment objects: DFT_segment_2 DFT_segment_1  
           analyzed: false
           test_clock domain: ScanClock
           test_clock edge: rise
-          compressed: true
-          internal scan channel objects: chain_1_0 chain_1_1 chain_1_2 chain_1_3 chain_1_4 chain_1_5 chain_1_6 chain_1_7 chain_1_8 chain_1_9 chain_1_10 chain_1_11 chain_1_12 chain_1_13 chain_1_14 chain_1_15 chain_1_16 chain_1_17 chain_1_18 chain_1_19 chain_1_20 chain_1_21 chain_1_22 chain_1_23 chain_1_24 chain_1_25 chain_1_26 chain_1_27 chain_1_28 chain_1_29 chain_1_30 chain_1_31 chain_1_32 chain_1_33 chain_1_34 chain_1_35 chain_1_36 chain_1_37 chain_1_38 chain_1_39 chain_1_40 chain_1_41 chain_1_42 chain_1_43 chain_1_44 chain_1_45 chain_1_46 chain_1_47 chain_1_48 chain_1_49 chain_1_50 chain_1_51 chain_1_52 chain_1_53 chain_1_54 chain_1_55 chain_1_56 chain_1_57 chain_1_58 chain_1_59 chain_1_60 chain_1_61 chain_1_62 chain_1_63 chain_1_64 chain_1_65 chain_1_66 chain_1_67 chain_1_68 chain_1_69 chain_1_70 chain_1_71 chain_1_72 chain_1_73 chain_1_74 chain_1_75 chain_1_76 chain_1_77 chain_1_78 chain_1_79 chain_1_80 chain_1_81 chain_1_82 chain_1_83 chain_1_84 chain_1_85 chain_1_86 chain_1_87 chain_1_88 chain_1_89 chain_1_90 chain_1_91 chain_1_92 chain_1_93 chain_1_94 chain_1_95 chain_1_96 chain_1_97 chain_1_98
 
     Actual Chain:
           object name: chain_2 
@@ -265,11 +265,9 @@ DFT actual scan chains
           scan-out hookup_pin: pad_so_2/A 
           shared out: false
           shift_enable: PIN_ScanEnable 
-          length: 4346
-          segment objects: DFT_segment_1  
+          length: 4354
+          segment objects: none
           analyzed: false
           test_clock domain: ScanClock
           test_clock edge: rise
-          compressed: true
-          internal scan channel objects: chain_2_99 chain_2_100 chain_2_101 chain_2_102 chain_2_103 chain_2_104 chain_2_105 chain_2_106 chain_2_107 chain_2_108 chain_2_109 chain_2_110 chain_2_111 chain_2_112 chain_2_113 chain_2_114 chain_2_115 chain_2_116 chain_2_117 chain_2_118 chain_2_119 chain_2_120 chain_2_121 chain_2_122 chain_2_123 chain_2_124 chain_2_125 chain_2_126 chain_2_127 chain_2_128 chain_2_129 chain_2_130 chain_2_131 chain_2_132 chain_2_133 chain_2_134 chain_2_135 chain_2_136 chain_2_137 chain_2_138 chain_2_139 chain_2_140 chain_2_141 chain_2_142 chain_2_143 chain_2_144 chain_2_145 chain_2_146 chain_2_147 chain_2_148 chain_2_149 chain_2_150 chain_2_151 chain_2_152 chain_2_153 chain_2_154 chain_2_155 chain_2_156 chain_2_157 chain_2_158 chain_2_159 chain_2_160 chain_2_161 chain_2_162 chain_2_163 chain_2_164 chain_2_165 chain_2_166 chain_2_167 chain_2_168 chain_2_169 chain_2_170 chain_2_171 chain_2_172 chain_2_173 chain_2_174 chain_2_175 chain_2_176 chain_2_177 chain_2_178 chain_2_179 chain_2_180 chain_2_181 chain_2_182 chain_2_183 chain_2_184 chain_2_185 chain_2_186 chain_2_187 chain_2_188 chain_2_189 chain_2_190 chain_2_191 chain_2_192 chain_2_193 chain_2_194 chain_2_195 chain_2_196 chain_2_197
 

@@ -1,0 +1,128 @@
+Starting Command: commit_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment TOP_WRAPPER_atpg -testmode FULLSCAN -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_WRAPPER_atpg_082626171805-137471000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Aug 26 17:18:05 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 100822.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT TOP_WRAPPER_atpg
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_commit_tests_FULLSCAN_TOP_WRAPPER_atpg_082626171805-137471000
+            -STDOUT summary
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+       36420269 /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/tbdata/TBDbin.FULLSCAN.TOP_WRAPPER_atpg
+
+INFO (TBD-807): Experiment TOP_WRAPPER_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.3.1.43.7 (Relative test numbers 1 thru 10771).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       240589            0            0            0       240589       249914            0            0            0       249914
+Collapsed Static     0.00   0.00       190500            0            0            0       190500       199536            0            0            0       199536
+PI Static            0.00   0.00           20            0            0            0           20           30            0            0            0           30
+PO Static            0.00   0.00           12            0            0            0           12           12            0            0            0           12
+
+Total Dynamic        0.00   0.00       214442            0            0            0       214442       249887            0            0            0       249887
+Collapsed Dynamic    0.00   0.00       184764            0            0            0       184764       220023            0            0            0       220023
+PI Dynamic           0.00   0.00           12            0            0            0           12           30            0            0            0           30
+PO Dynamic           0.00   0.00           10            0            0            0           10           12            0            0            0           12
+
+Parametric        
+
+IDDq                 0.00   0.00       249914            0                                 249914       249914            0                                 249914
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+
+Testmode and Global statistics after commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.99  96.26       240589       240541           14           22           12       249914       240541           14           22         9337
+Collapsed Static    99.99  95.46       190500       190459            9           22           10       199536       190459            9           22         9046
+PI Static           95.00  63.33           20           19            0            0            1           30           19            0            0           11
+PO Static          100.00 100.00           12           12            0            0            0           12           12            0            0            0
+
+Total Dynamic       97.31  83.50       214442       208661            0            5         5776       249887       208661            0            5        41221
+Collapsed Dynamic   96.96  81.42       184764       179145            0            5         5614       220023       179145            0            5        40873
+PI Dynamic          83.33  33.33           12           10            0            0            2           30           10            0            0           20
+PO Dynamic          40.00  33.33           10            4            0            0            6           12            4            0            0            8
+
+Parametric        
+
+IDDq                 0.00   0.00       249914            0                                 249914       249914            0                                 249914
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TBD-810): Experiment TOP_WRAPPER_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.3.1.43.7 (Relative test numbers 1 to 10771).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 3
+  tester loops    = 3
+  test procedures = 778
+  test sequence   = 10771
+  init sequencess = 3
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+       36420269 /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/tbdata/TBDbin.FULLSCAN 
+        2646016 /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           26,876,080  bytes
+
+                      CPU Time =    0:00:00.28
+                  Elapsed Time =    0:00:00.36                    [end TDA_001]
+
+     Date Ended:  Wednesday Aug 26 17:18:05 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_WRAPPER_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.3.1.43.7 (Relative test numbers 1 thru 10771).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_WRAPPER_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.3.1.43.7 (Relative test numbers 1 to 10771).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

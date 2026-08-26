@@ -3,19 +3,19 @@ Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
 Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
-[13:14:05.455537] Configured Lic search path (25.01-s002): 5280@pine-server
+[16:52:03.455561] Configured Lic search path (25.01-s002): 5280@pine-server
 
 Version: 25.10-p002_1, built Thu Apr 17 03:05:38 PDT 2025
 Options: -files scan.tcl -overwrite 
-Date:    Thu Aug 06 13:14:05 2026
-Host:    Pine-06 (x86_64 w/Linux 5.14.0-611.30.1.el9_7.x86_64) (6cores*6cpus*1physical cpu*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB) (7671844KB)
-PID:     466630
+Date:    Wed Aug 26 16:52:03 2026
+Host:    Pine-06 (x86_64 w/Linux 5.14.0-611.30.1.el9_7.x86_64) (6cores*6cpus*1physical cpu*Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz 9216KB) (7671852KB)
+PID:     82946
 OS:      Red Hat Enterprise Linux 9.7 (Plow)
 
 Checking out license: Genus_Synthesis
-[13:14:05.510722] Periodic Lic check successful
-[13:14:05.510744] Feature usage summary:
-[13:14:05.510745] Genus_Synthesis  
+[16:52:03.091443] Periodic Lic check successful
+[16:52:03.615746] Feature usage summary:
+[16:52:03.615747] Genus_Synthesis  
 
 
 ***********************************************************************************************************
@@ -170,16 +170,16 @@ Stage: post_elab
 | ume_ssm           |       0 |       0 |        0.00 | 
 | ume_cse           |       1 |       0 |        0.03 | 
 | ume_shrink        |       0 |       0 |        0.00 | 
-| ume_sweep         |       0 |       0 |        0.21 | 
+| ume_sweep         |       0 |       0 |        0.22 | 
 | ume_constant_bmux |       0 |       0 |        0.00 | 
 | ume_merge         |       0 |       0 |        0.00 | 
 | ume_ssm           |       0 |       0 |        0.00 | 
 | ume_cse           |       0 |       0 |        0.02 | 
 | ume_shrink        |       0 |       0 |        0.00 | 
-| ume_sweep         |       0 |       0 |        0.22 | 
+| ume_sweep         |       0 |       0 |        0.21 | 
 -------------------------------------------------------
 Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: TOP_WRAPPER, recur: true)
-Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: TOP_WRAPPER, recur: true)
 Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: TOP_WRAPPER, recur: true)
@@ -231,7 +231,7 @@ No empty modules in design 'TOP_WRAPPER'
   Setting attribute of inst 'pad_mask_load': 'preserve' = true
   Setting attribute of inst 'pad_mask_clk': 'preserve' = true
 @file(scan.tcl) 57: source TOP_cons.tcl                              
-Sourcing '/home/admin/DFT/SOCX/CONSTRAINTS/TOP_cons.tcl' (Thu Aug 06 13:14:27 IST 2026)...
+Sourcing '/home/admin/DFT/SOCX/CONSTRAINTS/TOP_cons.tcl' (Wed Aug 26 16:52:25 IST 2026)...
 #@ Begin verbose source /home/admin/DFT/SOCX/CONSTRAINTS/TOP_cons.tcl
 @file(TOP_cons.tcl) 4: set CLK1 PIN_REF_CLK
 @file(TOP_cons.tcl) 5: set CLK1_PERIOD 20.0
@@ -434,7 +434,7 @@ Warning : Suppressed printing of details of some DFT violations. [DFT-314]
       Number of registers that pass DFT rules:   3
   Percentage of total registers that are scannable:  0%
 Info    : Reporting runtime for DFT command. [DFT-147]
-        : Runtime for check_dft_rules is 0.185000 seconds.
+        : Runtime for check_dft_rules is 0.187000 seconds.
 Info    : Successfully completed DFT command. [DFT-146]
         : Successfully completed check_dft_rules command.
   =================
@@ -619,7 +619,7 @@ stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -782,7 +782,7 @@ Running Synthesis Turbo Flow Version 4.
 Info    : Partition Based Synthesis execution skipped. [PHYS-752]
         : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
 Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: TOP_WRAPPER, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.012s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.010s)
 
 Stage: pre_to_gen_setup
 -----------------------------------------------------
@@ -916,39 +916,39 @@ Begin SDR optimization IMPL_BASED_region
 No special hier is found 
 End SDR optimization IMPL_BASED_region 
 Starting timing based select reordering [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.871s)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.865s)
 Starting recase case-box optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.090s)
+Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.101s)
 Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed infer macro optimization (accepts: 0, rejects: 62, runtime: 0.034s)
+Completed infer macro optimization (accepts: 0, rejects: 62, runtime: 0.036s)
 Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.002s)
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.003s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.002s)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.004s)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.003s)
 Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.002s)
 Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.035s)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.038s)
 Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.002s)
 Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.027s)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.026s)
 Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed identity transform (accepts: 0, rejects: 0, runtime: 0.003s)
 Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.002s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.004s)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.005s)
 Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed datapath recasting (accepts: 0, rejects: 2, runtime: 0.011s)
 Starting word-level redundancy removal [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
@@ -956,7 +956,7 @@ Info    : Setting up the version of high level Redundancy Removal Optimizations.
         : hlo_rr=2: enables RRv2 with filter, on by default.
 Info    : Setting up the version of high level Redundancy Removal Optimizations. [HLO_RR-1]
         : hlo_rr=2: Value cannot be changed anymore.
-Completed word-level redundancy removal (accepts: 1, rejects: 0, runtime: 0.643s)
+Completed word-level redundancy removal (accepts: 1, rejects: 0, runtime: 0.634s)
 Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: TOP_WRAPPER, recur: true)
@@ -969,8 +969,8 @@ Stage: pre_rtlopt
 | Transform                   | Accepts | Rejects | Runtime (s) | 
 -----------------------------------------------------------------
 | hlo_timing_reorder          |       0 |       0 |        0.87 | 
-| hlo_recase_casebox          |       0 |       0 |        0.09 | 
-| hlo_infer_macro             |       0 |      62 |        0.03 | 
+| hlo_recase_casebox          |       0 |       0 |        0.10 | 
+| hlo_infer_macro             |       0 |      62 |        0.04 | 
 | hlo_decode_mux_sandwich     |       0 |       0 |        0.00 | 
 | hlo_mux_decode              |       0 |       0 |        0.00 | 
 | hlo_chop_mux                |       0 |       0 |        0.00 | 
@@ -986,7 +986,7 @@ Stage: pre_rtlopt
 | hlo_mux_consolidation       |       0 |       0 |        0.00 | 
 | hlo_optimize_datapath       |       0 |       0 |        0.00 | 
 | hlo_datapath_recast         |       0 |       2 |        0.01 | 
-| hlo_redundancy_removal_word |       1 |       0 |        0.64 | 
+| hlo_redundancy_removal_word |       1 |       0 |        0.63 | 
 | hlo_clip_mux_input          |       0 |       0 |        0.00 | 
 | hlo_clip                    |       0 |       0 |        0.00 | 
 | hlo_cleanup                 |       0 |       0 |        0.00 | 
@@ -1000,7 +1000,7 @@ Stage: post_hlo_rtlopt
 ----------------------------------------------------------
 | ume_sweep_aggressive |       0 |       0 |        0.21 | 
 | ume_runtime          |       1 |       0 |        0.00 | 
-| ume_sweep_aggressive |       0 |       0 |        0.22 | 
+| ume_sweep_aggressive |       0 |       0 |        0.21 | 
 | ume_runtime          |       1 |       0 |        0.00 | 
 ----------------------------------------------------------
 CAS: Converted binary mux mux_FIFO_MEM[r_addr]_51_17 (def: fifo_mem_D_SIZE8_F_DEPTH2048_P_SIZE11, data: 1024, sel: 10, width: 8) to onehot mux
@@ -3877,22 +3877,22 @@ Info    : Done optimizing datapath logic. [DPOPT-2]
         : Done optimizing datapath logic in 'TOP_WRAPPER'.
 Number of big hc bmuxes after = 0
 Starting bit-level redundancy removal [v1.0] (stage: post_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.675s)
+Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.691s)
 Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: TOP_WRAPPER, recur: true)
 Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting timing based select reordering [v1.0] (stage: post_rtlopt, startdef: TOP_WRAPPER, recur: true)
-Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.920s)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.891s)
 
 Stage: post_rtlopt
 ----------------------------------------------------------------
 | Transform                  | Accepts | Rejects | Runtime (s) | 
 ----------------------------------------------------------------
-| hlo_redundancy_removal_bit |       0 |       0 |        0.68 | 
+| hlo_redundancy_removal_bit |       0 |       0 |        0.69 | 
 | hlo_logic_reduction        |       0 |       0 |        0.00 | 
 | hlo_mux_reorder            |       0 |       0 |        0.00 | 
-| hlo_timing_reorder         |       0 |       0 |        0.92 | 
+| hlo_timing_reorder         |       0 |       0 |        0.89 | 
 ----------------------------------------------------------------
 Running post blast mux optimization. Please follow up with Cadence support if runtime issues are seen with this optimization.
 Running post blast mux optimization. Please follow up with Cadence support if runtime issues are seen with this optimization.
@@ -3912,16 +3912,16 @@ Running post blast mux optimization. Please follow up with Cadence support if ru
 Starting mux speculation [v1.0] (stage: post_muxopt, startdef: TOP_WRAPPER, recur: true)
 Starting speculation optimization
 Completed speculation optimization (accepts:0)
-Completed mux speculation (accepts: 0, rejects: 0, runtime: 1.008s)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 1.000s)
 Starting timing based select reordering [v1.0] (stage: post_muxopt, startdef: TOP_WRAPPER, recur: true)
-Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.879s)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.854s)
 
 Stage: post_muxopt
 --------------------------------------------------------
 | Transform          | Accepts | Rejects | Runtime (s) | 
 --------------------------------------------------------
-| hlo_speculation    |       0 |       0 |        1.01 | 
-| hlo_timing_reorder |       0 |       0 |        0.88 | 
+| hlo_speculation    |       0 |       0 |        1.00 | 
+| hlo_timing_reorder |       0 |       0 |        0.85 | 
 --------------------------------------------------------
 ==================================
 Stage : to_generic 
@@ -4107,7 +4107,7 @@ Target path end-point (Pin: u_core/U0_UART/U0_UART_RX/U0_strt_check/strt_glitch_
 Cost Group 'UART_TX_CLK' target slack: 6531418 ps
 Target path end-point (Port: TOP_WRAPPER/PIN_UART_TX_O)
 
-/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/.st_launch_Pine-06_466630
+/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/.st_launch_Pine-06_82946
 
 State Retention Synthesis Status
 ================================
@@ -4130,51 +4130,51 @@ false
 0
 Starting post first-condense unobservable FF removal
 Detecting unobservable FF's ...
-Detected 0 unobserable FF's cputime(detection/total) = 3.892 /4.984 seconds
+Detected 0 unobserable FF's cputime(detection/total) = 3.888 /4.967 seconds
 Unobservable FF redundancy removal succeeded.
-Done post first-condense unobservable FF removal (7.00 cpu seconds) (6.00 elapsed cpu seconds)
+Done post first-condense unobservable FF removal (6.00 cpu seconds) (6.00 elapsed cpu seconds)
 Advanced structuring report (syn_gen):
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 |                                                                                                       | Graph                | Opt. Graph           | Result          |                                                   | 
 |-------------------------------------------------------------------------------------------------------+----------------------+----------------------+-----------------+---------------------------------------------------|
 | Name                                                                                          | Tag   | #nodes | #and | #lvl | #nodes | #and | #lvl | Acc | Time      | Netlist ID                                        | 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| mux_ctl_0x_1730                                                                               | FCOPT |  74940 | 1189 |   36 |  74906 | 1155 |    5 | N   |     11.28 | mux_ctl_0x_1730                                   | 
+| mux_ctl_0x_1730                                                                               | FCOPT |  74940 | 1189 |   36 |  74906 | 1155 |    5 | N   |     11.20 | mux_ctl_0x_1730                                   | 
 | cdec                                                                                          | FCOPT |   2175 | 1140 |   30 |   2175 | 1140 |    4 | N   |      2.37 | cdec                                              | 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Number of LFLHs filtered from table: 29
-Runtime accepts/rejects/total =     2.98 /    14.58 /    17.56
+Runtime accepts/rejects/total =     2.98 /    14.51 /    17.49
 Accepts/rejects/total = 17 / 14 / 31
 Sum of reduced nodes/levels = 419 / 2638
-PBS_Generic_Opt-Post - Elapsed_Time 103, CPU_Time 107.771005
+PBS_Generic_Opt-Post - Elapsed_Time 102, CPU_Time 106.15902000000003
 stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) | 100.0(100.0) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) | 100.0(100.0) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 1, CPU_Time 0.0
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 1, CPU_Time 1.0
 stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) | 100.0( 99.1) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  99.1( 99.1) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.9) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.9(  0.9) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
 Starting post syn_generic ultra-effort Boolean optimization
 Redundancy removal succeeded.
-Done post syn_generic ultra-effort Boolean optimization (2.00 cpu seconds) (1.00 elapsed cpu seconds)
+Done post syn_generic ultra-effort Boolean optimization (1.00 cpu seconds) (1.00 elapsed cpu seconds)
 Info    : Done synthesizing. [SYNTH-2]
         : Done synthesizing 'TOP_WRAPPER' to generic gates.
 ##>=================== Cadence Confidential (Generic-Logical) ===================
@@ -4208,31 +4208,31 @@ stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  96.5( 96.4) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  96.5( 95.5) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.9) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.9(  0.9) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   3.5(  2.7) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   2.6(  3.6) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 1, CPU_Time 0.0
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 1.0
 stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  96.5( 95.5) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  95.6( 95.5) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.9) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.9(  0.9) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   3.5(  2.7) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   2.6(  3.6) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.9) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.9(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4436,7 +4436,7 @@ Scan synthesis status
                            Total  Weighted 
 Operation                   Area   Slacks  
  scan_map                 325904        0 
-/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/.st_launch_Pine-06_466630
+/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/.st_launch_Pine-06_82946
 
 State Retention Synthesis Status
 ================================
@@ -4458,22 +4458,22 @@ INFO: skipping constant propagation
 false
 0
 0
-PBS_Techmap-Global Mapping - Elapsed_Time 90, CPU_Time 94.84017600000004
+PBS_Techmap-Global Mapping - Elapsed_Time 90, CPU_Time 93.7320639999999
 stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  53.0( 52.7) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  52.7( 52.5) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.5(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.9(  1.5) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.4(  2.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.5(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  45.1( 44.8) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  44.9( 45.0) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4484,11 +4484,11 @@ Advanced structuring report (syn_map):
 |-------------------------------------------------------------------------------------------------------+----------------------+----------------------+-----------------+---------------------------------------------------|
 | Name                                                                                          | Tag   | #nodes | #and | #lvl | #nodes | #and | #lvl | Acc | Time      | Netlist ID                                        | 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| mux_ctl_0x_1759                                                                               | REIFI |  74940 | 1189 |   36 |  74906 | 1155 |    5 | N   |     11.28 | mux_ctl_0x_1759                                   | 
-| cdec                                                                                          | REIFI |   2175 | 1140 |   30 |   2175 | 1140 |    4 | N   |      2.36 | cdec                                              | 
+| mux_ctl_0x_1759                                                                               | REIFI |  74940 | 1189 |   36 |  74906 | 1155 |    5 | N   |     11.31 | mux_ctl_0x_1759                                   | 
+| cdec                                                                                          | REIFI |   2175 | 1140 |   30 |   2175 | 1140 |    4 | N   |      2.40 | cdec                                              | 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Number of LFLHs filtered from table: 68
-Runtime accepts/rejects/total =     2.70 /    15.23 /    17.93
+Runtime accepts/rejects/total =     2.69 /    15.27 /    17.96
 Accepts/rejects/total = 16 / 23 / 39
 Sum of reduced nodes/levels = 267 / 1595
 Info    : Value not written to the user hierarchy file. [CFM-420]
@@ -4547,48 +4547,48 @@ Warning : Writing DFT constraints in the dofile. [CFM-655]
 Info    : Wrote dofile. [CFM-1]
         : Dofile is 'fv/TOP_WRAPPER/rtl_to_fv_map.do'.
         : RTL names flow is enabled.
-PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 14, CPU_Time 14.63196899999997
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 14, CPU_Time 13.647678000000042
 stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  49.5( 49.3) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  49.4( 49.1) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.5(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.8(  1.4) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.4(  1.9) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.5(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  42.2( 41.9) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  42.2( 42.1) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:13(00:03:58) |  00:00:14(00:00:14) |   6.5(  6.5) |   13:18:04 (Aug06) |   1.63 GB | PBS_TechMap-Datapath Postmap Operations
+ 00:04:10(00:03:57) |  00:00:13(00:00:14) |   6.1(  6.5) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 1, CPU_Time 0.6288389999999708
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.6505009999999913
 stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  49.4( 49.1) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  49.3( 49.1) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.8(  1.4) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.3(  1.9) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.4(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  42.0( 41.7) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  42.1( 42.1) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:13(00:03:58) |  00:00:14(00:00:14) |   6.5(  6.5) |   13:18:04 (Aug06) |   1.63 GB | PBS_TechMap-Datapath Postmap Operations
+ 00:04:10(00:03:57) |  00:00:13(00:00:14) |   6.1(  6.5) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:14(00:03:59) |  00:00:00(00:00:01) |   0.3(  0.5) |   13:18:05 (Aug06) |   1.63 GB | PBS_TechMap-Postmap HBO Optimizations
+ 00:04:11(00:03:57) |  00:00:00(00:00:00) |   0.3(  0.0) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4601,23 +4601,23 @@ stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  49.2( 48.8) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  49.1( 48.8) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.8(  1.4) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.3(  1.9) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.4(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  41.9( 41.5) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  41.9( 41.9) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:13(00:03:58) |  00:00:14(00:00:14) |   6.5(  6.5) |   13:18:04 (Aug06) |   1.63 GB | PBS_TechMap-Datapath Postmap Operations
+ 00:04:10(00:03:57) |  00:00:13(00:00:14) |   6.1(  6.5) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:14(00:03:59) |  00:00:00(00:00:01) |   0.3(  0.5) |   13:18:05 (Aug06) |   1.63 GB | PBS_TechMap-Postmap HBO Optimizations
+ 00:04:11(00:03:57) |  00:00:00(00:00:00) |   0.3(  0.0) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:15(00:04:00) |  00:00:01(00:00:01) |   0.4(  0.5) |   13:18:06 (Aug06) |   1.63 GB | PBS_TechMap-Postmap Clock Gating
+ 00:04:12(00:03:58) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:56:02 (Aug26) |   1.62 GB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4627,7 +4627,7 @@ Info: CPU time includes time of parent + longest thread
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-       hi_fo_buf         8  (        8 /        8 )  1.32
+       hi_fo_buf         8  (        8 /        8 )  1.29
 
  
 Incremental optimization status
@@ -4680,30 +4680,30 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 false
 0
 0
-PBS_TechMap-Postmap Cleanup - Elapsed_Time 2, CPU_Time 1.5464060000000472
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 2, CPU_Time 2.5492389999999716
 stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  48.9( 48.4) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  48.5( 48.4) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.8(  1.4) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.3(  1.8) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.4(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  41.6( 41.1) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  41.4( 41.5) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:13(00:03:58) |  00:00:14(00:00:14) |   6.4(  6.4) |   13:18:04 (Aug06) |   1.63 GB | PBS_TechMap-Datapath Postmap Operations
+ 00:04:10(00:03:57) |  00:00:13(00:00:14) |   6.0(  6.5) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:14(00:03:59) |  00:00:00(00:00:01) |   0.3(  0.5) |   13:18:05 (Aug06) |   1.63 GB | PBS_TechMap-Postmap HBO Optimizations
+ 00:04:11(00:03:57) |  00:00:00(00:00:00) |   0.3(  0.0) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:15(00:04:00) |  00:00:01(00:00:01) |   0.4(  0.5) |   13:18:06 (Aug06) |   1.63 GB | PBS_TechMap-Postmap Clock Gating
+ 00:04:12(00:03:58) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:56:02 (Aug26) |   1.62 GB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:16(00:04:02) |  00:00:01(00:00:02) |   0.7(  0.9) |   13:18:08 (Aug06) |   1.63 GB | PBS_TechMap-Postmap Cleanup
+ 00:04:15(00:04:00) |  00:00:02(00:00:02) |   1.1(  0.9) |   16:56:04 (Aug26) |   1.62 GB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4711,32 +4711,32 @@ Info: CPU time includes time of parent + longest thread
 false
 0
 0
-PBS_Techmap-Post_MBCI - Elapsed_Time 0, CPU_Time 1.0
+PBS_Techmap-Post_MBCI - Elapsed_Time 0, CPU_Time 0.0
 stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   13:14:29 (Aug06) |   1.00 GB | PBS_Generic-Start
+ 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:52:27 (Aug26) |   1.02 GB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:09) |  00:01:51(00:01:46) |  48.6( 48.4) |   13:16:15 (Aug06) |   1.59 GB | PBS_Generic_Opt-Post
+ 00:02:18(00:02:08) |  00:01:49(00:01:45) |  48.5( 48.4) |   16:54:12 (Aug26) |   1.60 GB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:20(00:02:10) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:16 (Aug06) |   1.59 GB | PBS_Generic-Postgen HBO Optimizations
+ 00:02:19(00:02:09) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:54:13 (Aug26) |   1.60 GB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:13) |  00:00:04(00:00:03) |   1.7(  1.4) |   13:16:19 (Aug06) |   1.59 GB | PBS_TechMap-Start
+ 00:02:22(00:02:13) |  00:00:03(00:00:04) |   1.3(  1.8) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:02:24(00:02:14) |  00:00:00(00:00:01) |   0.0(  0.5) |   13:16:20 (Aug06) |   1.54 GB | PBS_TechMap-Premap HBO Optimizations
+ 00:02:23(00:02:13) |  00:00:01(00:00:00) |   0.4(  0.0) |   16:54:17 (Aug26) |   1.55 GB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:03:59(00:03:44) |  00:01:34(00:01:30) |  41.4( 41.1) |   13:17:50 (Aug06) |   1.65 GB | PBS_Techmap-Global Mapping
+ 00:03:57(00:03:43) |  00:01:33(00:01:30) |  41.4( 41.5) |   16:55:47 (Aug26) |   1.63 GB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:13(00:03:58) |  00:00:14(00:00:14) |   6.4(  6.4) |   13:18:04 (Aug06) |   1.63 GB | PBS_TechMap-Datapath Postmap Operations
+ 00:04:10(00:03:57) |  00:00:13(00:00:14) |   6.0(  6.5) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:14(00:03:59) |  00:00:00(00:00:01) |   0.3(  0.5) |   13:18:05 (Aug06) |   1.63 GB | PBS_TechMap-Postmap HBO Optimizations
+ 00:04:11(00:03:57) |  00:00:00(00:00:00) |   0.3(  0.0) |   16:56:01 (Aug26) |   1.62 GB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:15(00:04:00) |  00:00:01(00:00:01) |   0.4(  0.5) |   13:18:06 (Aug06) |   1.63 GB | PBS_TechMap-Postmap Clock Gating
+ 00:04:12(00:03:58) |  00:00:01(00:00:01) |   0.4(  0.5) |   16:56:02 (Aug26) |   1.62 GB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:16(00:04:02) |  00:00:01(00:00:02) |   0.7(  0.9) |   13:18:08 (Aug06) |   1.63 GB | PBS_TechMap-Postmap Cleanup
+ 00:04:15(00:04:00) |  00:00:02(00:00:02) |   1.1(  0.9) |   16:56:04 (Aug26) |   1.62 GB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:04:17(00:04:02) |  00:00:01(00:00:00) |   0.4(  0.0) |   13:18:08 (Aug06) |   1.63 GB | PBS_Techmap-Post_MBCI
+ 00:04:15(00:04:00) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:56:04 (Aug26) |   1.62 GB | PBS_Techmap-Post_MBCI
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4746,9 +4746,9 @@ Info: CPU time includes time of parent + longest thread
 ##>----------------------------------------------------------------------------------------
 ##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
 ##>----------------------------------------------------------------------------------------
-##>M:Initial                            0         -         -     24420    349870      1593
+##>M:Initial                            1         -         -     24420    349870      1548
 ##>M:Early Clock Gating                 0         -         -         -         -         -
-##>M:Pre Cleanup                        1         -         -     24420    349870      1537
+##>M:Pre Cleanup                        0         -         -     24420    349870      1548
 ##>M:Setup                              0         -         -         -         -         -
 ##>M:Launch ST                          0         -         -         -         -         -
 ##>M:Design Partition                   0         -         -         -         -         -
@@ -4762,16 +4762,16 @@ Info: CPU time includes time of parent + longest thread
 ##>M:Timer                              0         -         -         -         -         -
 ##>M:Assembly                           0         -         -         -         -         -
 ##>M:DFT                                0         -         -         -         -         -
-##>M:DP Operations                     14         -         -     25952    325887      1630
-##>M:Const Prop                         0     11637         0     25952    325887      1630
-##>M:Cleanup                            2     11637         0     26047    326334      1630
-##>M:MBCI                               0         -         -     26047    326334      1630
+##>M:DP Operations                     14         -         -     25952    325887      1621
+##>M:Const Prop                         0     11637         0     25952    325887      1621
+##>M:Cleanup                            2     11637         0     26047    326334      1621
+##>M:MBCI                               0         -         -     26047    326334      1621
 ##>M:PostGen Opt                        0         -         -         -         -         -
 ##>M:Const Gate Removal                 0         -         -         -         -         -
 ##>M:Early Clock Gating Cleanup         0         -         -         -         -         -
-##>M:Misc                              92
+##>M:Misc                              91
 ##>----------------------------------------------------------------------------------------
-##>Total Elapsed                      109
+##>Total Elapsed                      108
 ##>========================================================================================
 Info    : Done mapping. [SYNTH-5]
         : Done mapping 'TOP_WRAPPER'.
@@ -4781,10 +4781,10 @@ UM:*                                                                   syn_map
 INFO: Building JTAG TAP Controller and Boundary Scan...
 @file(scan.tcl) 171: define_jtag_instruction_register -name JTAG_IR 
 Checking out license: Modus_DFT_Opt
-[13:18:09.304850] Periodic Lic check successful
-[13:18:09.829161] Feature usage summary:
-[13:18:09.829162] Genus_Synthesis  
-[13:18:09.829162] Modus_DFT_Opt  
+[16:56:06.074586] Periodic Lic check successful
+[16:56:06.074609] Feature usage summary:
+[16:56:06.074610] Genus_Synthesis  
+[16:56:06.074610] Modus_DFT_Opt  
 @file(scan.tcl) 174: define_jtag_instruction -name EXTEST  -opcode 00
 @file(scan.tcl) 175: define_jtag_instruction -name SAMPLE  -opcode 01
 @file(scan.tcl) 176: define_jtag_instruction -name PRELOAD -opcode 10
@@ -4797,7 +4797,7 @@ Checking out license: Modus_DFT_Opt
     -trst [get_ports PIN_TRST]
 Info    : Initiating DFT command. [DFT-145]
         : Started add_jtag_macro.
-WARNING: Using existing directory '/tmp/genus_temp_466630_37e227a1-b776-4e09-99ec-655e4ac16676_Pine-06_admin_q0Mzb3/__TB.466630_1786002248080___ePAMTk' for add_jtag_macro.
+WARNING: Using existing directory '/tmp/genus_temp_82946_47b18fab-778b-497e-a7e7-e7c24eb55a81_Pine-06_admin_kUXnoH/__TB.82946_1787743326169___RV5tL1' for add_jtag_macro.
   Warning: Port 'PIN_REF_CLK' already specified as test clock.
   Warning: Port 'PIN_UART_CLK' already specified as test clock.
   Setting attribute of root '/': 'optimize_constant_0_flops' = false
@@ -5098,7 +5098,7 @@ Info    : Successfully completed DFT command. [DFT-146]
 @file(scan.tcl) 190: add_jtag_boundary_scan -exclude_ports {PIN_comp_en PIN_spread_en PIN_mask_en PIN_mask_load PIN_mask_clk}
 Info    : Initiating DFT command. [DFT-145]
         : Started add_jtag_boundary_scan.
-WARNING: Using existing directory '/tmp/genus_temp_466630_37e227a1-b776-4e09-99ec-655e4ac16676_Pine-06_admin_q0Mzb3/__TB.466630_1786002248080___DBbTko' for add_jtag_boundary_scan.
+WARNING: Using existing directory '/tmp/genus_temp_82946_47b18fab-778b-497e-a7e7-e7c24eb55a81_Pine-06_admin_kUXnoH/__TB.82946_1787743326169___3fyHs7' for add_jtag_boundary_scan.
   Warning: Port 'PIN_mask_clk' already specified as -exclude_ports.
   Warning: Port 'PIN_TCK' already specified as -tck.
   Warning: Port 'PIN_TRST' already specified as -trst.
@@ -5200,15 +5200,15 @@ Index      Port               System Use  Test Use  BDY Cell    I/O cell    Comp
 ===> Loading the boundary cells
 
 Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'BC_OUT' from file '/tmp/genus_temp_466630_37e227a1-b776-4e09-99ec-655e4ac16676_Pine-06_admin_q0Mzb3/__TB.466630_1786002248080___DBbTko/BC_OUT.v'.
+        : Elaborating top-level block 'BC_OUT' from file '/tmp/genus_temp_82946_47b18fab-778b-497e-a7e7-e7c24eb55a81_Pine-06_admin_kUXnoH/__TB.82946_1787743326169___3fyHs7/BC_OUT.v'.
 Info    : Done Elaborating Design. [ELAB-3]
         : Done elaborating 'BC_OUT'.
 Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'BC_CLKIN' from file '/tmp/genus_temp_466630_37e227a1-b776-4e09-99ec-655e4ac16676_Pine-06_admin_q0Mzb3/__TB.466630_1786002248080___DBbTko/BC_CLKIN.v'.
+        : Elaborating top-level block 'BC_CLKIN' from file '/tmp/genus_temp_82946_47b18fab-778b-497e-a7e7-e7c24eb55a81_Pine-06_admin_kUXnoH/__TB.82946_1787743326169___3fyHs7/BC_CLKIN.v'.
 Info    : Done Elaborating Design. [ELAB-3]
         : Done elaborating 'BC_CLKIN'.
 Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'BC_IN' from file '/tmp/genus_temp_466630_37e227a1-b776-4e09-99ec-655e4ac16676_Pine-06_admin_q0Mzb3/__TB.466630_1786002248080___DBbTko/BC_IN.v'.
+        : Elaborating top-level block 'BC_IN' from file '/tmp/genus_temp_82946_47b18fab-778b-497e-a7e7-e7c24eb55a81_Pine-06_admin_kUXnoH/__TB.82946_1787743326169___3fyHs7/BC_IN.v'.
 Info    : Done Elaborating Design. [ELAB-3]
         : Done elaborating 'BC_IN'.
 
@@ -5393,7 +5393,7 @@ Async. set/reset Rule Violations:
       Number of registers that pass DFT rules: 8495
   Percentage of total registers that are scannable: 99.6%
 Info    : Reporting runtime for DFT command. [DFT-147]
-        : Runtime for add_jtag_boundary_scan is 2 second(s).
+        : Runtime for add_jtag_boundary_scan is 1 second(s).
 Info    : Successfully completed DFT command. [DFT-146]
         : Successfully completed add_jtag_boundary_scan.
   =================
@@ -5423,7 +5423,7 @@ Info    : Initiating DFT command. [DFT-145]
 Mapping DFT logic introduced by scan chain connection...
 Mapping DFT logic done.
 Info    : Reporting runtime for DFT command. [DFT-147]
-        : Runtime for connect_scan_chains is 2 second(s).
+        : Runtime for connect_scan_chains is 1 second(s).
 Info    : Successfully completed DFT command. [DFT-146]
         : Successfully completed connect_scan_chains command.
   =================
@@ -5588,20 +5588,368 @@ Info    : Successfully completed DFT command. [DFT-146]
 |       |    |     |Try running the 'edit_netlist uniquify' command on the parent hierarchy of this (sub)                     |
 |       |    |     | design, if there exists any.                                                                             |
 -------------------------------------------------------------------------------------------------------------------------------
-@file(scan.tcl) 225: report_scan_chains > $REPORT_DIR/Scan_Chain_Report.rpt
-@file(scan.tcl) 226: report_scan_setup > $REPORT_DIR/Scan_Setup_Report.rpt
+@file(scan.tcl) 227: analyze_atpg_testability -directory $TP_DIR  -library $VERILOG_LIB [current_design]
+WARNING: Using existing directory 'TOP_WRAPPER_TP' for analyze_atpg_testability.
+
+
+Checking out license: Modus_DFT_Opt
+Build Model log:
+===============
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        368,988  Blocks                     192,399  Blocks
+      1,148,574  Pins                       192,399  Nodes
+        604,456  Nets
+
+Primary Inputs:                      Primary Outputs:
+         17  Input Only                         6  Output Only
+          0  Input/Output                       0  Input/Output
+         17  Total Inputs                       6  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+     17,005  Tied to 0                          0  Two-State
+      8,516  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+     25,521  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          1  TSDs
+          0  Resistors
+          0  Transistors
+     17,323  MUX2s
+         12  Latches
+
+
+      8,724  Rising  Edge Flop w/Set-Dominant and Reset Port
+      8,724  Total Flops
+
+     27,380  Technology Library Cell Instances
+
+End Build Model log
+===================
+ 
+INFO (THM-814): Testmode contains 90.90% active logic,  9.10% inactive logic and  0.00% constraint logic.   [end THM_814] 
+      1 INFO (THM-814): Testmode contains 90.90% active logic,  9.10% inactive logic and  0.00% constraint logic.    
+WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+      1 WARNING (TTM-347): There is less than 96 percent active logic in this test mode.  Global fault
+ATPG log:
+=========
+
+                           Testmode Statistics: SCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                 34551        34501            5           43            2  99.86  99.98
+
+End ATPG log
+============
+ 
+@file(scan.tcl) 231: write_dft_compression_test_points -library $VERILOG_LIB
+WARNING: Using existing directory './test_scripts' for write_dft_compression_test_points.
+INFO: Start of Generation of Modus No TP File './test_scripts/TOP_WRAPPER.noTpFile'
+INFO: Avoiding test point identification for cell 'JTAG_MACRO' because the module is marked dont-scan.
+INFO: Avoiding test point identification for block 'u_core/U0_SYS_CTRL/DFT_lockup_latch_neg_edge' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_framing_error_5' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_parity_error_4' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_UART_TX_O_3' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_UART_RX_IN_2' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_UART_CLK_1' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'TBB_BSC_PIN_REF_CLK_0' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'COMPACTOR' because the instance is a scan abstracted block.
+INFO: Avoiding test point identification for block 'DFT_lockup_latch_neg_edge11' because the instance is marked dont-scan.
+INFO: Avoiding test point identification for block 'DFT_lockup_latch_neg_edge' because the instance is marked dont-scan.
+INFO: End of Generation of Modus No TP File './test_scripts/TOP_WRAPPER.noTpFile'
+----------------------------------------------------------------------------
+Modus scripts for COMPRESSION TESTPOINT ANALYSIS have been written 
+ for fullscan mode to directory './test_scripts'.
+To run Compression Testpoint Analysis on the design:
+.... Invoke the script from OS command line as 'modus -file ./test_scripts/runmodus.compression_testpoints.tcl'.
+------------------------------------------------------------------------
+@file(scan.tcl) 234: puts "Running Modus analysis..."
+Running Modus analysis...
+@file(scan.tcl) 235: exec modus -files ./test_scripts/runmodus.compression_testpoints.tcl
+@file(scan.tcl) 238: add_analyzed_test_points -input_test_point_file ./test_scripts/${DESIGN_NAME}.compression_testpoints.tpfile
+Info    : Initiating DFT command. [DFT-145]
+        : Started add_analyzed_test_points.
+Warning : Obsolete option value. [DFT-1002] [add_analyzed_test_points]
+        : '-input_test_point_file' option will be obsolete from the future releases. Run analyze_test_points command with '-input_test_point_file' option to identify test points.
+        : This option value will be invalid in future release.
+INFO: Using test signal 'PIN_TestMode' for testpoint insertion.
+Info : Selected 53 qualified test point nodes out of 53 suggested test point nodes.
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+        : This attribute does not affect the tool behavior and will be removed in next major release. Remove all usages.
+Test Point (1 - 4): insert_testpoint -dont_map -type async_1 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2498/Y pin:TOP_WRAPPER/u_core/U0_CLKDIV_MUX/g160/Y pin:TOP_WRAPPER/u_core/U0_Register_File/g4350/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_data_sampling/g1481/Y}
+             : Inserted testpoint is 'u_core/U0_SYS_CTRL/DFT_tpi_async_1_flop_0/DFT_CDNS_C1_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (5 - 8): insert_testpoint -dont_map -type async_0 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/DFT_tpi_and2518/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2505/Y pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2494/Y pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2497/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5675__8246/Y}
+             : Inserted testpoint is 'u_core/U0_SYS_CTRL/DFT_tpi_async_0_flop_0/DFT_CDNS_C0_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (9 - 11): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_and/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27328/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27327/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27326/Y}
+             : Inserted testpoint is 'u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_xor_tree_0/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (12 - 15): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_and49815/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27325/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27324/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27323/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27322/Y}
+             : Inserted testpoint is 'u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_xor_tree_1/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (16 - 19): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_and49816/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27321/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27320/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27319/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27318/Y}
+             : Inserted testpoint is 'u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_xor_tree_2/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (20 - 23): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_and49817/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27316/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27315/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27314/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27317/Y}
+             : Inserted testpoint is 'u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_xor_tree_3/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (24 - 27): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_and49818/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_mem/g27313/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/div_67_27_g1877__5526/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5592__6161/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5599__6417/Y}
+             : Inserted testpoint is 'u_core/U0_Async_fifo/u_fifo_mem/DFT_tpi_xor_tree_4/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (28 - 31): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_parity_check/DFT_tpi_and/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_parity_check/g1062/Y pin:TOP_WRAPPER/u_core/U1_Integer_Clock_Divider_RX/g1318/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_strt_check/g758/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_FSM/g2365/Y}
+             : Inserted testpoint is 'u_core/U0_UART/U0_UART_RX/U0_parity_check/DFT_tpi_xor_tree_5/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (32 - 35): insert_testpoint -dont_map -type async_0 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_strt_check/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_strt_check/g769/Y pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2513/Y pin:TOP_WRAPPER/u_core/U0_Async_fifo/u_fifo_rd/g796/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_strt_check/g765/Y}
+             : Inserted testpoint is 'u_core/U0_UART/U0_UART_RX/U0_strt_check/DFT_tpi_async_0_flop_1/DFT_CDNS_C0_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (36 - 39): insert_testpoint -dont_map -type async_1 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_stop_check/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_stop_check/g559/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_FSM/g2364/Y pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2318/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5582__2802/Y}
+             : Inserted testpoint is 'u_core/U0_UART/U0_UART_RX/U0_stop_check/DFT_tpi_async_1_flop_1/DFT_CDNS_C1_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (40 - 43): insert_testpoint -dont_map -type async_0 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_Integer_Clock_Divider_TX/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_Integer_Clock_Divider_TX/g1170/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_edge_bit_counter/g1167/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_parity_check/g1070/Y pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_FSM/g2386/Y}
+             : Inserted testpoint is 'u_core/U0_Integer_Clock_Divider_TX/DFT_tpi_async_0_flop_2/DFT_CDNS_C0_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (44 - 47): insert_testpoint -dont_map -type async_0 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_FSM/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_FSM/g2366/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5680__6131/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5624__2346/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5595__2883/Y}
+             : Inserted testpoint is 'u_core/U0_UART/U0_UART_RX/U0_FSM/DFT_tpi_async_0_flop_3/DFT_CDNS_C0_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (48 - 50): insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/DFT_tpi_and2518/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_SYS_CTRL/g2291/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5591__4733/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5573__5107/Y}
+             : Inserted testpoint is 'u_core/U0_SYS_CTRL/DFT_tpi_xor_tree_6/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point 51: insert_testpoint -dont_map -type observe_scan -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_stop_check/DFT_tpi_and/z} -test_control PIN_TestMode -rise  -location {pin:TOP_WRAPPER/u_core/U0_UART/U0_UART_RX/U0_stop_check/g547/Y}
+             : Inserted testpoint is 'u_core/U0_UART/U0_UART_RX/U0_stop_check/DFT_tpi_xor_tree_7/DFT_CDNS_OBS_tpi_flop'.
+
+Warning : Obsolete attribute. [TUI-30]
+        : Attribute 'dft_testpoint_type' will be obsolete from future releases. Please use 'dft_testpoint_type_flop' instead.
+Test Point (52 - 53): insert_testpoint -dont_map -type async_0 -test_clock_pin {pin:TOP_WRAPPER/u_core/U0_ALU_16B/DFT_tpi_and/z} -test_control PIN_TestMode -rise   -location {pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5673__1705/Y pin:TOP_WRAPPER/u_core/U0_ALU_16B/g5709__2802/Y}
+             : Inserted testpoint is 'u_core/U0_ALU_16B/DFT_tpi_async_0_flop_4/DFT_CDNS_C0_tpi_flop'.
+
+  Mapping the Test Point logic ...
+
+                Test Point Insertion Summary                
+============================================================
+                          Type    Node    Flop  Failed
+------------------------------------------------------------
+                       async_0      18       5       0
+                       async_1       8       2       0
+                  observe_scan      27       8       0
+------------------------------------------------------------
+                         Total      53      15       0
+------------------------------------------------------------
+
+Legend:
+============================================================
+  - Type includes all different types of test points.
+  - Node includes all qualified test point locations.
+  - Flop includes all the test point flops inserted.
+  - Fail includes all the qualified test point nodes that failed to insert test points.
+
+
+Info : Processed 53 of 53 suggested test point nodes successfully (Failed: 0).
+Info : Inserted 15 test point flops.
+
+Inserted 53 of 53 suggested test points.
+Inserted 53 testpoints successfully (Failed: 0).
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for add_analyzed_test_points is 3 second(s).
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed add_analyzed_test_points.
+
+
+
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|   Id   |  Sev  |Count|                                             Message Text                                             |
+-------------------------------------------------------------------------------------------------------------------------------
+|DFT-145 |Info   |    1|Initiating DFT command.                                                                               |
+|DFT-146 |Info   |    1|Successfully completed DFT command.                                                                   |
+|DFT-147 |Info   |    1|Reporting runtime for DFT command.                                                                    |
+|DFT-1002|Warning|    1|Obsolete option value.                                                                                |
+|        |       |     |This option value will be invalid in future release.                                                  |
+|TUI-30  |Warning|   15|Obsolete attribute.                                                                                   |
+|        |       |     |This attribute does not affect the tool behavior and will be removed in next major release. Remove all|
+|        |       |     | usages.                                                                                              |
+-------------------------------------------------------------------------------------------------------------------------------
+@file(scan.tcl) 241: check_dft_rules
+Info    : Initiating DFT command. [DFT-145]
+        : Initiating check_dft_rules command.
+  Checking DFT rules for 'TOP_WRAPPER' module under 'muxed_scan' style
+
+Detected 0 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 44
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 0
+	      Tied constant clock net: 0
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 0
+	      Tied active async net: 0
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+Abstract Segment Test Mode Violations:
+-------------------------------------
+	            Internally driven Abs Seg TM net: 0
+	                  Tied active Abs Seg TM net: 0
+	                     Undriven Abs Seg TM net: 0
+	Conflicting active values for Abs Seg TM net: 0
+	                        Misc. Abs Seg TM net: 0
+
+   Total number of DFT violations: 0
+
+  Total number of Test Clock Domains: 2
+  Number of user specified non-Scan registers:  31
+  Number of Abstract Segment non-Scan registers: 198
+      Number of registers that fail DFT rules:   0
+      Number of registers that pass DFT rules: 8708
+  Percentage of total registers that are scannable: 99.6%
+  Percentage of abstract segment flops that are scannable: 100%
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for check_dft_rules is 0.137000 seconds.
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed check_dft_rules command.
+  =================
+   Message Summary
+  =================
+--------------------------------------------------------
+|  Id   |Sev |Count|           Message Text            |
+--------------------------------------------------------
+|DFT-145|Info|    1|Initiating DFT command.            |
+|DFT-146|Info|    1|Successfully completed DFT command.|
+|DFT-147|Info|    1|Reporting runtime for DFT command. |
+--------------------------------------------------------
+@file(scan.tcl) 247: connect_scan_chains -auto_create
+Info    : Initiating DFT command. [DFT-145]
+        : Started connect_scan_chains.
+  Starting DFT Scan Configuration for module 'TOP_WRAPPER' in 'normal' mode, with physical flow OFF 
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[1]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+        : Scan mapped flops which reside in a parent module that is abstracted are excluded from scan connection as individual bits. In both scenarios, abstract scan segment defined for the lib cell or parent module is used by scan connection to include the segment into the scan chain.
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[2]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[3]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[4]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[5]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[6]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[7]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[8]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[9]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[10]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[11]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[12]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[13]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[14]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[15]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[16]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[17]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[18]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[19]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across a parent module. [DFT-515]
+        : 'COMPACTOR/compressor/mreg0_reg[20]' is part of scan segment 'scan_segment:TOP_WRAPPER/DFT_segment_1'
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'DFT-515'.
+  Configuring 2 chains for 8708 scan f/f 
+  Configured 2 chains for Domain: 'ScanClock', edge: 'rising'
+  	 chain_1 (PIN_ScanIn_1 -> PIN_ScanOut_1) has 4354 registers; Domain:ScanClock, edge: rising
+  	 chain_2 (PIN_ScanIn_2 -> PIN_ScanOut_2) has 4354 registers; Domain:ScanClock, edge: rising
+  Processing 2 scan chains in 'muxed_scan' style.
+  Default shift enable signal is 'PIN_ScanEnable': 'port:TOP_WRAPPER/PIN_ScanEnable' active high.
+Mapping DFT logic introduced by scan chain connection...
+Mapping DFT logic done.
+Info    : Reporting runtime for DFT command. [DFT-147]
+        : Runtime for connect_scan_chains is 1 second(s).
+Info    : Successfully completed DFT command. [DFT-146]
+        : Successfully completed connect_scan_chains command.
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------
+|  Id   |  Sev  |Count|                                             Message Text                                              |
+-------------------------------------------------------------------------------------------------------------------------------
+|DFT-145|Info   |    1|Initiating DFT command.                                                                                |
+|DFT-146|Info   |    1|Successfully completed DFT command.                                                                    |
+|DFT-147|Info   |    1|Reporting runtime for DFT command.                                                                     |
+|DFT-515|Warning|   20|Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across |
+|       |       |     | a parent module.                                                                                      |
+|       |       |     |Scan mapped flops which reside in a parent module that is abstracted are excluded from scan connection |
+|       |       |     | as individual bits. In both scenarios, abstract scan segment defined for the lib cell or parent module|
+|       |       |     | is used by scan connection to include the segment into the scan chain.                                |
+|MESG-11|Warning|    1|Maximum message print count reached.                                                                   |
+-------------------------------------------------------------------------------------------------------------------------------
+@file(scan.tcl) 253: report_scan_chains > $REPORT_DIR/Scan_Chain_Report.rpt
+@file(scan.tcl) 254: report_scan_setup > $REPORT_DIR/Scan_Setup_Report.rpt
 Info    : Scan chain has elements which already have their SE connected. No elements in the scan chain needs SE connection. [DFT-710]
         : Scan chain chain_1 shift_enable is reported as NONE.
 Info    : Scan chain has elements which already have their SE connected. No elements in the scan chain needs SE connection. [DFT-710]
         : Scan chain chain_2 shift_enable is reported as NONE.
-@file(scan.tcl) 231: set_db syn_opt_effort $EFFORT
+@file(scan.tcl) 259: set_db syn_opt_effort $EFFORT
   Setting attribute of root '/': 'syn_opt_effort' = high
-@file(scan.tcl) 232: syn_opt                                      ;# Fix electrical & timing violations
+@file(scan.tcl) 260: syn_opt                                      ;# Fix electrical & timing violations
 Warning : The selected flow setting will be removed in a future release. [SYNTH-33]
         : The use of 'syn_opt' for logical only optimization will be obsolete in a future release.
 	Transition to 'syn_opt -logical' or 'syn_opt -spatial'.
 
         : Contact Cadence support to understand current flows.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 3 sequential instances.
 Info    : Incrementally optimizing. [SYNTH-7]
         : Incrementally optimizing 'TOP_WRAPPER' using 'high' effort.
  
@@ -5611,16 +5959,16 @@ Incremental optimization status
                                   Tot Wrst     Total - - DRC Totals - -
                            Total  Weighted      Neg      Max       Max 
 Operation                   Area   Slacks      Slack    Trans      Cap 
- init_iopt                329780        0         0  36051321    10234
+ init_iopt                329550        0         0  35691730    10144
 -------------------------------------------------------------------------------
- const_prop               329780        0         0  36051321    10234
- simp_cc_inputs           329778        0         0  36051321    10234
+ const_prop               329550        0         0  35691730    10144
+ simp_cc_inputs           329549        0         0  35691730    10144
 -------------------------------------------------------------------------------
- hi_fo_buf                331001        0         0         0        0
+ hi_fo_buf                330708        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-       hi_fo_buf         3  (        3 /        3 )  1.63
+       hi_fo_buf         2  (        2 /        2 )  1.55
 
  
 Incremental optimization status
@@ -5629,7 +5977,7 @@ Incremental optimization status
                                   Tot Wrst     Total - - DRC Totals - -
                            Total  Weighted      Neg      Max       Max 
 Operation                   Area   Slacks      Slack    Trans      Cap 
- init_delay               331001        0         0         0        0
+ init_delay               330708        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -5752,7 +6100,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        gate_deco         0  (        0 /        0 )  0.00
        gcomp_tim         0  (        0 /        0 )  0.00
   inv_pair_2_buf         0  (        0 /        0 )  0.00
- init_drc                 331001        0         0         0        0
+ init_drc                 330708        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -5794,7 +6142,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        crit_dnsz         0  (        0 /        0 )  0.00
        crit_upsz         0  (        0 /        0 )  0.00
 
- init_tns                 331001        0         0         0        0
+ init_tns                 330708        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -5836,34 +6184,34 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        crr_local         0  (        0 /        0 )  0.00
          buf2inv         0  (        0 /        0 )  0.00
 
- init_area                331001        0         0         0        0
- rem_buf                  330989        0         0         0        0
- rem_inv                  329489        0         0         0        0
- merge_bi                 329378        0         0         0        0
- merge_bi                 329377        0         0         0        0
- io_phase                 329376        0         0         0        0
- gate_comp                329375        0         0         0        0
- glob_area                329369        0         0         0        0
- area_down                329367        0         0         0        0
+ init_area                330708        0         0         0        0
+ rem_buf                  330687        0         0         0        0
+ rem_inv                  329225        0         0         0        0
+ merge_bi                 329141        0         0         0        0
+ merge_bi                 329140        0         0         0        0
+ io_phase                 329139        0         0         0        0
+ gate_comp                329138        0         0         0        0
+ glob_area                329133        0         0         0        0
+ area_down                329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-           undup         0  (        0 /        0 )  0.13
-         rem_buf         4  (        4 /        4 )  0.05
-         rem_inv       252  (      216 /      243 )  5.96
-        merge_bi        52  (       45 /       45 )  1.47
+           undup         0  (        0 /        0 )  0.12
+         rem_buf         4  (        4 /        4 )  0.03
+         rem_inv       234  (      207 /      234 )  5.51
+        merge_bi        43  (       36 /       36 )  1.36
       rem_inv_qb         0  (        0 /        0 )  0.00
-    seq_res_area         9  (        0 /        0 )  2.19
+    seq_res_area         9  (        0 /        0 )  2.17
         io_phase       205  (        1 /        1 )  0.01
-       gate_comp       504  (        6 /        6 )  2.05
-       gcomp_mog         3  (        0 /        0 )  0.35
-       glob_area        57  (        6 /       57 )  0.13
-       area_down        12  (        2 /        4 )  0.47
+       gate_comp       504  (        6 /        6 )  1.65
+       gcomp_mog         5  (        0 /        0 )  0.35
+       glob_area        56  (        4 /       56 )  0.12
+       area_down        11  (        1 /        3 )  0.45
       size_n_buf         0  (        0 /        0 )  0.23
   gate_deco_area         0  (        0 /        0 )  0.01
          rem_buf         0  (        0 /        0 )  0.00
-         rem_inv         8  (        0 /        7 )  1.00
-        merge_bi         6  (        0 /        0 )  0.11
+         rem_inv         7  (        0 /        7 )  0.92
+        merge_bi         6  (        0 /        0 )  0.10
       rem_inv_qb         0  (        0 /        0 )  0.00
 
  
@@ -5873,7 +6221,7 @@ Incremental optimization status
                                   Tot Wrst     Total - - DRC Totals - -
                            Total  Weighted      Neg      Max       Max 
 Operation                   Area   Slacks      Slack    Trans      Cap 
- init_delay               329367        0         0         0        0
+ init_delay               329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -5944,7 +6292,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        gate_deco         0  (        0 /        0 )  0.00
        gcomp_tim         0  (        0 /        0 )  0.00
   inv_pair_2_buf         0  (        0 /        0 )  0.00
- init_drc                 329367        0         0         0        0
+ init_drc                 329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -5984,7 +6332,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        crit_dnsz         0  (        0 /        0 )  0.00
        crit_upsz         0  (        0 /        0 )  0.00
 
- init_tns                 329367        0         0         0        0
+ init_tns                 329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -6026,23 +6374,21 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        crr_local         0  (        0 /        0 )  0.00
          buf2inv         0  (        0 /        0 )  0.00
 
- init_area                329367        0         0         0        0
- glob_area                329366        0         0         0        0
- area_down                329366        0         0         0        0
+ init_area                329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-           undup         0  (        0 /        0 )  0.43
+           undup         0  (        0 /        0 )  0.41
          rem_buf         0  (        0 /        0 )  0.00
-         rem_inv         8  (        0 /        7 )  1.00
+         rem_inv         7  (        0 /        7 )  0.92
         merge_bi         6  (        0 /        0 )  0.11
       rem_inv_qb         0  (        0 /        0 )  0.00
         io_phase       204  (        0 /        0 )  0.01
-       gate_comp       494  (        0 /        0 )  1.85
-       gcomp_mog         3  (        0 /        0 )  0.34
-       glob_area        55  (        2 /       55 )  0.13
-       area_down        11  (        1 /        3 )  0.38
-      size_n_buf         0  (        0 /        0 )  0.12
+       gate_comp       494  (        0 /        0 )  1.39
+       gcomp_mog         5  (        0 /        0 )  0.34
+       glob_area        50  (        0 /       50 )  0.12
+       area_down        10  (        0 /        2 )  0.38
+      size_n_buf         0  (        0 /        0 )  0.11
   gate_deco_area         0  (        0 /        0 )  0.00
 
  
@@ -6052,7 +6398,7 @@ Incremental optimization status
                                   Tot Wrst     Total - - DRC Totals - -
                            Total  Weighted      Neg      Max       Max 
 Operation                   Area   Slacks      Slack    Trans      Cap 
- init_delay               329366        0         0         0        0
+ init_delay               329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -6105,7 +6451,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        gcomp_tim         0  (        0 /        0 )  0.00
   inv_pair_2_buf         0  (        0 /        0 )  0.00
 
- init_drc                 329366        0         0         0        0
+ init_drc                 329133        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -6154,41 +6500,52 @@ Stage : incr_opt
 -------------------------------------------------------------------------------------------------------------------------------
 |   Id   |  Sev  |Count|                                             Message Text                                             |
 -------------------------------------------------------------------------------------------------------------------------------
+|DFT-515 |Warning|  176|Scan mapped flop marked dont scan because an abstract segment is defined across its lib cell or across|
+|        |       |     | a parent module.                                                                                     |
+|        |       |     |Scan mapped flops which reside in a parent module that is abstracted are excluded from scan connection|
+|        |       |     | as individual bits. In both scenarios, abstract scan segment defined for the lib cell or parent      |
+|        |       |     | module is used by scan connection to include the segment into the scan chain.                        |
 |DFT-710 |Info   |    2|Scan chain has elements which already have their SE connected. No elements in the scan chain needs SE |
 |        |       |     | connection.                                                                                          |
+|GLO-34  |Info   |    1|Deleting instances not driving any primary outputs.                                                   |
+|        |       |     |Optimizations such as constant propagation or redundancy removal could change the connections so a    |
+|        |       |     | hierarchical instance does not drive any primary outputs anymore. To see the list of deleted         |
+|        |       |     | hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is       |
+|        |       |     | truncated set the message attribute 'truncate' to false to see the complete list. To prevent this    |
+|        |       |     | optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve'      |
+|        |       |     | instance attribute to 'true'.                                                                        |
 |PA-7    |Info   |    2|Resetting power analysis results.                                                                     |
 |        |       |     |All computed switching activities are removed.                                                        |
 |SYNTH-7 |Info   |    1|Incrementally optimizing.                                                                             |
 |SYNTH-33|Warning|    1|The selected flow setting will be removed in a future release.                                        |
 |        |       |     |Contact Cadence support to understand current flows.                                                  |
+|TUI-306 |Info   |    1|An additional product license has been checked out.                                                   |
+|TUI-307 |Info   |    1|A product license has been checked in.                                                                |
 -------------------------------------------------------------------------------------------------------------------------------
 Info    : Done incrementally optimizing. [SYNTH-8]
         : Done incrementally optimizing 'TOP_WRAPPER'.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   syn_opt
-@file(scan.tcl) 237: write_netlist > $NETLIST_DIR/${DESIGN_NAME}_Scan_Netlist.v
-@file(scan.tcl) 238: write_sdc >     $NETLIST_DIR/${DESIGN_NAME}_mapped.sdc
+@file(scan.tcl) 265: write_netlist > $NETLIST_DIR/${DESIGN_NAME}_Scan_Netlist.v
+@file(scan.tcl) 266: write_sdc >     $NETLIST_DIR/${DESIGN_NAME}_mapped.sdc
 Finished SDC export (command execution time mm:ss (real) = 00:00).
-@file(scan.tcl) 239: write_dft_atpg -compression -delay -library  $VERILOG_LIB -directory $ATPG_DIR -generate_config_file [current_design]
+@file(scan.tcl) 267: write_dft_atpg -compression -delay -library  $VERILOG_LIB -directory $ATPG_DIR -generate_config_file [current_design]
+INFO: Ignoring '-compression' option as there are no compressed scan chains in the design.
 WARNING: Using existing directory 'TOP_WRAPPER_ATPG' for write_dft_atpg.
 ----------------------------------------------------------------------------
 Modus scripts for ATPG have been written 
- for compression mode with fullscan top-off to directory 'TOP_WRAPPER_ATPG'.
-To generate the ATPG test vectors in compression mode with fullscan top-off :
+ for fullscan mode to directory 'TOP_WRAPPER_ATPG'.
+To generate the ATPG test vectors in fullscan mode :
 .... Invoke the script from OS command line as 'modus -file TOP_WRAPPER_ATPG/runmodus.atpg.tcl'.
-To simulate the ATPG generated test vectors in COMPRESSION mode:
-.... Invoke the script from OS command line as 'TOP_WRAPPER_ATPG/run_compression_sim'.
-To simulate the ATPG generated test vectors in COMPRESSION_DECOMP mode:
-.... Invoke the script from OS command line as 'TOP_WRAPPER_ATPG/run_compression_decomp_sim'.
-To simulate the ATPG generated test vectors in FULLSCAN (top-off) mode:
+To simulate the ATPG generated test vectors in FULLSCAN mode:
 .... Invoke the script from OS command line as 'TOP_WRAPPER_ATPG/run_fullscan_sim'.
 ------------------------------------------------------------------------
-@file(scan.tcl) 244: report_timing >           $REPORT_DIR/${DESIGN_NAME}_timing_worst_path.rpt  
-@file(scan.tcl) 245: report_timing -nworst 10 >$REPORT_DIR/${DESIGN_NAME}_timing_worst_negative.rpt
-@file(scan.tcl) 246: report_qor >              $REPORT_DIR/${DESIGN_NAME}_qor.rpt                       
-@file(scan.tcl) 247: report_area >             $REPORT_DIR/${DESIGN_NAME}_area_summary.rpt            
-@file(scan.tcl) 248: report_area -detail >     $REPORT_DIR/${DESIGN_NAME}_area_hierarchical.rpt 
-@file(scan.tcl) 249: report_power >            $REPORT_DIR/${DESIGN_NAME}_power_summary.rpt          
+@file(scan.tcl) 272: report_timing >           $REPORT_DIR/${DESIGN_NAME}_timing_worst_path.rpt  
+@file(scan.tcl) 273: report_timing -nworst 10 >$REPORT_DIR/${DESIGN_NAME}_timing_worst_negative.rpt
+@file(scan.tcl) 274: report_qor >              $REPORT_DIR/${DESIGN_NAME}_qor.rpt                       
+@file(scan.tcl) 275: report_area >             $REPORT_DIR/${DESIGN_NAME}_area_summary.rpt            
+@file(scan.tcl) 276: report_area -detail >     $REPORT_DIR/${DESIGN_NAME}_area_hierarchical.rpt 
+@file(scan.tcl) 277: report_power >            $REPORT_DIR/${DESIGN_NAME}_power_summary.rpt          
 Warning: Library 'giolib045' found in multiple domains.
 Info: Use -domain to uniquify.
 Info: Selecting library 'giolib045' in domain '-1'
@@ -6216,7 +6573,7 @@ Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=0, Error=0, Fatal=0
 Output file: TOP_WRAPPER_Scan/Report/TOP_WRAPPER_power_summary.rpt
-@file(scan.tcl) 250: report_gates >            $REPORT_DIR/${DESIGN_NAME}_gates_count.rpt            
+@file(scan.tcl) 278: report_gates >            $REPORT_DIR/${DESIGN_NAME}_gates_count.rpt            
 ENABLED NEW REPORT GATE CMD
 
 
@@ -6224,15 +6581,15 @@ ENABLED NEW REPORT GATE CMD
 
 
 
-@file(scan.tcl) 251: report_hierarchy >        $REPORT_DIR/${DESIGN_NAME}_hierarchy.rpt       
-@file(scan.tcl) 252: report_clocks >           $REPORT_DIR/${DESIGN_NAME}_clocks.rpt     
+@file(scan.tcl) 279: report_hierarchy >        $REPORT_DIR/${DESIGN_NAME}_hierarchy.rpt       
+@file(scan.tcl) 280: report_clocks >           $REPORT_DIR/${DESIGN_NAME}_clocks.rpt     
 #@ End verbose source ./scan.tcl
-WARNING: This version of the tool is 475 days old.
+WARNING: This version of the tool is 496 days old.
 @genus:root: 2> exit
 
 Lic Summary:
-[13:19:39.029363] Cdslmd servers: pine-server
-[13:19:39.553680] Feature usage summary:
-[13:19:39.553681] Genus_Synthesis  
-[13:19:39.553682] Modus_DFT_Opt  
+[16:58:15.424763] Cdslmd servers: pine-server
+[16:58:15.424784] Feature usage summary:
+[16:58:15.424784] Genus_Synthesis  
+[16:58:15.424785] Modus_DFT_Opt  
 Normal exit.

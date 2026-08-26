@@ -45,67 +45,11 @@ build_testmode \
  
  
 #-------------------------------------------------------------------------------
-# BUILD THE TEST MODEL
-#-------------------------------------------------------------------------------
-build_testmode \
-    -testmode	 COMPRESSION \
-    -assignfile	 $WORKDIR/TOP_WRAPPER.COMPRESSION.pinassign \
-    -modedef	 COMPRESSION \
- 
- 
-#-------------------------------------------------------------------------------
-# BUILD THE TEST MODEL
-#-------------------------------------------------------------------------------
-build_testmode \
-    -testmode	 COMPRESSION_DECOMP \
-    -assignfile	 $WORKDIR/TOP_WRAPPER.COMPRESSION_DECOMP.pinassign \
-    -modedef	 COMPRESSION \
- 
- 
-#-------------------------------------------------------------------------------
-# REPORT THE TEST MODEL
-#-------------------------------------------------------------------------------
-report_test_structures \
-    -testmode	 COMPRESSION \
-    -reportscanchain	 all \
-    -reportchannelio	 yes \
-    -reportchannelmaskscanchain	 yes \
-    -reportchannelmaskstate	 yes \
- 
- 
-#-------------------------------------------------------------------------------
-# REPORT THE TEST MODEL
-#-------------------------------------------------------------------------------
-report_test_structures \
-    -testmode	 COMPRESSION_DECOMP \
-    -reportscanchain	 all \
-    -reportchannelio	 yes \
-    -reportchannelmaskscanchain	 yes \
-    -reportchannelmaskstate	 yes \
- 
- 
-#-------------------------------------------------------------------------------
 # REPORT THE TEST MODEL
 #-------------------------------------------------------------------------------
 report_test_structures \
     -testmode	 FULLSCAN \
     -reportscanchain	 all \
- 
- 
-#-------------------------------------------------------------------------------
-# VERIFY THE TEST MODEL
-#-------------------------------------------------------------------------------
-verify_test_structures \
-    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
-    -testmode	 COMPRESSION \
- 
- 
-#-------------------------------------------------------------------------------
-# VERIFY THE TEST MODEL
-#-------------------------------------------------------------------------------
-verify_test_structures \
-    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
-    -testmode	 COMPRESSION_DECOMP \
  
  
 #-------------------------------------------------------------------------------
@@ -127,95 +71,7 @@ build_faultmodel \
 # ATPG - DELAY TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_delay_tests \
-    -experiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION_DECOMP \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - TEST GENERATION
-#-------------------------------------------------------------------------------
-create_logic_tests \
-    -experiment	 TOP_WRAPPER_compression \
-    -append	 yes \
-    -testmode	 COMPRESSION_DECOMP \
-    -testscan	 no \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - Report the Scan and Capture Switching
-#-------------------------------------------------------------------------------
-write_toggle_gram \
-    -experiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION_DECOMP \
-
-#-------------------------------------------------------------------------------
-# VERILOG VECTORS - For SERIAL Simulation
-#-------------------------------------------------------------------------------
-write_vectors \
-    -inexperiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION_DECOMP \
-    -language	 verilog \
-    -scanformat	 serial \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - Save Experiment to the Master Database for the Testmode
-#-------------------------------------------------------------------------------
-commit_tests \
-    -inexperiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION_DECOMP 
-
-
-#-------------------------------------------------------------------------------
-# ATPG - DELAY TEST GENERATION
-#-------------------------------------------------------------------------------
-create_logic_delay_tests \
-    -experiment	 TOP_WRAPPER_compression \
-    -testscan	 no \
-    -testmode	 COMPRESSION \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - TEST GENERATION
-#-------------------------------------------------------------------------------
-create_logic_tests \
-    -experiment	 TOP_WRAPPER_compression \
-    -append	 yes \
-    -testmode	 COMPRESSION \
-    -testscan	 no \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - Report the Scan and Capture Switching
-#-------------------------------------------------------------------------------
-write_toggle_gram \
-    -experiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION \
-
-#-------------------------------------------------------------------------------
-# VERILOG VECTORS - For SERIAL Simulation
-#-------------------------------------------------------------------------------
-write_vectors \
-    -inexperiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION \
-    -language	 verilog \
-    -scanformat	 serial \
-
-
-#-------------------------------------------------------------------------------
-# ATPG - Save Experiment to the Master Database for the Testmode
-#-------------------------------------------------------------------------------
-commit_tests \
-    -inexperiment	 TOP_WRAPPER_compression \
-    -testmode	 COMPRESSION 
-
-
-#-------------------------------------------------------------------------------
-# ATPG - DELAY TEST GENERATION
-#-------------------------------------------------------------------------------
-create_logic_delay_tests \
-    -experiment	 TOP_WRAPPER_compression \
-    -testscan	 no \
+    -experiment	 TOP_WRAPPER_atpg \
     -testmode	 FULLSCAN \
 
 
@@ -223,7 +79,7 @@ create_logic_delay_tests \
 # ATPG - TEST GENERATION
 #-------------------------------------------------------------------------------
 create_logic_tests \
-    -experiment	 TOP_WRAPPER_compression \
+    -experiment	 TOP_WRAPPER_atpg \
     -append	 yes \
     -testmode	 FULLSCAN \
     -testscan	 no \
@@ -233,17 +89,25 @@ create_logic_tests \
 # ATPG - Report the Scan and Capture Switching
 #-------------------------------------------------------------------------------
 write_toggle_gram \
-    -experiment	 TOP_WRAPPER_compression \
+    -experiment	 TOP_WRAPPER_atpg \
     -testmode	 FULLSCAN \
 
 #-------------------------------------------------------------------------------
 # VERILOG VECTORS - For PARALLEL Simulation
 #-------------------------------------------------------------------------------
 write_vectors \
-    -inexperiment	 TOP_WRAPPER_compression \
+    -inexperiment	 TOP_WRAPPER_atpg \
     -testmode	 FULLSCAN \
     -language	 verilog \
     -scanformat	 parallel \
 
-report_fault_ststistics > $WORKDIR/final_coverage_summary.rpt
+
+#-------------------------------------------------------------------------------
+# ATPG - Save Experiment to the Master Database for the Testmode
+#-------------------------------------------------------------------------------
+commit_tests \
+    -inexperiment	 TOP_WRAPPER_atpg \
+    -testmode	 FULLSCAN 
+
+
 exit

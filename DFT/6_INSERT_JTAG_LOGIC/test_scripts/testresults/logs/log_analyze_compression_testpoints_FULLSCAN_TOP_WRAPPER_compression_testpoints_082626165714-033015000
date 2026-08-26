@@ -1,0 +1,196 @@
+Starting Command: analyze_compression_testpoints 
+
+INFO (TDA-005): Command Line Invocation: 
+            analyze_compression_testpoints -notpfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/TOP_WRAPPER.noTpFile -testmode FULLSCAN -experiment TOP_WRAPPER_compression_testpoints -workdir /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/testresults/logs/log_analyze_compression_testpoints_FULLSCAN_TOP_WRAPPER_compression_testpoints_082626165714-033015000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Aug 26 16:57:14 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 90374.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts
+            -TESTMODE FULLSCAN
+            -EXPERIMENT TOP_WRAPPER_compression_testpoints
+
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/testresults/logs/log_analyze_compression_testpoints_FULLSCAN_TOP_WRAPPER_compression_testpoints_082626165714-033015000
+            -STDOUT summary
+            -notpfile /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/TOP_WRAPPER.noTpFile
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TRA-061): Scan Enables were held to the below listed values for random resistant analysis:
+         Pin Pin.f.l.TOP_WRAPPER.nl.PIN_ScanEnable is held to a value of 0.
+         Pin Pin.f.l.TOP_WRAPPER.nl.PIN_comp_en is held to a value of 1.
+         Pin Pin.f.l.TOP_WRAPPER.nl.PIN_mask_en is held to a value of 1.
+         Pin Pin.f.l.TOP_WRAPPER.nl.PIN_mask_load is held to a value of 0.
+         Pin Pin.f.l.TOP_WRAPPER.nl.PIN_spread_en is held to a value of 1.  [end TRA_061] 
+
+-------------------------------------------------------------------------------
+                Initial Fault Statistics: 
+-------------------------------------------------------------------------------
+
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested      #Redund    #Untested  %TCov %ATCov
+Total Static                246795            0            0       246795   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested      #Redund    #Untested  %TCov %ATCov
+Total Static                256084            0            0       256084   0.00   0.00
+
+
+-------------------------------------------------------------------------------
+                Fault Status After Processing Scan Test: 
+-------------------------------------------------------------------------------
+
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested      #Redund    #Untested  %TCov %ATCov
+Total Static                246795        70519            0       176276  28.57  28.57
+
+                            Global Statistics
+
+                           #Faults      #Tested      #Redund    #Untested  %TCov %ATCov
+Total Static                256084        70519            0       185565  27.54  27.54
+
+
+INFO (TRA-073): Read no testpoint file /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/TOP_WRAPPER.noTpFile started. [end TRA_073] 
+INFO (TRA-074): Read no testpoint file complete. [end TRA_074] 
+
+INFO (TRA-643): Random Resistant analysis based test point identification started. [end TRA_643] 
+INFO (TRA-644): Random Resistant analysis based test point identification completed. '86' test points have been identified. Time used: (CPU/Elapsed)   0:00:10.77/  0:00:10.85 [end TRA_644] 
+
+
+INFO (TRA-641): Incremental test points analysis to find out effective test points started. This may take some time. [end TRA_641] 
+INFO (TRA-642): Incremental test points analysis to find out effective test points complete. Time used: (CPU/Elapsed)   0:00:00.33/  0:00:00.00 [end TRA_642] 
+
+
+INFO (TRA-647): SCOAP analysis based test point identification started. [end TRA_647] 
+
+INFO (TRA-075): Compression Aware analysis is ending - Unable to identify any more good testpoint candidates. [end TRA_075] 
+INFO (TRA-648): SCOAP analysis based test point identification completed. '10' test points have been identified. Time used: (CPU/Elapsed)   0:00:04.18/  0:00:04.19 [end TRA_648] 
+
+
+-------------------------------------------------------------------------------
+                  Test Point Identification 
+-------------------------------------------------------------------------------
+
+INFO (TRA-155): Test point identification started, maximum number of test points to be identified: 86 [end TRA_155] 
+
+Testpoint   Testpoint                                                    
+ Number       Type       Elapsed Time   Testpoint Location            
+---------   ---------   -------------   ------------------           
+  Start                    0:00:19.49                         
+      1        C1          0:00:19.49   u_core.U0_SYS_CTRL.g2498.Y 
+      2        C0          0:00:19.49   u_core.U0_SYS_CTRL.g2505.Y 
+      3        C0          0:00:19.49   u_core.U0_SYS_CTRL.g2494.Y 
+      4        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27328.Y 
+      5        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27327.Y 
+      6        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27326.Y 
+      7        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27325.Y 
+      8        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27324.Y 
+      9        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27323.Y 
+     10        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27322.Y 
+     11        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27321.Y 
+     12        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27320.Y 
+     13        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27319.Y 
+     14        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27318.Y 
+     15        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27316.Y 
+     16        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27315.Y 
+     17        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27314.Y 
+     18        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27317.Y 
+     19        O           0:00:19.49   u_core.U0_Async_fifo.u_fifo_mem.g27313.Y 
+     20        C0          0:00:19.49   u_core.U0_SYS_CTRL.g2497.Y 
+     21        O           0:00:19.49   u_core.U0_ALU_16B.div_67_27_g1877__5526.Y 
+     22        C1          0:00:19.49   u_core.U0_CLKDIV_MUX.g160.Y 
+     23        O           0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_parity_check.g1062.Y 
+     24        C1          0:00:19.49   u_core.U0_Register_File.g4350.Y 
+     25        O           0:00:19.49   u_core.U0_ALU_16B.g5592__6161.Y 
+     26        C0          0:00:19.49   u_core.U0_ALU_16B.g5675__8246.Y 
+     27        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_strt_check.g769.Y 
+     28        O           0:00:19.49   u_core.U1_Integer_Clock_Divider_RX.g1318.Y 
+     29        C0          0:00:19.49   u_core.U0_SYS_CTRL.g2513.Y 
+     30        O           0:00:19.49   u_core.U0_ALU_16B.g5599__6417.Y 
+     31        C0          0:00:19.49   u_core.U0_Async_fifo.u_fifo_rd.g796.Y 
+     32        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_strt_check.g765.Y 
+     33        O           0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_strt_check.g758.Y 
+     34        O           0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_FSM.g2365.Y 
+     35        C1          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_data_sampling.g1481.Y 
+     36        C1          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_stop_check.g559.Y 
+     37        C0          0:00:19.49   u_core.U0_Integer_Clock_Divider_TX.g1170.Y 
+     38        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_edge_bit_counter.g1167.Y 
+     39        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_parity_check.g1070.Y 
+     40        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_FSM.g2386.Y 
+     41        C0          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_FSM.g2366.Y 
+     42        C1          0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_FSM.g2364.Y 
+     43        C0          0:00:19.49   u_core.U0_ALU_16B.g5680__6131.Y 
+     44        C1          0:00:19.49   u_core.U0_SYS_CTRL.g2318.Y 
+     45        C0          0:00:19.49   u_core.U0_ALU_16B.g5624__2346.Y 
+     46        O           0:00:19.49   u_core.U0_SYS_CTRL.g2291.Y 
+     47        O           0:00:19.49   u_core.U0_ALU_16B.g5591__4733.Y 
+     48        O           0:00:19.49   u_core.U0_UART.U0_UART_RX.U0_stop_check.g547.Y 
+     49        C0          0:00:19.49   u_core.U0_ALU_16B.g5595__2883.Y 
+     50        C0          0:00:19.49   u_core.U0_ALU_16B.g5673__1705.Y 
+     51        O           0:00:19.49   u_core.U0_ALU_16B.g5573__5107.Y 
+     52        C0          0:00:19.49   u_core.U0_ALU_16B.g5709__2802.Y 
+     53        C1          0:00:19.49   u_core.U0_ALU_16B.g5582__2802.Y 
+
+      Test Point Summary
+ -----------------------------
+ Observe   Test Points:     27
+ Control-0 Test Points:     18
+ Control-1 Test Points:      8
+ -----------------------------
+ Total     Test Points:     53
+
+INFO (TRA-156): Test point identification complete, 53 test points have been identified. [end TRA_156] 
+
+-------------------------------------------------------------------------------
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          310,577,888  bytes
+
+                      CPU Time =    0:00:17.45
+                  Elapsed Time =    0:00:19.50                    [end TDA_001]
+
+     Date Ended:  Wednesday Aug 26 16:57:33 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TRA-061): Scan Enables were held to the below listed values for random resistant analysis:
+      1 INFO (TRA-073): Read no testpoint file /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/TOP_WRAPPER.noTpFile started.  
+      1 INFO (TRA-074): Read no testpoint file complete.  
+      1 INFO (TRA-075): Compression Aware analysis is ending - Unable to identify any more good testpoint candidates.  
+      1 INFO (TRA-155): Test point identification started, maximum number of test points to be identified: 86  
+      1 INFO (TRA-156): Test point identification complete, 53 test points have been identified.  
+      1 INFO (TRA-641): Incremental test points analysis to find out effective test points started. This may take some time.  
+      1 INFO (TRA-642): Incremental test points analysis to find out effective test points complete. Time used: (CPU/Elapsed)   0:00:00.33/  0:00:00.00  
+      1 INFO (TRA-643): Random Resistant analysis based test point identification started.  
+      1 INFO (TRA-644): Random Resistant analysis based test point identification completed. '86' test points have been identified. Time used: (CPU/Elapsed)   0:00:10.77/  0:00:10.85  
+      1 INFO (TRA-647): SCOAP analysis based test point identification started.  
+      1 INFO (TRA-648): SCOAP analysis based test point identification completed. '10' test points have been identified. Time used: (CPU/Elapsed)   0:00:04.18/  0:00:04.19  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

@@ -16,8 +16,9 @@ xrun \
    +access+rwc \
    +xmstatus \
    +xm64bit \
-   +TESTFILE1=$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_compression.data.logic.ex1.ts1.verilog \
-   +TESTFILE2=$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_compression.data.logic.ex1.ts2.verilog \
+   +TESTFILE1=$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_atpg.data.scan.ex1.ts1.verilog \
+   +TESTFILE2=$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_atpg.data.logic.ex1.ts2.verilog \
+   +TESTFILE3=$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_atpg.data.logic.ex1.ts3.verilog \
    +HEARTBEAT \
    +FAILSET \
    +xmtimescale+1ns/1ps \
@@ -29,10 +30,10 @@ xrun \
    +sdf_file+DEFAULT.sdf \
    +xmerror+CUSFNF \
    +define+TIMING \
-   +xmlibdirname+$WORKDIR/Inca_libs_13_19_00 \
+   +xmlibdirname+$WORKDIR/Inca_libs_16_58_06 \
    -l $WORKDIR/ncverilog_FULLSCAN_TIMED.log \
   -v /home/admin/DFT/Library/verilog/typical.v \
   -v /home/admin/DFT/Library/verilog/pads.v \
 $WORKDIR/TOP_WRAPPER.test_netlist.v \
-$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_compression.mainsim.v
+$WORKDIR/testresults/verilog/VER.FULLSCAN_TIMED.TOP_WRAPPER_atpg.mainsim.v
 

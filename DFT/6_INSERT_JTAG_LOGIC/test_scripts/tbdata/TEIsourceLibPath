@@ -1,0 +1,3 @@
+SOURCE=/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/test_scripts/TOP_WRAPPER.test_netlist.v
+TECHLIB=/home/admin/DFT/Library/verilog/typical.v,/home/admin/DFT/Library/verilog/pads.v
+RUNDIR=/home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/

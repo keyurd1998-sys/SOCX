@@ -4,12 +4,12 @@ INFO (TDA-005): Command Line Invocation:
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_faultmodel_080626143420-903522000 [end TDA_015]
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_faultmodel_082626165856-342537000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Thursday Aug 06 14:34:20 2026  IST
+            Date Started: Wednesday Aug 26 16:58:56 2026  IST
             Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
-            This job is process number 504430.
+            This job is process number 93721.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
@@ -18,7 +18,7 @@ INFO (TDA-009): Options/Values information.
 
             -WORKDIR /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG
 
-            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_faultmodel_080626143420-903522000
+            -LOGFILE /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/testresults/logs/log_build_faultmodel_082626165856-342537000
             -STDOUT summary
           + -includedynamic yes
 [end TDA_009]
@@ -26,8 +26,8 @@ INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117]
 INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
 INFO (TFM-102): Creating faultModel file /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG_LOGIC/TOP_WRAPPER_ATPG/tbdata/faultModel.  [end TFM_102] 
 
-Global Ignored Static Fault Count               140
-Global Ignored Dynamic Fault Count              167
+Global Ignored Static Fault Count              4966
+Global Ignored Dynamic Fault Count             4993
 
 
                             Global Statistics
@@ -35,19 +35,19 @@ Global Ignored Dynamic Fault Count              167
                     ATCov  ----------------------- Global Faults --------------------------
                    Global        Total       Tested     Possibly    Redundant     Untested
 
-Total Static         0.00       255690            0            0            0       255690
-Collapsed Static     0.00       202166            0            0            0       202166
-PI Static            0.00           34            0            0            0           34
+Total Static         0.00       249914            0            0            0       249914
+Collapsed Static     0.00       199536            0            0            0       199536
+PI Static            0.00           30            0            0            0           30
 PO Static            0.00           12            0            0            0           12
 
-Total Dynamic        0.00       255663            0            0            0       255663
-Collapsed Dynamic    0.00       223135            0            0            0       223135
-PI Dynamic           0.00           34            0            0            0           34
+Total Dynamic        0.00       249887            0            0            0       249887
+Collapsed Dynamic    0.00       220023            0            0            0       220023
+PI Dynamic           0.00           30            0            0            0           30
 PO Dynamic           0.00           12            0            0            0           12
 
 Parametric        
 
-IDDq                 0.00       255690            0                                 255690
+IDDq                 0.00       249914            0                                 249914
 
 
 
@@ -58,65 +58,19 @@ INFO (TFM-103): Creating faultStatus file /home/admin/DFT/SOCX/DFT/6_INSERT_JTAG
                  ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
                  Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
 
-Total Static         0.00   0.00       246407            0            0            0       246407       255690            0            0            0       255690
-Collapsed Static     0.00   0.00       193172            0            0            0       193172       202166            0            0            0       202166
-PI Static            0.00   0.00           24            0            0            0           24           34            0            0            0           34
+Total Static         0.00   0.00       240589            0            0            0       240589       249914            0            0            0       249914
+Collapsed Static     0.00   0.00       190500            0            0            0       190500       199536            0            0            0       199536
+PI Static            0.00   0.00           20            0            0            0           20           30            0            0            0           30
 PO Static            0.00   0.00           12            0            0            0           12           12            0            0            0           12
 
-Total Dynamic        0.00   0.00       218294            0            0            0       218294       255663            0            0            0       255663
-Collapsed Dynamic    0.00   0.00       186754            0            0            0       186754       223135            0            0            0       223135
-PI Dynamic           0.00   0.00           12            0            0            0           12           34            0            0            0           34
+Total Dynamic        0.00   0.00       214442            0            0            0       214442       249887            0            0            0       249887
+Collapsed Dynamic    0.00   0.00       184764            0            0            0       184764       220023            0            0            0       220023
+PI Dynamic           0.00   0.00           12            0            0            0           12           30            0            0            0           30
 PO Dynamic           0.00   0.00           10            0            0            0           10           12            0            0            0           12
 
 Parametric        
 
-IDDq                 0.00   0.00       255690            0                                 255690       255690            0                                 255690
-
-Path                 0.00   0.00            0            0                                      0            0            0                                      0
-
-
-
-                           Testmode Statistics: COMPRESSION
-
-                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
-                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
-
-Total Static         0.00   0.00       246407            0            0            0       246407       255690            0            0            0       255690
-Collapsed Static     0.00   0.00       193172            0            0            0       193172       202166            0            0            0       202166
-PI Static            0.00   0.00           24            0            0            0           24           34            0            0            0           34
-PO Static            0.00   0.00           12            0            0            0           12           12            0            0            0           12
-
-Total Dynamic        0.00   0.00       219900            0            0            0       219900       255663            0            0            0       255663
-Collapsed Dynamic    0.00   0.00       187560            0            0            0       187560       223135            0            0            0       223135
-PI Dynamic           0.00   0.00           16            0            0            0           16           34            0            0            0           34
-PO Dynamic           0.00   0.00           10            0            0            0           10           12            0            0            0           12
-
-Parametric        
-
-IDDq                 0.00   0.00       255690            0                                 255690       255690            0                                 255690
-
-Path                 0.00   0.00            0            0                                      0            0            0                                      0
-
-
-
-                           Testmode Statistics: COMPRESSION_DECOMP
-
-                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
-                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
-
-Total Static         0.00   0.00       246407            0            0            0       246407       255690            0            0            0       255690
-Collapsed Static     0.00   0.00       193172            0            0            0       193172       202166            0            0            0       202166
-PI Static            0.00   0.00           24            0            0            0           24           34            0            0            0           34
-PO Static            0.00   0.00           12            0            0            0           12           12            0            0            0           12
-
-Total Dynamic        0.00   0.00       219910            0            0            0       219910       255663            0            0            0       255663
-Collapsed Dynamic    0.00   0.00       187570            0            0            0       187570       223135            0            0            0       223135
-PI Dynamic           0.00   0.00           16            0            0            0           16           34            0            0            0           34
-PO Dynamic           0.00   0.00           10            0            0            0           10           12            0            0            0           12
-
-Parametric        
-
-IDDq                 0.00   0.00       255690            0                                 255690       255690            0                                 255690
+IDDq                 0.00   0.00       249914            0                                 249914       249914            0                                 249914
 
 Path                 0.00   0.00            0            0                                      0            0            0                                      0
 
@@ -125,34 +79,32 @@ Path                 0.00   0.00            0            0                      
 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
 
                   %Active      #Faults      #Active    #Inactive
-Total Static        96.37       255690       246407         9283
-Collapsed Static    95.55       202166       193172         8994
-PI Static           70.59           34           24           10
+Total Static        96.27       249914       240589         9325
+Collapsed Static    95.47       199536       190500         9036
+PI Static           66.67           30           20           10
 PO Static          100.00           12           12            0
 
-Total Dynamic       86.02       255663       219926        35737
-Collapsed Dynamic   84.07       223135       187586        35549
-PI Dynamic          47.06           34           16           18
+Total Dynamic       85.82       249887       214442        35445
+Collapsed Dynamic   83.97       220023       184764        35259
+PI Dynamic          40.00           30           12           18
 PO Dynamic          83.33           12           10            2
 
 Parametric        
 
-There are 3 test mode(s) defined:
+There are 1 test mode(s) defined:
       FULLSCAN
-      COMPRESSION
-      COMPRESSION_DECOMP
 
 [end TFM_704]
 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =           85,597,024  bytes
+                  Total Memory =           85,491,520  bytes
 
-                      CPU Time =    0:00:00.54
-                  Elapsed Time =    0:00:00.62                    [end TDA_001]
+                      CPU Time =    0:00:00.35
+                  Elapsed Time =    0:00:00.44                    [end TDA_001]
 
-     Date Ended:  Thursday Aug 06 14:34:21 2026  IST
+     Date Ended:  Wednesday Aug 26 16:58:56 2026  IST
 
 INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
 
