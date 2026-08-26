@@ -232,7 +232,7 @@ write_dft_compression_test_points -library $VERILOG_LIB
 
 # 3. Invoke Modus analysis via OS command
 puts "Running Modus analysis..."
-exec modus -files ./test_scripts/runmodus.dfa.tcl
+exec modus -files ./test_scripts/runmodus.compression_testpoints.tcl
 
 # 4. Insert the identified test points into the design
 add_analyzed_test_points -input_test_point_file ./test_scripts/${DESIGN_NAME}.dfa.tpfile
