@@ -6,7 +6,7 @@ The flow here starts from RTL and moves through constraints, synthesis, and desi
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By the end of this learning path, a student should be able to:
 
@@ -19,7 +19,7 @@ By the end of this learning path, a student should be able to:
 
 ---
 
-## 🧭 What This Repository Contains
+## What This Repository Contains
 
 This project brings together several key stages of a modern digital implementation flow:
 
@@ -32,7 +32,7 @@ The design is centered around a digital system that includes UART-related blocks
 
 ---
 
-## 🌳 Repository Structure
+## Repository Structure
 
 ```text
 SOCX/
@@ -63,7 +63,7 @@ SOCX/
 
 ---
 
-## 🧰 Prerequisites
+## Prerequisites
 
 Before using this repository, make sure you have:
 
@@ -81,7 +81,7 @@ Before using this repository, make sure you have:
 
 ---
 
-## ⚙️ Required Cadence Tools
+## Required Cadence Tools
 
 The current repository is mainly built around the following tools:
 
@@ -119,7 +119,7 @@ modus -files DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/runmodus.atpg.tcl
 
 ---
 
-## 🔄 Top-Level Design Flow
+## Top-Level Design Flow
 
 This repository follows a practical ASIC implementation path:
 
@@ -145,7 +145,7 @@ This repository follows a practical ASIC implementation path:
 
 ---
 
-## 📦 Key Inputs and Outputs
+## Key Inputs and Outputs
 
 ### Inputs
 
@@ -163,7 +163,7 @@ This repository follows a practical ASIC implementation path:
 
 ---
 
-## 🧠 How to Use This Repository as a Student
+## How to Use This Repository as a Student
 
 A good study order is:
 
@@ -174,7 +174,7 @@ A good study order is:
 
 ---
 
-## 📚 Proposed Documentation Structure
+## Proposed Documentation Structure
 
 The documentation in this repository is intended to be expanded step by step. The planned structure is:
 
@@ -198,7 +198,7 @@ Each of these sections will include:
 
 ---
 
-## ✅ Recommended First Steps
+## Recommended First Steps
 
 If you are new to this flow, begin here:
 
@@ -217,7 +217,7 @@ This will give you a solid introduction to how a real digital IC implementation 
 
 ---
 
-## 💡 Final Note
+## Final Note
 
 The most important skill in Cadence-based design is not just learning syntax. It is learning how to connect the RTL intent, the timing constraints, the synthesis decisions, and the test strategy into one coherent implementation story.
 
