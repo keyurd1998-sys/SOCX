@@ -1,13 +1,13 @@
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
 source "$SCRIPT_DIR/00_setup_env.tcl"
 
-set STEP_RPT_DIR [file normalize "$REPORTS_DIR/05_tpi"]
+set STEP_RPT_DIR [file normalize "$REPORTS_DIR/06_tpi"]
 set TPI_DIR      [file normalize "$STEP_RPT_DIR/modus_tpi_work"]
 file mkdir $STEP_RPT_DIR
 file mkdir $TPI_DIR
 file mkdir $DBS_DIR
 
-read_db "$DBS_DIR/03_mapped.db"
+read_db "$DBS_DIR/04_mapped.db"
 
 # PASS 1: Build temporary scan chain(s) for Modus ATPG test point analysis
 set_db [current_design] .dft_mix_clock_edges_in_scan_chains true
@@ -33,7 +33,7 @@ shell modus -file "$TPI_DIR/runmodus.compression_testpoints.tcl"
 
 # PASS 2: Reload clean mapped netlist without temporary chains
 delete_obj [get_db designs *]
-read_db "$DBS_DIR/03_mapped.db"
+read_db "$DBS_DIR/04_mapped.db"
 
 # Insert analyzed test points
 set TP_FILE "$TPI_DIR/${DESIGN}.compression_testpoints.tpfile"
@@ -54,8 +54,8 @@ check_dft_rules                 > "$STEP_RPT_DIR/${DESIGN}_dft_rules.rpt"
 report_dft_analyzed_test_points > "$STEP_RPT_DIR/${DESIGN}_test_points.rpt"
 
 # Save checkpoint database
-set DB_FILE [file normalize "$DBS_DIR/05_tpi.db"]
+set DB_FILE [file normalize "$DBS_DIR/06_tpi.db"]
 write_db -all_root_attributes -to_file $DB_FILE
 
-puts "INFO: Step 5 Test Point Insertion (max 100 TPs) completed. Checkpoint saved: $DB_FILE"
+puts "INFO: Step 6 Test Point Insertion (max 100 TPs) completed. Checkpoint saved: $DB_FILE"
 exit

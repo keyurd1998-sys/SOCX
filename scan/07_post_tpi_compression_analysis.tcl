@@ -1,13 +1,13 @@
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
 source "$SCRIPT_DIR/00_setup_env.tcl"
 
-set STEP_RPT_DIR [file normalize "$REPORTS_DIR/06_post_tpi_compression"]
+set STEP_RPT_DIR [file normalize "$REPORTS_DIR/07_post_tpi_compression"]
 set MODUS_WORK   [file normalize "$STEP_RPT_DIR/modus_compressibility"]
 file mkdir $STEP_RPT_DIR
 file mkdir $MODUS_WORK
 file mkdir $DBS_DIR
 
-read_db "$DBS_DIR/05_tpi.db"
+read_db "$DBS_DIR/06_tpi.db"
 
 # Configure scan chain attributes
 set_db [current_design] .dft_mix_clock_edges_in_scan_chains true
@@ -35,8 +35,8 @@ analyze_scan_compressibility \
     -verbose
 
 # Save checkpoint database
-set DB_FILE [file normalize "$DBS_DIR/06_post_tpi_analyzed.db"]
+set DB_FILE [file normalize "$DBS_DIR/07_post_tpi_analyzed.db"]
 write_db -all_root_attributes -to_file $DB_FILE
 
-puts "INFO: Step 6 Post-TPI compression analysis completed. Checkpoint saved: $DB_FILE"
+puts "INFO: Step 7 Post-TPI compression analysis completed. Checkpoint saved: $DB_FILE"
 exit

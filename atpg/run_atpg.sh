@@ -33,7 +33,7 @@ run_atpg() {
 
     if [ ! -f "$script" ]; then
         echo "ERROR: ATPG script not found: $script"
-        echo "Please run Genus DFT step 8 (08_export.tcl) first to generate the ATPG workspace."
+        echo "Please run Genus DFT step 9 (09_export.tcl) first to generate the ATPG workspace."
         exit 1
     fi
 

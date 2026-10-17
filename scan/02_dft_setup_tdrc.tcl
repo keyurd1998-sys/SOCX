@@ -30,17 +30,10 @@ define_test_clock -name ScanClock -function test_clock -period 20000 -controllab
 define_test_clock -name UART_TestClock -function test_clock -period 20000 -controllable [get_ports UART_CLK]
 set_compatible_test_clocks -all
 
-# Check initial DRC
-check_dft_rules > "$STEP_RPT_DIR/${DESIGN}_dft_rules_pre_fix.rpt"
-
-# Fix DRC violations (resolves async reset & internal clock gating violations)
-fix_dft_violations -async_reset -test_control test_mode
-fix_dft_violations -async_set -test_control test_mode
-fix_dft_violations -clock -test_control test_mode
-
-# Run Pre-DFT Testability Design Rule Check (TDRC) post-fix
-check_dft_rules       > "$STEP_RPT_DIR/${DESIGN}_dft_rules_post_syn.rpt"
-report_dft_violations > "$STEP_RPT_DIR/${DESIGN}_dft_violations_post_syn.rpt"
+# Run Pre-DFT Testability Design Rule Check (TDRC)
+puts "INFO: Running initial pre-DFT rule check..."
+check_dft_rules       > "$STEP_RPT_DIR/${DESIGN}_dft_rules_pre_fix.rpt"
+report_dft_violations > "$STEP_RPT_DIR/${DESIGN}_dft_violations_pre_fix.rpt"
 
 # Save checkpoint database
 set DB_FILE "$DBS_DIR/02_tdrc.db"

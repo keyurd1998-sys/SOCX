@@ -22,7 +22,7 @@ mkdir -p logs reports dbs netlists "${ROOT_DIR}/atpg" "${ROOT_DIR}/gls"
 
 if [ $# -eq 0 ] || [ "$1" = "help" ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
     echo "Usage: $0 <step_number(s) | all>"
-    echo "Steps: 1 to 8"
+    echo "Steps: 1 to 9"
     echo ""
     echo "Fixed DFT Architecture:"
     echo "  Scan Channels:    2 (scan_in_0/1, scan_out_0/1)"
@@ -31,7 +31,7 @@ if [ $# -eq 0 ] || [ "$1" = "help" ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; 
     echo ""
     echo "Examples:"
     echo "  ./run_step.sh all"
-    echo "  ./run_step.sh 7"
+    echo "  ./run_step.sh 3"
     exit 0
 fi
 
@@ -55,15 +55,16 @@ run_step() {
 
     case "$step" in
         1) script="01_elaborate.tcl";                     desc="Elaboration & Health Check" ;;
-        2) script="02_dft_setup_tdrc.tcl";               desc="DFT Setup, DRC Fix & Pre-DFT DRC" ;;
-        3) script="03_scan_mapping.tcl";                 desc="Generic Synthesis & Scan Mapping" ;;
-        4) script="04_pre_tpi_compression_analysis.tcl"; desc="Pre-TPI Compression Analysis" ;;
-        5) script="05_test_point_insertion.tcl";         desc="Modus Test Point Insertion (TPI)" ;;
-        6) script="06_post_tpi_compression_analysis.tcl";desc="Post-TPI Compression Analysis" ;;
-        7) script="07_insert_compression.tcl";           desc="Scan Compression Insertion" ;;
-        8) script="08_export.tcl";                       desc="Export Netlist, SDC, SCANDEF, Reports & ATPG" ;;
+        2) script="02_dft_setup_tdrc.tcl";               desc="DFT Setup & Pre-DFT DRC Check" ;;
+        3) script="03_drc_fix.tcl";                      desc="DFT DRC Violation Fixing" ;;
+        4) script="04_scan_mapping.tcl";                 desc="Generic Synthesis & Scan Mapping" ;;
+        5) script="05_pre_tpi_compression_analysis.tcl"; desc="Pre-TPI Compression Analysis" ;;
+        6) script="06_test_point_insertion.tcl";         desc="Modus Test Point Insertion (TPI)" ;;
+        7) script="07_post_tpi_compression_analysis.tcl";desc="Post-TPI Compression Analysis" ;;
+        8) script="08_insert_compression.tcl";           desc="Scan Compression Insertion" ;;
+        9) script="09_export.tcl";                       desc="Export Netlist, SDC, SCANDEF, Reports & ATPG" ;;
         *)
-            echo "ERROR: Invalid step '$step'. Valid steps are 1 through 8, or 'all'."
+            echo "ERROR: Invalid step '$step'. Valid steps are 1 through 9, or 'all'."
             exit 1
             ;;
     esac
@@ -78,7 +79,7 @@ run_step() {
 
 for arg in "$@"; do
     if [ "$arg" = "all" ]; then
-        for s in {1..8}; do
+        for s in {1..9}; do
             run_step "$s"
         done
     else

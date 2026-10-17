@@ -1,7 +1,7 @@
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
 source "$SCRIPT_DIR/00_setup_env.tcl"
 
-set STEP_RPT_DIR [file normalize "$REPORTS_DIR/08_export"]
+set STEP_RPT_DIR [file normalize "$REPORTS_DIR/09_export"]
 set SA_DIR       [file normalize "$ATPG_DIR/stuck_at"]
 set DELAY_DIR    [file normalize "$ATPG_DIR/delay"]
 
@@ -12,7 +12,7 @@ file mkdir $NETLISTS_DIR
 file mkdir $DBS_DIR
 file mkdir [file normalize "$BLOCK_DIR/CONSTRAINTS"]
 
-read_db "$DBS_DIR/07_compressed.db"
+read_db "$DBS_DIR/08_compressed.db"
 
 # ==============================================================================
 # 1. Export All Required Reports
@@ -96,12 +96,12 @@ puts "INFO: Transition Delay ATPG script exported to: $DELAY_DIR/runmodus.atpg.t
 # ==============================================================================
 # 6. Save Final Checkpoint Database
 # ==============================================================================
-set FINAL_DB [file normalize "$DBS_DIR/08_final.db"]
+set FINAL_DB [file normalize "$DBS_DIR/09_final.db"]
 write_db -all_root_attributes -to_file $FINAL_DB
 puts "INFO: Final post-export database saved: $FINAL_DB"
 
 puts "=================================================================="
-puts " Step 8 Export Completed Successfully!"
+puts " Step 9 Export Completed Successfully!"
 puts " Deliverables summary:"
 puts "   - Reports:        $STEP_RPT_DIR/"
 puts "   - SDC:            $EXPORT_SDC"

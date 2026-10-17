@@ -1,11 +1,11 @@
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
 source "$SCRIPT_DIR/00_setup_env.tcl"
 
-set STEP_RPT_DIR "$REPORTS_DIR/03_mapping"
+set STEP_RPT_DIR "$REPORTS_DIR/04_mapping"
 file mkdir $STEP_RPT_DIR
 file mkdir $DBS_DIR
 
-read_db "$DBS_DIR/02_tdrc.db"
+read_db "$DBS_DIR/03_drc_fixed.db"
 
 # Generic synthesis
 syn_generic
@@ -25,8 +25,8 @@ report_gates          > "$STEP_RPT_DIR/${DESIGN}_gates.rpt"
 report_scan_registers > "$STEP_RPT_DIR/${DESIGN}_scan_registers.rpt"
 
 # Save checkpoint database
-set DB_FILE "$DBS_DIR/03_mapped.db"
+set DB_FILE "$DBS_DIR/04_mapped.db"
 write_db -all_root_attributes -to_file $DB_FILE
 
-puts "INFO: Step 3 completed successfully. Checkpoint saved: $DB_FILE"
+puts "INFO: Step 4 Scan mapping completed successfully. Checkpoint saved: $DB_FILE"
 exit

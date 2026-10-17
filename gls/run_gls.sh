@@ -24,7 +24,7 @@ fi
 
 if [ ! -f "$NETLIST" ]; then
     echo "ERROR: Post-scan compressed netlist not found: $NETLIST"
-    echo "Please run the scan synthesis flow (scan/08_export.tcl) first."
+    echo "Please run the scan synthesis flow (scan/09_export.tcl) first."
     exit 1
 fi
 
