@@ -1,224 +1,128 @@
-# SOCX ASIC Design Flow Learning Repository
+# SOCX - Scan Compression & Test Point Insertion (Cadence Genus & Modus)
 
-This repository is an educational walkthrough of a digital ASIC design flow using Cadence tools. It is designed for engineering students who already understand basic digital logic but are new to the Cadence design environment.
+Complete, fully chained Design-for-Test (DFT) flow for the **SOCX** System-on-Chip Controller (`TOP`).
 
-The flow here starts from RTL and moves through constraints, synthesis, and design-for-test implementation. The goal is not only to show the commands, but also to explain why each step matters in real ASIC development.
-
----
-
-## Learning Objectives
-
-By the end of this learning path, a student should be able to:
-
-- Understand the overall RTL-to-GDS-style ASIC flow.
-- Read and interpret timing constraints written in SDC/Tcl.
-- Run Cadence Genus for synthesis and understand the generated outputs.
-- Understand the purpose of scan insertion, DFT rules, and ATPG.
-- Recognize the difference between functional RTL, synthesized gate-level netlist, and test-ready logic.
-- Follow a structured documentation path through the repository.
+The architecture focuses exclusively on **Scan Compression** and **ATPG-Guided Test Point Insertion (TPI)**, featuring full pre-TPI and post-TPI compression analysis on **2 scan channels** with target **80x compression**. All steps are fully chained via persistent checkpoint databases (`read_db`/`write_db`) without any redundant elaboration.
 
 ---
 
-## What This Repository Contains
+## Architecture Overview
 
-This project brings together several key stages of a modern digital implementation flow:
+1. **Database Chaining (Zero Redundancy):**
+   - Each step loads the checkpoint database produced by the previous step via `read_db` and saves its output via `write_db`.
+   - Eliminates all repeated elaboration, re-synthesis, and disconnected script runs.
 
-- RTL source files in [RTL](RTL)
-- Timing and environment constraints in [CONSTRAINTS](CONSTRAINTS)
-- Synthesis flow and reports in [SYNTHESIS](SYNTHESIS)
-- DFT and scan-related stages in [DFT](DFT)
+2. **Full Scan & Automated DRC Fixing (Step 2):**
+   - Active-low reset (`RST_N`) and dual test clocks (`REF_CLK` at 50 MHz, `UART_CLK` at ~3.68 MHz) are declared with clock compatibility.
+   - Built-in DFT rule violations on internally generated clocks and synchronizer resets are automatically resolved using `fix_dft_violations` under `test_mode` control, achieving 100% scan rule compliance.
 
-The design is centered around a digital system that includes UART-related blocks, an ALU, FIFOs, clock dividers, synchronizers, and control logic.
+3. **Pre-TPI Compression Analysis (Step 4):**
+   - ATPG-guided scan compressibility evaluation (`analyze_scan_compressibility`) measuring baseline coverage and test data volume reduction (TDVR) across ratios **70 and 80** on 2 scan channels.
+
+4. **Modus ATPG-Guided Test Point Insertion (Step 5):**
+   - Modus fault analysis identifies up to 100 control and observe test points.
+   - Inserted into the mapped netlist to resolve random-pattern resistant faults and eliminate compression bottlenecks.
+
+5. **Post-TPI Compression Analysis (Step 6):**
+   - Evaluates compression configurations (ratios **70 and 80**) via `analyze_scan_compressibility` on the design with test points inserted across 2 scan channels.
+   - Quantifies the test coverage boost, pattern count reduction, and compression scalability achieved by TPI.
+
+6. **Final Scan Compression Insertion (Step 7):**
+   - **2 Scan Channels:** `scan_in_0`, `scan_in_1`, `scan_out_0`, `scan_out_1`.
+   - Broadcast decompressor and XOR compressor with wide1 channel masking.
+   - Configured with fixed target compression ratio **80**.
+
+7. **Timing & ATPG Export (Step 8):**
+   - Post-DFT QoR and slack timing reports.
+   - Exported compressed gate-level Verilog netlist (`scan/netlists/TOP_compressed.v`).
+   - Automated export of Modus Compressed ATPG workspaces (`atpg/stuck_at` & `atpg/delay`).
 
 ---
 
 ## Repository Structure
 
-```text
+```
 SOCX/
-├── README.md
-├── CONSTRAINTS/
-│   ├── README.md
-│   ├── cons.tcl
-│   └── TOP_cons.tcl
-├── DFT/
-│   ├── 0_DRC_CHECK/
-│   ├── 1_DRC_FIX/
-│   ├── 2_SCAN_INITIAL/
-│   ├── 3_SCAN_WITH_ATPG_ANALYSIS_N_TPI/
-│   ├── 4_SCAN_COMPRESSION_ANALYSIS/
-│   ├── 5_INSERT_SCAN_COMPRESSION_LOGIC/
-│   └── 6_INSERT_JTAG_LOGIC/
-├── RTL/
-│   ├── ALU_16B.v
-│   ├── Async_fifo.v
-│   ├── TOP.sv
-│   └── ...
-└── SYNTHESIS/
-    ├── README.md
-    ├── synth.tcl
-    ├── genus.cmd
-    └── TOP_Synth/
+├── run_step.sh                             # Top-level runner (delegates to scan/run_step.sh)
+├── CONSTRAINTS/                            # Functional constraints (cons.tcl)
+├── RTL/                                    # SOC Controller RTL modules (TOP.sv, ALU, UART, FIFO, etc.)
+│
+├── scan/                                   # Scan Synthesis & Compression Flow (Genus)
+│   ├── run_step.sh                         # Step runner for Genus DFT flow (steps 1-8 or all)
+│   ├── 00_setup_env.tcl                    # Environment paths, library, 2 scan channels & ratio 80
+│   ├── 01_elaborate.tcl                    # Step 1: RTL elaboration and health check
+│   ├── 02_dft_setup_tdrc.tcl               # Step 2: Test clocks, scan enable, DRC fix & pre-DFT TDRC
+│   ├── 03_scan_mapping.tcl                 # Step 3: Generic synthesis and scan flop mapping
+│   ├── 04_pre_tpi_compression_analysis.tcl # Step 4: Pre-TPI compression analysis (ratios 70, 80)
+│   ├── 05_test_point_insertion.tcl         # Step 5: Modus ATPG-guided test point insertion (max 100 TPs)
+│   ├── 06_post_tpi_compression_analysis.tcl# Step 6: Post-TPI compression analysis (ratios 70, 80)
+│   ├── 07_insert_compression.tcl           # Step 7: Scan compression insertion (Ratio 80, 2 Channels)
+│   ├── 08_export.tcl                       # Step 8: Export netlists, SDC, reports & ATPG scripts
+│   ├── dbs/                                # Checkpoint databases (01 through 08)
+│   ├── logs/                               # Execution logs for each step
+│   ├── reports/                            # DRC, area, timing, preview, and scan reports
+│   └── netlists/                           # Final gate-level netlists & SCANDEF
+│
+├── atpg/                                   # Automatic Test Pattern Generation (Modus)
+│   ├── run_atpg.sh                         # Modus ATPG runner script
+│   ├── stuck_at/                           # Stuck-At ATPG workspace (exported by Step 8)
+│   ├── delay/                              # Transition Delay ATPG workspace (exported by Step 8)
+│   ├── logs/                               # ATPG execution logs
+│   └── reports/                            # ATPG coverage & fault reports
+│
+├── gls/                                    # Gate-Level Simulation (Xcelium / VCS / Icarus)
+│   ├── run_gls.sh                          # Gate-level simulation runner
+│   ├── tb/                                 # Testbench (TOP_tb.v)
+│   ├── logs/                               # Simulation logs
+│   └── waves/                              # Simulation waveform databases
+│
+├── SYNTHESIS/                              # Legacy baseline synthesis reference
+└── DFT/                                    # Legacy unchained DFT reference runs
 ```
 
 ---
 
-## Prerequisites
+## Quick Start Guide
 
-Before using this repository, make sure you have:
-
-- A Linux-based workstation or server.
-- Cadence Genus installed and licensed.
-- Cadence Modus ATPG available if you want to run the DFT/ATPG flow.
-- Access to the standard-cell timing library files used by the scripts.
-- A basic understanding of:
-  - RTL design
-  - Verilog/SystemVerilog
-  - Tcl scripting
-  - Clocking and timing concepts
-
-> In many university or corporate environments, the standard cell libraries are not stored inside this repository. The scripts expect them to be available in a separate library path, such as a shared lab directory.
-
----
-
-## Required Cadence Tools
-
-The current repository is mainly built around the following tools:
-
-- Genus: synthesis, mapping, reporting, and netlist generation
-- Modus: ATPG generation and test pattern execution
-- Optional future stage: Innovus for placement and routing
-
-### Common launch commands
-
-#### 1. Start Genus in interactive GUI mode
-
+### Step 1: Run Scan Synthesis in Genus (`scan/`)
+You can run directly from the root using `./run_step.sh` or from `scan/`:
 ```bash
-genus
+# Run all steps (Fixed: 2 scan channels, Ratio 80, Analysis 70 & 80):
+./run_step.sh all
+
+# Or run individual steps sequentially:
+./run_step.sh 1    # Elaboration & Checkpoint 01_elaborated.db
+./run_step.sh 2    # DFT Setup, DRC Fix & Pre-DFT TDRC
+./run_step.sh 3    # Generic Synthesis & Scan Mapping
+./run_step.sh 4    # Pre-TPI Compression Analysis (Ratios 70, 80)
+./run_step.sh 5    # Modus Test Point Insertion (TPI)
+./run_step.sh 6    # Post-TPI Compression Analysis (Ratios 70, 80)
+./run_step.sh 7    # Scan Compression Insertion (Ratio 80, 2 Channels)
+./run_step.sh 8    # Export Netlist, SDC, SCANDEF, Reports & Modus ATPG
 ```
 
-Once inside the Genus console, you can source a script manually:
+---
 
-```tcl
-genus@root:> source SYNTHESIS/synth.tcl
-```
-
-#### 2. Run Genus in batch mode
-
+### Step 2: Run ATPG in Cadence Modus (`atpg/`)
+Step 8 automatically exports the Modus ATPG scripts to `atpg/stuck_at/` and `atpg/delay/`. Run them via:
 ```bash
-genus -files SYNTHESIS/synth.tcl
+cd atpg
+
+# Run Stuck-At ATPG:
+./run_atpg.sh stuck_at
+
+# Run Transition Delay ATPG:
+./run_atpg.sh delay
+
+# Run both:
+./run_atpg.sh all
 ```
 
-#### 3. Run Modus ATPG in batch mode
+---
 
+### Step 3: Run Gate-Level Simulation (`gls/`)
+Verify the post-scan compressed netlist with testbenches using:
 ```bash
-modus -files DFT/5_INSERT_SCAN_COMPRESSION_LOGIC/runmodus.atpg.tcl
+cd gls
+./run_gls.sh
 ```
-
-> If your environment uses a setup script for Cadence tools, source it first. The exact path depends on your lab or installation.
-
----
-
-## Top-Level Design Flow
-
-This repository follows a practical ASIC implementation path:
-
-1. RTL Development
-   - The design is written in Verilog/SystemVerilog inside [RTL](RTL).
-   - The top module is the main entry point for the complete design.
-
-2. Timing and Physical Constraints
-   - The constraints are collected in [CONSTRAINTS](CONSTRAINTS).
-   - These define clocks, generated clocks, input/output delays, and environmental rules.
-
-3. Synthesis with Genus
-   - The flow in [SYNTHESIS](SYNTHESIS) reads the RTL, applies constraints, maps logic to technology cells, and writes reports and netlists.
-
-4. Design-for-Test Insertion
-   - The stages under [DFT](DFT) introduce scan chains, check DFT rules, fix violations, and analyze compression options.
-
-5. ATPG Generation
-   - Test patterns are generated so the chip can be tested after fabrication.
-
-6. Physical Design (future stage)
-   - The next logical step after synthesis and DFT is placement and routing, usually done with Innovus.
-
----
-
-## Key Inputs and Outputs
-
-### Inputs
-
-- RTL files from [RTL](RTL)
-- SDC/Tcl constraints from [CONSTRAINTS](CONSTRAINTS)
-- Standard-cell libraries and technology files
-- Parameter values used during elaboration
-
-### Outputs
-
-- Synthesized gate-level netlists
-- Timing reports and QoR summaries
-- Scan chain reports and ATPG files
-- Test-ready netlists for DFT analysis
-
----
-
-## How to Use This Repository as a Student
-
-A good study order is:
-
-1. Start with [CONSTRAINTS](CONSTRAINTS) to learn how timing constraints shape synthesis.
-2. Move to [SYNTHESIS](SYNTHESIS) to see how RTL becomes a gate-level implementation.
-3. Explore [DFT](DFT) to understand how testability is added to the design.
-4. Compare the scripts with the generated reports to connect theory to tool behavior.
-
----
-
-## Proposed Documentation Structure
-
-The documentation in this repository is intended to be expanded step by step. The planned structure is:
-
-- [CONSTRAINTS](CONSTRAINTS) — explanation of clock definitions, generated clocks, I/O delays, and DRC-style constraints
-- [SYNTHESIS](SYNTHESIS) — interpretation of synthesis scripts, netlist generation, and report analysis
-- [DFT/0_DRC_CHECK](DFT/0_DRC_CHECK) — how DFT rule checks are performed
-- [DFT/1_DRC_FIX](DFT/1_DRC_FIX) — how violations are corrected
-- [DFT/2_SCAN_INITIAL](DFT/2_SCAN_INITIAL) — initial scan chain setup
-- [DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI](DFT/3_SCAN_WITH_ATPG_ANALYSIS_N_TPI) — ATPG and test point analysis
-- [DFT/4_SCAN_COMPRESSION_ANALYSIS](DFT/4_SCAN_COMPRESSION_ANALYSIS) — scan compression evaluation
-- [DFT/5_INSERT_SCAN_COMPRESSION_LOGIC](DFT/5_INSERT_SCAN_COMPRESSION_LOGIC) — compression logic insertion and ATPG generation
-- [DFT/6_INSERT_JTAG_LOGIC](DFT/6_INSERT_JTAG_LOGIC) — JTAG-based test infrastructure
-
-Each of these sections will include:
-
-- What the stage is for
-- Which files are important
-- Which commands to run
-- What inputs and outputs to expect
-- A line-by-line explanation of the Tcl scripts
-
----
-
-## Recommended First Steps
-
-If you are new to this flow, begin here:
-
-```bash
-cd SOCX
-ls
-```
-
-Then read the documentation in this order:
-
-1. [CONSTRAINTS](CONSTRAINTS)
-2. [SYNTHESIS](SYNTHESIS)
-3. [DFT](DFT)
-
-This will give you a solid introduction to how a real digital IC implementation flow is organized in practice.
-
----
-
-## Final Note
-
-The most important skill in Cadence-based design is not just learning syntax. It is learning how to connect the RTL intent, the timing constraints, the synthesis decisions, and the test strategy into one coherent implementation story.
-
-This repository is intended to help you develop exactly that intuition.
