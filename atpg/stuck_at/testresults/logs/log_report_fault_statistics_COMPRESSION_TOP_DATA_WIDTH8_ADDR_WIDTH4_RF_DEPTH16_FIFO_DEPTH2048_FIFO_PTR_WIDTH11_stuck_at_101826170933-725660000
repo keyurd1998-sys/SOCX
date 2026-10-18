@@ -1,0 +1,107 @@
+Starting Command: report_fault_statistics 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_fault_statistics -testmode COMPRESSION -experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at -effectiveness yes -workdir /home/admin/DFT/SOCX/atpg/stuck_at -stdout all -reportpiporows yes  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/atpg/stuck_at/testresults/logs/log_report_fault_statistics_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at_101826170933-725660000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Sunday Oct 18 17:09:33 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 606918.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/atpg/stuck_at
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at
+
+            -LOGFILE /home/admin/DFT/SOCX/atpg/stuck_at/testresults/logs/log_report_fault_statistics_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at_101826170933-725660000
+            -effectiveness yes
+            -reportpiporows yes
+          + -STDOUT all
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+Logic Model(GM)   10/18/26
+                  11:37:44
+
+
+File Id     faultModel        faultStatus         experiment
+Created (GM)  10/18/26           10/18/26           10/18/26
+              11:37:50           11:37:50           11:37:51
+Modified(GM)  10/18/26           10/18/26           10/18/26
+              11:37:50           11:37:50           11:39:30
+Code Level        2025.0             2025.0             2025.0            
+Max Fault Id        253660
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count               214
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-701):  Fault Statistics for Testmode:  COMPRESSION Experiment: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at: 
+
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.71  96.32       244817       243907            1          212          697       253446       243907            1          212         9326
+Collapsed Static    99.73  95.47       192250       191530            1          197          522       200807       191530            1          197         9079
+PI Static          100.00  86.36           19           19            0            0            0           22           19            0            0            3
+PO Static          100.00 100.00           10           10            0            0            0           10           10            0            0            0
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00       253446            0                                 253446       253446            0                                 253446
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+                             #Faults      #Tested    #Possibly      #Redund    #Untested
+Static Testmode               244817       243907            1          212          697
+Static Global                 253446       243907            1          212         9326
+
+Static Test Coverage        99.71% 
+Static Fault Coverage       96.24% 
+Static ATPG Effectiveness   99.72% 
+
+[end TFM_701]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           41,443,344  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.02                    [end TDA_001]
+
+     Date Ended:  Sunday Oct 18 17:09:33 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-701):  Fault Statistics for Testmode:  COMPRESSION Experiment: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

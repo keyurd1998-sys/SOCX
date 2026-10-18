@@ -1,0 +1,99 @@
+Starting Command: report_fault_statistics 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_fault_statistics -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/atpg/delay -stdout all  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/atpg/delay/testresults/logs/log_report_fault_statistics_COMPRESSION_101826171042-030356000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Sunday Oct 18 17:10:42 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 608498.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/atpg/delay
+            -TESTMODE COMPRESSION
+
+            -LOGFILE /home/admin/DFT/SOCX/atpg/delay/testresults/logs/log_report_fault_statistics_COMPRESSION_101826171042-030356000
+          + -STDOUT all
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+Logic Model(GM)   10/18/26
+                  11:40:34
+
+
+File Id     faultModel        faultStatus
+Created (GM)  10/18/26           10/18/26
+              11:40:40           11:40:40
+Modified(GM)  10/18/26           10/18/26
+              11:40:40           11:40:40
+Code Level        2025.0             2025.0            
+Max Fault Id        507320
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count               214
+Global Ignored Dynamic Fault Count              422
+
+
+INFO (TFM-701):  Fault Statistics for Testmode:  COMPRESSION  : 
+
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       244817            0            0            0       244817       253446            0            0            0       253446
+Collapsed Static     0.00   0.00       192250            0            0            0       192250       200807            0            0            0       200807
+PI Static            0.00   0.00           19            0            0            0           19           22            0            0            0           22
+PO Static            0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Total Dynamic        0.00   0.00       218398            0            0            0       218398       253238            0            0            0       253238
+Collapsed Dynamic    0.00   0.00       186832            0            0            0       186832       221644            0            0            0       221644
+PI Dynamic           0.00   0.00           14            0            0            0           14           22            0            0            0           22
+PO Dynamic           0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Parametric        
+
+IDDq                 0.00   0.00       253446            0                                 253446       253446            0                                 253446
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+[end TFM_701]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           41,428,416  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.01                    [end TDA_001]
+
+     Date Ended:  Sunday Oct 18 17:10:42 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-701):  Fault Statistics for Testmode:  COMPRESSION  : 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

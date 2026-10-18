@@ -1,0 +1,3 @@
+SOURCE=../../scan/netlists/TOP_compressed.v
+TECHLIB=/home/admin/DFT/Library/atpg/stdcell.v
+RUNDIR=/home/admin/DFT/SOCX/atpg/delay/

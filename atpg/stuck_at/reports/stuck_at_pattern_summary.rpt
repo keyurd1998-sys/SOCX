@@ -1,0 +1,170 @@
+Starting Command: report_vector_summary 
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/atpg/stuck_at/testresults/logs/log_report_vector_summary_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at_101826170931-910678000 [end TDA_015]
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+Key for string format of Test Sequence report
+-----------------------------------------------------
+S - Stim PI
+I - Stim PPI
+s - Stim Latch
+P - Pulse Clock (P is followed by name of the clock being pulsed)
+p - Dynamic Pulse Clock (p is followed by name of the clock being pulsed)
+C - Stim Clock
+Q - Pulse PPI (Q is followed by name of the clock being pulsed)
+q - Dynamic Pulse PPI (q is followed by name of the clock being pulsed)
+L - LoadOPCGcontrols
+l - LoadChannelMasks
+u - UseChannelMasks
+M - Measure PO
+m - Measure Latch
+r - Measure Current
+c - Channel_Scan
+d - Diagnostic_Scan_Unload
+F - Force
+O - Product MISR Signature
+X - Any other events
+Z - CompressedInputStream or CompressedOutputStream
+W - Wait_osc
+A - Load_SR
+a - Unload_SR
+B - Composite_MISR_Signature
+
+
+      #Sequences  %Det     #Static   #Dynamic  1st Seq Template
+      ----------  ----     -------   --------  ------- --------
+#1             1  33.3          77          0     2699 sSMP(UART_CLK)P(REF_CLK)MlumZ
+#2          2761   0.0      169225          0        9 sSP(UART_CLK)P(REF_CLK)MmZ
+#3           137   0.0         739          0     2716 sSP(REF_CLK)SP(UART_CLK)P(REF_CLK)MmZ
+#4            11   0.0          22          0     2920 sSP(UART_CLK)MmZ
+#5             6   0.0          22          0     2912 sSP(REF_CLK)MmZ
+#6             2   0.0          22          0     2697 sSMP(UART_CLK)P(REF_CLK)MmZ
+#7             4   0.0           8          0     2918 sSP(REF_CLK)SP(UART_CLK)MmZ
+#8             2   0.0           0          0        0 init
+#9             7   0.0           0          0        2 scan
+#10            1   0.0           0          0        1 scan
+#11            2  66.7         393          0      362 sSP(UART_CLK)P(REF_CLK)MlumZ
+
+----Template #1---- logic 
+
+Scan_Load 
+Stim_PI 
+Measure_PO 
+Pulse(UART_CLK) 
+Pulse(REF_CLK) 
+Measure_PO 
+Load_Channel_Masks 
+Use_Channel_Masks 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #2---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(UART_CLK) 
+Pulse(REF_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #3---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(REF_CLK) 
+Stim_PI 
+Pulse(UART_CLK) 
+Pulse(REF_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #4---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(UART_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #5---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(REF_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #6---- logic 
+
+Scan_Load 
+Stim_PI 
+Measure_PO 
+Pulse(UART_CLK) 
+Pulse(REF_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #7---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(REF_CLK) 
+Stim_PI 
+Pulse(UART_CLK) 
+Measure_PO 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #8---- init 
+
+Stim_PI 
+
+----Template #9---- scan 
+
+Scan_Load 
+Load_Channel_Masks 
+Use_Channel_Masks 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #10---- scan 
+
+Scan_Load 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+----Template #11---- logic 
+
+Scan_Load 
+Stim_PI 
+Pulse(UART_CLK) 
+Pulse(REF_CLK) 
+Measure_PO 
+Load_Channel_Masks 
+Use_Channel_Masks 
+Diagnostic_Scan_Unload 
+Compressed_Output_Stream 
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

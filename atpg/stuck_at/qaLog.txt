@@ -1,0 +1,1770 @@
+10/18/2026 17:02:08 (425958-3685077248 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:08 (425958-3685077248): CDS_LIC_VALIDATE disabled
+10/18/2026 17:02:08 (425958-3685077248): Use of default clients files is enabled
+10/18/2026 17:02:08 (425958-3685077248): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:02:08 (425958-3685077248): Process ID 602892
+10/18/2026 17:02:08 (425958-3685077248): Creating a new job ...
+10/18/2026 17:02:08 (425958-3685077248): Validating server path: 
+10/18/2026 17:02:08 (425958-3685077248): Server path validation status: 0
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of sleep time value of 0.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of display specification is ':1'.
+10/18/2026 17:02:08 (425958-3685077248):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:08 (425958-3685077248):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:02:08 (425958-3685077248): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:08 (425958-3685077248): Creating a new job ...
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of sleep time value of 0.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of display specification is ':1'.
+10/18/2026 17:02:08 (425958-3685077248):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:08 (425958-3685077248):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:02:08 (425958-3685077248): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:08 (425958-3685077248): Creating a new job ...
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of sleep time value of 0.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of display specification is ':1'.
+10/18/2026 17:02:08 (425958-3685077248):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:08 (425958-3685077248):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:02:08 (425958-3685077248): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:08 (425958-3685077248): Creating a new job ...
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of sleep time value of 0.
+10/18/2026 17:02:08 (425958-3685077248):   Configuration of display specification is ':1'.
+10/18/2026 17:02:08 (425958-3685077248):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:08 (425958-3685077248):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:02:08 (425958-3685077248): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:08 (425958-3685077248): Initialization completed with status 0 (time 0).
+10/18/2026 17:02:08 (425958-3685077248): Api started: api=CheckOutIncr;feature=Modus_common_ui;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:02:08 (425958-3685077248): Check-out (Increment) started ....
+10/18/2026 17:02:08 (425958-3685077248): Checking out 1 license(s) for Modus_common_ui 25.100...
+10/18/2026 17:02:08 (425958-3685077248):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 0F5BE6B58486E3DADBF8 ')
+10/18/2026 17:02:08 (425958-3685077248): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:02:09 (425958-3685077248 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:09 (425958-3685077248): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:09 (425958-3685077248): Initialization completed with status 0 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): Api started: api=FeatureExists;feature=Modus_Diagnostics;version=25.10000
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists started ....
+10/18/2026 17:02:09 (425958-3685077248): Check-out started ....
+10/18/2026 17:02:09 (425958-3685077248): Testing only for the validity of feature Modus_Diagnostics 25.100...
+10/18/2026 17:02:09 (425958-3685077248): Validity test completed with status -5.
+10/18/2026 17:02:09 (425958-3685077248): Check-out completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists of Modus_Diagnostics completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:09 (425958-3685077248): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:09 (425958-3685077248): Initialization completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists started ....
+10/18/2026 17:02:09 (425958-3685077248): Check-out started ....
+10/18/2026 17:02:09 (425958-3685077248): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:02:09 (425958-3685077248): Validity test completed with status -5.
+10/18/2026 17:02:09 (425958-3685077248): Check-out completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:09 (425958-3685077248): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:09 (425958-3685077248): Initialization completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): Api started: api=FeatureExists;feature=Modus_Hierarchical_Opt;version=25.10000
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists started ....
+10/18/2026 17:02:09 (425958-3685077248): Check-out started ....
+10/18/2026 17:02:09 (425958-3685077248): Testing only for the validity of feature Modus_Hierarchical_Opt 25.100...
+10/18/2026 17:02:09 (425958-3685077248): Validity test completed with status 0.
+10/18/2026 17:02:09 (425958-3685077248): Check-out completed with status 0 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists of Modus_Hierarchical_Opt completed with status 0 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): Added Modus_Hierarchical_Opt,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:02:09 (425958-3685077248 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:09 (425958-3685077248): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:09 (425958-3685077248): Initialization completed with status 0 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): Api started: api=FeatureExists;feature=Virtuoso_digital_test;version=25.10000
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists started ....
+10/18/2026 17:02:09 (425958-3685077248): Check-out started ....
+10/18/2026 17:02:09 (425958-3685077248): Testing only for the validity of feature Virtuoso_digital_test 25.100...
+10/18/2026 17:02:09 (425958-3685077248): Validity test completed with status -5.
+10/18/2026 17:02:09 (425958-3685077248): Check-out completed with status -5 (time 0).
+10/18/2026 17:02:09 (425958-3685077248): FeatureExists of Virtuoso_digital_test completed with status -5 (time 0).
+10/18/2026 17:02:14 (726445-4030509312 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:14 (726445-4030509312): CDS_LIC_VALIDATE disabled
+10/18/2026 17:02:14 (726445-4030509312): Use of default clients files is enabled
+10/18/2026 17:02:14 (726445-4030509312): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:02:14 (726445-4030509312): Process ID 602956
+10/18/2026 17:02:14 (726445-4030509312): Creating a new job ...
+10/18/2026 17:02:14 (726445-4030509312): Validating server path: 
+10/18/2026 17:02:14 (726445-4030509312): Server path validation status: 0
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of sleep time value of 0.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of display specification is ':1'.
+10/18/2026 17:02:14 (726445-4030509312):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:14 (726445-4030509312):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:02:14 (726445-4030509312): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Creating a new job ...
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of sleep time value of 0.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of display specification is ':1'.
+10/18/2026 17:02:14 (726445-4030509312):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:14 (726445-4030509312):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:02:14 (726445-4030509312): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Creating a new job ...
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of sleep time value of 0.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of display specification is ':1'.
+10/18/2026 17:02:14 (726445-4030509312):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:14 (726445-4030509312):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:02:14 (726445-4030509312): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Creating a new job ...
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of sleep time value of 0.
+10/18/2026 17:02:14 (726445-4030509312):   Configuration of display specification is ':1'.
+10/18/2026 17:02:14 (726445-4030509312):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:14 (726445-4030509312):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:02:14 (726445-4030509312): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Initialization completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:02:14 (726445-4030509312): FeatureExists started ....
+10/18/2026 17:02:14 (726445-4030509312): Check-out started ....
+10/18/2026 17:02:14 (726445-4030509312): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:02:14 (726445-4030509312): Validity test completed with status -5.
+10/18/2026 17:02:14 (726445-4030509312): Check-out completed with status -5 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:02:14 (726445-4030509312 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:14 (726445-4030509312): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:14 (726445-4030509312): Initialization completed with status -5 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:02:14 (726445-4030509312): FeatureExists started ....
+10/18/2026 17:02:14 (726445-4030509312): Check-out started ....
+10/18/2026 17:02:14 (726445-4030509312): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:02:14 (726445-4030509312): Validity test completed with status 0.
+10/18/2026 17:02:14 (726445-4030509312): Check-out completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:02:14 (726445-4030509312 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:02:14 (726445-4030509312): ERROR!  Multiple initializations attempted!
+10/18/2026 17:02:14 (726445-4030509312): Initialization completed with status 0 (time 0).
+10/18/2026 17:02:14 (726445-4030509312): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:02:14 (726445-4030509312): Check-out (Increment) started ....
+10/18/2026 17:02:14 (726445-4030509312): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:02:14 (726445-4030509312):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:02:14 (726445-4030509312): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:02:17 (726445-4030509312): Check-in started ....
+10/18/2026 17:02:17 (726445-4030509312): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:02:17 (726445-4030509312): Creating a new job ...
+10/18/2026 17:02:17 (726445-4030509312): Validating server path: 5280@pine-server
+10/18/2026 17:02:17 (726445-4030509312): Server path validation status: 0
+10/18/2026 17:02:17 (726445-4030509312):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:17 (726445-4030509312):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:17 (726445-4030509312):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:17 (726445-4030509312):   Configuration of sleep time value of 0.
+10/18/2026 17:02:17 (726445-4030509312):   Configuration of display specification is ':1'.
+10/18/2026 17:02:17 (726445-4030509312):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:17 (726445-4030509312):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:02:17 (726445-4030509312): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:17 (726445-4030509312): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:02:17 (726445-4030509312): Exit started ....
+10/18/2026 17:02:17 (726445-4030509312): Exit completed with status 0 (time 0).
+10/18/2026 17:02:49 (425958-3685077248): Check-in started ....
+10/18/2026 17:02:49 (425958-3685077248): Api started: api=CheckIn;feature=Modus_common_ui
+10/18/2026 17:02:49 (425958-3685077248): Creating a new job ...
+10/18/2026 17:02:49 (425958-3685077248): Validating server path: 5280@pine-server
+10/18/2026 17:02:49 (425958-3685077248): Server path validation status: 0
+10/18/2026 17:02:49 (425958-3685077248):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:02:49 (425958-3685077248):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:02:49 (425958-3685077248):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:02:49 (425958-3685077248):   Configuration of sleep time value of 0.
+10/18/2026 17:02:49 (425958-3685077248):   Configuration of display specification is ':1'.
+10/18/2026 17:02:49 (425958-3685077248):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:02:49 (425958-3685077248):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:02:49 (425958-3685077248): Job creation completed with status 0 (time 0).
+10/18/2026 17:02:49 (425958-3685077248): Check-in of Modus_common_ui completed with status 0 (time 0).
+10/18/2026 17:02:49 (425958-3685077248): Exit started ....
+10/18/2026 17:02:49 (425958-3685077248): Exit completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:34 (65172-1127313664): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:34 (65172-1127313664): Use of default clients files is enabled
+10/18/2026 17:07:34 (65172-1127313664): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:34 (65172-1127313664): Process ID 605907
+10/18/2026 17:07:34 (65172-1127313664): Creating a new job ...
+10/18/2026 17:07:34 (65172-1127313664): Validating server path: 
+10/18/2026 17:07:34 (65172-1127313664): Server path validation status: 0
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of sleep time value of 0.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of display specification is ':1'.
+10/18/2026 17:07:34 (65172-1127313664):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:34 (65172-1127313664):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:07:34 (65172-1127313664): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664): Creating a new job ...
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of sleep time value of 0.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of display specification is ':1'.
+10/18/2026 17:07:34 (65172-1127313664):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:34 (65172-1127313664):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:07:34 (65172-1127313664): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664): Creating a new job ...
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of sleep time value of 0.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of display specification is ':1'.
+10/18/2026 17:07:34 (65172-1127313664):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:34 (65172-1127313664):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:07:34 (65172-1127313664): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664): Creating a new job ...
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of sleep time value of 0.
+10/18/2026 17:07:34 (65172-1127313664):   Configuration of display specification is ':1'.
+10/18/2026 17:07:34 (65172-1127313664):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:34 (65172-1127313664):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:07:34 (65172-1127313664): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:34 (65172-1127313664): Api started: api=CheckOutIncr;feature=Modus_common_ui;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:34 (65172-1127313664): Check-out (Increment) started ....
+10/18/2026 17:07:34 (65172-1127313664): Checking out 1 license(s) for Modus_common_ui 25.100...
+10/18/2026 17:07:34 (65172-1127313664):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 0F5BE6B58486E3DADBF8 ')
+10/18/2026 17:07:34 (65172-1127313664): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:35 (65172-1127313664 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:35 (65172-1127313664): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:35 (65172-1127313664): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): Api started: api=FeatureExists;feature=Modus_Diagnostics;version=25.10000
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists started ....
+10/18/2026 17:07:35 (65172-1127313664): Check-out started ....
+10/18/2026 17:07:35 (65172-1127313664): Testing only for the validity of feature Modus_Diagnostics 25.100...
+10/18/2026 17:07:35 (65172-1127313664): Validity test completed with status -5.
+10/18/2026 17:07:35 (65172-1127313664): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists of Modus_Diagnostics completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:35 (65172-1127313664): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:35 (65172-1127313664): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists started ....
+10/18/2026 17:07:35 (65172-1127313664): Check-out started ....
+10/18/2026 17:07:35 (65172-1127313664): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:35 (65172-1127313664): Validity test completed with status -5.
+10/18/2026 17:07:35 (65172-1127313664): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:35 (65172-1127313664): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:35 (65172-1127313664): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): Api started: api=FeatureExists;feature=Modus_Hierarchical_Opt;version=25.10000
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists started ....
+10/18/2026 17:07:35 (65172-1127313664): Check-out started ....
+10/18/2026 17:07:35 (65172-1127313664): Testing only for the validity of feature Modus_Hierarchical_Opt 25.100...
+10/18/2026 17:07:35 (65172-1127313664): Validity test completed with status 0.
+10/18/2026 17:07:35 (65172-1127313664): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists of Modus_Hierarchical_Opt completed with status 0 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): Added Modus_Hierarchical_Opt,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:35 (65172-1127313664 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:35 (65172-1127313664): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:35 (65172-1127313664): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): Api started: api=FeatureExists;feature=Virtuoso_digital_test;version=25.10000
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists started ....
+10/18/2026 17:07:35 (65172-1127313664): Check-out started ....
+10/18/2026 17:07:35 (65172-1127313664): Testing only for the validity of feature Virtuoso_digital_test 25.100...
+10/18/2026 17:07:35 (65172-1127313664): Validity test completed with status -5.
+10/18/2026 17:07:35 (65172-1127313664): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:35 (65172-1127313664): FeatureExists of Virtuoso_digital_test completed with status -5 (time 0).
+10/18/2026 17:07:40 (365659-3206426880 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:40 (365659-3206426880): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:40 (365659-3206426880): Use of default clients files is enabled
+10/18/2026 17:07:40 (365659-3206426880): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:40 (365659-3206426880): Process ID 605971
+10/18/2026 17:07:40 (365659-3206426880): Creating a new job ...
+10/18/2026 17:07:40 (365659-3206426880): Validating server path: 
+10/18/2026 17:07:40 (365659-3206426880): Server path validation status: 0
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of sleep time value of 0.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of display specification is ':1'.
+10/18/2026 17:07:40 (365659-3206426880):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:40 (365659-3206426880):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:40 (365659-3206426880): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Creating a new job ...
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of sleep time value of 0.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of display specification is ':1'.
+10/18/2026 17:07:40 (365659-3206426880):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:40 (365659-3206426880):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:40 (365659-3206426880): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Creating a new job ...
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of sleep time value of 0.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of display specification is ':1'.
+10/18/2026 17:07:40 (365659-3206426880):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:40 (365659-3206426880):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:40 (365659-3206426880): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Creating a new job ...
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of sleep time value of 0.
+10/18/2026 17:07:40 (365659-3206426880):   Configuration of display specification is ':1'.
+10/18/2026 17:07:40 (365659-3206426880):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:40 (365659-3206426880):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:40 (365659-3206426880): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:40 (365659-3206426880): FeatureExists started ....
+10/18/2026 17:07:40 (365659-3206426880): Check-out started ....
+10/18/2026 17:07:40 (365659-3206426880): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:40 (365659-3206426880): Validity test completed with status -5.
+10/18/2026 17:07:40 (365659-3206426880): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:40 (365659-3206426880 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:40 (365659-3206426880): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:40 (365659-3206426880): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:40 (365659-3206426880): FeatureExists started ....
+10/18/2026 17:07:40 (365659-3206426880): Check-out started ....
+10/18/2026 17:07:40 (365659-3206426880): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:40 (365659-3206426880): Validity test completed with status 0.
+10/18/2026 17:07:40 (365659-3206426880): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:40 (365659-3206426880 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:40 (365659-3206426880): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:40 (365659-3206426880): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:40 (365659-3206426880): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:40 (365659-3206426880): Check-out (Increment) started ....
+10/18/2026 17:07:40 (365659-3206426880): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:40 (365659-3206426880):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:40 (365659-3206426880): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:44 (365659-3206426880): Check-in started ....
+10/18/2026 17:07:44 (365659-3206426880): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:44 (365659-3206426880): Creating a new job ...
+10/18/2026 17:07:44 (365659-3206426880): Validating server path: 5280@pine-server
+10/18/2026 17:07:44 (365659-3206426880): Server path validation status: 0
+10/18/2026 17:07:44 (365659-3206426880):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:44 (365659-3206426880):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:44 (365659-3206426880):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:44 (365659-3206426880):   Configuration of sleep time value of 0.
+10/18/2026 17:07:44 (365659-3206426880):   Configuration of display specification is ':1'.
+10/18/2026 17:07:44 (365659-3206426880):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:44 (365659-3206426880):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:44 (365659-3206426880): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:44 (365659-3206426880): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:44 (365659-3206426880): Exit started ....
+10/18/2026 17:07:44 (365659-3206426880): Exit completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:45 (599736-1910780160): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:45 (599736-1910780160): Use of default clients files is enabled
+10/18/2026 17:07:45 (599736-1910780160): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:45 (599736-1910780160): Process ID 606048
+10/18/2026 17:07:45 (599736-1910780160): Creating a new job ...
+10/18/2026 17:07:45 (599736-1910780160): Validating server path: 
+10/18/2026 17:07:45 (599736-1910780160): Server path validation status: 0
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of sleep time value of 0.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of display specification is ':1'.
+10/18/2026 17:07:45 (599736-1910780160):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:45 (599736-1910780160):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:45 (599736-1910780160): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Creating a new job ...
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of sleep time value of 0.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of display specification is ':1'.
+10/18/2026 17:07:45 (599736-1910780160):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:45 (599736-1910780160):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:45 (599736-1910780160): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Creating a new job ...
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of sleep time value of 0.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of display specification is ':1'.
+10/18/2026 17:07:45 (599736-1910780160):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:45 (599736-1910780160):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:45 (599736-1910780160): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Creating a new job ...
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of sleep time value of 0.
+10/18/2026 17:07:45 (599736-1910780160):   Configuration of display specification is ':1'.
+10/18/2026 17:07:45 (599736-1910780160):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:45 (599736-1910780160):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:45 (599736-1910780160): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:45 (599736-1910780160): FeatureExists started ....
+10/18/2026 17:07:45 (599736-1910780160): Check-out started ....
+10/18/2026 17:07:45 (599736-1910780160): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:45 (599736-1910780160): Validity test completed with status -5.
+10/18/2026 17:07:45 (599736-1910780160): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:45 (599736-1910780160 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:45 (599736-1910780160): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:45 (599736-1910780160): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:45 (599736-1910780160): FeatureExists started ....
+10/18/2026 17:07:45 (599736-1910780160): Check-out started ....
+10/18/2026 17:07:45 (599736-1910780160): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:45 (599736-1910780160): Validity test completed with status 0.
+10/18/2026 17:07:45 (599736-1910780160): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:45 (599736-1910780160 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:45 (599736-1910780160): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:45 (599736-1910780160): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:45 (599736-1910780160): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:45 (599736-1910780160): Check-out (Increment) started ....
+10/18/2026 17:07:45 (599736-1910780160): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:45 (599736-1910780160):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:45 (599736-1910780160): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:46 (599736-1910780160): Check-in started ....
+10/18/2026 17:07:46 (599736-1910780160): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:46 (599736-1910780160): Creating a new job ...
+10/18/2026 17:07:46 (599736-1910780160): Validating server path: 5280@pine-server
+10/18/2026 17:07:46 (599736-1910780160): Server path validation status: 0
+10/18/2026 17:07:46 (599736-1910780160):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:46 (599736-1910780160):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:46 (599736-1910780160):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:46 (599736-1910780160):   Configuration of sleep time value of 0.
+10/18/2026 17:07:46 (599736-1910780160):   Configuration of display specification is ':1'.
+10/18/2026 17:07:46 (599736-1910780160):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:46 (599736-1910780160):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:46 (599736-1910780160): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:46 (599736-1910780160): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:46 (599736-1910780160): Exit started ....
+10/18/2026 17:07:46 (599736-1910780160): Exit completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:47 (699903-3242107136): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:47 (699903-3242107136): Use of default clients files is enabled
+10/18/2026 17:07:47 (699903-3242107136): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:47 (699903-3242107136): Process ID 606074
+10/18/2026 17:07:47 (699903-3242107136): Creating a new job ...
+10/18/2026 17:07:47 (699903-3242107136): Validating server path: 
+10/18/2026 17:07:47 (699903-3242107136): Server path validation status: 0
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of sleep time value of 0.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of display specification is ':1'.
+10/18/2026 17:07:47 (699903-3242107136):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:47 (699903-3242107136):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:47 (699903-3242107136): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Creating a new job ...
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of sleep time value of 0.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of display specification is ':1'.
+10/18/2026 17:07:47 (699903-3242107136):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:47 (699903-3242107136):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:47 (699903-3242107136): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Creating a new job ...
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of sleep time value of 0.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of display specification is ':1'.
+10/18/2026 17:07:47 (699903-3242107136):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:47 (699903-3242107136):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:47 (699903-3242107136): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Creating a new job ...
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of sleep time value of 0.
+10/18/2026 17:07:47 (699903-3242107136):   Configuration of display specification is ':1'.
+10/18/2026 17:07:47 (699903-3242107136):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:47 (699903-3242107136):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:47 (699903-3242107136): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:47 (699903-3242107136): FeatureExists started ....
+10/18/2026 17:07:47 (699903-3242107136): Check-out started ....
+10/18/2026 17:07:47 (699903-3242107136): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:47 (699903-3242107136): Validity test completed with status -5.
+10/18/2026 17:07:47 (699903-3242107136): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:47 (699903-3242107136 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:47 (699903-3242107136): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:47 (699903-3242107136): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:47 (699903-3242107136): FeatureExists started ....
+10/18/2026 17:07:47 (699903-3242107136): Check-out started ....
+10/18/2026 17:07:47 (699903-3242107136): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:47 (699903-3242107136): Validity test completed with status 0.
+10/18/2026 17:07:47 (699903-3242107136): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:47 (699903-3242107136 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:47 (699903-3242107136): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:47 (699903-3242107136): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:47 (699903-3242107136): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:47 (699903-3242107136): Check-out (Increment) started ....
+10/18/2026 17:07:47 (699903-3242107136): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:47 (699903-3242107136):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:47 (699903-3242107136): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:48 (699903-3242107136): Check-in started ....
+10/18/2026 17:07:48 (699903-3242107136): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:48 (699903-3242107136): Creating a new job ...
+10/18/2026 17:07:48 (699903-3242107136): Validating server path: 5280@pine-server
+10/18/2026 17:07:48 (699903-3242107136): Server path validation status: 0
+10/18/2026 17:07:48 (699903-3242107136):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:48 (699903-3242107136):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:48 (699903-3242107136):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:48 (699903-3242107136):   Configuration of sleep time value of 0.
+10/18/2026 17:07:48 (699903-3242107136):   Configuration of display specification is ':1'.
+10/18/2026 17:07:48 (699903-3242107136):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:48 (699903-3242107136):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:48 (699903-3242107136): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:48 (699903-3242107136): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:48 (699903-3242107136): Exit started ....
+10/18/2026 17:07:48 (699903-3242107136): Exit completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:48 (733639-1862246656): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:48 (733639-1862246656): Use of default clients files is enabled
+10/18/2026 17:07:48 (733639-1862246656): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:48 (733639-1862246656): Process ID 606091
+10/18/2026 17:07:48 (733639-1862246656): Creating a new job ...
+10/18/2026 17:07:48 (733639-1862246656): Validating server path: 
+10/18/2026 17:07:48 (733639-1862246656): Server path validation status: 0
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of sleep time value of 0.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of display specification is ':1'.
+10/18/2026 17:07:48 (733639-1862246656):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:48 (733639-1862246656):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:48 (733639-1862246656): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Creating a new job ...
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of sleep time value of 0.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of display specification is ':1'.
+10/18/2026 17:07:48 (733639-1862246656):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:48 (733639-1862246656):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:48 (733639-1862246656): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Creating a new job ...
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of sleep time value of 0.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of display specification is ':1'.
+10/18/2026 17:07:48 (733639-1862246656):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:48 (733639-1862246656):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:48 (733639-1862246656): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Creating a new job ...
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of sleep time value of 0.
+10/18/2026 17:07:48 (733639-1862246656):   Configuration of display specification is ':1'.
+10/18/2026 17:07:48 (733639-1862246656):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:48 (733639-1862246656):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:48 (733639-1862246656): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:48 (733639-1862246656): FeatureExists started ....
+10/18/2026 17:07:48 (733639-1862246656): Check-out started ....
+10/18/2026 17:07:48 (733639-1862246656): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:48 (733639-1862246656): Validity test completed with status -5.
+10/18/2026 17:07:48 (733639-1862246656): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:48 (733639-1862246656 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:48 (733639-1862246656): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:48 (733639-1862246656): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:48 (733639-1862246656): FeatureExists started ....
+10/18/2026 17:07:48 (733639-1862246656): Check-out started ....
+10/18/2026 17:07:48 (733639-1862246656): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:48 (733639-1862246656): Validity test completed with status 0.
+10/18/2026 17:07:48 (733639-1862246656): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:48 (733639-1862246656 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:48 (733639-1862246656): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:48 (733639-1862246656): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:48 (733639-1862246656): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:48 (733639-1862246656): Check-out (Increment) started ....
+10/18/2026 17:07:48 (733639-1862246656): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:48 (733639-1862246656):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:48 (733639-1862246656): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:49 (733639-1862246656): Check-in started ....
+10/18/2026 17:07:49 (733639-1862246656): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:49 (733639-1862246656): Creating a new job ...
+10/18/2026 17:07:49 (733639-1862246656): Validating server path: 5280@pine-server
+10/18/2026 17:07:49 (733639-1862246656): Server path validation status: 0
+10/18/2026 17:07:49 (733639-1862246656):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:49 (733639-1862246656):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:49 (733639-1862246656):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:49 (733639-1862246656):   Configuration of sleep time value of 0.
+10/18/2026 17:07:49 (733639-1862246656):   Configuration of display specification is ':1'.
+10/18/2026 17:07:49 (733639-1862246656):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:49 (733639-1862246656):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:49 (733639-1862246656): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:49 (733639-1862246656): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:49 (733639-1862246656): Exit started ....
+10/18/2026 17:07:49 (733639-1862246656): Exit completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:50 (833808-2157707520): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:50 (833808-2157707520): Use of default clients files is enabled
+10/18/2026 17:07:50 (833808-2157707520): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:50 (833808-2157707520): Process ID 606119
+10/18/2026 17:07:50 (833808-2157707520): Creating a new job ...
+10/18/2026 17:07:50 (833808-2157707520): Validating server path: 
+10/18/2026 17:07:50 (833808-2157707520): Server path validation status: 0
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of sleep time value of 0.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of display specification is ':1'.
+10/18/2026 17:07:50 (833808-2157707520):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:50 (833808-2157707520):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:50 (833808-2157707520): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Creating a new job ...
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of sleep time value of 0.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of display specification is ':1'.
+10/18/2026 17:07:50 (833808-2157707520):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:50 (833808-2157707520):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:50 (833808-2157707520): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Creating a new job ...
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of sleep time value of 0.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of display specification is ':1'.
+10/18/2026 17:07:50 (833808-2157707520):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:50 (833808-2157707520):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:50 (833808-2157707520): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Creating a new job ...
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of sleep time value of 0.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of display specification is ':1'.
+10/18/2026 17:07:50 (833808-2157707520):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:50 (833808-2157707520):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:50 (833808-2157707520): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:50 (833808-2157707520): FeatureExists started ....
+10/18/2026 17:07:50 (833808-2157707520): Check-out started ....
+10/18/2026 17:07:50 (833808-2157707520): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:50 (833808-2157707520): Validity test completed with status -5.
+10/18/2026 17:07:50 (833808-2157707520): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:50 (833808-2157707520 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:50 (833808-2157707520): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:50 (833808-2157707520): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:50 (833808-2157707520): FeatureExists started ....
+10/18/2026 17:07:50 (833808-2157707520): Check-out started ....
+10/18/2026 17:07:50 (833808-2157707520): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:50 (833808-2157707520): Validity test completed with status 0.
+10/18/2026 17:07:50 (833808-2157707520): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:50 (833808-2157707520 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:50 (833808-2157707520): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:50 (833808-2157707520): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:50 (833808-2157707520): Check-out (Increment) started ....
+10/18/2026 17:07:50 (833808-2157707520): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:50 (833808-2157707520):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:50 (833808-2157707520): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Check-in started ....
+10/18/2026 17:07:50 (833808-2157707520): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:50 (833808-2157707520): Creating a new job ...
+10/18/2026 17:07:50 (833808-2157707520): Validating server path: 5280@pine-server
+10/18/2026 17:07:50 (833808-2157707520): Server path validation status: 0
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of sleep time value of 0.
+10/18/2026 17:07:50 (833808-2157707520):   Configuration of display specification is ':1'.
+10/18/2026 17:07:50 (833808-2157707520):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:50 (833808-2157707520):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:50 (833808-2157707520): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:50 (833808-2157707520): Exit started ....
+10/18/2026 17:07:50 (833808-2157707520): Exit completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:51 (383900-3120324864): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:51 (383900-3120324864): Use of default clients files is enabled
+10/18/2026 17:07:51 (383900-3120324864): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:51 (383900-3120324864): Process ID 606141
+10/18/2026 17:07:51 (383900-3120324864): Creating a new job ...
+10/18/2026 17:07:51 (383900-3120324864): Validating server path: 
+10/18/2026 17:07:51 (383900-3120324864): Server path validation status: 0
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383900-3120324864):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383900-3120324864):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383900-3120324864): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Creating a new job ...
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383900-3120324864):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383900-3120324864):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383900-3120324864): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Creating a new job ...
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383900-3120324864):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383900-3120324864):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383900-3120324864): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Creating a new job ...
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383900-3120324864):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383900-3120324864):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383900-3120324864): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:07:51 (383900-3120324864): FeatureExists started ....
+10/18/2026 17:07:51 (383900-3120324864): Check-out started ....
+10/18/2026 17:07:51 (383900-3120324864): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:07:51 (383900-3120324864): Validity test completed with status -5.
+10/18/2026 17:07:51 (383900-3120324864): Check-out completed with status -5 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:07:51 (383900-3120324864 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:51 (383900-3120324864): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:51 (383900-3120324864): Initialization completed with status -5 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:51 (383900-3120324864): FeatureExists started ....
+10/18/2026 17:07:51 (383900-3120324864): Check-out started ....
+10/18/2026 17:07:51 (383900-3120324864): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:51 (383900-3120324864): Validity test completed with status 0.
+10/18/2026 17:07:51 (383900-3120324864): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:51 (383900-3120324864 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:51 (383900-3120324864): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:51 (383900-3120324864): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:51 (383900-3120324864): Check-out (Increment) started ....
+10/18/2026 17:07:51 (383900-3120324864): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:51 (383900-3120324864):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:51 (383900-3120324864): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Check-in started ....
+10/18/2026 17:07:51 (383900-3120324864): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:07:51 (383900-3120324864): Creating a new job ...
+10/18/2026 17:07:51 (383900-3120324864): Validating server path: 5280@pine-server
+10/18/2026 17:07:51 (383900-3120324864): Server path validation status: 0
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383900-3120324864):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383900-3120324864):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383900-3120324864):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383900-3120324864): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:51 (383900-3120324864): Exit started ....
+10/18/2026 17:07:51 (383900-3120324864): Exit completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:51 (383914-2350702848): CDS_LIC_VALIDATE disabled
+10/18/2026 17:07:51 (383914-2350702848): Use of default clients files is enabled
+10/18/2026 17:07:51 (383914-2350702848): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:07:51 (383914-2350702848): Process ID 606155
+10/18/2026 17:07:51 (383914-2350702848): Creating a new job ...
+10/18/2026 17:07:51 (383914-2350702848): Validating server path: 
+10/18/2026 17:07:51 (383914-2350702848): Server path validation status: 0
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383914-2350702848):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383914-2350702848):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383914-2350702848): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Creating a new job ...
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383914-2350702848):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383914-2350702848):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383914-2350702848): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Creating a new job ...
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383914-2350702848):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383914-2350702848):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383914-2350702848): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Creating a new job ...
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of sleep time value of 0.
+10/18/2026 17:07:51 (383914-2350702848):   Configuration of display specification is ':1'.
+10/18/2026 17:07:51 (383914-2350702848):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:07:51 (383914-2350702848):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:07:51 (383914-2350702848): Job creation completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:07:51 (383914-2350702848): FeatureExists started ....
+10/18/2026 17:07:51 (383914-2350702848): Check-out started ....
+10/18/2026 17:07:51 (383914-2350702848): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:07:51 (383914-2350702848): Validity test completed with status 0.
+10/18/2026 17:07:51 (383914-2350702848): Check-out completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:07:51 (383914-2350702848 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:07:51 (383914-2350702848): ERROR!  Multiple initializations attempted!
+10/18/2026 17:07:51 (383914-2350702848): Initialization completed with status 0 (time 0).
+10/18/2026 17:07:51 (383914-2350702848): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:07:51 (383914-2350702848): Check-out (Increment) started ....
+10/18/2026 17:07:51 (383914-2350702848): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:07:51 (383914-2350702848):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:07:51 (383914-2350702848): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:30 (383914-2350702848): Check-in started ....
+10/18/2026 17:09:30 (383914-2350702848): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:30 (383914-2350702848): Creating a new job ...
+10/18/2026 17:09:30 (383914-2350702848): Validating server path: 5280@pine-server
+10/18/2026 17:09:30 (383914-2350702848): Server path validation status: 0
+10/18/2026 17:09:30 (383914-2350702848):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:30 (383914-2350702848):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:30 (383914-2350702848):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:30 (383914-2350702848):   Configuration of sleep time value of 0.
+10/18/2026 17:09:30 (383914-2350702848):   Configuration of display specification is ':1'.
+10/18/2026 17:09:30 (383914-2350702848):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:30 (383914-2350702848):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:30 (383914-2350702848): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:30 (383914-2350702848): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:30 (383914-2350702848): Exit started ....
+10/18/2026 17:09:30 (383914-2350702848): Exit completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:31 (679100-1053032704): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:31 (679100-1053032704): Use of default clients files is enabled
+10/18/2026 17:09:31 (679100-1053032704): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:31 (679100-1053032704): Process ID 606867
+10/18/2026 17:09:31 (679100-1053032704): Creating a new job ...
+10/18/2026 17:09:31 (679100-1053032704): Validating server path: 
+10/18/2026 17:09:31 (679100-1053032704): Server path validation status: 0
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of sleep time value of 0.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of display specification is ':1'.
+10/18/2026 17:09:31 (679100-1053032704):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:31 (679100-1053032704):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:31 (679100-1053032704): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Creating a new job ...
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of sleep time value of 0.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of display specification is ':1'.
+10/18/2026 17:09:31 (679100-1053032704):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:31 (679100-1053032704):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:31 (679100-1053032704): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Creating a new job ...
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of sleep time value of 0.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of display specification is ':1'.
+10/18/2026 17:09:31 (679100-1053032704):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:31 (679100-1053032704):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:31 (679100-1053032704): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Creating a new job ...
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of sleep time value of 0.
+10/18/2026 17:09:31 (679100-1053032704):   Configuration of display specification is ':1'.
+10/18/2026 17:09:31 (679100-1053032704):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:31 (679100-1053032704):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:31 (679100-1053032704): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:31 (679100-1053032704): FeatureExists started ....
+10/18/2026 17:09:31 (679100-1053032704): Check-out started ....
+10/18/2026 17:09:31 (679100-1053032704): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:31 (679100-1053032704): Validity test completed with status -5.
+10/18/2026 17:09:31 (679100-1053032704): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:31 (679100-1053032704 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:31 (679100-1053032704): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:31 (679100-1053032704): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:31 (679100-1053032704): FeatureExists started ....
+10/18/2026 17:09:31 (679100-1053032704): Check-out started ....
+10/18/2026 17:09:31 (679100-1053032704): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:31 (679100-1053032704): Validity test completed with status 0.
+10/18/2026 17:09:31 (679100-1053032704): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:31 (679100-1053032704 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:31 (679100-1053032704): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:31 (679100-1053032704): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:31 (679100-1053032704): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:31 (679100-1053032704): Check-out (Increment) started ....
+10/18/2026 17:09:31 (679100-1053032704): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:31 (679100-1053032704):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:31 (679100-1053032704): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:32 (679100-1053032704): Check-in started ....
+10/18/2026 17:09:32 (679100-1053032704): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:32 (679100-1053032704): Creating a new job ...
+10/18/2026 17:09:32 (679100-1053032704): Validating server path: 5280@pine-server
+10/18/2026 17:09:32 (679100-1053032704): Server path validation status: 0
+10/18/2026 17:09:32 (679100-1053032704):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (679100-1053032704):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (679100-1053032704):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (679100-1053032704):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (679100-1053032704):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (679100-1053032704):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (679100-1053032704):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (679100-1053032704): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (679100-1053032704): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:32 (679100-1053032704): Exit started ....
+10/18/2026 17:09:32 (679100-1053032704): Exit completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229198-2065559808): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:32 (229198-2065559808): Use of default clients files is enabled
+10/18/2026 17:09:32 (229198-2065559808): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:32 (229198-2065559808): Process ID 606894
+10/18/2026 17:09:32 (229198-2065559808): Creating a new job ...
+10/18/2026 17:09:32 (229198-2065559808): Validating server path: 
+10/18/2026 17:09:32 (229198-2065559808): Server path validation status: 0
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229198-2065559808):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229198-2065559808):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229198-2065559808): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Creating a new job ...
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229198-2065559808):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229198-2065559808):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229198-2065559808): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Creating a new job ...
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229198-2065559808):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229198-2065559808):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229198-2065559808): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Creating a new job ...
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229198-2065559808):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229198-2065559808):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229198-2065559808): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:32 (229198-2065559808): FeatureExists started ....
+10/18/2026 17:09:32 (229198-2065559808): Check-out started ....
+10/18/2026 17:09:32 (229198-2065559808): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:32 (229198-2065559808): Validity test completed with status -5.
+10/18/2026 17:09:32 (229198-2065559808): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:32 (229198-2065559808 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229198-2065559808): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:32 (229198-2065559808): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:32 (229198-2065559808): FeatureExists started ....
+10/18/2026 17:09:32 (229198-2065559808): Check-out started ....
+10/18/2026 17:09:32 (229198-2065559808): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:32 (229198-2065559808): Validity test completed with status 0.
+10/18/2026 17:09:32 (229198-2065559808): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:32 (229198-2065559808 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229198-2065559808): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:32 (229198-2065559808): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:32 (229198-2065559808): Check-out (Increment) started ....
+10/18/2026 17:09:32 (229198-2065559808): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:32 (229198-2065559808):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:32 (229198-2065559808): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Check-in started ....
+10/18/2026 17:09:32 (229198-2065559808): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:32 (229198-2065559808): Creating a new job ...
+10/18/2026 17:09:32 (229198-2065559808): Validating server path: 5280@pine-server
+10/18/2026 17:09:32 (229198-2065559808): Server path validation status: 0
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229198-2065559808):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229198-2065559808):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229198-2065559808):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229198-2065559808): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229198-2065559808): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229207-1346511104): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:32 (229207-1346511104): Use of default clients files is enabled
+10/18/2026 17:09:32 (229207-1346511104): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:32 (229207-1346511104): Process ID 606903
+10/18/2026 17:09:32 (229207-1346511104): Creating a new job ...
+10/18/2026 17:09:32 (229207-1346511104): Validating server path: 
+10/18/2026 17:09:32 (229207-1346511104): Server path validation status: 0
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229207-1346511104):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229207-1346511104):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229207-1346511104): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Creating a new job ...
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229207-1346511104):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229207-1346511104):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229207-1346511104): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Creating a new job ...
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229207-1346511104):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229207-1346511104):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229207-1346511104): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Creating a new job ...
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of sleep time value of 0.
+10/18/2026 17:09:32 (229207-1346511104):   Configuration of display specification is ':1'.
+10/18/2026 17:09:32 (229207-1346511104):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:32 (229207-1346511104):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:32 (229207-1346511104): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:32 (229207-1346511104): FeatureExists started ....
+10/18/2026 17:09:32 (229207-1346511104): Check-out started ....
+10/18/2026 17:09:32 (229207-1346511104): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:32 (229207-1346511104): Validity test completed with status -5.
+10/18/2026 17:09:32 (229207-1346511104): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:32 (229207-1346511104 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229207-1346511104): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:32 (229207-1346511104): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:32 (229207-1346511104): FeatureExists started ....
+10/18/2026 17:09:32 (229207-1346511104): Check-out started ....
+10/18/2026 17:09:32 (229207-1346511104): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:32 (229207-1346511104): Validity test completed with status 0.
+10/18/2026 17:09:32 (229207-1346511104): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:32 (229207-1346511104 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:32 (229207-1346511104): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:32 (229207-1346511104): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:32 (229207-1346511104): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:32 (229207-1346511104): Check-out (Increment) started ....
+10/18/2026 17:09:32 (229207-1346511104): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:32 (229207-1346511104):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:32 (229207-1346511104): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:33 (229207-1346511104): Check-in started ....
+10/18/2026 17:09:33 (229207-1346511104): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:33 (229207-1346511104): Creating a new job ...
+10/18/2026 17:09:33 (229207-1346511104): Validating server path: 5280@pine-server
+10/18/2026 17:09:33 (229207-1346511104): Server path validation status: 0
+10/18/2026 17:09:33 (229207-1346511104):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (229207-1346511104):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (229207-1346511104):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (229207-1346511104):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (229207-1346511104):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (229207-1346511104):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (229207-1346511104):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (229207-1346511104): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (229207-1346511104): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:33 (229207-1346511104): Exit started ....
+10/18/2026 17:09:33 (229207-1346511104): Exit completed with status 0 (time 0).
+10/18/2026 17:09:33 (229198-2065559808): Exit started ....
+10/18/2026 17:09:33 (229198-2065559808): Exit completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779296-3200303360): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:33 (779296-3200303360): Use of default clients files is enabled
+10/18/2026 17:09:33 (779296-3200303360): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:33 (779296-3200303360): Process ID 606922
+10/18/2026 17:09:33 (779296-3200303360): Creating a new job ...
+10/18/2026 17:09:33 (779296-3200303360): Validating server path: 
+10/18/2026 17:09:33 (779296-3200303360): Server path validation status: 0
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779296-3200303360):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779296-3200303360):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779296-3200303360): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Creating a new job ...
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779296-3200303360):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779296-3200303360):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779296-3200303360): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Creating a new job ...
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779296-3200303360):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779296-3200303360):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779296-3200303360): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Creating a new job ...
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779296-3200303360):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779296-3200303360):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779296-3200303360): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:33 (779296-3200303360): FeatureExists started ....
+10/18/2026 17:09:33 (779296-3200303360): Check-out started ....
+10/18/2026 17:09:33 (779296-3200303360): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:33 (779296-3200303360): Validity test completed with status -5.
+10/18/2026 17:09:33 (779296-3200303360): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:33 (779296-3200303360 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779296-3200303360): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:33 (779296-3200303360): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:33 (779296-3200303360): FeatureExists started ....
+10/18/2026 17:09:33 (779296-3200303360): Check-out started ....
+10/18/2026 17:09:33 (779296-3200303360): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:33 (779296-3200303360): Validity test completed with status 0.
+10/18/2026 17:09:33 (779296-3200303360): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:33 (779296-3200303360 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779296-3200303360): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:33 (779296-3200303360): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:33 (779296-3200303360): Check-out (Increment) started ....
+10/18/2026 17:09:33 (779296-3200303360): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:33 (779296-3200303360):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:33 (779296-3200303360): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Check-in started ....
+10/18/2026 17:09:33 (779296-3200303360): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:33 (779296-3200303360): Creating a new job ...
+10/18/2026 17:09:33 (779296-3200303360): Validating server path: 5280@pine-server
+10/18/2026 17:09:33 (779296-3200303360): Server path validation status: 0
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779296-3200303360):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779296-3200303360):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779296-3200303360):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779296-3200303360): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:33 (779296-3200303360): Exit started ....
+10/18/2026 17:09:33 (779296-3200303360): Exit completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779309-719171840): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:33 (779309-719171840): Use of default clients files is enabled
+10/18/2026 17:09:33 (779309-719171840): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:33 (779309-719171840): Process ID 606935
+10/18/2026 17:09:33 (779309-719171840): Creating a new job ...
+10/18/2026 17:09:33 (779309-719171840): Validating server path: 
+10/18/2026 17:09:33 (779309-719171840): Server path validation status: 0
+10/18/2026 17:09:33 (779309-719171840):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779309-719171840):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779309-719171840):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779309-719171840): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Creating a new job ...
+10/18/2026 17:09:33 (779309-719171840):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779309-719171840):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779309-719171840):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779309-719171840): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Creating a new job ...
+10/18/2026 17:09:33 (779309-719171840):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779309-719171840):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779309-719171840):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779309-719171840): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Creating a new job ...
+10/18/2026 17:09:33 (779309-719171840):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of sleep time value of 0.
+10/18/2026 17:09:33 (779309-719171840):   Configuration of display specification is ':1'.
+10/18/2026 17:09:33 (779309-719171840):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:33 (779309-719171840):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:33 (779309-719171840): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:33 (779309-719171840): FeatureExists started ....
+10/18/2026 17:09:33 (779309-719171840): Check-out started ....
+10/18/2026 17:09:33 (779309-719171840): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:33 (779309-719171840): Validity test completed with status -5.
+10/18/2026 17:09:33 (779309-719171840): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:33 (779309-719171840): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:33 (779309-719171840 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779309-719171840): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:33 (779309-719171840): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:33 (779309-719171840): FeatureExists started ....
+10/18/2026 17:09:33 (779309-719171840): Check-out started ....
+10/18/2026 17:09:33 (779309-719171840): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:33 (779309-719171840): Validity test completed with status 0.
+10/18/2026 17:09:33 (779309-719171840): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:33 (779309-719171840 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:33 (779309-719171840): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:33 (779309-719171840): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:33 (779309-719171840): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:33 (779309-719171840): Check-out (Increment) started ....
+10/18/2026 17:09:33 (779309-719171840): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:33 (779309-719171840):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:33 (779309-719171840): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:34 (779309-719171840): Check-in started ....
+10/18/2026 17:09:34 (779309-719171840): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:34 (779309-719171840): Creating a new job ...
+10/18/2026 17:09:34 (779309-719171840): Validating server path: 5280@pine-server
+10/18/2026 17:09:34 (779309-719171840): Server path validation status: 0
+10/18/2026 17:09:34 (779309-719171840):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (779309-719171840):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (779309-719171840):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (779309-719171840):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (779309-719171840):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (779309-719171840):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (779309-719171840):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (779309-719171840): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (779309-719171840): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:34 (779309-719171840): Exit started ....
+10/18/2026 17:09:34 (779309-719171840): Exit completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329396-323166464): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:34 (329396-323166464): Use of default clients files is enabled
+10/18/2026 17:09:34 (329396-323166464): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:34 (329396-323166464): Process ID 606951
+10/18/2026 17:09:34 (329396-323166464): Creating a new job ...
+10/18/2026 17:09:34 (329396-323166464): Validating server path: 
+10/18/2026 17:09:34 (329396-323166464): Server path validation status: 0
+10/18/2026 17:09:34 (329396-323166464):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329396-323166464):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329396-323166464):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329396-323166464): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Creating a new job ...
+10/18/2026 17:09:34 (329396-323166464):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329396-323166464):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329396-323166464):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329396-323166464): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Creating a new job ...
+10/18/2026 17:09:34 (329396-323166464):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329396-323166464):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329396-323166464):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329396-323166464): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Creating a new job ...
+10/18/2026 17:09:34 (329396-323166464):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329396-323166464):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329396-323166464):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329396-323166464): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:34 (329396-323166464): FeatureExists started ....
+10/18/2026 17:09:34 (329396-323166464): Check-out started ....
+10/18/2026 17:09:34 (329396-323166464): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:34 (329396-323166464): Validity test completed with status -5.
+10/18/2026 17:09:34 (329396-323166464): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:34 (329396-323166464): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:34 (329396-323166464 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329396-323166464): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:34 (329396-323166464): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:34 (329396-323166464): FeatureExists started ....
+10/18/2026 17:09:34 (329396-323166464): Check-out started ....
+10/18/2026 17:09:34 (329396-323166464): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:34 (329396-323166464): Validity test completed with status 0.
+10/18/2026 17:09:34 (329396-323166464): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:34 (329396-323166464 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329396-323166464): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:34 (329396-323166464): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:34 (329396-323166464): Check-out (Increment) started ....
+10/18/2026 17:09:34 (329396-323166464): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:34 (329396-323166464):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:34 (329396-323166464): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Check-in started ....
+10/18/2026 17:09:34 (329396-323166464): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:34 (329396-323166464): Creating a new job ...
+10/18/2026 17:09:34 (329396-323166464): Validating server path: 5280@pine-server
+10/18/2026 17:09:34 (329396-323166464): Server path validation status: 0
+10/18/2026 17:09:34 (329396-323166464):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329396-323166464):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329396-323166464):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329396-323166464):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329396-323166464): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:34 (329396-323166464): Exit started ....
+10/18/2026 17:09:34 (329396-323166464): Exit completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329410-2682118400): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:34 (329410-2682118400): Use of default clients files is enabled
+10/18/2026 17:09:34 (329410-2682118400): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:34 (329410-2682118400): Process ID 606965
+10/18/2026 17:09:34 (329410-2682118400): Creating a new job ...
+10/18/2026 17:09:34 (329410-2682118400): Validating server path: 
+10/18/2026 17:09:34 (329410-2682118400): Server path validation status: 0
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329410-2682118400):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329410-2682118400):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329410-2682118400): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Creating a new job ...
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329410-2682118400):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329410-2682118400):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329410-2682118400): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Creating a new job ...
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329410-2682118400):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329410-2682118400):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329410-2682118400): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Creating a new job ...
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of sleep time value of 0.
+10/18/2026 17:09:34 (329410-2682118400):   Configuration of display specification is ':1'.
+10/18/2026 17:09:34 (329410-2682118400):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:34 (329410-2682118400):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:34 (329410-2682118400): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:34 (329410-2682118400): FeatureExists started ....
+10/18/2026 17:09:34 (329410-2682118400): Check-out started ....
+10/18/2026 17:09:34 (329410-2682118400): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:34 (329410-2682118400): Validity test completed with status -5.
+10/18/2026 17:09:34 (329410-2682118400): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:34 (329410-2682118400 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329410-2682118400): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:34 (329410-2682118400): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:34 (329410-2682118400): FeatureExists started ....
+10/18/2026 17:09:34 (329410-2682118400): Check-out started ....
+10/18/2026 17:09:34 (329410-2682118400): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:34 (329410-2682118400): Validity test completed with status 0.
+10/18/2026 17:09:34 (329410-2682118400): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:34 (329410-2682118400 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:34 (329410-2682118400): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:34 (329410-2682118400): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:34 (329410-2682118400): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:34 (329410-2682118400): Check-out (Increment) started ....
+10/18/2026 17:09:34 (329410-2682118400): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:34 (329410-2682118400):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:34 (329410-2682118400): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:45 (329410-2682118400): Check-in started ....
+10/18/2026 17:09:45 (329410-2682118400): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:45 (329410-2682118400): Creating a new job ...
+10/18/2026 17:09:45 (329410-2682118400): Validating server path: 5280@pine-server
+10/18/2026 17:09:45 (329410-2682118400): Server path validation status: 0
+10/18/2026 17:09:45 (329410-2682118400):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:45 (329410-2682118400):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:45 (329410-2682118400):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:45 (329410-2682118400):   Configuration of sleep time value of 0.
+10/18/2026 17:09:45 (329410-2682118400):   Configuration of display specification is ':1'.
+10/18/2026 17:09:45 (329410-2682118400):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:45 (329410-2682118400):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:45 (329410-2682118400): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:45 (329410-2682118400): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:45 (329410-2682118400): Exit started ....
+10/18/2026 17:09:45 (329410-2682118400): Exit completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:45 (347562-1337757952): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:45 (347562-1337757952): Use of default clients files is enabled
+10/18/2026 17:09:45 (347562-1337757952): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:45 (347562-1337757952): Process ID 607046
+10/18/2026 17:09:45 (347562-1337757952): Creating a new job ...
+10/18/2026 17:09:45 (347562-1337757952): Validating server path: 
+10/18/2026 17:09:45 (347562-1337757952): Server path validation status: 0
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of sleep time value of 0.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of display specification is ':1'.
+10/18/2026 17:09:45 (347562-1337757952):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:45 (347562-1337757952):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:45 (347562-1337757952): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Creating a new job ...
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of sleep time value of 0.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of display specification is ':1'.
+10/18/2026 17:09:45 (347562-1337757952):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:45 (347562-1337757952):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:45 (347562-1337757952): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Creating a new job ...
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of sleep time value of 0.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of display specification is ':1'.
+10/18/2026 17:09:45 (347562-1337757952):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:45 (347562-1337757952):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:45 (347562-1337757952): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Creating a new job ...
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of sleep time value of 0.
+10/18/2026 17:09:45 (347562-1337757952):   Configuration of display specification is ':1'.
+10/18/2026 17:09:45 (347562-1337757952):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:45 (347562-1337757952):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:45 (347562-1337757952): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:45 (347562-1337757952): FeatureExists started ....
+10/18/2026 17:09:45 (347562-1337757952): Check-out started ....
+10/18/2026 17:09:45 (347562-1337757952): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:45 (347562-1337757952): Validity test completed with status -5.
+10/18/2026 17:09:45 (347562-1337757952): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:45 (347562-1337757952 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:45 (347562-1337757952): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:45 (347562-1337757952): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:45 (347562-1337757952): FeatureExists started ....
+10/18/2026 17:09:45 (347562-1337757952): Check-out started ....
+10/18/2026 17:09:45 (347562-1337757952): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:45 (347562-1337757952): Validity test completed with status 0.
+10/18/2026 17:09:45 (347562-1337757952): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:45 (347562-1337757952 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:45 (347562-1337757952): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:45 (347562-1337757952): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:45 (347562-1337757952): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:45 (347562-1337757952): Check-out (Increment) started ....
+10/18/2026 17:09:45 (347562-1337757952): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:45 (347562-1337757952):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:45 (347562-1337757952): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:47 (347562-1337757952): Check-in started ....
+10/18/2026 17:09:47 (347562-1337757952): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:47 (347562-1337757952): Creating a new job ...
+10/18/2026 17:09:47 (347562-1337757952): Validating server path: 5280@pine-server
+10/18/2026 17:09:47 (347562-1337757952): Server path validation status: 0
+10/18/2026 17:09:47 (347562-1337757952):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:47 (347562-1337757952):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:47 (347562-1337757952):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:47 (347562-1337757952):   Configuration of sleep time value of 0.
+10/18/2026 17:09:47 (347562-1337757952):   Configuration of display specification is ':1'.
+10/18/2026 17:09:47 (347562-1337757952):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:47 (347562-1337757952):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:47 (347562-1337757952): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:47 (347562-1337757952): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:47 (347562-1337757952): Exit started ....
+10/18/2026 17:09:47 (347562-1337757952): Exit completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:48 (997800-2851082496): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:48 (997800-2851082496): Use of default clients files is enabled
+10/18/2026 17:09:48 (997800-2851082496): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:48 (997800-2851082496): Process ID 607072
+10/18/2026 17:09:48 (997800-2851082496): Creating a new job ...
+10/18/2026 17:09:48 (997800-2851082496): Validating server path: 
+10/18/2026 17:09:48 (997800-2851082496): Server path validation status: 0
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of sleep time value of 0.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of display specification is ':1'.
+10/18/2026 17:09:48 (997800-2851082496):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:48 (997800-2851082496):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:48 (997800-2851082496): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Creating a new job ...
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of sleep time value of 0.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of display specification is ':1'.
+10/18/2026 17:09:48 (997800-2851082496):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:48 (997800-2851082496):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:48 (997800-2851082496): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Creating a new job ...
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of sleep time value of 0.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of display specification is ':1'.
+10/18/2026 17:09:48 (997800-2851082496):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:48 (997800-2851082496):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:48 (997800-2851082496): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Creating a new job ...
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of sleep time value of 0.
+10/18/2026 17:09:48 (997800-2851082496):   Configuration of display specification is ':1'.
+10/18/2026 17:09:48 (997800-2851082496):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:48 (997800-2851082496):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:48 (997800-2851082496): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:48 (997800-2851082496): FeatureExists started ....
+10/18/2026 17:09:48 (997800-2851082496): Check-out started ....
+10/18/2026 17:09:48 (997800-2851082496): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:48 (997800-2851082496): Validity test completed with status -5.
+10/18/2026 17:09:48 (997800-2851082496): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:48 (997800-2851082496 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:48 (997800-2851082496): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:48 (997800-2851082496): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:48 (997800-2851082496): FeatureExists started ....
+10/18/2026 17:09:48 (997800-2851082496): Check-out started ....
+10/18/2026 17:09:48 (997800-2851082496): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:48 (997800-2851082496): Validity test completed with status 0.
+10/18/2026 17:09:48 (997800-2851082496): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:48 (997800-2851082496 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:48 (997800-2851082496): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:48 (997800-2851082496): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:48 (997800-2851082496): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:48 (997800-2851082496): Check-out (Increment) started ....
+10/18/2026 17:09:48 (997800-2851082496): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:48 (997800-2851082496):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:48 (997800-2851082496): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:51 (997800-2851082496): Check-in started ....
+10/18/2026 17:09:51 (997800-2851082496): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:51 (997800-2851082496): Creating a new job ...
+10/18/2026 17:09:51 (997800-2851082496): Validating server path: 5280@pine-server
+10/18/2026 17:09:51 (997800-2851082496): Server path validation status: 0
+10/18/2026 17:09:51 (997800-2851082496):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:51 (997800-2851082496):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:51 (997800-2851082496):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:51 (997800-2851082496):   Configuration of sleep time value of 0.
+10/18/2026 17:09:51 (997800-2851082496):   Configuration of display specification is ':1'.
+10/18/2026 17:09:51 (997800-2851082496):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:51 (997800-2851082496):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:51 (997800-2851082496): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:51 (997800-2851082496): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:51 (997800-2851082496): Exit started ....
+10/18/2026 17:09:51 (997800-2851082496): Exit completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:52 (681766-132178176): CDS_LIC_VALIDATE disabled
+10/18/2026 17:09:52 (681766-132178176): Use of default clients files is enabled
+10/18/2026 17:09:52 (681766-132178176): FLEXnet version 11.16.4.0 build 252457
+10/18/2026 17:09:52 (681766-132178176): Process ID 607108
+10/18/2026 17:09:52 (681766-132178176): Creating a new job ...
+10/18/2026 17:09:52 (681766-132178176): Validating server path: 
+10/18/2026 17:09:52 (681766-132178176): Server path validation status: 0
+10/18/2026 17:09:52 (681766-132178176):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of sleep time value of 0.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of display specification is ':1'.
+10/18/2026 17:09:52 (681766-132178176):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:52 (681766-132178176):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:52 (681766-132178176): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Creating a new job ...
+10/18/2026 17:09:52 (681766-132178176):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of sleep time value of 0.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of display specification is ':1'.
+10/18/2026 17:09:52 (681766-132178176):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:52 (681766-132178176):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:52 (681766-132178176): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Creating a new job ...
+10/18/2026 17:09:52 (681766-132178176):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of sleep time value of 0.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of display specification is ':1'.
+10/18/2026 17:09:52 (681766-132178176):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:52 (681766-132178176):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:52 (681766-132178176): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Creating a new job ...
+10/18/2026 17:09:52 (681766-132178176):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of sleep time value of 0.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of display specification is ':1'.
+10/18/2026 17:09:52 (681766-132178176):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:52 (681766-132178176):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:52 (681766-132178176): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Api started: api=FeatureExists;feature=Modus_Test;version=25.10000
+10/18/2026 17:09:52 (681766-132178176): FeatureExists started ....
+10/18/2026 17:09:52 (681766-132178176): Check-out started ....
+10/18/2026 17:09:52 (681766-132178176): Testing only for the validity of feature Modus_Test 25.100...
+10/18/2026 17:09:52 (681766-132178176): Validity test completed with status -5.
+10/18/2026 17:09:52 (681766-132178176): Check-out completed with status -5 (time 0).
+10/18/2026 17:09:52 (681766-132178176): FeatureExists of Modus_Test completed with status -5 (time 0).
+10/18/2026 17:09:52 (681766-132178176 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:52 (681766-132178176): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:52 (681766-132178176): Initialization completed with status -5 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Api started: api=FeatureExists;feature=modus_atpg;version=25.10000
+10/18/2026 17:09:52 (681766-132178176): FeatureExists started ....
+10/18/2026 17:09:52 (681766-132178176): Check-out started ....
+10/18/2026 17:09:52 (681766-132178176): Testing only for the validity of feature modus_atpg 25.100...
+10/18/2026 17:09:52 (681766-132178176): Validity test completed with status 0.
+10/18/2026 17:09:52 (681766-132178176): Check-out completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): FeatureExists of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Added modus_atpg,25.100000 entry with status 0 to feature exists cache
+10/18/2026 17:09:52 (681766-132178176 cds_root): Initialization started (24.01-s004)...
+10/18/2026 17:09:52 (681766-132178176): ERROR!  Multiple initializations attempted!
+10/18/2026 17:09:52 (681766-132178176): Initialization completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Api started: api=CheckOutIncr;feature=modus_atpg;version=25.10000;count=1,wait=SS_NOWAIT;lic_type=0
+10/18/2026 17:09:52 (681766-132178176): Check-out (Increment) started ....
+10/18/2026 17:09:52 (681766-132178176): Checking out 1 license(s) for modus_atpg 25.100...
+10/18/2026 17:09:52 (681766-132178176):   (Checked out from file '5280@pine-server',
+             line '25.1 05-dec-2026 10 9F7B8645FBE5F50AC3CF ')
+10/18/2026 17:09:52 (681766-132178176): Check-out (Increment) completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Check-in started ....
+10/18/2026 17:09:52 (681766-132178176): Api started: api=CheckIn;feature=modus_atpg
+10/18/2026 17:09:52 (681766-132178176): Creating a new job ...
+10/18/2026 17:09:52 (681766-132178176): Validating server path: 5280@pine-server
+10/18/2026 17:09:52 (681766-132178176): Server path validation status: 0
+10/18/2026 17:09:52 (681766-132178176):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of sleep time value of 0.
+10/18/2026 17:09:52 (681766-132178176):   Configuration of display specification is ':1'.
+10/18/2026 17:09:52 (681766-132178176):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:52 (681766-132178176):   (System spec would have been admin@Pine-06(none) )
+10/18/2026 17:09:52 (681766-132178176): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Check-in of modus_atpg completed with status 0 (time 0).
+10/18/2026 17:09:52 (681766-132178176): Exit started ....
+10/18/2026 17:09:52 (681766-132178176): Exit completed with status 0 (time 0).
+10/18/2026 17:09:53 (65172-1127313664): Check-in started ....
+10/18/2026 17:09:53 (65172-1127313664): Api started: api=CheckIn;feature=Modus_common_ui
+10/18/2026 17:09:53 (65172-1127313664): Creating a new job ...
+10/18/2026 17:09:53 (65172-1127313664): Validating server path: 5280@pine-server
+10/18/2026 17:09:53 (65172-1127313664): Server path validation status: 0
+10/18/2026 17:09:53 (65172-1127313664):   Configuration of license path is '5280@pine-server'.
+10/18/2026 17:09:53 (65172-1127313664):   Configuration of recheck interval minimum is 290.
+10/18/2026 17:09:53 (65172-1127313664):   Configuration of 2000000000 maximum retry calls.
+10/18/2026 17:09:53 (65172-1127313664):   Configuration of sleep time value of 0.
+10/18/2026 17:09:53 (65172-1127313664):   Configuration of display specification is ':1'.
+10/18/2026 17:09:53 (65172-1127313664):   Licenses will be checked out using admin@Pine-06(:1).
+10/18/2026 17:09:53 (65172-1127313664):   (System spec would have been admin@Pine-06(/dev/pts/1) )
+10/18/2026 17:09:53 (65172-1127313664): Job creation completed with status 0 (time 0).
+10/18/2026 17:09:53 (65172-1127313664): Check-in of Modus_common_ui completed with status 0 (time 0).
+10/18/2026 17:09:54 (65172-1127313664): Exit started ....
+10/18/2026 17:09:54 (65172-1127313664): Exit completed with status 0 (time 0).

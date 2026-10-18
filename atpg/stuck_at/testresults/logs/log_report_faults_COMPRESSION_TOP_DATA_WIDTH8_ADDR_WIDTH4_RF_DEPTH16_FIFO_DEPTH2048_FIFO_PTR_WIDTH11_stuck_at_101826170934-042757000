@@ -1,0 +1,308 @@
+Starting Command: report_faults 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_faults -faultstatus redundant -testmode COMPRESSION -experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at -workdir /home/admin/DFT/SOCX/atpg/stuck_at -stdout all  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/atpg/stuck_at/testresults/logs/log_report_faults_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at_101826170934-042757000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Sunday Oct 18 17:09:34 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 606947.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/atpg/stuck_at
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at
+
+            -LOGFILE /home/admin/DFT/SOCX/atpg/stuck_at/testresults/logs/log_report_faults_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at_101826170934-042757000
+            -faultstatus redundant
+          + -STDOUT all
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+TFMlist 
+
+Logic Model(GM)   10/18/26
+                  11:37:44
+
+
+File Id     faultModel        faultStatus         experiment
+Created (GM)  10/18/26           10/18/26           10/18/26
+              11:37:50           11:37:50           11:37:51
+Modified(GM)  10/18/26           10/18/26           10/18/26
+              11:37:50           11:37:50           11:39:30
+Code Level        2025.0             2025.0             2025.0            
+Max Fault Id        253660
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count               214
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: COMPRESSION Experiment: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+      1219 R       ISA1           SDFFRHQX8               U1_RST_SYNC_UART.\sync_reg_reg[1].SE   
+      1221 R       ISA0           SDFFRHQX8               U1_RST_SYNC_UART.\sync_reg_reg[1].SE   
+      1410 R       ISA1           AO22X4                  U1_Integer_Clock_Divider_RX.g1334.B1   
+    253565 cR      OSA1           INVX6                   U1_Integer_Clock_Divider_RX.g1347.Y   
+    253566 cR      ISA0           INVX6                   U1_Integer_Clock_Divider_RX.g1347.A   
+      1471 R       ISA0           AO21X4                  U1_Integer_Clock_Divider_RX.g1329.A0   
+    244298 cR      ISA1           NOR3X6                  U0_CLKDIV_MUX.g158.A   
+    244300 cR      ISA1           NOR3X6                  U0_CLKDIV_MUX.g158.B   
+    244302 cR      ISA1           NOR3X6                  U0_CLKDIV_MUX.g158.C   
+    244303 cR      OSA0           NOR3X6                  U0_CLKDIV_MUX.g158.Y   
+    253460 cR      ISA0           AO21X4                  U1_Integer_Clock_Divider_RX.g1329.A1   
+    253559 cR      OSA0           INVX6                   U1_Integer_Clock_Divider_RX.g1345.Y   
+    253560 cR      ISA1           INVX6                   U1_Integer_Clock_Divider_RX.g1345.A   
+      1472 R       ISA1           AO21X4                  U1_Integer_Clock_Divider_RX.g1329.A0   
+    253561 cR      OSA1           INVX6                   U1_Integer_Clock_Divider_RX.g1345.Y   
+    253562 cR      ISA0           INVX6                   U1_Integer_Clock_Divider_RX.g1345.A   
+      1654 R       ISA0           NOR2X6                  U1_Integer_Clock_Divider_RX.g1315.B   
+      2107 R       ISA1           AND3X6                  COMPACTOR.compressor.g_0.g43.A   
+      2125 R       ISA1           AND3X6                  COMPACTOR.compressor.g_1.g43.A   
+      2136 R       ISA0           OR2X6                   U0_UART.U0_UART_TX.U0_serializer.g1112.B   
+      2143 R       ISA1           AND3X6                  COMPACTOR.compressor.g_10.g43.A   
+      2161 R       ISA1           AND3X6                  COMPACTOR.compressor.g_100.g43.A   
+      2179 R       ISA1           AND3X6                  COMPACTOR.compressor.g_101.g43.A   
+      2197 R       ISA1           AND3X6                  COMPACTOR.compressor.g_102.g43.A   
+      2215 R       ISA1           AND3X6                  COMPACTOR.compressor.g_103.g43.A   
+      2233 R       ISA1           AND3X6                  COMPACTOR.compressor.g_104.g43.A   
+      2251 R       ISA1           AND3X6                  COMPACTOR.compressor.g_105.g43.A   
+      2269 R       ISA1           AND3X6                  COMPACTOR.compressor.g_106.g43.A   
+      2287 R       ISA1           AND3X6                  COMPACTOR.compressor.g_107.g43.A   
+      2305 R       ISA1           AND3X6                  COMPACTOR.compressor.g_108.g43.A   
+      2323 R       ISA1           AND3X6                  COMPACTOR.compressor.g_109.g43.A   
+      2341 R       ISA1           AND3X6                  COMPACTOR.compressor.g_11.g43.A   
+      2359 R       ISA1           AND3X6                  COMPACTOR.compressor.g_110.g43.A   
+      2377 R       ISA1           AND3X6                  COMPACTOR.compressor.g_111.g43.A   
+      2395 R       ISA1           AND3X6                  COMPACTOR.compressor.g_112.g43.A   
+      2413 R       ISA1           AND3X6                  COMPACTOR.compressor.g_113.g43.A   
+      2431 R       ISA1           AND3X6                  COMPACTOR.compressor.g_114.g43.A   
+      2449 R       ISA1           AND3X6                  COMPACTOR.compressor.g_115.g43.A   
+      2467 R       ISA1           AND3X6                  COMPACTOR.compressor.g_116.g43.A   
+      2485 R       ISA1           AND3X6                  COMPACTOR.compressor.g_117.g43.A   
+      2503 R       ISA1           AND3X6                  COMPACTOR.compressor.g_118.g43.A   
+      2521 R       ISA1           AND3X6                  COMPACTOR.compressor.g_119.g43.A   
+      2539 R       ISA1           AND3X6                  COMPACTOR.compressor.g_12.g43.A   
+      2557 R       ISA1           AND3X6                  COMPACTOR.compressor.g_120.g43.A   
+      2575 R       ISA1           AND3X6                  COMPACTOR.compressor.g_121.g43.A   
+      2593 R       ISA1           AND3X6                  COMPACTOR.compressor.g_122.g43.A   
+      2611 R       ISA1           AND3X6                  COMPACTOR.compressor.g_123.g43.A   
+      2629 R       ISA1           AND3X6                  COMPACTOR.compressor.g_124.g43.A   
+      2647 R       ISA1           AND3X6                  COMPACTOR.compressor.g_125.g43.A   
+      2665 R       ISA1           AND3X6                  COMPACTOR.compressor.g_126.g43.A   
+      2683 R       ISA1           AND3X6                  COMPACTOR.compressor.g_127.g43.A   
+      2701 R       ISA1           AND3X6                  COMPACTOR.compressor.g_128.g43.A   
+      2719 R       ISA1           AND3X6                  COMPACTOR.compressor.g_129.g43.A   
+      2737 R       ISA1           AND3X6                  COMPACTOR.compressor.g_13.g43.A   
+      2755 R       ISA1           AND3X6                  COMPACTOR.compressor.g_130.g43.A   
+      2773 R       ISA1           AND3X6                  COMPACTOR.compressor.g_131.g43.A   
+      2787 R       ISA0           NOR2X6                  U0_UART.U0_UART_TX.U0_FSM.g287.B   
+    252547 cR      OSA0           INVX6                   U0_UART.U0_UART_TX.U0_FSM.g289.Y   
+    252548 cR      ISA1           INVX6                   U0_UART.U0_UART_TX.U0_FSM.g289.A   
+      2791 R       ISA1           AND3X6                  COMPACTOR.compressor.g_132.g43.A   
+      2809 R       ISA1           AND3X6                  COMPACTOR.compressor.g_133.g43.A   
+      2827 R       ISA1           AND3X6                  COMPACTOR.compressor.g_134.g43.A   
+      2845 R       ISA1           AND3X6                  COMPACTOR.compressor.g_135.g43.A   
+      2863 R       ISA1           AND3X6                  COMPACTOR.compressor.g_136.g43.A   
+      2881 R       ISA1           AND3X6                  COMPACTOR.compressor.g_137.g43.A   
+      2899 R       ISA1           AND3X6                  COMPACTOR.compressor.g_138.g43.A   
+      2917 R       ISA1           AND3X6                  COMPACTOR.compressor.g_139.g43.A   
+      2935 R       ISA1           AND3X6                  COMPACTOR.compressor.g_14.g43.A   
+      2953 R       ISA1           AND3X6                  COMPACTOR.compressor.g_140.g43.A   
+      2971 R       ISA1           AND3X6                  COMPACTOR.compressor.g_141.g43.A   
+      2989 R       ISA1           AND3X6                  COMPACTOR.compressor.g_142.g43.A   
+      3007 R       ISA1           AND3X6                  COMPACTOR.compressor.g_143.g43.A   
+      3025 R       ISA1           AND3X6                  COMPACTOR.compressor.g_144.g43.A   
+      3043 R       ISA1           AND3X6                  COMPACTOR.compressor.g_145.g43.A   
+      3061 R       ISA1           AND3X6                  COMPACTOR.compressor.g_146.g43.A   
+      3079 R       ISA1           AND3X6                  COMPACTOR.compressor.g_147.g43.A   
+      3097 R       ISA1           AND3X6                  COMPACTOR.compressor.g_148.g43.A   
+      3115 R       ISA1           AND3X6                  COMPACTOR.compressor.g_149.g43.A   
+      3133 R       ISA1           AND3X6                  COMPACTOR.compressor.g_15.g43.A   
+      3151 R       ISA1           AND3X6                  COMPACTOR.compressor.g_150.g43.A   
+      3169 R       ISA1           AND3X6                  COMPACTOR.compressor.g_151.g43.A   
+      3187 R       ISA1           AND3X6                  COMPACTOR.compressor.g_152.g43.A   
+      3205 R       ISA1           AND3X6                  COMPACTOR.compressor.g_153.g43.A   
+      3223 R       ISA1           AND3X6                  COMPACTOR.compressor.g_154.g43.A   
+      3241 R       ISA1           AND3X6                  COMPACTOR.compressor.g_155.g43.A   
+      3259 R       ISA1           AND3X6                  COMPACTOR.compressor.g_156.g43.A   
+      3277 R       ISA1           AND3X6                  COMPACTOR.compressor.g_157.g43.A   
+      3295 R       ISA1           AND3X6                  COMPACTOR.compressor.g_16.g43.A   
+      3313 R       ISA1           AND3X6                  COMPACTOR.compressor.g_17.g43.A   
+      3331 R       ISA1           AND3X6                  COMPACTOR.compressor.g_18.g43.A   
+      3349 R       ISA1           AND3X6                  COMPACTOR.compressor.g_19.g43.A   
+      3367 R       ISA1           AND3X6                  COMPACTOR.compressor.g_2.g43.A   
+      3385 R       ISA1           AND3X6                  COMPACTOR.compressor.g_20.g43.A   
+      3403 R       ISA1           AND3X6                  COMPACTOR.compressor.g_21.g43.A   
+      3421 R       ISA1           AND3X6                  COMPACTOR.compressor.g_22.g43.A   
+      3439 R       ISA1           AND3X6                  COMPACTOR.compressor.g_23.g43.A   
+      3457 R       ISA1           AND3X6                  COMPACTOR.compressor.g_24.g43.A   
+      3475 R       ISA1           AND3X6                  COMPACTOR.compressor.g_25.g43.A   
+      3493 R       ISA1           AND3X6                  COMPACTOR.compressor.g_26.g43.A   
+      3511 R       ISA1           AND3X6                  COMPACTOR.compressor.g_27.g43.A   
+      3529 R       ISA1           AND3X6                  COMPACTOR.compressor.g_28.g43.A   
+      3547 R       ISA1           AND3X6                  COMPACTOR.compressor.g_29.g43.A   
+      3565 R       ISA1           AND3X6                  COMPACTOR.compressor.g_3.g43.A   
+      3583 R       ISA1           AND3X6                  COMPACTOR.compressor.g_30.g43.A   
+      3601 R       ISA1           AND3X6                  COMPACTOR.compressor.g_31.g43.A   
+      3619 R       ISA1           AND3X6                  COMPACTOR.compressor.g_32.g43.A   
+      3637 R       ISA1           AND3X6                  COMPACTOR.compressor.g_33.g43.A   
+      3655 R       ISA1           AND3X6                  COMPACTOR.compressor.g_34.g43.A   
+      3673 R       ISA1           AND3X6                  COMPACTOR.compressor.g_35.g43.A   
+      3691 R       ISA1           AND3X6                  COMPACTOR.compressor.g_36.g43.A   
+      3709 R       ISA1           AND3X6                  COMPACTOR.compressor.g_37.g43.A   
+      3727 R       ISA1           AND3X6                  COMPACTOR.compressor.g_38.g43.A   
+      3745 R       ISA1           AND3X6                  COMPACTOR.compressor.g_39.g43.A   
+      3763 R       ISA1           AND3X6                  COMPACTOR.compressor.g_4.g43.A   
+      3781 R       ISA1           AND3X6                  COMPACTOR.compressor.g_40.g43.A   
+      3799 R       ISA1           AND3X6                  COMPACTOR.compressor.g_41.g43.A   
+      3817 R       ISA1           AND3X6                  COMPACTOR.compressor.g_42.g43.A   
+      3835 R       ISA1           AND3X6                  COMPACTOR.compressor.g_43.g43.A   
+      3853 R       ISA1           AND3X6                  COMPACTOR.compressor.g_44.g43.A   
+      3871 R       ISA1           AND3X6                  COMPACTOR.compressor.g_45.g43.A   
+      3889 R       ISA1           AND3X6                  COMPACTOR.compressor.g_46.g43.A   
+      3907 R       ISA1           AND3X6                  COMPACTOR.compressor.g_47.g43.A   
+      3925 R       ISA1           AND3X6                  COMPACTOR.compressor.g_48.g43.A   
+      3943 R       ISA1           AND3X6                  COMPACTOR.compressor.g_49.g43.A   
+      3961 R       ISA1           AND3X6                  COMPACTOR.compressor.g_5.g43.A   
+      3979 R       ISA1           AND3X6                  COMPACTOR.compressor.g_50.g43.A   
+      3997 R       ISA1           AND3X6                  COMPACTOR.compressor.g_51.g43.A   
+      4015 R       ISA1           AND3X6                  COMPACTOR.compressor.g_52.g43.A   
+      4033 R       ISA1           AND3X6                  COMPACTOR.compressor.g_53.g43.A   
+      4051 R       ISA1           AND3X6                  COMPACTOR.compressor.g_54.g43.A   
+      4069 R       ISA1           AND3X6                  COMPACTOR.compressor.g_55.g43.A   
+      4087 R       ISA1           AND3X6                  COMPACTOR.compressor.g_56.g43.A   
+      4105 R       ISA1           AND3X6                  COMPACTOR.compressor.g_57.g43.A   
+      4123 R       ISA1           AND3X6                  COMPACTOR.compressor.g_58.g43.A   
+      4141 R       ISA1           AND3X6                  COMPACTOR.compressor.g_59.g43.A   
+      4159 R       ISA1           AND3X6                  COMPACTOR.compressor.g_6.g43.A   
+      4177 R       ISA1           AND3X6                  COMPACTOR.compressor.g_60.g43.A   
+      4195 R       ISA1           AND3X6                  COMPACTOR.compressor.g_61.g43.A   
+      4213 R       ISA1           AND3X6                  COMPACTOR.compressor.g_62.g43.A   
+      4231 R       ISA1           AND3X6                  COMPACTOR.compressor.g_63.g43.A   
+      4249 R       ISA1           AND3X6                  COMPACTOR.compressor.g_64.g43.A   
+      4267 R       ISA1           AND3X6                  COMPACTOR.compressor.g_65.g43.A   
+      4285 R       ISA1           AND3X6                  COMPACTOR.compressor.g_66.g43.A   
+      4303 R       ISA1           AND3X6                  COMPACTOR.compressor.g_67.g43.A   
+      4321 R       ISA1           AND3X6                  COMPACTOR.compressor.g_68.g43.A   
+      4339 R       ISA1           AND3X6                  COMPACTOR.compressor.g_69.g43.A   
+      4357 R       ISA1           AND3X6                  COMPACTOR.compressor.g_7.g43.A   
+      4375 R       ISA1           AND3X6                  COMPACTOR.compressor.g_70.g43.A   
+      4393 R       ISA1           AND3X6                  COMPACTOR.compressor.g_71.g43.A   
+      4411 R       ISA1           AND3X6                  COMPACTOR.compressor.g_72.g43.A   
+      4429 R       ISA1           AND3X6                  COMPACTOR.compressor.g_73.g43.A   
+      4447 R       ISA1           AND3X6                  COMPACTOR.compressor.g_74.g43.A   
+      4465 R       ISA1           AND3X6                  COMPACTOR.compressor.g_75.g43.A   
+      4483 R       ISA1           AND3X6                  COMPACTOR.compressor.g_76.g43.A   
+      4501 R       ISA1           AND3X6                  COMPACTOR.compressor.g_77.g43.A   
+      4519 R       ISA1           AND3X6                  COMPACTOR.compressor.g_78.g43.A   
+      4537 R       ISA1           AND3X6                  COMPACTOR.compressor.g_79.g43.A   
+      4555 R       ISA1           AND3X6                  COMPACTOR.compressor.g_8.g43.A   
+      4573 R       ISA1           AND3X6                  COMPACTOR.compressor.g_80.g43.A   
+      4591 R       ISA1           AND3X6                  COMPACTOR.compressor.g_81.g43.A   
+      4605 R       ISA1           CLKAND2X6               U0_UART.U0_UART_RX.U0_FSM.g2357.A   
+      4609 R       ISA1           AND3X6                  COMPACTOR.compressor.g_82.g43.A   
+      4627 R       ISA1           AND3X6                  COMPACTOR.compressor.g_83.g43.A   
+      4645 R       ISA1           AND3X6                  COMPACTOR.compressor.g_84.g43.A   
+      4663 R       ISA1           AND3X6                  COMPACTOR.compressor.g_85.g43.A   
+      4681 R       ISA1           AND3X6                  COMPACTOR.compressor.g_86.g43.A   
+      4699 R       ISA1           AND3X6                  COMPACTOR.compressor.g_87.g43.A   
+      4717 R       ISA1           AND3X6                  COMPACTOR.compressor.g_88.g43.A   
+      4735 R       ISA1           AND3X6                  COMPACTOR.compressor.g_89.g43.A   
+      4753 R       ISA1           AND3X6                  COMPACTOR.compressor.g_9.g43.A   
+      4771 R       ISA1           AND3X6                  COMPACTOR.compressor.g_90.g43.A   
+      4789 R       ISA1           AND3X6                  COMPACTOR.compressor.g_91.g43.A   
+      4807 R       ISA1           AND3X6                  COMPACTOR.compressor.g_92.g43.A   
+      4825 R       ISA1           AND3X6                  COMPACTOR.compressor.g_93.g43.A   
+      4838 R       ISA0           NOR3X8                  U0_SYS_CTRL.g2471.B   
+      4842 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2470.B   
+      4843 R       ISA1           AND3X6                  COMPACTOR.compressor.g_94.g43.A   
+      4849 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2469.B   
+      4855 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2468.B   
+      4859 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2467.B   
+      4861 R       ISA1           AND3X6                  COMPACTOR.compressor.g_95.g43.A   
+      4866 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2466.B   
+      4872 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2465.B   
+      4879 R       ISA1           AND3X6                  COMPACTOR.compressor.g_96.g43.A   
+      4888 R       ISA0           NOR2X8                  U0_SYS_CTRL.g2461.B   
+      4893 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2460.B   
+      4897 R       ISA1           AND3X6                  COMPACTOR.compressor.g_97.g43.A   
+      4898 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2459.B   
+      4910 R       ISA1           CLKAND2X12              U0_SYS_CTRL.g2457.B   
+      4915 R       ISA1           AND3X6                  COMPACTOR.compressor.g_98.g43.A   
+      4933 R       ISA1           AND3X6                  COMPACTOR.compressor.g_99.g43.A   
+      4953 R       ISA1           CLKAND2X12              COMPACTOR.decompressor.dg_0.g8.B   
+      4959 R       ISA1           CLKAND2X12              COMPACTOR.decompressor.dg_1.g8.B   
+      4986 R       ISA0           TLATNX1                 DFT_lockup_latch_neg_edge.GN   
+      4994 R       ISA0           TLATNX1                 DFT_lockup_latch_neg_edge49.GN   
+      7596 R       ISA1           AND2X6                  U0_Register_File.g4350.A   
+    249153 cR      OSA1           INVX6                   U0_Register_File.g4361.Y   
+    249154 cR      ISA0           INVX6                   U0_Register_File.g4361.A   
+      8819 R       ISA1           NAND2X8                 U0_ALU_16B.g5511__5115.A   
+    109472 R       ISA0           NAND2BX1                U0_Register_File.g2.AN   
+    112262 R       ISA1           SDFFRHQX8               U0_RST_SYNC_REF.\sync_reg_reg[1].SE   
+    112264 R       ISA0           SDFFRHQX8               U0_RST_SYNC_REF.\sync_reg_reg[1].SE   
+    113020 R       ISA1           SDFFRHQX8               U0_DATA_SYNC.\sync_reg_reg[1].SE   
+    113022 R       ISA0           SDFFRHQX8               U0_DATA_SYNC.\sync_reg_reg[1].SE   
+    113300 R       ISA1           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1].SE   
+    113302 R       ISA0           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[3][1].SE   
+    113340 R       ISA1           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1].SE   
+    113342 R       ISA0           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[2][1].SE   
+    113380 R       ISA1           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1].SE   
+    113382 R       ISA0           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[1][1].SE   
+    113420 R       ISA1           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1].SE   
+    113422 R       ISA0           SDFFRHQX8               U0_Async_fifo.u_w2r_sync.\sync_reg_reg[0][1].SE   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :          212
+ Tested                :            0
+ Possibly Tested       :            0
+ Redundant             :          212
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           28,864,576  bytes
+
+                      CPU Time =    0:00:00.04
+                  Elapsed Time =    0:00:00.05                    [end TDA_001]
+
+     Date Ended:  Sunday Oct 18 17:09:34 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: COMPRESSION Experiment: TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_stuck_at Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

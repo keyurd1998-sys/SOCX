@@ -1,0 +1,350 @@
+
+INFO (TDA-005): Command Line Invocation: 
+            create_logic_tests -testmode COMPRESSION -experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression -workdir /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70 -stdout no  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_101826165823-776844000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Sunday Oct 18 16:58:23 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 599882.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70
+            -TESTMODE COMPRESSION
+            -EXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+            -LOGFILE /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70/testresults/logs/log_create_logic_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression_101826165823-776844000
+            -STDOUT no
+[end TDA_009]
+
+
+WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.  [end TTC_018] 
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: COMPRESSION
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                243993            0            0            0       243993   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                252622            0            0            0       252622   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Scan Test generation                                                   [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      8       8      72647    29.77%   28.76%       171346           00:00.60    [end TDA_220] 
+INFO (TTC-110): Ending Scan Test generation                                                     [end TTC_110] 
+*************************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16      94609    68.55%   66.21%        76735           00:02.44    [end TDA_220] 
+INFO (TDA-220):     32      32       3015    69.79%   67.40%        73720           00:03.01    [end TDA_220] 
+INFO (TDA-220):     48      48       1506    70.40%   68.00%        72214           00:03.42    [end TDA_220] 
+INFO (TDA-220):     64      64       1385    70.97%   68.55%        70829           00:03.85    [end TDA_220] 
+INFO (TDA-220):     80      80       1047    71.40%   68.96%        69782           00:04.26    [end TDA_220] 
+INFO (TDA-220):     96      96       1032    71.82%   69.37%        68750           00:04.68    [end TDA_220] 
+INFO (TDA-220):    112     112        931    72.20%   69.74%        67819           00:05.12    [end TDA_220] 
+INFO (TDA-220):    128     128        813    72.54%   70.06%        67006           00:05.51    [end TDA_220] 
+INFO (TDA-220):    144     144       1341    73.09%   70.59%        65665           00:05.93    [end TDA_220] 
+INFO (TDA-220):    160     160        722    73.38%   70.88%        64943           00:06.30    [end TDA_220] 
+INFO (TDA-220):    176     176        679    73.66%   71.14%        64264           00:06.70    [end TDA_220] 
+INFO (TDA-220):    192     192        644    73.92%   71.40%        63620           00:07.10    [end TDA_220] 
+INFO (TDA-220):    208     208        999    74.33%   71.80%        62621           00:07.52    [end TDA_220] 
+INFO (TDA-220):    224     224        644    74.60%   72.05%        61977           00:07.96    [end TDA_220] 
+INFO (TDA-220):    240     240        817    74.93%   72.37%        61160           00:08.34    [end TDA_220] 
+INFO (TDA-220):    256     256        646    75.20%   72.63%        60514           00:08.78    [end TDA_220] 
+INFO (TDA-220):    272     272        640    75.46%   72.88%        59874           00:09.22    [end TDA_220] 
+INFO (TDA-220):    288     288        560    75.69%   73.10%        59314           00:09.61    [end TDA_220] 
+INFO (TDA-220):    304     304        661    75.96%   73.37%        58653           00:10.01    [end TDA_220] 
+INFO (TDA-220):    320     320        540    76.18%   73.58%        58113           00:10.44    [end TDA_220] 
+INFO (TDA-220):    336     336        540    76.40%   73.79%        57573           00:10.85    [end TDA_220] 
+INFO (TDA-220):    352     352        606    76.65%   74.03%        56967           00:11.25    [end TDA_220] 
+INFO (TDA-220):    368     368        649    76.92%   74.29%        56318           00:11.70    [end TDA_220] 
+INFO (TDA-220):    384     384        497    77.12%   74.49%        55821           00:12.12    [end TDA_220] 
+INFO (TDA-220):    400     400        451    77.31%   74.67%        55370           00:12.48    [end TDA_220] 
+INFO (TDA-220):    416     416        529    77.52%   74.87%        54841           00:12.87    [end TDA_220] 
+INFO (TDA-220):    432     432        500    77.73%   75.07%        54341           00:13.26    [end TDA_220] 
+INFO (TDA-220):    448     448        568    77.96%   75.30%        53773           00:13.65    [end TDA_220] 
+INFO (TDA-220):    464     464        509    78.17%   75.50%        53264           00:14.04    [end TDA_220] 
+INFO (TDA-220):    480     480        482    78.37%   75.69%        52782           00:14.42    [end TDA_220] 
+INFO (TDA-220):    496     496        598    78.61%   75.93%        52184           00:14.80    [end TDA_220] 
+INFO (TDA-220):    512     512        505    78.82%   76.13%        51679           00:15.17    [end TDA_220] 
+INFO (TDA-220):    528     528        368    78.97%   76.27%        51311           00:15.50    [end TDA_220] 
+INFO (TDA-220):    544     544        435    79.15%   76.44%        50876           00:15.87    [end TDA_220] 
+INFO (TDA-220):    560     560        596    79.39%   76.68%        50280           00:16.26    [end TDA_220] 
+INFO (TDA-220):    576     576        455    79.58%   76.86%        49825           00:16.62    [end TDA_220] 
+INFO (TDA-220):    592     592        509    79.79%   77.06%        49316           00:17.02    [end TDA_220] 
+INFO (TDA-220):    608     608        395    79.95%   77.22%        48921           00:17.40    [end TDA_220] 
+INFO (TDA-220):    624     624        491    80.15%   77.41%        48430           00:17.77    [end TDA_220] 
+INFO (TDA-220):    640     640        412    80.32%   77.58%        48018           00:18.13    [end TDA_220] 
+INFO (TDA-220):    656     656        522    80.53%   77.78%        47496           00:18.54    [end TDA_220] 
+INFO (TDA-220):    672     672        407    80.70%   77.94%        47089           00:18.89    [end TDA_220] 
+INFO (TDA-220):    688     688        607    80.95%   78.18%        46482           00:19.31    [end TDA_220] 
+INFO (TDA-220):    704     704        656    81.22%   78.44%        45826           00:19.74    [end TDA_220] 
+INFO (TDA-220):    720     720        461    81.41%   78.63%        45365           00:20.15    [end TDA_220] 
+INFO (TDA-220):    736     736        508    81.61%   78.83%        44857           00:20.56    [end TDA_220] 
+INFO (TDA-220):    752     752        381    81.77%   78.98%        44476           00:20.91    [end TDA_220] 
+INFO (TDA-220):    768     768        444    81.95%   79.15%        44032           00:21.33    [end TDA_220] 
+INFO (TDA-220):    784     784        553    82.18%   79.37%        43479           00:21.67    [end TDA_220] 
+INFO (TDA-220):    800     800        444    82.36%   79.55%        43035           00:22.02    [end TDA_220] 
+INFO (TDA-220):    816     816        510    82.57%   79.75%        42525           00:22.40    [end TDA_220] 
+INFO (TDA-220):    832     832        438    82.75%   79.92%        42087           00:22.77    [end TDA_220] 
+INFO (TDA-220):    848     848        443    82.93%   80.10%        41644           00:23.13    [end TDA_220] 
+INFO (TDA-220):    864     864        487    83.13%   80.29%        41157           00:23.53    [end TDA_220] 
+INFO (TDA-220):    880     880        457    83.32%   80.47%        40700           00:23.86    [end TDA_220] 
+INFO (TDA-220):    896     896        445    83.50%   80.65%        40255           00:24.21    [end TDA_220] 
+INFO (TDA-220):    912     912        389    83.66%   80.80%        39866           00:24.59    [end TDA_220] 
+INFO (TDA-220):    928     928        423    83.83%   80.97%        39443           00:24.95    [end TDA_220] 
+INFO (TDA-220):    944     944        411    84.00%   81.13%        39032           00:25.28    [end TDA_220] 
+INFO (TDA-220):    960     960        402    84.17%   81.29%        38630           00:25.67    [end TDA_220] 
+INFO (TDA-220):    976     976        395    84.33%   81.45%        38235           00:26.02    [end TDA_220] 
+INFO (TDA-220):    992     992        293    84.45%   81.56%        37942           00:26.34    [end TDA_220] 
+INFO (TDA-220):   1008    1008        335    84.59%   81.70%        37607           00:26.65    [end TDA_220] 
+INFO (TDA-220):   1024    1024        470    84.78%   81.88%        37137           00:27.04    [end TDA_220] 
+INFO (TDA-220):   1040    1040        414    84.95%   82.05%        36723           00:27.41    [end TDA_220] 
+INFO (TDA-220):   1056    1056        401    85.11%   82.21%        36322           00:27.77    [end TDA_220] 
+INFO (TDA-220):   1072    1072        329    85.25%   82.34%        35993           00:28.09    [end TDA_220] 
+INFO (TDA-220):   1088    1088        343    85.39%   82.47%        35650           00:28.43    [end TDA_220] 
+INFO (TDA-220):   1104    1104        434    85.57%   82.64%        35216           00:28.79    [end TDA_220] 
+INFO (TDA-220):   1120    1120        419    85.74%   82.81%        34797           00:29.19    [end TDA_220] 
+INFO (TDA-220):   1136    1136        445    85.92%   82.99%        34352           00:29.58    [end TDA_220] 
+INFO (TDA-220):   1152    1152        331    86.06%   83.12%        34021           00:29.88    [end TDA_220] 
+INFO (TDA-220):   1168    1168        324    86.19%   83.24%        33697           00:30.22    [end TDA_220] 
+INFO (TDA-220):   1184    1184        350    86.33%   83.38%        33347           00:30.58    [end TDA_220] 
+INFO (TDA-220):   1200    1200        403    86.50%   83.54%        32944           00:30.94    [end TDA_220] 
+INFO (TDA-220):   1216    1216        401    86.66%   83.70%        32543           00:31.30    [end TDA_220] 
+INFO (TDA-220):   1232    1232        353    86.81%   83.84%        32190           00:31.65    [end TDA_220] 
+INFO (TDA-220):   1248    1248        416    86.98%   84.01%        31774           00:32.00    [end TDA_220] 
+INFO (TDA-220):   1264    1264        391    87.14%   84.16%        31383           00:32.39    [end TDA_220] 
+INFO (TDA-220):   1280    1280        345    87.28%   84.30%        31038           00:32.72    [end TDA_220] 
+INFO (TDA-220):   1296    1296        369    87.43%   84.44%        30669           00:33.03    [end TDA_220] 
+INFO (TDA-220):   1312    1312        375    87.58%   84.59%        30294           00:33.35    [end TDA_220] 
+INFO (TDA-220):   1328    1328        329    87.72%   84.72%        29965           00:33.66    [end TDA_220] 
+INFO (TDA-220):   1344    1344        320    87.85%   84.85%        29645           00:33.96    [end TDA_220] 
+INFO (TDA-220):   1360    1360        347    87.99%   84.99%        29298           00:34.28    [end TDA_220] 
+INFO (TDA-220):   1376    1376        338    88.13%   85.12%        28960           00:34.62    [end TDA_220] 
+INFO (TDA-220):   1392    1392        352    88.27%   85.26%        28608           00:34.96    [end TDA_220] 
+INFO (TDA-220):   1408    1408        313    88.40%   85.38%        28295           00:35.26    [end TDA_220] 
+INFO (TDA-220):   1424    1424        377    88.56%   85.53%        27918           00:35.63    [end TDA_220] 
+INFO (TDA-220):   1440    1440        300    88.68%   85.65%        27618           00:35.92    [end TDA_220] 
+INFO (TDA-220):   1456    1456        331    88.82%   85.78%        27287           00:36.25    [end TDA_220] 
+INFO (TDA-220):   1472    1472        334    88.95%   85.91%        26953           00:36.60    [end TDA_220] 
+INFO (TDA-220):   1488    1488        322    89.08%   86.04%        26631           00:36.92    [end TDA_220] 
+INFO (TDA-220):   1504    1504        404    89.25%   86.20%        26227           00:37.24    [end TDA_220] 
+INFO (TDA-220):   1520    1520        339    89.39%   86.34%        25888           00:37.54    [end TDA_220] 
+INFO (TDA-220):   1536    1536        241    89.49%   86.43%        25647           00:37.80    [end TDA_220] 
+INFO (TDA-220):   1552    1552        310    89.61%   86.55%        25337           00:38.11    [end TDA_220] 
+INFO (TDA-220):   1568    1568        332    89.75%   86.69%        25004           00:38.44    [end TDA_220] 
+INFO (TDA-220):   1584    1584        396    89.91%   86.84%        24608           00:38.77    [end TDA_220] 
+INFO (TDA-220):   1600    1600        392    90.07%   87.00%        24216           00:39.12    [end TDA_220] 
+INFO (TDA-220):   1616    1616        346    90.22%   87.13%        23870           00:39.43    [end TDA_220] 
+INFO (TDA-220):   1632    1632        298    90.34%   87.25%        23572           00:39.73    [end TDA_220] 
+INFO (TDA-220):   1648    1648        331    90.47%   87.38%        23241           00:40.04    [end TDA_220] 
+INFO (TDA-220):   1664    1664        314    90.60%   87.51%        22927           00:40.35    [end TDA_220] 
+INFO (TDA-220):   1680    1680        299    90.73%   87.63%        22628           00:40.66    [end TDA_220] 
+INFO (TDA-220):   1696    1696        249    90.83%   87.72%        22379           00:40.93    [end TDA_220] 
+INFO (TDA-220):   1712    1712        267    90.94%   87.83%        22112           00:41.21    [end TDA_220] 
+INFO (TDA-220):   1728    1728        290    91.06%   87.95%        21822           00:41.48    [end TDA_220] 
+INFO (TDA-220):   1744    1744        338    91.19%   88.08%        21484           00:41.81    [end TDA_220] 
+INFO (TDA-220):   1760    1760        309    91.32%   88.20%        21175           00:42.11    [end TDA_220] 
+INFO (TDA-220):   1776    1776        248    91.42%   88.30%        20927           00:42.38    [end TDA_220] 
+INFO (TDA-220):   1792    1792        278    91.54%   88.41%        20649           00:42.69    [end TDA_220] 
+INFO (TDA-220):   1808    1808        324    91.67%   88.54%        20325           00:43.00    [end TDA_220] 
+INFO (TDA-220):   1824    1824        357    91.82%   88.68%        19968           00:43.32    [end TDA_220] 
+INFO (TDA-220):   1840    1840        301    91.94%   88.80%        19667           00:43.61    [end TDA_220] 
+INFO (TDA-220):   1856    1856        282    92.05%   88.91%        19385           00:43.88    [end TDA_220] 
+INFO (TDA-220):   1872    1872        252    92.16%   89.01%        19133           00:44.16    [end TDA_220] 
+INFO (TDA-220):   1888    1888        291    92.28%   89.12%        18842           00:44.45    [end TDA_220] 
+INFO (TDA-220):   1904    1904        220    92.37%   89.21%        18622           00:44.73    [end TDA_220] 
+INFO (TDA-220):   1920    1920        333    92.50%   89.34%        18289           00:45.03    [end TDA_220] 
+INFO (TDA-220):   1936    1936        294    92.62%   89.46%        17995           00:45.31    [end TDA_220] 
+INFO (TDA-220):   1952    1952        320    92.76%   89.59%        17675           00:45.63    [end TDA_220] 
+INFO (TDA-220):   1968    1968        249    92.86%   89.69%        17426           00:45.92    [end TDA_220] 
+INFO (TDA-220):   1984    1984        301    92.98%   89.80%        17125           00:46.20    [end TDA_220] 
+INFO (TDA-220):   2000    2000        253    93.08%   89.90%        16872           00:46.49    [end TDA_220] 
+INFO (TDA-220):   2016    2016        270    93.19%   90.01%        16602           00:46.78    [end TDA_220] 
+INFO (TDA-220):   2032    2032        272    93.31%   90.12%        16330           00:47.06    [end TDA_220] 
+INFO (TDA-220):   2048    2048        286    93.42%   90.23%        16044           00:47.39    [end TDA_220] 
+INFO (TDA-220):   2064    2064        246    93.52%   90.33%        15798           00:47.67    [end TDA_220] 
+INFO (TDA-220):   2080    2080        235    93.62%   90.42%        15563           00:47.96    [end TDA_220] 
+INFO (TDA-220):   2096    2096        252    93.72%   90.52%        15311           00:48.21    [end TDA_220] 
+INFO (TDA-220):   2112    2112        208    93.81%   90.60%        15103           00:48.49    [end TDA_220] 
+INFO (TDA-220):   2128    2128        328    93.94%   90.73%        14775           00:48.80    [end TDA_220] 
+INFO (TDA-220):   2144    2144        288    94.06%   90.85%        14487           00:49.06    [end TDA_220] 
+INFO (TDA-220):   2160    2160        224    94.15%   90.94%        14263           00:49.32    [end TDA_220] 
+INFO (TDA-220):   2176    2176        310    94.28%   91.06%        13953           00:49.64    [end TDA_220] 
+INFO (TDA-220):   2192    2192        264    94.39%   91.16%        13689           00:49.92    [end TDA_220] 
+INFO (TDA-220):   2208    2208        308    94.51%   91.29%        13381           00:50.20    [end TDA_220] 
+INFO (TDA-220):   2224    2224        203    94.60%   91.37%        13178           00:50.43    [end TDA_220] 
+INFO (TDA-220):   2240    2240        181    94.67%   91.44%        12997           00:50.67    [end TDA_220] 
+INFO (TDA-220):   2256    2256        213    94.76%   91.52%        12784           00:50.92    [end TDA_220] 
+INFO (TDA-220):   2272    2272        335    94.90%   91.66%        12449           00:51.25    [end TDA_220] 
+INFO (TDA-220):   2288    2288        241    95.00%   91.75%        12208           00:51.51    [end TDA_220] 
+INFO (TDA-220):   2304    2304        311    95.12%   91.87%        11897           00:51.82    [end TDA_220] 
+INFO (TDA-220):   2320    2320        250    95.23%   91.97%        11647           00:52.11    [end TDA_220] 
+INFO (TDA-220):   2336    2336        264    95.33%   92.08%        11383           00:52.40    [end TDA_220] 
+INFO (TDA-220):   2352    2352        257    95.44%   92.18%        11126           00:52.70    [end TDA_220] 
+INFO (TDA-220):   2368    2368        241    95.54%   92.27%        10885           00:52.97    [end TDA_220] 
+INFO (TDA-220):   2384    2384        229    95.63%   92.37%        10656           00:53.27    [end TDA_220] 
+INFO (TDA-220):   2400    2400        316    95.76%   92.49%        10339           00:53.59    [end TDA_220] 
+INFO (TDA-220):   2416    2416        300    95.88%   92.61%        10039           00:53.89    [end TDA_220] 
+INFO (TDA-220):   2432    2432        220    95.97%   92.70%         9819           00:54.18    [end TDA_220] 
+INFO (TDA-220):   2448    2448        238    96.07%   92.79%         9581           00:54.43    [end TDA_220] 
+INFO (TDA-220):   2464    2464        232    96.17%   92.88%         9349           00:54.69    [end TDA_220] 
+INFO (TDA-220):   2480    2480        223    96.26%   92.97%         9126           00:54.92    [end TDA_220] 
+INFO (TDA-220):   2496    2496        192    96.34%   93.05%         8934           00:55.15    [end TDA_220] 
+INFO (TDA-220):   2512    2512        293    96.46%   93.16%         8641           00:55.44    [end TDA_220] 
+INFO (TDA-220):   2528    2528        195    96.54%   93.24%         8446           00:55.67    [end TDA_220] 
+INFO (TDA-220):   2544    2544        236    96.63%   93.33%         8210           00:55.93    [end TDA_220] 
+INFO (TDA-220):   2560    2560        208    96.72%   93.42%         8002           00:56.18    [end TDA_220] 
+INFO (TDA-220):   2576    2576        154    96.78%   93.48%         7848           00:56.40    [end TDA_220] 
+INFO (TDA-220):   2592    2592        237    96.88%   93.57%         7611           00:56.67    [end TDA_220] 
+INFO (TDA-220):   2608    2608        236    96.98%   93.66%         7375           00:56.94    [end TDA_220] 
+INFO (TDA-220):   2624    2624        179    97.05%   93.73%         7196           00:57.17    [end TDA_220] 
+INFO (TDA-220):   2640    2640        198    97.13%   93.81%         6998           00:57.42    [end TDA_220] 
+INFO (TDA-220):   2656    2656        226    97.22%   93.90%         6772           00:57.67    [end TDA_220] 
+INFO (TDA-220):   2672    2672        256    97.33%   94.00%         6515           00:57.95    [end TDA_220] 
+INFO (TDA-220):   2688    2688        220    97.42%   94.09%         6295           00:58.18    [end TDA_220] 
+INFO (TDA-220):   2704    2704        190    97.50%   94.17%         6104           00:58.42    [end TDA_220] 
+INFO (TDA-220):   2720    2720        199    97.58%   94.25%         5905           00:58.69    [end TDA_220] 
+INFO (TDA-220):   2736    2736        195    97.66%   94.32%         5710           00:58.94    [end TDA_220] 
+INFO (TDA-220):   2752    2752        201    97.74%   94.40%         5509           00:59.19    [end TDA_220] 
+INFO (TDA-220):   2768    2768        214    97.83%   94.49%         5295           00:59.49    [end TDA_220] 
+INFO (TDA-220):   2784    2784        183    97.90%   94.56%         5112           00:59.75    [end TDA_220] 
+INFO (TDA-220):   2800    2800        252    98.01%   94.66%         4860           01:00.05    [end TDA_220] 
+INFO (TDA-220):   2816    2816        209    98.09%   94.74%         4651           01:00.31    [end TDA_220] 
+INFO (TDA-220):   2832    2832        198    98.17%   94.82%         4453           01:00.56    [end TDA_220] 
+INFO (TDA-220):   2848    2848        218    98.26%   94.91%         4234           01:00.83    [end TDA_220] 
+INFO (TDA-220):   2864    2864        199    98.35%   94.99%         4035           01:01.09    [end TDA_220] 
+INFO (TDA-220):   2880    2880        195    98.43%   95.06%         3840           01:01.38    [end TDA_220] 
+INFO (TDA-220):   2896    2896        194    98.50%   95.14%         3646           01:01.64    [end TDA_220] 
+INFO (TDA-220):   2912    2912        172    98.58%   95.21%         3474           01:01.88    [end TDA_220] 
+INFO (TDA-220):   2928    2928        159    98.64%   95.27%         3315           01:02.14    [end TDA_220] 
+INFO (TDA-220):   2944    2944        181    98.71%   95.34%         3134           01:02.40    [end TDA_220] 
+INFO (TDA-220):   2960    2960        185    98.79%   95.42%         2949           01:02.67    [end TDA_220] 
+INFO (TDA-220):   2976    2976        219    98.88%   95.50%         2730           01:02.97    [end TDA_220] 
+INFO (TDA-220):   2992    2992        180    98.95%   95.57%         2549           01:03.28    [end TDA_220] 
+INFO (TDA-220):   3008    3008        159    99.02%   95.64%         2390           01:03.59    [end TDA_220] 
+INFO (TDA-220):   3024    3024        187    99.10%   95.71%         2203           01:03.94    [end TDA_220] 
+INFO (TDA-220):   3040    3040        152    99.16%   95.77%         2051           01:04.31    [end TDA_220] 
+INFO (TDA-220):   3056    3056        168    99.23%   95.84%         1883           01:04.80    [end TDA_220] 
+INFO (TDA-220):   3059    3058         17    99.24%   95.85%         1858           01:07.63    [end TDA_220] 
+INFO (TDA-220):   3075    3073        148    99.30%   95.91%         1710           01:07.72    [end TDA_220] 
+INFO (TDA-220):   3091    3087         88    99.33%   95.94%         1622           01:07.80    [end TDA_220] 
+INFO (TDA-220):   3107    3103        102    99.38%   95.98%         1520           01:07.92    [end TDA_220] 
+INFO (TDA-220):   3123    3119        101    99.42%   96.02%         1419           01:08.04    [end TDA_220] 
+INFO (TDA-220):   3139    3135         58    99.44%   96.04%         1361           01:08.12    [end TDA_220] 
+INFO (TDA-220):   3155    3149         81    99.47%   96.08%         1280           01:08.25    [end TDA_220] 
+INFO (TDA-220):   3171    3165         72    99.50%   96.11%         1208           01:08.37    [end TDA_220] 
+INFO (TDA-220):   3187    3178         52    99.53%   96.13%         1156           01:08.45    [end TDA_220] 
+INFO (TDA-220):   3203    3190         53    99.55%   96.15%         1103           01:08.57    [end TDA_220] 
+INFO (TDA-220):   3219    3205         72    99.58%   96.18%         1031           01:08.70    [end TDA_220] 
+INFO (TDA-220):   3235    3218         46    99.60%   96.19%          985           01:08.82    [end TDA_220] 
+INFO (TDA-220):   3251    3227         40    99.61%   96.21%          945           01:08.94    [end TDA_220] 
+INFO (TDA-220):   3267    3234         18    99.62%   96.22%          927           01:09.02    [end TDA_220] 
+INFO (TDA-220):   3283    3241         24    99.63%   96.23%          903           01:09.13    [end TDA_220] 
+INFO (TDA-220):   3299    3248         20    99.64%   96.23%          883           01:09.21    [end TDA_220] 
+INFO (TDA-220):   3310    3250          6    99.64%   96.24%          877           01:09.28    [end TDA_220] 
+INFO (TDA-220):   3312    3251          2    99.64%   96.24%          875           01:09.39    [end TDA_220] 
+INFO (TDA-221):   3312    3251          0    99.64%   96.24%          875           01:09.39    [end TDA_221] 
+INFO (TDA-220):   3328    3253          4    99.64%   96.24%          871           01:33.14    [end TDA_220] 
+INFO (TDA-220):   3344    3255          4    99.64%   96.24%          867           01:33.19    [end TDA_220] 
+INFO (TDA-220):   3360    3256          2    99.65%   96.24%          865           01:33.24    [end TDA_220] 
+INFO (TDA-220):   3376    3258          4    99.65%   96.24%          861           01:33.28    [end TDA_220] 
+INFO (TDA-220):   3392    3264         12    99.65%   96.25%          849           01:33.34    [end TDA_220] 
+INFO (TDA-220):   3408    3266          6    99.65%   96.25%          843           01:33.41    [end TDA_220] 
+INFO (TDA-220):   3424    3268          7    99.66%   96.25%          836           01:33.48    [end TDA_220] 
+INFO (TDA-220):   3440    3268          0    99.66%   96.25%          836           01:33.55    [end TDA_220] 
+INFO (TDA-220):   3456    3268          0    99.66%   96.25%          836           01:33.64    [end TDA_220] 
+INFO (TDA-220):   3466    3268          0    99.66%   96.25%          836           01:33.72    [end TDA_220] 
+INFO (TDA-220):   3473    3268          0    99.66%   96.25%          836           01:33.78    [end TDA_220] 
+INFO (TDA-220):   3473    3268          0    99.73%   96.32%          657           01:34.15    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: COMPRESSION
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                243993       243141            1          194          657  99.65  99.73
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                252622       243141            1          194         9286  96.25  96.32
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Scan                                           8
+ Logic                                          3268
+----------------------------------------------------------
+ Total                                          3276
+
+(I) File(s) generated (bytes and name):
+
+         872448 /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70/tbdata/faultStatus.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+       11678059 /home/admin/DFT/SOCX/scan/reports/07_post_tpi_compression/modus_compressibility/test_scripts_ratio_70/tbdata/TBDbin.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_compression
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           66,046,976  bytes
+
+                      CPU Time =    0:01:33.06
+                  Elapsed Time =    0:01:34.19                    [end TDA_001]
+
+     Date Ended:  Sunday Oct 18 16:59:58 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+    226 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):   3312    3251          0    99.64%   96.24%          875           01:09.39     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+
+  WARNING [Severe] Messages...
+      1 WARNING (TTC-018): [Severe] verify_test_structures issued Severe messages related to Stored Pattern tests.  Invalid test data may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

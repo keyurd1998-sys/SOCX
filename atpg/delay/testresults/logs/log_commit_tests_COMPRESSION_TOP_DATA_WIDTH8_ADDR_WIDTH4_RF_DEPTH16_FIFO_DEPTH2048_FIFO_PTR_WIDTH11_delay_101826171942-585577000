@@ -1,0 +1,127 @@
+Starting Command: commit_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay -testmode COMPRESSION -workdir /home/admin/DFT/SOCX/atpg/delay  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 25.10-p027_1, built Mar 13 2025 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/admin/DFT/SOCX/atpg/delay/testresults/logs/log_commit_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay_101826171942-585577000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Sunday Oct 18 17:19:42 2026  IST
+            Host machine is Pine-06, x86_64 running Linux 5.14.0-611.30.1.el9_7.x86_64.
+            This job is process number 615766.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/admin/DFT/SOCX/atpg/delay
+            -TESTMODE COMPRESSION
+
+            -INEXPERIMENT TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay
+            -LOGFILE /home/admin/DFT/SOCX/atpg/delay/testresults/logs/log_commit_tests_COMPRESSION_TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay_101826171942-585577000
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+       36905997 /home/admin/DFT/SOCX/atpg/delay/tbdata/TBDbin.COMPRESSION.TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay
+
+INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay odometers prior to commit_tests: 1.1.1.2.1 thru 1.3.1.160.5 (Relative test numbers 1 thru 10722).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00       244817            0            0            0       244817       253446            0            0            0       253446
+Collapsed Static     0.00   0.00       192250            0            0            0       192250       200807            0            0            0       200807
+PI Static            0.00   0.00           19            0            0            0           19           22            0            0            0           22
+PO Static            0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Total Dynamic        0.00   0.00       218398            0            0            0       218398       253238            0            0            0       253238
+Collapsed Dynamic    0.00   0.00       186832            0            0            0       186832       221644            0            0            0       221644
+PI Dynamic           0.00   0.00           14            0            0            0           14           22            0            0            0           22
+PO Dynamic           0.00   0.00           10            0            0            0           10           10            0            0            0           10
+
+Parametric        
+
+IDDq                 0.00   0.00       253446            0                                 253446       253446            0                                 253446
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+
+Testmode and Global statistics after commit_tests
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static        99.79  96.39       244817       244097            0          214          506       253446       244097            0          214         9135
+Collapsed Static    99.82  95.57       192250       191713            0          199          338       200807       191713            0          199         8895
+PI Static          100.00  86.36           19           19            0            0            0           22           19            0            0            3
+PO Static          100.00 100.00           10           10            0            0            0           10           10            0            0            0
+
+Total Dynamic       86.49  74.59       218398       188851            0           40        29507       253238       188851            0           40        64347
+Collapsed Dynamic   84.99  71.64       186832       158763            0           29        28040       221644       158763            0           29        62852
+PI Dynamic          85.71  54.55           14           12            0            0            2           22           12            0            0           10
+PO Dynamic          40.00  40.00           10            4            0            0            6           10            4            0            0            6
+
+Parametric        
+
+IDDq                 0.00   0.00       253446            0                                 253446       253446            0                                 253446
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay is saved to the master test vectors odometers: 1.1.1.2.1 to 1.3.1.160.5 (Relative test numbers 1 to 10722).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 3
+  tester loops    = 3
+  test procedures = 750
+  test sequence   = 10722
+  init sequencess = 3
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+       36905997 /home/admin/DFT/SOCX/atpg/delay/tbdata/TBDbin.COMPRESSION 
+        2662400 /home/admin/DFT/SOCX/atpg/delay/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           26,330,784  bytes
+
+                      CPU Time =    0:00:00.27
+                  Elapsed Time =    0:00:00.37                    [end TDA_001]
+
+     Date Ended:  Sunday Oct 18 17:19:43 2026  IST
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay odometers prior to commit_tests: 1.1.1.2.1 thru 1.3.1.160.5 (Relative test numbers 1 thru 10722).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11_delay is saved to the master test vectors odometers: 1.1.1.2.1 to 1.3.1.160.5 (Relative test numbers 1 to 10722).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
