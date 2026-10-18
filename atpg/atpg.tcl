@@ -7,10 +7,20 @@
 # ------------------------------------------------------------------------------
 # 1. Variables & Mode Selection
 # ------------------------------------------------------------------------------
-set DESIGN    "TOP"
 set TECH_LIB  "/home/admin/DFT/Library/atpg/stdcell.v"
 set NETLIST   "../../scan/netlists/TOP_compressed.v"
-set PINASSIGN "../../scan/atpg_script/TOP.COMPRESSION.pinassign"
+
+# Dynamically locate the pinassign file and design cell name exported by Genus
+set PINASSIGN_LIST [glob -nocomplain "../../scan/atpg_script/*.COMPRESSION.pinassign"]
+if {[llength $PINASSIGN_LIST] > 0} {
+    set PINASSIGN [lindex $PINASSIGN_LIST 0]
+    set DESIGN [string map {".COMPRESSION.pinassign" ""} [file tail $PINASSIGN]]
+    puts "INFO: Auto-detected design cell name: $DESIGN"
+    puts "INFO: Using pinassign file: $PINASSIGN"
+} else {
+    set DESIGN    "TOP_DATA_WIDTH8_ADDR_WIDTH4_RF_DEPTH16_FIFO_DEPTH2048_FIFO_PTR_WIDTH11"
+    set PINASSIGN "../../scan/atpg_script/${DESIGN}.COMPRESSION.pinassign"
+}
 
 # Select ATPG mode ("stuck_at" or "delay")
 if {[info exists argv] && [llength $argv] > 0} {
