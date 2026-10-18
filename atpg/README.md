@@ -1,5 +1,11 @@
 # Modus ATPG Flow
 
+![Tool](https://img.shields.io/badge/Tool-Cadence%20Modus-007ACC)
+![Stuck-At Test Coverage](https://img.shields.io/badge/Stuck--At%20Coverage-99.71%25-brightgreen)
+![Dynamic Delay Coverage](https://img.shields.io/badge/Delay%20Coverage-86.49%25-green)
+![ATPG Effectiveness](https://img.shields.io/badge/Effectiveness-99.72%25-brightgreen)
+![Pattern Count](https://img.shields.io/badge/Total%20Patterns-11%2C177-blue)
+
 ## Overview
 This directory contains the Cadence Modus ATPG flow for generating Stuck-At and Transition Delay test patterns targeting the compressed gate-level netlist of the TOP design. The flow runs structural test verification (TSV rules), builds fault models, generates compact test patterns, and exports simulation testbenches and vectors.
 

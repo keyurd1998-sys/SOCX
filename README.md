@@ -1,5 +1,14 @@
 # SOCX DFT Implementation and Verification
 
+![Synthesis](https://img.shields.io/badge/Synthesis-Cadence%20Genus-007ACC)
+![ATPG](https://img.shields.io/badge/ATPG-Cadence%20Modus-007ACC)
+![GLS](https://img.shields.io/badge/GLS-Cadence%20Xcelium-007ACC)
+![Stuck-At Coverage](https://img.shields.io/badge/Stuck--At%20Coverage-99.71%25-brightgreen)
+![Delay Coverage](https://img.shields.io/badge/Delay%20Coverage-86.49%25-green)
+![GLS Verification](https://img.shields.io/badge/GLS%20Status-100%25%20Passed-brightgreen)
+![Timing](https://img.shields.io/badge/Timing-Met%20(0%20Violations)-brightgreen)
+![Compression](https://img.shields.io/badge/Compression-80x-orange)
+
 ## Overview
 This project implements an end-to-end Design-for-Test (DFT) flow for the SOCX (TOP) SoC controller block. The flow covers RTL elaboration, testability design rule repair, scan chain stitching, ATPG-guided test point insertion, XOR-based scan compression, timing closure, ATPG pattern generation, and gate-level pattern simulation using Cadence tools.
 

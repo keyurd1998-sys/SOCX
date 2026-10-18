@@ -1,5 +1,11 @@
 # Scan Synthesis and Compression Flow
 
+![Tool](https://img.shields.io/badge/Tool-Cadence%20Genus-007ACC)
+![Scan Flops](https://img.shields.io/badge/Scan%20Flops-8%2C657-blue)
+![Compression](https://img.shields.io/badge/Compression-80x-orange)
+![Timing](https://img.shields.io/badge/Timing-0.0ps%20TNS-brightgreen)
+![Channels](https://img.shields.io/badge/Channels-2-informational)
+
 ## Overview
 The scan flow performs logic synthesis, testability design rule check (TDRC) violation repair, scan flop replacement, ATPG-guided test point insertion (TPI), XOR scan compression insertion, and timing optimization using Cadence Genus.
 

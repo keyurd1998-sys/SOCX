@@ -1,5 +1,10 @@
 # Gate-Level Simulation (GLS) Flow
 
+![Simulator](https://img.shields.io/badge/Simulator-Cadence%20Xcelium-007ACC)
+![Stuck-At GLS](https://img.shields.io/badge/Stuck--At%20GLS-100%25%20Passed-brightgreen)
+![Delay GLS](https://img.shields.io/badge/Delay%20GLS-100%25%20Passed-brightgreen)
+![Miscompares](https://img.shields.io/badge/Miscompares-0-brightgreen)
+
 ## Overview
 This directory contains the gate-level test pattern simulation flow using Cadence Xcelium (xrun). The simulation executes Modus-generated Verilog testbenches against the compressed gate-level netlist to verify that test patterns operate correctly without unknown (X) states, timing races, or scan shifting errors.
 
