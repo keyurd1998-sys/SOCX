@@ -1,0 +1,26 @@
+# Genus synthesis checkpoints & temporary files
+scan/dbs/*.db
+scan/logs/
+scan/modus.cmd*
+scan/modus.log*
+scan/qaLog.txt
+scan/fv/
+
+# Modus ATPG runtime databases
+atpg/*/tbdata/
+atpg/*/testresults/
+atpg/*/patterns/
+atpg/*/logs/
+atpg/*/reports/
+
+# Xcelium GLS simulation outputs
+gls/xcelium.d/
+gls/xrun.history
+gls/xrun.log
+gls/logs/
+gls/waves/
+
+# Temporary files
+*.cmd*
+*.log
+*.rpt~
