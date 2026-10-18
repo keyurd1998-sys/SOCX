@@ -1,0 +1,6 @@
+# Ignore Modus runtime directories inside atpg subdirectories
+*/tbdata/
+*/testresults/
+*/patterns/
+*/logs/
+*/reports/

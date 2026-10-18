@@ -11,7 +11,11 @@ set LOGS_DIR     "$SCAN_DIR/logs"
 
 set ATPG_DIR     "$ROOT_DIR/atpg"
 set GLS_DIR      "$ROOT_DIR/gls"
-set LIB_DIR "/home/admin/DFT/Library"
+if {[info exists env(CADENCE_DFT_LIB)]} {
+    set LIB_DIR $env(CADENCE_DFT_LIB)
+} else {
+    set LIB_DIR "/home/admin/DFT/Library"
+}
 
 
 set TIMING_LIB "$LIB_DIR/timing/slow.lib"
